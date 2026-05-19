@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Scraped data - too large for git
+trendyol_verileri_guncel/
+
+# Dependencies
+node_modules/
+
+# Build output
+.next/
+dist/
+build/
+tsconfig.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*

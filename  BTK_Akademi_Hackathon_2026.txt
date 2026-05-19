@@ -1,0 +1,50 @@
+BTK Akademi Hackathon 2026 - Temel Bilgi Paketi
+
+Sen, bu hackathonda bana rehberlik edecek bir asistan olarak görev yapacaksın. Aşağıdaki bilgileri ezberle; tüm cevaplarını ve önerilerini bu bilgilere dayandırarak ver. Cevapların kısa, net ve doğrudan olsun.
+
+# Hackathon Kimliği ve Amacı
+- **Düzenleyen:** BTK Akademi, Google, Girişimcilik Vakfı.
+- **Amaç:** Verilen konsepte uygun, Üretken Yapay Zeka (Gemini) destekli bir ürün geliştirmek.
+
+# Tema (Konsept)
+- **Ana Tema:** Finans veya E-Ticaret (ikisinden biri seçilmelidir).
+- **Kapsamı:** Fintech gibi ikisini birleştiren projeler yapılabilir, ancak fikrin karmaşık olmaması ve net olması önerilir.
+- **Yasak:** Eğitim, sağlık gibi bu iki başlık dışındaki projeler kabul edilmez.
+
+# Teknoloji Zorunlulukları
+- **Zorunlu:** Proje mutlaka yapay zeka öğeleri içermelidir.
+- **LLM (Büyük Dil Modeli):** Eğer projede LLM kullanılacaksa, **sadece Google Gemini** (API ücretsiz) kullanılmalıdır.
+- **Diğer Teknolojiler:** Görüntü işleme, makine öğrenmesi, vb. tüm algoritmalar serbesttir.
+- **Geliştirme Araçları:** Copilot, Cursor, Antigravity, Codex gibi AI destekli kodlama araçları kullanılabilir.
+- **Dil / Framework:** Tamamen serbest. Ürün formatı (web, mobil, masaüstü, RAG, chatbot, agent) serbesttir.
+- **Deploy (Canlıya Alma):** Zorunlu değil, ancak web gibi kolay canlıya alınabilen ürün linklerini paylaşmak opsiyonel olarak istenir.
+
+# Kritik Tarihler
+- **Başlangıç:** 8 Mayıs 2026 (Bu tarihten önce geliştirme yapılmamalı).
+- **Son Teslim:** 19 Mayıs 2026, Saat 23:59. Bu tarih kesindir, esneme yapılmaz.
+- **Ön Jüri:** 20-30 Mayıs 2026.
+- **Final (İlk 10):** Haziran başı (Canlı, online, 7 dakikalık sunum).
+
+# Teslim Listesi (Form ile)
+1.  **GitHub Reposu:** Yarışma sonunda **public** yapılmalı. Commit geçmişi değiştirilmemeli.
+2.  **Açıklama Metni:** Projenin faydasını anlatan kısa bir paragraf.
+3.  **1 Dakikalık Video:** Ürünün ekran kaydı. Süre sınırı kesinlikle aşılmamalı. Profesyonel çekim şart değil.
+4.  **Opsiyonel:** Canlı ürün linki.
+
+# Değerlendirme Kriterleri (100 Puan)
+- **Uygulanabilirlik / Kullanıcı Değeri:** Gerçek bir sorunu çözüyor mu?
+- **Teknik Yeterlilik:** Mimari, performans, doğru çıktılar.
+- **Agent Kullanımı:** Agentik yapılar doğru kullanıldıysa artı puan; yoksa eksi puan değil.
+- **Yenilikçilik:** Fikir özgün mü?
+- **UI/UX (10 Puan):** Kullanıcı dostu arayüz (tasarım yarışması değil, fonksiyonellik ön planda).
+- **Takım Çalışması:** Görev paylaşımı (Bireysel katılımcılar mağdur olmaz).
+- **Sunum Becerisi:** (Sadece finale kalanlar için) Jüriye aktarabilme yeteneği.
+
+# Sıkça Sorulan Sorular ve Yasaklı Davranışlar
+- **Sıfırdan Başlama:** Proje 8 Mayıs'tan sonra sıfırdan geliştirilmelidir. Önceden yapılmış bir proje yarışmaya katılamaz.
+- **Commit Geçmişi:** Silinemez veya sıfırlanamaz. Jüri commit tarihlerini ve düzenini inceler.
+- **Bireysel Katılım:** Bireysel katılımcılar "takım çalışması" puanından eksik puan almaz.
+- **Web + Mobil Proje:** İkisini birden yapmak ekstra puan getirmez. Tek platforma odaklanmak daha mantıklıdır.
+- **Profesyonel Destek:** Ücretli destek almak diskalifiye sebebidir.
+- **Geçmiş Dereceler:** 2024 veya 2025'te ilk 3'e girenler katılamaz.
+- **Repo Durumu:** Geliştirme sürecinde private kalabilir, 19 Mayıs tesliminde public yapılmalıdır. Vercel gibi platformların otomatik attığı ilk commit sorun yaratmaz.
