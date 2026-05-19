@@ -1,0 +1,130 @@
+# SmartCart — Ürün Detay Sayfası Görsel ve UX Düzeltmeleri
+
+## Proje Bilgisi
+- **Proje dizini**: `/Users/arif/Desktop/btk/e-commerce-prototype-2`
+- **Ana dosya**: `app/page.tsx` (tek dosyalı Next.js uygulaması, tüm componentler burada)
+- **Sorunlu component**: `ProductDetailPage` fonksiyonu (satır 549-843)
+- **Ekran görüntüleri**: `/Users/arif/Desktop/btk/problemlerimin_guncel_ekran_resimleri/` klasöründe 4 adet screenshot var, bunlara bakarak sorunları daha iyi anlayabilirsin.
+
+---
+
+## PROBLEM 1: Ana Ürün Görseli Çok Büyük — Sohbet Alanına Yer Kalmıyor
+
+**Mevcut durum**: `ProductDetailPage` componentinde sol taraftaki görsel alanı (`lg:col-span-7`) aspect-ratio `4/5` ile çok büyük render ediliyor. Bu yüzden sayfada aşağıdaki AI sohbet paneline (Gerçeklik Filtresi) ulaşmak için çok fazla scroll yapmak gerekiyor. Ekran görüntüsü 2, 3 ve 4'te bu açıkça görülüyor: ana resim neredeyse tüm viewport'u kaplıyor.
+
+**İlgili kod bloğu** (satır 649-664):
+```tsx
+<div className="lg:col-span-7">
+  <div className="sticky top-32">
+    <div className="grid grid-cols-4 gap-4">
+      <div className="col-span-4 aspect-[4/5] bg-secondary overflow-hidden relative group rounded-[2rem]">
+        <img src={displayImages[selectedImage]} ... />
+      </div>
+      {/* thumbnail'ler */}
+    </div>
+  </div>
+</div>
+```
+
+**Önerilen çözüm**:
+1. Ana görselin aspect-ratio'sunu `aspect-[4/5]`'ten `aspect-[3/4]` veya `aspect-square` gibi daha kompakt bir orana düşür.
+2. Ana görsele `max-h-[65vh]` veya benzeri bir max-height sınırı koy, böylece viewport'un büyük bölümünü kaplamasın.
+3. Sol sütunu `lg:col-span-7`'den `lg:col-span-6`'ya düşürmeyi düşün, sağ tarafa (ürün bilgisi + AI panel) daha fazla alan ver.
+4. Thumbnail görselleri ana görselin altında yatay bir satır halinde kalabilir ama daha küçük olabilir.
+
+**Amaç**: Kullanıcı bir ürüne tıkladığında, hem ürün görselini hem fiyat/sepet bilgilerini hem de AI sohbet panelini scroll yapmadan veya minimal scroll ile görebilmeli.
+
+---
+
+## PROBLEM 2: Görseller Arası Gezinme — Modern ve Premium Ok Tuşları
+
+**Mevcut durum**: Ürün görselleri arasında geçiş yapmak için sadece alttaki küçük thumbnail'lere tıklamak gerekiyor. Sol-sağ ok tuşu navigasyonu yok. Kullanıcı deneyimi zayıf, özellikle çok görselsi olan ürünlerde.
+
+**Önerilen çözüm**:
+Ana görselin üzerine sol ve sağ ok butonları ekle. AMA bunlar klasik/sıradan oklar olmasın — premium, Maison tarzı tasarıma uygun olsun:
+
+1. **Tasarım önerileri** (bunlardan birini seç veya daha iyi bir alternatif bul):
+   - **Cam efektli (glassmorphism)**: Yarı saydam beyaz arka plan, blur efekti, ince border. Hover'da hafif büyüme ve opacity artışı.
+   - **Minimal çizgi stili**: Sadece ince bir çizgi ok, arka plansız, hover'da accent rengiyle dolma animasyonu.
+   - **Floating pill stili**: Resmin sağ ve sol kenarında dikey hizalanmış, rounded-full, `bg-background/80 backdrop-blur-md` ile.
+   - **Swipe indicator stili**: Resmin alt ortasında dot indicator + kenarlarında çok ince, uzun dikdörtgen şeklinde touch-friendly alanlar.
+
+2. **Davranışlar**:
+   - İlk görseldeyken sol ok gizlensin veya disable olsun.
+   - Son görseldeyken sağ ok gizlensin veya disable olsun.
+   - Ok tuşlarına tıklandığında görsel smooth bir şekilde değişsin (fade veya slide animasyonu).
+   - Hover olmadan oklar yarı saydam olsun, hover'da tam görünür olsun.
+   - Keyboard arrow keys ile de çalışsın (opsiyonel ama güzel olur).
+
+3. **Ek olarak**: Görselin altında kaçıncı görsel olduğunu gösteren küçük dot indicator'lar ekle (örn: • • ● • •)
+
+**İlgili kod**: Satır 652-657 arasındaki ana görsel `div`'inin içine, `<img>` tag'ından sonra ok butonları eklenecek.
+
+---
+
+## PROBLEM 3: Ürüne Tıklandığında Sayfa Yanlış Konuma Scroll Ediyor
+
+**Mevcut durum**: Ürün kartına tıklandığında `window.scrollTo({ top: 0, behavior: "smooth" })` çağrılıyor (satır 955). Ancak sayfa en üste değil, 4. ekran görüntüsündeki gibi sayfanın ortasına/alt kısmına düşüyor — yani görselin alt kısmı + AI paneli görünüyor ama ürün başlığı, fiyat ve sepete ekleme butonları görünmüyor.
+
+**İlgili kod** (satır 952-956):
+```tsx
+const handleProductClick = (product: Product) => {
+  setViewedIds(prev => prev.includes(product.id) ? prev : [...prev, product.id])
+  setSelectedProduct(product); setCurrentView("product")
+  window.scrollTo({ top: 0, behavior: "smooth" })
+}
+```
+
+**Önerilen çözüm**:
+1. `window.scrollTo` çağrısının state güncellemesinden SONRA çalıştığından emin ol. React state update'leri asenkron olduğu için, scroll işlemi henüz eski view renderlanmışken tetikleniyor olabilir.
+2. Şu yaklaşımı dene:
+```tsx
+const handleProductClick = (product: Product) => {
+  setViewedIds(prev => prev.includes(product.id) ? prev : [...prev, product.id])
+  setSelectedProduct(product)
+  setCurrentView("product")
+  // State update sonrası scroll
+  requestAnimationFrame(() => {
+    window.scrollTo({ top: 0, behavior: "instant" })
+  })
+  // Veya daha güvenli: setTimeout ile
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: "instant" })
+  }, 50)
+}
+```
+3. Alternatif olarak `ProductDetailPage` componentinin `useEffect` hook'una scroll ekle:
+```tsx
+useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "instant" })
+}, []) // component mount olduğunda
+```
+4. `behavior: "smooth"` yerine `behavior: "instant"` kullanmayı tercih et — sayfa geçişinde smooth scroll garip görünebilir, anında geçiş daha doğal.
+
+---
+
+## GENEL NOTLAR
+
+- Bu proje **Maison/luxury e-commerce** tarzında tasarlanmış. Tüm değişikliklerde bu premium estetiği koru.
+- Font: serif başlıklar, sans-serif body text.
+- Renk paleti: `accent` (altın/gold tonları), `foreground` (koyu), `background` (açık/krem), `muted-foreground` (gri tonları).
+- Radius'lar büyük: `rounded-[2rem]`, `rounded-full`, `rounded-3xl` gibi.
+- Animasyonlar subtle olmalı: `transition-all duration-300`, `hover:` state'leri.
+- Tüm componentler tek dosyada: `app/page.tsx`
+- Shadcn UI kullanılıyor: Button, Input, Badge, Card, Sheet, Separator componentleri `@/components/ui/` altında.
+- Lucide React ikonları kullanılıyor.
+
+**Eğer yukarıdaki çözümlerden daha iyi bir yaklaşım bulursan onu uygula. Önemli olan:**
+1. ✅ Görsel alanı küçülsün, sohbet + fiyat bilgisi scroll yapmadan görünsün
+2. ✅ Görseller arası geçiş için şık, premium, Maison-uyumlu ok navigasyonu olsun
+3. ✅ Ürüne tıklandığında sayfa kesinlikle en üste (ürün başlığı + fiyat görünecek şekilde) scroll etsin
+
+---
+
+## TEST
+Değişikliklerden sonra `npm run dev` ile çalıştır ve şunları kontrol et:
+1. Ürüne tıkla → Sayfa en üste scroll ediyor mu? Fiyat ve sepete ekle butonu görünüyor mu?
+2. Ana görsel makul boyutta mı? Sohbet paneline ulaşmak için çok scroll gerekmiyor mu?
+3. Sol-sağ oklar çalışıyor mu? Görünümleri premium mi?
+4. İlk/son görselde gereksiz ok görünmüyor mu?
+5. Mobilde de düzgün çalışıyor mu?

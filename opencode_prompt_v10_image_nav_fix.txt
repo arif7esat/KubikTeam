@@ -1,0 +1,213 @@
+# FIX — Ana Resim Kayboldu + Sidebar'dan Ürün Sayfasına Geçiş
+
+## Proje: `/Users/arif/Desktop/btk/e-commerce-prototype-2`
+
+---
+
+## SORUN 1: Ana Ürün Resmi Görünmüyor (Sadece Küçük Resimler Var)
+
+**Ekran görüntüsüne bak**: Ana resmin olması gereken yerde boş/beyaz alan var, sadece küçük resim grid'i görünüyor.
+
+**Neden**: `page.tsx` satır ~653-662'deki crossfade implementasyonu hatalı yapılmış. Mevcut yapı:
+
+```tsx
+<div className="aspect-[3/4] max-h-[50vh] bg-secondary overflow-hidden relative group rounded-[2rem] w-fit mx-auto">
+  <div className="relative w-full h-full">           ← BU DIV
+    <img ... className="absolute inset-0 ..." />     ← ABSOLUTE
+    <img key={...} ... className="absolute inset-0 ..." style={{ opacity: 0 }} />  ← ABSOLUTE
+  </div>
+  {/* oklar, dot indicator, badge, favori butonu */}
+</div>
+```
+
+Sorunlar:
+1. İç `<div className="relative w-full h-full">` → `w-full h-full` derken parent'ın height'ını almaya çalışıyor
+2. Ama parent `aspect-[3/4]` ile aspect ratio kullanıyor ve `w-fit` ile content'e göre genişlik alıyor
+3. İki `<img>` da `absolute inset-0` → normal flow'dan çıkıyorlar → iç div'in intrinsic height'ı = 0
+4. İç div 0 height → parent `w-fit`'e göre 0 width → RESİM KAYBOLDU
+
+**Çözüm** — `page.tsx` satır ~653-685'i düzelt:
+
+`w-fit` kaldır ve iç relative div yerine doğrudan ana container'ı kullan:
+
+```tsx
+{/* Ana resim */}
+<div className="aspect-[3/4] max-h-[50vh] bg-secondary overflow-hidden relative group rounded-[2rem] mx-auto">
+  {/* Arka plan resim (crossfade için) */}
+  <img src={displayImages[selectedImage]} alt={displayProduct.title}
+    className="absolute inset-0 w-full h-full object-cover"
+    onError={(e) => { const t = e.target as HTMLImageElement; t.src = displayProduct.image }} />
+  {/* Üst resim (fade-in animasyonu) */}
+  <img key={selectedImage} src={displayImages[selectedImage]} alt={displayProduct.title}
+    className="absolute inset-0 w-full h-full object-cover"
+    style={{ animation: 'imageFadeIn 0.6s ease-out forwards', opacity: 0 }}
+    onError={(e) => { const t = e.target as HTMLImageElement; t.src = displayProduct.image }} />
+  {/* Oklar */}
+  {selectedImage > 0 && (
+    <button onClick={(e) => { e.stopPropagation(); setSelectedImage(selectedImage - 1) }}
+      className="absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center bg-background/70 backdrop-blur-md hover:bg-background/90 rounded-full shadow-soft opacity-0 group-hover:opacity-100 transition-all duration-300">
+      <ChevronRight className="h-5 w-5 rotate-180 text-foreground" strokeWidth={1} />
+    </button>
+  )}
+  {selectedImage < displayImages.length - 1 && (
+    <button onClick={(e) => { e.stopPropagation(); setSelectedImage(selectedImage + 1) }}
+      className="absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 flex items-center justify-center bg-background/70 backdrop-blur-md hover:bg-background/90 rounded-full shadow-soft opacity-0 group-hover:opacity-100 transition-all duration-300">
+      <ChevronRight className="h-5 w-5 text-foreground" strokeWidth={1} />
+    </button>
+  )}
+  {/* Dot indicator */}
+  {displayImages.length > 1 && (
+    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 px-3 py-1.5 rounded-full bg-background/50 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-300">
+      {displayImages.map((_, i) => (
+        <button key={i} onClick={(e) => { e.stopPropagation(); setSelectedImage(i) }}
+          className={`rounded-full transition-all duration-300 ${i === selectedImage ? 'w-5 h-1.5 bg-foreground' : 'w-1.5 h-1.5 bg-foreground/40 hover:bg-foreground/60'}`} />
+      ))}
+    </div>
+  )}
+  {/* İndirim badge + favori */}
+  <div className="absolute top-6 left-6"><span className="text-[10px] tracking-[0.2em] text-background bg-foreground px-5 py-2.5 rounded-full uppercase font-medium">%{rawDiscount}</span></div>
+  <button className="absolute top-6 right-6 h-12 w-12 flex items-center justify-center bg-background/95 backdrop-blur-sm hover:bg-foreground hover:text-background transition-all duration-300 rounded-full shadow-soft"><Heart className="h-4 w-4" strokeWidth={1.5} /></button>
+</div>
+```
+
+**Önemli değişiklikler**:
+1. `w-fit` KALDIRILDI — container artık parent sütunun tam genişliğini alır
+2. İç `<div className="relative w-full h-full">` KALDIRILDI — gereksiz wrapper
+3. İki `<img>` doğrudan ana container'ın içine `absolute inset-0` olarak yerleştirildi
+4. Ana container zaten `relative` — absolute child'lar doğru pozisyonlanır
+5. `aspect-[3/4]` container'a height verir — absolute imglar bu height'ı doldurur
+
+Ayrıca küçük resimlerin `maxWidth` hesaplamasını da güncelle (`w-fit` kaldırıldığı için artık tam sütun genişliğinde):
+```tsx
+{/* Küçük resimler */}
+<div className="grid grid-cols-3 gap-2 mt-3 mx-auto">
+  {/* maxWidth hesaplamasını kaldır — artık parent sütunu kadar geniş */}
+```
+
+---
+
+## SORUN 2: Sidebar'daki Ürüne Tıklayınca Ürün Sayfası Değişmiyor
+
+**Mevcut durum**: Sidebar'da (Collection bölümündeki yuvarlak ürün resimleri) bir ürüne tıklayınca sadece chat değişiyor, ama sayfa hala eski ürünün sayfasında kalıyor. Kullanıcı o ürünün detay sayfasını görmek istiyor.
+
+**Neden**: `handleChatSelect` (`maison-chat.tsx` satır ~499-517) sadece chat state'ini değiştiriyor (`setActiveProductId`, `setCurrentProduct`). Ama ürün sayfasını değiştirmek `EcommercePage` component'ının `setSelectedProduct` fonksiyonuna erişim gerektiriyor — bu MaisonChat'in dışında.
+
+**Çözüm — `onProductNavigate` callback prop'u ekle**:
+
+### Adım 1: MaisonChat'e yeni prop ekle (`maison-chat.tsx`)
+
+Interface'e ekle (satır ~70-80 civarı, MaisonChatProps):
+```tsx
+interface MaisonChatProps {
+  products: Product[]
+  initialProductId?: number
+  initialProductName?: string
+  initialSellerName?: string
+  initialProductImage?: string
+  apiUrl?: string
+  onProductNavigate?: (productId: number) => void  // ← YENİ
+}
+```
+
+Function signature'a ekle:
+```tsx
+export function MaisonChat({ products, initialProductId, initialProductName, initialSellerName, initialProductImage, apiUrl, onProductNavigate }: MaisonChatProps) {
+```
+
+### Adım 2: handleChatSelect'te sayfa navigasyonu tetikle (`maison-chat.tsx` satır ~499-517)
+
+```tsx
+const handleChatSelect = useCallback((productId: string) => {
+  if (productId === activeProductId) return
+  
+  const product = sidebarProducts.find(p => p.id === productId)
+  if (product) {
+    setActiveProductId(productId)
+    setCurrentProduct({ name: product.name, seller: product.seller })
+    setSuggestionChips([
+      `Analyze ${product.name}`,
+      "Check material quality",
+      "Read authenticity signals",
+      "Show reality score",
+      "Compare with others",
+    ])
+    
+    // Ürün sayfasını da değiştir
+    if (onProductNavigate) {
+      const numericId = parseInt(productId.replace("product-", ""))
+      if (!isNaN(numericId)) {
+        onProductNavigate(numericId)
+      }
+    }
+  }
+}, [activeProductId, sidebarProducts, onProductNavigate])
+```
+
+### Adım 3: ProductDetailPage'den EcommercePage'e callback zinciri (`page.tsx`)
+
+`ProductDetailPage` component'ına `onProductChange` prop'u ekle (satır ~555 civarı):
+```tsx
+function ProductDetailPage({ product, onBack, onProductChange }: { 
+  product: Product
+  onBack: () => void
+  onProductChange?: (productId: number) => void
+}) {
+```
+
+Ve MaisonChat'e aktar (satır ~782 civarı):
+```tsx
+<MaisonChat
+  products={[]}
+  initialProductId={product.id}
+  initialProductName={displayProduct.title}
+  initialSellerName={displayProduct.seller.name}
+  initialProductImage={displayImages[0]}
+  apiUrl={process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}
+  onProductNavigate={onProductChange}
+/>
+```
+
+### Adım 4: EcommercePage'de ürün değiştirme fonksiyonu (`page.tsx` satır ~907-915)
+
+```tsx
+// Mevcut:
+const handleProductClick = (product: Product) => {
+  setViewedIds(prev => prev.includes(product.id) ? prev : [...prev, product.id])
+  setSelectedProduct(product); setCurrentView("product")
+  requestAnimationFrame(() => { window.scrollTo({ top: 0, behavior: "instant" }) })
+}
+
+// Yeni fonksiyon ekle:
+const handleProductChange = useCallback((productId: number) => {
+  const targetProduct = products.find(p => p.id === productId)
+  if (targetProduct) {
+    setSelectedProduct(targetProduct)
+    setViewedIds(prev => prev.includes(productId) ? prev : [...prev, productId])
+    requestAnimationFrame(() => { window.scrollTo({ top: 0, behavior: "smooth" }) })
+  }
+}, [products])
+```
+
+Ve ProductDetailPage'e aktar (satır ~945):
+```tsx
+// Mevcut:
+selectedProduct && <ProductDetailPage product={selectedProduct} onBack={handleBackToHome} />
+// Değiştir:
+selectedProduct && <ProductDetailPage product={selectedProduct} onBack={handleBackToHome} onProductChange={handleProductChange} />
+```
+
+---
+
+## ÖZET
+
+| # | Dosya | Sorun | Çözüm |
+|---|-------|-------|-------|
+| 1 | `page.tsx` | Ana resim kayboldu | `w-fit` kaldır, iç relative div kaldır, imgları doğrudan container'a koy |
+| 2 | `maison-chat.tsx` + `page.tsx` | Sidebar tıklaması sayfayı değiştirmiyor | `onProductNavigate` callback prop zinciri: MaisonChat → ProductDetailPage → EcommercePage |
+
+## TEST
+1. Herhangi bir ürüne tıkla → Ana resim görünüyor mu? ✅
+2. Ok butonlarına bas → Crossfade geçiş çalışıyor mu? ✅
+3. Chat'te mesaj at → Sidebar'da ürün daireyi görüyor musun? ✅
+4. Sidebar'daki başka bir ürün dairesine tıkla → Sayfa o ürüne geçiyor mu? ✅ (chat + sayfa birlikte değişmeli)
+5. Geri dön, başka ürüne git, sidebar'dan önceki ürüne tıkla → Hem chat geçmişi hem sayfa doğru mu? ✅

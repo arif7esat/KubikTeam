@@ -1,0 +1,193 @@
+# SmartCart — AI Chat Layout Düzeltmeleri ve Dinamik Veri Bağlama
+
+## Proje Bilgisi
+- **Ana proje dizini**: `/Users/arif/Desktop/btk/e-commerce-prototype-2`
+- **Ana dosya**: `app/page.tsx`
+- **Chat component dosyası**: `components/maison-chat.tsx` (tüm chat state yönetimi burada)
+- **Sidebar dosyası**: `components/product-sidebar.tsx`
+- **Header dosyası**: `components/chat-header.tsx`
+- **Ekran görüntüleri**: `/Users/arif/Desktop/btk/problemlerimin_guncel_ekran_resimleri/ai_sistemdeki_goruntusu1.png` ve `ai_sistemdeki_goruntusu2.png` — mevcut sorunlu durumu gösteriyor
+
+---
+
+## SORUNLAR VE ÇÖZÜMLER
+
+### PROBLEM 1: Küçük Ürün Resimleri Taşıyor — 3'erli Grid Yapılmalı
+
+**Mevcut durum**: `page.tsx` satır ~652'de `grid grid-cols-4` kullanılıyor. Küçük resimler 4'lü sıra halinde diziliyor. 4. resim taşıyor ve kötü görünüyor (ekran görüntüsünde görüldüğü gibi birinci satırda 4 resim sığmaya çalışıyor).
+
+**Yapılacak**: Küçük resimlerin grid yapısını `grid-cols-4`'ten `grid-cols-3`'e değiştir.
+
+**İlgili kod** (page.tsx, satır ~652):
+```tsx
+<div className="grid grid-cols-4 gap-4">
+```
+Bunu şuna çevir:
+```tsx
+<div className="grid grid-cols-3 gap-4">
+```
+
+Ve ana resmin span değerini de güncelle (satır ~653):
+```tsx
+<div className="col-span-4 aspect-[3/4] ...">
+```
+Bunu şuna çevir:
+```tsx
+<div className="col-span-3 aspect-[3/4] ...">
+```
+
+Böylece küçük resimler her satırda 3'er adet olacak. 5 küçük resim varsa 3+2, 6 varsa 3+3, 7 varsa 3+3+1 şeklinde yerleşecek. Bu tüm ürün sayfaları için otomatik olarak geçerli olacak çünkü aynı grid yapısı kullanılıyor.
+
+Resim sayısını azaltma — sadece grid'i 3'lü yap.
+
+---
+
+### PROBLEM 2: Chat Alanı Çok Dar ve Kısa — Genişletilmeli
+
+**Mevcut durum**: Ekran görüntülerinde chat alanı çok dar görünüyor. Mesaj balonları, sidebar ve input bar küçük bir alana sıkışmış. Sağ tarafta ve altta boş alanlar var.
+
+**Yapılacak**:
+
+1. **Sağ sütun genişliğini artır**: page.tsx'de chat'in bulunduğu sağ sütun `lg:max-w-lg` ile sınırlanmış (satır ~695). Bu sınırı kaldır veya genişlet:
+```tsx
+// Mevcut:
+<div className="lg:max-w-lg">
+// Değiştir:
+<div className="w-full">
+```
+
+2. **MaisonChat'in h-screen sorununu çöz**: `maison-chat.tsx` satır 490'da `h-screen` kullanılıyor. Bu chat'i tam ekran yapmaya çalışıyor ama ürün detay sayfasının içinde olduğu için sorun çıkarıyor. Bunu ürün sayfasına uygun bir yüksekliğe çevir:
+```tsx
+// Mevcut (maison-chat.tsx, satır ~490):
+<div className="flex h-screen w-full bg-[#FAF9F6]">
+// Değiştir:
+<div className="flex h-[75vh] w-full bg-[#FAF9F6] rounded-[2rem] border border-border/30 overflow-hidden">
+```
+
+3. **Chat'in üstündeki mt-10 boşluğunu azalt** (page.tsx satır ~778):
+```tsx
+// Mevcut:
+<div className="mt-10">
+// Değiştir:
+<div className="mt-6">
+```
+
+4. **Sol-sağ grid oranını ayarla**: page.tsx satır ~648-649'da grid yapısı `lg:col-span-5` (sol) ve `lg:col-span-7` (sağ). Chat için daha fazla alan vermek istiyorsan bu oranları koruyabilirsin ama sağ sütundaki `lg:max-w-lg` sınırını kaldırman şart — bu chat'in genişlemesini engelliyor.
+
+5. **Sidebar genişliğini kontrol et**: `product-sidebar.tsx` satır ~405'te sidebar genişliği `width: 100` olarak sabit. Chat dar bir alanda olduğu için sidebar çok yer kaplıyor olabilir. Bunu `width: 80` veya `width: 70`'e düşürmeyi düşün.
+
+---
+
+### PROBLEM 3: Header'daki "Maison Collection" / "Maison Atelier" / "VERIFIED SELLER" Statik — Dinamik Olmalı
+
+**Mevcut durum**: `chat-header.tsx`'e `productName` ve `sellerName` prop'ları geliyor ama `maison-chat.tsx` satır 156'da bunlar sabit olarak "Maison Collection" ve "Maison Atelier" set ediliyor. Kullanıcı hangi ürüne tıklarsa tıklasın header hep aynı kalıyor.
+
+**Yapılacak**:
+
+1. **MaisonChat'e ürün bilgisi prop olarak gelmeli**: `page.tsx` satır ~779'da MaisonChat çağrılırken `products={[]}` ve `initialProductId` gönderiliyor ama ürün adı ve satıcı adı gönderilmiyor. Şu prop'ları ekle:
+
+```tsx
+// page.tsx, satır ~779:
+<MaisonChat
+  products={[]}
+  initialProductId={product.id}
+  initialProductName={displayProduct.title}
+  initialSellerName={displayProduct.seller.name}
+  apiUrl={process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}
+/>
+```
+
+2. **MaisonChatProps interface'ine ekle** (maison-chat.tsx, satır ~89-93):
+```tsx
+export interface MaisonChatProps {
+  products?: SmartCartProduct[]
+  initialProductId?: number
+  initialProductName?: string
+  initialSellerName?: string
+  apiUrl?: string
+}
+```
+
+3. **currentProduct state'ini güncelle** (maison-chat.tsx, satır ~156):
+```tsx
+// Mevcut:
+const [currentProduct, setCurrentProduct] = useState({ name: "Maison Collection", seller: "Maison Atelier" })
+// Değiştir:
+const [currentProduct, setCurrentProduct] = useState({ 
+  name: initialProductName || "Maison Collection", 
+  seller: initialSellerName || "Maison Atelier" 
+})
+```
+
+4. **handleNewChat'te de düzelt** (maison-chat.tsx, satır ~477):
+```tsx
+// Mevcut:
+setCurrentProduct({ name: "Maison Collection", seller: "Maison Atelier" })
+// Değiştir:
+setCurrentProduct({ name: initialProductName || "Maison Collection", seller: initialSellerName || "Maison Atelier" })
+```
+
+---
+
+### PROBLEM 4: Sol Sidebar'daki Ürün Daireleri — Geçmiş Sohbet Yoksa Boş Olmalı, Varsa Gerçek Resim Göstermeli
+
+**Mevcut durum**: `maison-chat.tsx` satır 36-43'te sidebar ürünleri sabit bir `PRODUCTS` array'inden geliyor. Bu ürünlerin resimleri `/products/shirt-1.jpg` gibi local path'ler ve yüklenmiyorlar (ekran görüntüsünde kırık resim ikonları + metin etiketleri görünüyor).
+
+**Yapılacak**:
+
+1. **Başlangıçta sidebar boş olsun**: Henüz hiçbir ürünle sohbet geçmişi yoksa sidebar'da ürün daireleri görünmesin. `PRODUCTS` sabit array'ini kaldır veya boş bir array ile başlat.
+
+2. **Sohbet geçmişi oluştuğunda ürün ekle**: Bir ürünle ilk mesaj gönderildiğinde (handleSend çalıştığında), o ürünü sidebar'daki products listesine ekle. Bunun için:
+   - MaisonChat'e gelen `initialProductId` ile birlikte ürünün `imageUrl`, `name`, `seller.name` bilgilerini de kullan
+   - O ürünü sidebar product listesine ekle
+   - Resim olarak ürünün marketplace'deki gerçek ana görseli (CDN URL) kullanılsın, local placeholder DEĞİL
+
+3. **Bir sonraki ürüne geçildiğinde**: Kullanıcı farklı bir ürüne tıklayıp o ürünün sayfasında da chat kullanırsa, o ürün de sidebar'a eklenir. Böylece sidebar yalnızca sohbet geçmişi olan ürünleri gösterir.
+
+4. **Pratik uygulama**: `PRODUCTS` sabit array'ini dinamik bir state'e çevir:
+```tsx
+// Mevcut (maison-chat.tsx, satır 36-43):
+const PRODUCTS = [
+  { id: "maison-silk-blouse-001", name: "Silk Blouse", image: "/products/shirt-1.jpg", seller: "Maison Atelier" },
+  ...
+]
+// Değiştir:
+// Component içinde state olarak tut, başlangıçta boş:
+const [sidebarProducts, setSidebarProducts] = useState<Array<{id: string, name: string, image: string, seller: string}>>([])
+```
+
+5. İlk mesaj gönderildiğinde veya component mount olduğunda, mevcut ürünü sidebar'a ekle:
+```tsx
+// handleSend fonksiyonunda, ilk mesaj gönderildiğinde:
+if (sidebarProducts.length === 0 || !sidebarProducts.find(p => p.id === `product-${initialProductId}`)) {
+  setSidebarProducts(prev => [...prev, {
+    id: `product-${initialProductId}`,
+    name: initialProductName || "Product",
+    image: /* ürünün CDN imageUrl'i */,
+    seller: initialSellerName || "Seller"
+  }])
+}
+```
+
+6. `ProductSidebar`'a, `generateInitialChatHistories` fonksiyonuna ve `filteredProducts`'a verilen `PRODUCTS` referanslarını bu yeni `sidebarProducts` state'iyle değiştir.
+
+---
+
+## ÖNEMLİ NOTLAR
+
+1. **Resim sayısını azaltma**: Sadece grid'i 4'lüden 3'lüye çevir. Tüm resimler gösterilecek ama 3'erli satırlarda.
+2. **Chat konumu değişmesin**: Chat hala ürün detay sayfasının sağ sütununda kalacak.
+3. **Backend değişikliği yok**: Sadece frontend düzeltmesi. Mevcut API'ler aynen kullanılacak.
+4. **Tüm ürün sayfaları için geçerli**: Grid ve layout değişiklikleri `ProductDetailPage` component'ında yapılacağı için tüm ürünlerde aynı şekilde çalışacak.
+
+---
+
+## TEST
+1. Bir ürüne tıkla → Küçük resimler 3'erli sırada mı? Taşma var mı?
+2. 5 resimli bir ürün → 3+2 düzeninde mi görünüyor?
+3. 6 resimli bir ürün → 3+3 düzeninde mi?
+4. Chat alanı yeterince geniş ve uzun mu? Sidebar + mesajlar + input rahat okunuyor mu?
+5. Header'da ürünün gerçek adı ve satıcısı mı yazıyor? "Maison Collection" DEĞİL?
+6. Sol sidebar başlangıçta boş mu? (geçmiş sohbet yoksa)
+7. İlk mesaj gönderildikten sonra sidebar'da ürün dairesi beliriyor mu?
+8. Ürün dairesindeki resim gerçek ürün görseli mi?

@@ -1,0 +1,80 @@
+# SmartCart — AI Chat Arayüzünü Değiştirme ve Backend Entegrasyonu
+
+## Proje Bilgisi
+- **Ana proje dizini**: `/Users/arif/Desktop/btk/e-commerce-prototype-2`
+- **Ana dosya**: `app/page.tsx` (tek dosyalı Next.js uygulaması, tüm componentler burada)
+- **Yeni chat arayüzü kaynak dizini**: `/Users/arif/Desktop/btk/continue-conversation (2)` — bu proje tam çalışan, baştan yazılmış bir AI chat arayüzü. Tüm component dosyalarını oku ve anla.
+
+---
+
+## GENEL AMAÇ
+
+Ana projedeki mevcut AI sohbet panelini (page.tsx, ProductDetailPage fonksiyonu içindeki "AI Panel" bölümü, satır ~788-871) tamamen kaldır ve yerine `/Users/arif/Desktop/btk/continue-conversation (2)` projesindeki yeni chat arayüzünü koy.
+
+**ÖNEMLİ**: Chat arayüzü harici ayrı bir sayfada OLMAYACAK. Şu anki konumunda kalacak — ürün detay sayfasının sağ sütununda, ürün bilgilerinin altında. Sadece mevcut basit chat panelinin yerini yeni gelişmiş chat arayüzü alacak.
+
+---
+
+## İŞ AKIŞI — ÖNCELİK SIRASI
+
+### ADIM 1: Frontend Entegrasyonu (Önce bunu yap)
+
+1. `/Users/arif/Desktop/btk/continue-conversation (2)/components/` altındaki tüm component dosyalarını oku ve anla. İçeriklerini incelemeden başlama.
+
+2. Bu componentleri ana projeye eksiksiz entegre et. Dosyalar:
+   - `maison-chat.tsx` — Ana orkestratör, tüm state yönetimi, chat history, ürünler arası sohbet geçişi
+   - `product-sidebar.tsx` — Sol sidebar, yuvarlak ürün daireleri (Apple Dock efekti), arama, sürükle-bırak
+   - `chat-header.tsx` — Üst header, ürün adı, satıcı, sidebar toggle, yeni sohbet butonu
+   - `chat-input.tsx` — Alt input bar, textarea, öneri chip'leri, score butonu, sürükle-bırak zone
+   - `chat-message.tsx` — Mesaj balonları, AI/user mesajları, streaming cursor, hover aksiyonlar (kopyala, yeniden oluştur, geri bildirim, düzenle)
+   - `maison-typing-indicator.tsx` — AI yazıyor animasyonu
+   - `suggestion-chips.tsx` — Öneri butonları
+   - `pending-products.tsx` — Bekleyen ürünler (sürükle-bırak ile)
+   - `reality-score-card.tsx` — Reality Score kartı
+   - `comparison-dashboard.tsx` — Karşılaştırma paneli
+
+3. Mevcut "AI Panel" bölümünü (satır ~788-871 arası, `{/* AI Panel */}` yorumundan başlayan div) kaldır ve yerine yeni chat arayüzünü yerleştir.
+
+4. Chat arayüzü ürün detay sayfasının içinde kalacak. Aynı sağ sütunda, ürün bilgilerinin altında olacak. Ayrı bir sayfa veya tam ekran geçişi YOK.
+
+5. Sol sidebar'daki ürün daireleri o anda backend'den yüklenen ürün listesinden gelecek. Bir daireye tıklanınca o ürünün sohbetine geçilecek. Her ürünün ayrı chat history'si olacak.
+
+6. Gerekli dependency'leri kur (framer-motion vb.). `next/image` kullanımlarını ana projenin yapısına uyarla (CDN görselleri var, normal `<img>` veya remote pattern ekle).
+
+### ADIM 2: Backend Yazımı (Frontend tamamlandıktan sonra)
+
+Frontend entegrasyonu tamamlandıktan sonra, yeni chat arayüzüne uygun backend endpoint'lerini yaz veya mevcut olanları uyarla:
+
+1. **Chat mesajları**: Yeni chat UI'dan gönderilen mesajları mevcut `/api/chat` endpoint'ine bağla. Şu an page.tsx içinde çalışan bir `sendMessage` fonksiyonu var (satır ~620-637) — aynı backend API çağrısını yeni arayüzde kullan.
+
+2. **Sidebar ürün listesi**: Sol sidebar'daki ürün dairelerini backend'deki `/api/products` endpoint'inden besle.
+
+3. **Yanıt verileri**: Backend'den dönen `reply`, `matchScore`, `warnings`, `followUpQuestions`, `dataSources` alanlarını yeni chat UI'ın mesaj formatına uygun şekilde göster.
+
+4. Eğer yeni chat arayüzünün ihtiyaç duyduğu ama mevcut backend'de olmayan bir endpoint varsa, onu da ekle.
+
+---
+
+## DİL
+
+Tüm UI metinlerini İNGİLİZCE bırak. continue-conversation projesindeki orijinal İngilizce metinleri aynen koru (Maison Assistant, New Chat, Compare reality scores, Score, Analyzing, Search vb.). Türkçeye çevirme.
+
+---
+
+## ÖNEMLİ KURALLAR
+
+1. **Konum değişmesin**: Chat arayüzü ürün detay sayfasının İÇİNDE kalacak. Harici bir yerde görünmeyecek.
+2. **Frontend eksiksiz olsun**: continue-conversation projesindeki tüm fonksiyonellik korunacak — mesaj düzenleme, kopyalama, yeniden oluşturma, geri bildirim, streaming efekti, typing indicator, suggestion chips, sürükle-bırak, ürün karşılaştırma, reality score kartı.
+3. **Önce frontend, sonra backend**: Frontend tamamen çalışır duruma geldikten sonra backend entegrasyonuna geç.
+4. **Mevcut sistemi bozma**: Ürün detay sayfasının geri kalanı (görsel galerisi, fiyat, sepete ekle, yorumlar) aynen kalacak. Sadece AI chat bölümü değişiyor.
+
+---
+
+## TEST
+1. Ürün detay sayfasını aç → yeni chat arayüzü ürün bilgilerinin altında görünüyor mu?
+2. Mesaj yaz ve gönder → AI yanıtı geliyor mu? Streaming efekti çalışıyor mu?
+3. Sol sidebar'da ürün daireleri var mı? Tıklayınca sohbet geçişi oluyor mu?
+4. Suggestion chips tıklanabilir mi?
+5. Mesaj kopyalama, düzenleme, yeniden oluşturma çalışıyor mu?
+6. Reality Score ve karşılaştırma paneli düzgün görünüyor mu?
+7. Ürün detay sayfasının geri kalanı (görseller, fiyat, yorumlar) bozulmadan duruyor mu?

@@ -1,0 +1,359 @@
+==============================================================
+SMARTCART AI — OPENCODE PROMPTLARI
+Faz 2: Core Services
+==============================================================
+ÖNEMLİ: Sırayla ver. Her prompt sonrası "mvn clean compile".
+Backend dizini: /Users/arif/Desktop/btk/smartcart-backend/
+==============================================================
+
+==============================
+PROMPT 7 — Exception sınıfları
+==============================
+
+2 dosya oluştur:
+
+1) src/main/java/com/smartcart/exception/ProductNotFoundException.java
+- extends RuntimeException
+- Constructor: ProductNotFoundException(Long id) → super("Ürün bulunamadı: " + id)
+
+2) src/main/java/com/smartcart/exception/GlobalExceptionHandler.java
+- @RestControllerAdvice
+- @ExceptionHandler(ProductNotFoundException.class) → 404, Map.of("error", ex.getMessage())
+- @ExceptionHandler(MethodArgumentNotValidException.class) → 400, validation hata mesajları
+- @ExceptionHandler(Exception.class) → 500, Map.of("error", "Bir hata oluştu. Lütfen tekrar deneyin.")
+
+"mvn clean compile" çalıştır.
+
+==============================
+PROMPT 8 — ContextBuilderService
+==============================
+
+src/main/java/com/smartcart/service/ContextBuilderService.java oluştur.
+
+@Service sınıfı. Constructor injection ile:
+- ProductRepository productRepository
+
+public ProductContext build(Long productId, String message):
+1. Product product = productRepository.findById(productId)
+     .orElseThrow(() -> new ProductNotFoundException(productId));
+2. List<ProductSpec> specs = product.getSpecs() != null ? product.getSpecs() : List.of();
+3. List<Review> reviews = product.getReviews() != null ? product.getReviews() : List.of();
+   - reviews en fazla 5 tane olsun (subList ile kes)
+4. List<Product> similar = productRepository.findByCategoryAndIdNot(product.getCategory(), productId);
+   - en fazla 3 tane olsun
+5. return new ProductContext(product, specs, reviews, similar);
+
+Kurallar:
+- null-safe: specs veya reviews null gelebilir, boş liste döndür
+- ProductNotFoundException import: com.smartcart.exception.ProductNotFoundException
+- ProductContext import: com.smartcart.model.dto.ProductContext
+
+"mvn clean compile" çalıştır.
+
+==============================
+PROMPT 9 — DataAnalysisService ⭐ (EN KRİTİK)
+==============================
+
+src/main/java/com/smartcart/service/DataAnalysisService.java oluştur.
+
+@Service sınıfı. LLM/Gemini KULLANMAZ. Tamamen deterministik.
+
+public DataAnalysisResult analyze(ProductContext context, String userMessage):
+
+7 skor hesapla (hepsi 0-100 arası int):
+
+1. specScore:
+   - userMessage'ı küçük harfe çevir
+   - Anahtar kelime listesi: ["boy", "beden", "boyut", "ölçü", "ağırlık", "numara", "cm", "kg", "inç", "uyumlu", "uyum", "sığ", "büyük", "küçük", "dar", "geniş", "uzun", "kısa"]
+   - Her anahtar kelime için specs'te eşleşen specKey veya specValue var mı kontrol et
+   - baseScore = 50
+   - Her eşleşme +10 (max 100)
+   - specs boşsa → 30
+
+2. reviewScore:
+   - reviews boşsa → 40
+   - avgRating = reviews ortalaması
+   - baseScore = (avgRating / 5.0) * 100
+   - Negatif helpfulTags varsa ("beden_buyuk", "beden_dar", "beden_kucuk", "renk_farkli", "kalite_kotu", "dikis_hatali") → her negatif tag için -5
+   - Clamp 0-100
+
+3. visualScore:
+   - product.imageUrl != null && !isEmpty → 70
+   - Aksi halde → 30
+
+4. variantScore:
+   - similarProducts boşsa → 50
+   - Benzer ürünlerin ortalama rating'i ile bu ürünün rating'ini kıyasla
+   - Bu ürün ortalamadan yüksekse → 75
+   - Eşitse → 65
+   - Düşükse → 55
+
+5. similarityScore:
+   - similarProducts.size() >= 2 → 75
+   - similarProducts.size() == 1 → 60
+   - 0 → 45
+
+6. userFitScore:
+   - userMessage'tan sayıları regex ile çıkar: Pattern.compile("\\d+")
+   - specs'teki specValue'lardan da sayıları çıkar
+   - Eşleşen sayı var mı? (±%20 tolerans)
+   - Eşleşme varsa → 80
+   - Yoksa ama specs zenginse → 60
+   - specs boşsa → 40
+
+7. trustScore:
+   - reviews.size() >= 4 → 85
+   - reviews.size() >= 2 → 70
+   - reviews.size() == 1 → 50
+   - 0 → 30
+   - avgRating >= 4.5 → +5
+   - avgRating < 3.0 → -10
+   - Clamp 0-100
+
+public int calculateMatchScore(DataAnalysisResult result):
+   = Math.round(result.specScore * 0.25f + result.reviewScore * 0.20f
+     + result.visualScore * 0.15f + result.similarityScore * 0.15f
+     + result.userFitScore * 0.10f + result.variantScore * 0.10f
+     + result.trustScore * 0.05f)
+   - Clamp 0-100
+
+warnings[] oluştur:
+- Negatif helpfulTags varsa → "Bazı kullanıcılar [tag açıklaması] belirtiyor"
+- reviews.size() < 3 → "Yorum sayısı az, değerlendirme sınırlı olabilir"
+- avgRating < 3.5 → "Ürün puanı ortalamanın altında"
+
+insights[] oluştur:
+- "Yorumların %X'i olumlu (4-5 yıldız)"
+- reviews.size() >= 5 → "Yeterli yorum verisi mevcut"
+- avgRating >= 4.5 → "Bu kategoride yüksek puanlı ürün"
+
+usedSources[] oluştur:
+- "Ürün teknik özellikleri" (specs varsa)
+- "{reviews.size()} kullanıcı yorumu"
+- "Görsel analiz" (imageUrl varsa)
+- "{similarProducts.size()} benzer ürün karşılaştırması" (similar varsa)
+- "Ürün puanlama verisi"
+
+Kurallar:
+- Tüm skorlar 0-100, null dönemez
+- warnings, insights, usedSources asla null olmaz (en kötü boş liste)
+- Tüm string karşılaştırmaları case-insensitive
+- NumberFormatException için try-catch
+
+"mvn clean compile" çalıştır.
+
+==============================
+PROMPT 10 — PromptBuilderService
+==============================
+
+src/main/java/com/smartcart/service/PromptBuilderService.java oluştur.
+
+@Service sınıfı.
+
+public GeminiRequest build(ProductContext context, DataAnalysisResult analysis, String userMessage, List<String> history):
+
+1. StringBuilder ile sistem promptu oluştur:
+
+"""
+Sen bir e-ticaret akıllı ürün asistanısın. Görevin kullanıcının sorusunu verilen ürün verisi üzerinden dürüstçe ve net yanıtlamak.
+
+KRİTİK KURAL: matchScore zaten backend tarafından hesaplandı: {analysis sonucu}. Sen matchScore ÜRETME.
+Senin görevin: reply, visualInsights, followUpQuestions ve varsa ek warnings üretmek.
+
+=== ÜRÜN BİLGİLERİ ===
+Ad: {product.name} | Kategori: {product.category} | Marka: {product.brand}
+Fiyat: {product.price} TL
+Açıklama: {product.description}
+
+=== TEKNİK ÖZELLİKLER ===
+{her spec için: specKey: specValue}
+
+=== KULLANICI YORUMLARI ===
+{her review için: username (rating/5): comment}
+
+=== BACKEND ANALİZ SONUÇLARI ===
+Uyum Skoru: {matchScore}
+Uyarılar: {analysis.warnings}
+Kullanılan Kaynaklar: {analysis.usedSources}
+
+=== KATEGORİ REHBERİ ===
+{kategoriye göre özel talimat — aşağıda}
+
+=== KONUŞMA GEÇMİŞİ ===
+{history varsa listele}
+
+=== KULLANICI SORUSU ===
+{userMessage}
+
+=== YANITINI SADECE JSON OLARAK VER ===
+{
+  "reply": "Türkçe, net, max 3 cümle, kullanıcıya doğrudan hitap",
+  "visualInsights": "Görsel analiz özeti, 1-2 cümle. Stüdyo çekim yanıltıcılığı varsa belirt",
+  "warnings": ["Ek uyarı varsa yaz, yoksa boş bırak"],
+  "followUpQuestions": ["Takip sorusu 1", "Takip sorusu 2"]
+}
+"""
+
+2. Kategori rehberleri (switch-case):
+- GIYIM: "Boy-kilo-beden uyumu analiz et. Stüdyo ışığının renk yanıltmasını belirt. Beden tablosunu referans al."
+- MOBILYA: "Oda boyutu uyumunu analiz et. Geniş açı lens etkisiyle ürünün gerçekte daha küçük olabileceğini belirt."
+- ELEKTRONIK: "Cihaz uyumluluğunu ve teknik özellikleri karşılaştır. Günlük kullanım senaryosunu değerlendir."
+- OUTDOOR: "Mevsim ve hava koşulu uyumunu analiz et. Su geçirmezlik, ağırlık ve dayanıklılık değerlendir."
+
+3. Görsel encode (imageUrl → Base64):
+   try {
+     URL url = new URL(product.imageUrl);
+     byte[] bytes = url.openStream().readAllBytes();
+     String base64 = Base64.getEncoder().encodeToString(bytes);
+     String mimeType = "image/jpeg";
+   } catch (Exception e) {
+     // Görsel yoksa sadece metin analizi
+     base64 = null; mimeType = null;
+   }
+
+4. return new GeminiRequest(prompt.toString(), base64, mimeType);
+
+"mvn clean compile" çalıştır.
+
+==============================
+PROMPT 11 — GeminiService
+==============================
+
+src/main/java/com/smartcart/service/GeminiService.java oluştur.
+
+@Service sınıfı.
+
+@Value("${gemini.api.key}") private String apiKey;
+@Value("${gemini.api.url}") private String apiUrl;
+
+RestTemplate: connectTimeout=10000ms, readTimeout=30000ms (constructor'da SimpleClientHttpRequestFactory ile ayarla)
+ObjectMapper mapper = new ObjectMapper();
+
+public Map<String, Object> call(GeminiRequest request):
+
+1. Request body oluştur:
+   List<Map<String,Object>> parts = new ArrayList<>();
+   parts.add(Map.of("text", request.getTextPrompt()));
+
+   if (request.getImageBase64() != null && !request.getImageBase64().isEmpty()) {
+     parts.add(Map.of("inline_data", Map.of(
+       "mime_type", request.getImageMimeType(),
+       "data", request.getImageBase64()
+     )));
+   }
+
+   Map<String,Object> body = Map.of(
+     "contents", List.of(Map.of("parts", parts)),
+     "generationConfig", Map.of("temperature", 0.3, "maxOutputTokens", 1024)
+   );
+
+2. POST isteği at:
+   HttpHeaders headers = new HttpHeaders();
+   headers.setContentType(MediaType.APPLICATION_JSON);
+   HttpEntity<Map<String,Object>> entity = new HttpEntity<>(body, headers);
+   ResponseEntity<Map> response = restTemplate.postForEntity(
+     apiUrl + "?key=" + apiKey, entity, Map.class
+   );
+
+3. Response'tan text çıkar:
+   private String extractText(Map body):
+   candidates[0].content.parts[0].text
+
+4. JSON parse:
+   private Map<String, Object> parseJson(String raw):
+   - ```json fence temizle: replaceAll("(?s)```json\\s*","").replaceAll("```","").trim()
+   - { ve } arasını bul
+   - mapper.readValue ile Map'e parse et
+   - Parse hatası → fallback Map döndür
+
+5. Fallback Map:
+   Map.of("reply", "Yanıt şu an üretilemiyor. Lütfen tekrar deneyin.",
+          "visualInsights", "",
+          "warnings", List.of(),
+          "followUpQuestions", List.of("Başka bir soru sormak ister misiniz?"))
+
+Hata yönetimi:
+- ResourceAccessException (timeout) → log + fallback
+- HttpClientErrorException → log + fallback
+- Exception → log + fallback
+- ASLA exception fırlatma, her zaman fallback döndür
+
+"mvn clean compile" çalıştır.
+
+==============================
+PROMPT 12 — AgentOrchestrator
+==============================
+
+src/main/java/com/smartcart/service/AgentOrchestrator.java oluştur.
+
+@Service sınıfı. Constructor injection:
+- ContextBuilderService contextBuilder
+- DataAnalysisService dataAnalysis
+- PromptBuilderService promptBuilder
+- GeminiService geminiService
+
+public ChatResponse process(ChatRequest request):
+
+Pipeline (bu sıra DEĞİŞMEZ):
+
+1. ProductContext context = contextBuilder.build(request.getProductId(), request.getMessage());
+
+2. DataAnalysisResult analysisResult = dataAnalysis.analyze(context, request.getMessage());
+
+3. int matchScore = dataAnalysis.calculateMatchScore(analysisResult);
+
+4. GeminiRequest geminiRequest = promptBuilder.build(
+     context, analysisResult, request.getMessage(),
+     request.getHistory() != null ? request.getHistory() : List.of()
+   );
+
+5. Map<String, Object> geminiResponse = geminiService.call(geminiRequest);
+
+6. Response merge + validation:
+   ChatResponse response = new ChatResponse();
+
+   response.setReply(getStringOrDefault(geminiResponse, "reply",
+     "Yanıt üretilirken bir sorun oluştu."));
+
+   response.setMatchScore(matchScore); // BACKEND HESAPLADI — Gemini'den DEĞİL
+
+   response.setVisualInsights(getStringOrDefault(geminiResponse, "visualInsights", ""));
+
+   // warnings merge: backend + gemini
+   List<String> allWarnings = new ArrayList<>(analysisResult.getWarnings());
+   Object geminiWarnings = geminiResponse.get("warnings");
+   if (geminiWarnings instanceof List) {
+     for (Object w : (List<?>) geminiWarnings) {
+       if (w instanceof String) allWarnings.add((String) w);
+     }
+   }
+   response.setWarnings(allWarnings);
+
+   // followUpQuestions
+   List<String> followUps = new ArrayList<>();
+   Object geminiFollowUps = geminiResponse.get("followUpQuestions");
+   if (geminiFollowUps instanceof List) {
+     for (Object q : (List<?>) geminiFollowUps) {
+       if (q instanceof String) followUps.add((String) q);
+     }
+   }
+   if (followUps.isEmpty()) {
+     followUps.add("Bu ürün hakkında başka ne öğrenmek istersiniz?");
+   }
+   response.setFollowUpQuestions(followUps);
+
+   response.setDataSources(analysisResult.getUsedSources());
+
+   return response;
+
+Helper metod:
+private String getStringOrDefault(Map<String,Object> map, String key, String defaultValue):
+  Object val = map.get(key);
+  return val instanceof String ? (String) val : defaultValue;
+
+Kurallar:
+- Gemini hata verse bile matchScore, dataSources, warnings korunur (backend hesapladı)
+- Pipeline KIRILMAZ — her adımda fallback
+- null kontrolü her yerde
+
+"mvn clean compile" çalıştır.

@@ -1,0 +1,544 @@
+# SmartCart — Ürün Detay + AI Chat Layout Düzeltmeleri
+
+## Proje Bilgisi
+- **Ana proje dizini**: `/Users/arif/Desktop/btk/e-commerce-prototype-2`
+- **Ana dosya**: `app/page.tsx`
+- **Chat component**: `components/maison-chat.tsx`
+- **Sidebar component**: `components/product-sidebar.tsx`
+- **Sorunlu ekran görüntüleri**: `/Users/arif/Desktop/btk/problemlerimin_guncel_ekran_resimleri/` — her problem için ayrı fotoğraf
+
+---
+
+## PROBLEM 1: Küçük Ürün Resimleri Ana Resimden Taşıyor — Aynı Genişliğe Sığmalı
+
+**Mevcut durum** (ekran görüntülerini incele):
+Ana resim `aspect-[3/4]` ve `max-h-[60vh]` ile sınırlandığı için gerçek genişliği grid sütununun tamamını KAPLAMAZ — dikey olarak sınırlı olduğu için yatay olarak da daraltılmış olur. Ama küçük resimler `grid-cols-3` ile grid'in tam genişliğini kaplıyor. Sonuç: küçük resimlerin toplam genişliği ana resimden çok daha geniş, sağa taşıyor.
+
+**Amaç**: 3 küçük resim yan yana = ana resmin gerçek render genişliği. Ana resmin boyutunu DEĞİŞTİRME. Sadece küçük resimlerin container'ını ana resimle aynı genişliğe sınırla.
+
+**Yapılacak** — Mevcut grid yapısını kaldır, yerine şu yapıyı koy (`page.tsx`, satır ~652-689):
+
+Mevcut yapı:
+```tsx
+<div className="grid grid-cols-3 gap-4">
+  <div className="col-span-3 aspect-[3/4] max-h-[60vh] bg-secondary overflow-hidden relative group rounded-[2rem]">
+    {/* ana resim + oklar + dot indicator + indirim badge + favori */}
+  </div>
+  {displayImages.map((url, i) => (
+    <div key={i} className="aspect-square bg-secondary overflow-hidden cursor-pointer transition-all duration-300 rounded-2xl ...">
+      <img src={...} />
+    </div>
+  ))}
+</div>
+```
+
+Yeni yapı:
+```tsx
+{/* Ana resim — kendi genişliğini belirler */}
+<div className="aspect-[3/4] max-h-[60vh] bg-secondary overflow-hidden relative group rounded-[2rem] w-fit mx-auto">
+  {/* ana resim + oklar + dot indicator + indirim badge + favori — AYNEN KORU */}
+</div>
+
+{/* Küçük resimler — ana resimle AYNI genişlikte, 3'erli grid */}
+<div className="grid grid-cols-3 gap-2 mt-3" style={{ maxWidth: 'calc(60vh * 3/4)' }}>
+  {displayImages.map((url, i) => (
+    <div key={i} className="aspect-square bg-secondary overflow-hidden cursor-pointer transition-all duration-300 rounded-xl ..." onClick={() => setSelectedImage(i)}>
+      <img src={`${url.split('?')[0]}?w=150`} alt="" className="w-full h-full object-cover" />
+    </div>
+  ))}
+</div>
+```
+
+**Açıklama**: 
+- Ana resim `max-h-[60vh]` ve `aspect-[3/4]` olduğu için gerçek genişliği = `60vh * 3/4 = 45vh`. 
+- Küçük resimlerin container'ına `maxWidth: 'calc(60vh * 3/4)'` vererek aynı genişlikle sınırlıyoruz.
+- `w-fit` ve `mx-auto` ana resmi ortalıyor.
+- Küçük resimlere `gap-2` (eskiden gap-4), `rounded-xl` (eskiden rounded-2xl) ile daha kompakt görünüm.
+- Bu sayede 6 resim varsa 3+3, 5 resim varsa 3+2, 7 resim varsa 3+3+1 düzeninde sığar.
+
+**Alternatif yaklaşım** (CSS calc yerine JavaScript):
+Eğer `calc(60vh * 3/4)` tam tutmazsa, ana resmin gerçek genişliğini `useRef` + `useEffect` ile ölç ve küçük resimlerin container'ına o genişliği uygula. Ama CSS calc genellikle yeterlidir.
+
+**ÖNEMLİ**: Ana resmin boyutunu, max-height'ını veya aspect-ratio'sunu değiştirme. Sadece küçük resimleri küçült ve ana resimle hizala.
+
+---
+
+## PROBLEM 2: Ürünün Ana Resmi Üstten Kesiliyor (Scroll Sorunu)
+
+**Mevcut durum** (ekran görüntüsüne bak: `Ekran Resmi 2026-05-19 20.19.19.png`):
+Ürün detay sayfasında aşağı kaydırıp chat'in tamamına bakınca, yukarı geri döndüğünde ana resmin üst kısmı kesiliyor/görünmüyor.
+
+**Neden oluyor**: Sol sütundaki `sticky top-32` (satır ~651). Ana resim sticky yapılmış, sayfanın scroll konumuna göre üstte yapışık kalıyor ama top değeri büyük olduğu için veya chat yüksekliği nedeniyle resim kesilmiş görünüyor.
+
+**Yapılacak** (`page.tsx`, satır ~651):
+```tsx
+// Mevcut:
+<div className="sticky top-32">
+// Değiştir:
+<div className="sticky top-24">
+```
+
+Veya sticky'yi tamamen kaldırabilirsin. Deneyerek en iyi görüneni belirle. Amaç: kullanıcı sayfayı yukarı-aşağı kaydırdığında ana resim asla kesilmemeli, tamamı her zaman erişilebilir olmalı.
+
+---
+
+## PROBLEM 3: Layout Yeniden Düzenle — Resimler Sola, Chat Geniş, Boşluklar Azalt
+
+**Mevcut durum** (ekran görüntüsüne bak):
+Sol sütun (resimler) ve sağ sütun (ürün bilgi + chat) arasında çok fazla boşluk var. Ekrandaki alanlar verimli kullanılmıyor. Chat alanı dar kalıyor. Resimler ve chat'in kendi iç sağ-sol boşlukları da gereğinden fazla.
+
+**Mevcut kod** (`page.tsx`, satır ~648):
+```tsx
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
+  {/* SOL — Görseller */}
+  <div className="lg:col-span-5">
+    ...
+  </div>
+  {/* SAĞ — Ürün Bilgi + AI */}
+  <div className="lg:col-span-7">
+    <div className="w-full">
+      ...
+    </div>
+  </div>
+</div>
+```
+
+**Yapılacak**:
+
+### 3A: İki Sütun Arası Boşluğu Azalt
+```tsx
+// Mevcut:
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
+// Değiştir:
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+```
+`lg:gap-20` çok büyük (5rem = 80px). Bunu `lg:gap-10` (2.5rem = 40px) yap.
+
+### 3B: Sol Sütunu Daralt, Sağ Sütunu Genişlet
+```tsx
+// Mevcut:
+<div className="lg:col-span-5">  {/* sol - resimler */}
+<div className="lg:col-span-7">  {/* sağ - ürün bilgi + chat */}
+// Değiştir:
+<div className="lg:col-span-4">  {/* sol - resimler (daralt) */}
+<div className="lg:col-span-8">  {/* sağ - ürün bilgi + chat (genişlet) */}
+```
+
+### 3C: Sayfanın Dış Padding'ini Kontrol Et
+Sayfanın etrafındaki padding'i kontrol et (muhtemelen `px-6 lg:px-12` veya benzeri bir class var). Çok büyükse küçült:
+```tsx
+// Eğer px-12 veya daha büyükse:
+// Değiştir:
+px-6 lg:px-8
+```
+
+### 3D: Chat İç Padding'ini Ayarla
+`maison-chat.tsx` satır ~516'da mesaj alanı `px-6 md:px-10` padding kullanıyor. Chat zaten dar bir alanda, bu padding'i küçült:
+```tsx
+// Mevcut:
+<div className="flex-1 overflow-y-auto px-6 md:px-10 py-8 space-y-5">
+// Değiştir:
+<div className="flex-1 overflow-y-auto px-4 md:px-6 py-6 space-y-4">
+```
+
+### 3E: Chat Container mt-6 → mt-3
+```tsx
+// page.tsx, chat wrapper:
+// Mevcut:
+<div className="mt-6">
+  <MaisonChat .../>
+</div>
+// Değiştir:
+<div className="mt-3">
+  <MaisonChat .../>
+</div>
+```
+
+---
+
+## PROBLEM 3.5: Resim Geçiş Animasyonu Çok Sert — Premium ve Soft Olmalı
+
+**Mevcut durum**: Küçük resimlere tıklayınca veya ok butonlarına basınca ana resim sert bir şekilde değişiyor. `slideIn` animasyonu var ama çok hızlı ve keskin.
+
+**Mevcut kod** (`page.tsx`, satır ~657):
+```tsx
+style={{ animation: 'slideIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
+```
+
+**Yapılacak**: Daha yumuşak, premium bir geçiş efekti kullan. İki seçenek var:
+
+**Seçenek A — Crossfade (önerilen)**: Yeni resim gelirken eski resim fade-out, yeni resim fade-in olsun:
+```tsx
+// slideIn animasyonunu kaldır, yerine crossfade kullan:
+style={{ 
+  animation: 'fadeIn 0.8s ease-out forwards',
+  opacity: 0 
+}}
+```
+
+Ve `globals.css`'e (veya mevcut CSS'e) ekle:
+```css
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.02); }
+  to { opacity: 1; transform: scale(1); }
+}
+```
+
+Bu şekilde resim hafif zoom-out ile fade-in olur — premium ve soft hissettirir.
+
+**Seçenek B — Slide + Fade birlikte**: Hem kayma hem fade:
+```css
+@keyframes premiumSlideIn {
+  from { 
+    opacity: 0; 
+    transform: translateX(20px) scale(0.98); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0) scale(1); 
+  }
+}
+```
+
+Süreyi `0.6s`'den `0.9s` veya `1s`'ye çıkar ve `ease-out` bezier kullan:
+```tsx
+style={{ animation: 'premiumSlideIn 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards' }}
+```
+
+**ÖNEMLİ**: `key={selectedImage}` prop'u kalsın — bu React'e resim değiştiğinde component'ı yeniden mount etmesini söylüyor, animasyon bu sayede her seferinde tetikleniyor.
+
+---
+
+## PROBLEM 4: Reality Score Her Mesajda Çıkıyor — Sadece İstendiğinde Çıkmalı
+
+**Mevcut durum** (ekran görüntüsüne bak: `Ekran Resmi 2026-05-19 20.17.02.png`):
+Her mesaj gönderildiğinde, kullanıcı ne sormuş olursa olsun altta bir Reality Score kartı çıkıyor (74/100 gibi). Kullanıcı Reality Score istemese bile her zaman görünüyor. Ayrıca score kartının verdict'inde "Yanıt şu an üretilemiyor. Lütfen tekrar deneyin." yazıyor — bu da hatalı.
+
+**Neden oluyor**: `maison-chat.tsx` satır ~250-269'da, backend'den `data.matchScore` geldiğinde her zaman otomatik olarak bir Reality Score mesajı ekleniyor. Backend muhtemelen her response'da matchScore döndürüyor.
+
+**Yapılacak** (`maison-chat.tsx`, satır ~250-269):
+Reality Score'u her mesajda otomatik olarak gösterme. Sadece şu durumlarda göster:
+1. Kullanıcı açıkça "score", "reality score", "analiz", "skor", "puan" gibi bir şey sorduğunda
+2. Kullanıcı "SCORE" butonuna bastığında
+
+```tsx
+// Mevcut (maison-chat.tsx, satır ~250):
+if (data.matchScore) {
+  setMessages((prev) => [...prev, {
+    // Reality Score mesajı...
+  }])
+}
+
+// Değiştir — sadece kullanıcı score istediğinde göster:
+const scoreKeywords = ["score", "reality score", "skor", "puan", "analiz et", "analyze", "gerçeklik"]
+const userWantsScore = scoreKeywords.some(keyword => 
+  inputValue.toLowerCase().includes(keyword)
+)
+
+if (data.matchScore && userWantsScore) {
+  setMessages((prev) => [...prev, {
+    id: (Date.now() + 2).toString(),
+    content: "",
+    isAi: true,
+    timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+    isNew: true,
+    uiType: "reality_score",
+    uiData: {
+      type: "reality_score",
+      product: {
+        name: currentProduct.name,  // ← boş string yerine ürün adını koy
+        score: data.matchScore,
+        matchLabel: `${data.matchScore}% Match`,
+        signals: [],
+        verdict: data.reply || "",  // ← hata mesajı değil, gerçek yanıt
+      },
+    },
+  }])
+}
+```
+
+Ayrıca `name: ""` olan yeri `name: currentProduct.name` olarak düzelt ve `verdict`'in hata mesajı ("Yanıt şu an üretilemiyor") olmamasını sağla — `data.reply` boşsa veya hatalıysa verdict'i boş bırak.
+
+Ek olarak, inputValue `handleSend`'de `setInputValue("")` ile sıfırlanıyor (satır ~216), bu yüzden score keyword check'i yapılacağı noktada `inputValue` boş olacak. Bu sorunu çözmek için keyword check'i `setInputValue("")` çağrılmadan ÖNCE yap veya `inputValue`'yu bir local değişkende tut:
+
+```tsx
+const handleSend = async () => {
+  if (!inputValue.trim()) return
+  
+  const userInput = inputValue // ← kaydet
+  // ... setInputValue("") ...
+  // ... API call ...
+  // Sonra:
+  const userWantsScore = scoreKeywords.some(kw => userInput.toLowerCase().includes(kw))
+}
+```
+
+---
+
+## PROBLEM 5: Sidebar'da Kırık Resimler ve Console Error'lar
+
+**Mevcut durum** (ekran görüntüleri: `Ekran Resmi 2026-05-19 20.19.36.png`, `20.19.45.png`, `20.19.49.png`, `20.19.54.png`):
+Console'da 4 adet error var, hepsi `product-sidebar.tsx` satır 141'den geliyor:
+- `Image is missing required "src" property: {}`
+- `An empty string ("") was passed to the src attribute`
+
+**Neden oluyor**: 
+1. `product-sidebar.tsx` satır 141'de `<Image src={product.image} ...>` kullanılıyor
+2. `maison-chat.tsx` satır ~226'da sidebar'a ürün eklenirken `image: firstProduct?.imageUrl || ""` deniliyor — eğer `firstProduct` bulunamazsa veya `imageUrl` boşsa, image boş string oluyor
+3. Next.js `Image` component'ı boş string'i kabul etmiyor ve error veriyor
+
+**Yapılacak**:
+
+### Çözüm A: product-sidebar.tsx satır ~141'deki Image'ı normal `<img>`'e çevir (önerilen):
+```tsx
+// Mevcut (product-sidebar.tsx, satır ~141-148):
+<Image
+  src={product.image}
+  alt={product.name}
+  width={56}
+  height={56}
+  style={{ width: "100%", height: "100%", objectFit: "cover", pointerEvents: "none" }}
+  draggable={false}
+/>
+
+// Değiştir:
+{product.image ? (
+  <img
+    src={product.image}
+    alt={product.name}
+    style={{ width: "100%", height: "100%", objectFit: "cover", pointerEvents: "none" }}
+    draggable={false}
+  />
+) : (
+  <div style={{ 
+    width: "100%", height: "100%", 
+    display: "flex", alignItems: "center", justifyContent: "center",
+    background: "#EAE5DC", color: "#9A8F82", fontSize: 14, fontWeight: 600 
+  }}>
+    {product.name.charAt(0)}
+  </div>
+)}
+```
+
+Bu hem boş src hatasını çözer hem de resim yoksa ürün adının ilk harfini gösterir.
+
+### Çözüm B: maison-chat.tsx'de image'ın boş olmamasını sağla (satır ~219-229):
+```tsx
+// Mevcut:
+const firstProduct = products.find(p => p.id === initialProductId)
+setSidebarProducts(prev => [...prev, {
+  id: productId,
+  name: initialProductName || currentProduct.name,
+  image: firstProduct?.imageUrl || "",  // ← boş string hatası buradan
+  seller: initialSellerName || currentProduct.seller,
+}])
+
+// Değiştir — bir fallback image URL kullan:
+const firstProduct = products.find(p => p.id === initialProductId)
+const productImage = firstProduct?.imageUrl || ""
+// Sidebar'a sadece geçerli image varsa ekle, yoksa boş placeholder
+setSidebarProducts(prev => [...prev, {
+  id: productId,
+  name: initialProductName || currentProduct.name,
+  image: productImage,
+  seller: initialSellerName || currentProduct.seller,
+}])
+```
+
+### Çözüm C: `import Image from "next/image"` yerine normal img kullan (product-sidebar.tsx satır 3):
+```tsx
+// Mevcut:
+import Image from "next/image"
+// Bu satırı sil — Next.js Image CDN URL'lerle sorun çıkarıyor
+```
+
+**EN ÖNEMLİSİ**: `product-sidebar.tsx` dosyasının başındaki `import Image from "next/image"` satırını kaldır ve tüm `<Image>` kullanımlarını normal `<img>` tag'ına çevir. Bu, CDN URL'leri ile `next/image` arasındaki domain whitelist sorununu da çözer.
+
+---
+
+## PROBLEM 6: MaisonChat'e initialProductImage Prop'u Eksik
+
+**Mevcut durum**: `maison-chat.tsx` satır ~219-229'da sidebar'a ürün eklerken `firstProduct?.imageUrl` ile resim alınmaya çalışılıyor. Ama `products` prop'u `page.tsx`'te `products={[]}` olarak gönderiliyor (satır ~780), dolayısıyla `firstProduct` her zaman `undefined` oluyor ve image boş kalıyor.
+
+**Yapılacak** (`page.tsx`, satır ~779-784):
+MaisonChat'e ürünün ana görselini de prop olarak gönder:
+```tsx
+// Mevcut:
+<MaisonChat
+  products={[]}
+  initialProductId={product.id}
+  initialProductName={displayProduct.title}
+  initialSellerName={displayProduct.seller.name}
+  apiUrl={process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}
+/>
+
+// Değiştir:
+<MaisonChat
+  products={[]}
+  initialProductId={product.id}
+  initialProductName={displayProduct.title}
+  initialSellerName={displayProduct.seller.name}
+  initialProductImage={displayImages[0]}
+  apiUrl={process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}
+/>
+```
+
+Ve `maison-chat.tsx`'te:
+1. `MaisonChatProps` interface'ine `initialProductImage?: string` ekle (satır ~89-93)
+2. Function signature'a ekle: `{ products, initialProductId, initialProductName, initialSellerName, initialProductImage, apiUrl }` (satır ~95)
+3. Sidebar'a ürün eklerken bu prop'u kullan (satır ~226):
+```tsx
+image: initialProductImage || firstProduct?.imageUrl || "",
+```
+
+---
+
+## PROBLEM 7: Sohbet Geçmişi Kayboluyor — Ürünler Arası Geçişte Mesajlar Siliniyor
+
+**Mevcut durum**: Kullanıcı Ürün A'da sohbet ediyor, sonra ana sayfaya dönüp Ürün B'ye tıklıyor. Ürün B'de sohbet ettikten sonra tekrar Ürün A'ya dönüyor — ama Ürün A'daki eski sohbet mesajları kaybolmuş.
+
+**Neden oluyor**: `page.tsx` satır ~944-945'te ürün değiştiğinde olan akış:
+```tsx
+currentView === "home" ? (
+  <HomePage ... />
+) : (
+  selectedProduct && <ProductDetailPage product={selectedProduct} onBack={handleBackToHome} />
+)
+```
+
+Kullanıcı ana sayfaya dönüp (`handleBackToHome`) başka bir ürüne tıkladığında:
+1. `ProductDetailPage` component'ı **tamamen unmount** oluyor
+2. İçindeki `MaisonChat` component'ı da unmount oluyor
+3. `MaisonChat` içindeki tüm state (`chatHistories`, `generalMessages`, `sidebarProducts`) **React state olduğu için tamamen sıfırlanıyor**
+4. Yeni ürün tıklandığında `ProductDetailPage` ve `MaisonChat` **sıfırdan** mount oluyor — tüm eski sohbet kayıp
+
+**Çözüm — localStorage ile sohbet geçmişini kalıcı yap**:
+
+### 7A: chatHistories'i localStorage'a kaydet (`maison-chat.tsx`)
+
+State başlatırken localStorage'dan oku:
+```tsx
+// Mevcut (satır ~100):
+const [chatHistories, setChatHistories] = useState<Record<string, ChatHistory>>(() => generateInitialChatHistories())
+
+// Değiştir:
+const [chatHistories, setChatHistories] = useState<Record<string, ChatHistory>>(() => {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('smartcart-chat-histories')
+    if (saved) {
+      try { return JSON.parse(saved) } catch {}
+    }
+  }
+  return {}
+})
+```
+
+Her chatHistories değiştiğinde localStorage'a yaz — bir useEffect ekle:
+```tsx
+useEffect(() => {
+  if (typeof window !== 'undefined' && Object.keys(chatHistories).length > 0) {
+    localStorage.setItem('smartcart-chat-histories', JSON.stringify(chatHistories))
+  }
+}, [chatHistories])
+```
+
+### 7B: generalMessages'ı da localStorage'a kaydet
+
+```tsx
+// Mevcut (satır ~106):
+const [generalMessages, setGeneralMessages] = useState<Message[]>(INITIAL_MESSAGES)
+
+// Değiştir:
+const [generalMessages, setGeneralMessages] = useState<Message[]>(() => {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('smartcart-general-messages')
+    if (saved) {
+      try { return JSON.parse(saved) } catch {}
+    }
+  }
+  return INITIAL_MESSAGES
+})
+
+// Ve useEffect ekle:
+useEffect(() => {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('smartcart-general-messages', JSON.stringify(generalMessages))
+  }
+}, [generalMessages])
+```
+
+### 7C: sidebarProducts'ı da localStorage'a kaydet
+
+```tsx
+// sidebarProducts state'i de persist edilmeli:
+const [sidebarProducts, setSidebarProducts] = useState<...>(() => {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('smartcart-sidebar-products')
+    if (saved) {
+      try { return JSON.parse(saved) } catch {}
+    }
+  }
+  return []
+})
+
+useEffect(() => {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('smartcart-sidebar-products', JSON.stringify(sidebarProducts))
+  }
+}, [sidebarProducts])
+```
+
+### 7D: Ürün değiştiğinde aktif ürünü sidebar'da otomatik seç
+
+`MaisonChat` mount olduğunda, `initialProductId` ile gelen ürünü sidebar'da otomatik olarak aktif yap. Bir useEffect ekle:
+```tsx
+// MaisonChat component'ının başına ekle:
+useEffect(() => {
+  if (initialProductId) {
+    const productKey = `product-${initialProductId}`
+    setActiveProductId(productKey)
+    setCurrentProduct({
+      name: initialProductName || "Maison Collection",
+      seller: initialSellerName || "Maison Atelier"
+    })
+  }
+}, [initialProductId])
+```
+
+Bu sayede kullanıcı Ürün A'dan Ürün B'ye geçip geri döndüğünde:
+- `MaisonChat` mount olur → localStorage'dan tüm eski sohbetleri yükler
+- `initialProductId` ile doğru ürünün sohbetini aktif eder
+- Sidebar'da tüm eski sohbet edilen ürünler görünür
+
+**ÖNEMLİ**: `generateInitialChatHistories()` fonksiyonunu boş `{}` döndürecek şekilde ayarla veya tamamen kaldır — başlangıçta localStorage'dan yüklenecek.
+
+---
+
+## ÖZET — TÜM DEĞİŞİKLİKLER
+
+| # | Dosya | Satır | Sorun | Çözüm |
+|---|-------|-------|-------|-------|
+| 1 | `page.tsx` | ~652 | Küçük resimler ana resimden taşıyor | Grid kaldır, `maxWidth: calc(60vh*3/4)` ile sınırla |
+| 2 | `page.tsx` | ~651 | Ana resim üstten kesiliyor | `sticky top-32` → `sticky top-24` |
+| 3 | `page.tsx` + `maison-chat.tsx` | ~648, ~516 | Layout verimsiz, chat dar | `gap-20`→`gap-10`, `col-span-5/7`→`4/8`, chat padding azalt |
+| 3.5 | `page.tsx` + CSS | ~657 | Resim geçişi çok sert | `slideIn` → `fadeIn` crossfade (0.8s, ease-out, scale) |
+| 4 | `maison-chat.tsx` | ~250-269 | Reality Score her zaman çıkıyor | Sadece score keyword'ü varsa göster |
+| 5 | `product-sidebar.tsx` | ~141 | `<Image>` boş src hatası | `<Image>` → `<img>` + null check |
+| 6 | `page.tsx` + `maison-chat.tsx` | ~779 + ~89 | Sidebar resim boş | `initialProductImage` prop ekle |
+| 7 | `maison-chat.tsx` | ~100-106 | Sohbet geçmişi kayboluyor | `localStorage` ile chatHistories, messages, sidebarProducts persist et |
+
+---
+
+## TEST
+1. Ürün detay sayfasını aç → Küçük resimler 3'erli, ana resimle aynı genişlikte mi?
+2. Sayfayı aşağı kaydır, chat'in tamamına bak, sonra yukarı geri dön → Ana resim kesilmeden görünüyor mu?
+3. Chat'te "Merhaba" yaz → Reality Score çıkmıyor mu? ✅
+4. Chat'te "Reality score göster" yaz → Reality Score çıkıyor mu? ✅
+5. Console'da `Image is missing required "src"` hatası var mı? Olmamalı.
+6. Sidebar'daki ürün dairesinde gerçek ürün resmi görünüyor mu?
+7. Farklı ürünlerde dene (az resimli, çok resimli) → Layout her yerde tutarlı mı?
+8. **Ürün A'da sohbet et → Ana sayfaya dön → Ürün B'de sohbet et → Ana sayfaya dön → Ürün A'ya geri dön → Eski sohbet mesajları görünüyor mu?** ✅
+9. **Sayfayı yenile (F5) → Sidebar'da eski ürünler ve sohbet geçmişleri duruyor mu?** ✅
+10. Resim geçişleri yumuşak mı? (crossfade/fade-in)
+11. Chat alanı yeterince geniş mi? Sol-sağ boşluklar azaldı mı?
+

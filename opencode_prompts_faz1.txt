@@ -1,0 +1,208 @@
+==============================================================
+SMARTCART AI — OPENCODE PROMPTLARI
+Faz 1: Proje İskeleti + Veri Katmanı
+==============================================================
+ÖNEMLİ: Her promptu AYRI AYRI ver. Bir prompt bitmeden diğerine geçme.
+Her prompt sonrası "mvn clean compile" çalıştır, hata varsa düzelt.
+==============================================================
+
+==============================
+PROMPT 1 — Proje Oluşturma
+==============================
+
+Bu dizinde Spring Boot projesi oluştur. Adımlar:
+
+1) Spring Initializr ile proje oluştur:
+curl https://start.spring.io/starter.zip \
+  -d type=maven-project \
+  -d language=java \
+  -d bootVersion=3.2.5 \
+  -d groupId=com.smartcart \
+  -d artifactId=smartcart-backend \
+  -d name=SmartCart \
+  -d packageName=com.smartcart \
+  -d javaVersion=21 \
+  -d dependencies=web,data-jpa,h2,validation,lombok \
+  -o /tmp/smartcart.zip
+
+2) Zip'i /Users/arif/Desktop/btk/smartcart-backend/ olarak aç.
+
+3) application.properties dosyasını şu şekilde güncelle:
+spring.application.name=smartcart
+server.port=8080
+spring.datasource.url=jdbc:h2:mem:smartcartdb
+spring.datasource.driver-class-name=org.h2.Driver
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.sql.init.mode=always
+spring.h2.console.enabled=true
+gemini.api.key=${GEMINI_API_KEY:test-key}
+gemini.api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent
+gemini.timeout.seconds=30
+
+4) "mvn clean compile" çalıştır ve başarılı olduğunu doğrula.
+
+==============================
+PROMPT 2 — Entity: Product.java
+==============================
+
+src/main/java/com/smartcart/model/entity/Product.java oluştur.
+
+Kurallar:
+- @Entity, @Data, @NoArgsConstructor, @AllArgsConstructor (Lombok)
+- @Table(name = "products")
+- Alanlar:
+  - id: Long, @Id, @GeneratedValue(strategy = IDENTITY)
+  - name: String, @Column(nullable = false)
+  - category: String (değerler: GIYIM, MOBILYA, ELEKTRONIK, OUTDOOR)
+  - brand: String
+  - description: String, @Column(length = 1000)
+  - imageUrl: String
+  - price: Double
+- İlişkiler:
+  - specs: @OneToMany(mappedBy="product", cascade=ALL, fetch=EAGER) List<ProductSpec>
+  - reviews: @OneToMany(mappedBy="product", cascade=ALL, fetch=EAGER) List<Review>
+
+ProductSpec ve Review sınıfları henüz yok, bu dosyayı oluşturduktan sonra compile hatası olacak — sorun değil, bir sonraki promptta oluşturacağız.
+
+"mvn clean compile" ÇALIŞTIRMA, önce diğer entity'leri de oluşturacağız.
+
+==============================
+PROMPT 3 — Entity: ProductSpec.java + Review.java
+==============================
+
+İki entity oluştur:
+
+1) src/main/java/com/smartcart/model/entity/ProductSpec.java
+- @Entity, @Data, @NoArgsConstructor, @AllArgsConstructor
+- @Table(name = "product_specs")
+- Alanlar:
+  - id: Long, @Id, @GeneratedValue(strategy = IDENTITY)
+  - product: Product, @ManyToOne, @JoinColumn(name="product_id"), @JsonIgnore
+  - specKey: String (örnek: "kumas", "beden_tablosu", "boyut_cm", "agirlik_kg")
+  - specValue: String (örnek: "%100 Keten", "S:36-38, M:38-40")
+
+2) src/main/java/com/smartcart/model/entity/Review.java
+- @Entity, @Data, @NoArgsConstructor, @AllArgsConstructor
+- @Table(name = "reviews")
+- Alanlar:
+  - id: Long, @Id, @GeneratedValue(strategy = IDENTITY)
+  - product: Product, @ManyToOne, @JoinColumn(name="product_id"), @JsonIgnore
+  - username: String
+  - rating: Integer (1-5)
+  - comment: String, @Column(length = 500)
+  - helpfulTags: String (örnek: "beden_buyuk,renk_farkli,kalite_iyi")
+
+JsonIgnore import: com.fasterxml.jackson.annotation.JsonIgnore
+
+Sonra "mvn clean compile" çalıştır ve başarılı olduğunu doğrula.
+
+==============================
+PROMPT 4 — Repository'ler
+==============================
+
+3 repository interface oluştur:
+
+1) src/main/java/com/smartcart/repository/ProductRepository.java
+- extends JpaRepository<Product, Long>
+- List<Product> findByCategory(String category);
+- List<Product> findByCategoryAndIdNot(String category, Long id);
+
+2) src/main/java/com/smartcart/repository/ProductSpecRepository.java
+- extends JpaRepository<ProductSpec, Long>
+- List<ProductSpec> findByProductId(Long productId);
+
+3) src/main/java/com/smartcart/repository/ReviewRepository.java
+- extends JpaRepository<Review, Long>
+- List<Review> findByProductIdOrderByIdDesc(Long productId);
+
+Sonra "mvn clean compile" çalıştır.
+
+==============================
+PROMPT 5 — DTO'lar (5 dosya)
+==============================
+
+5 DTO sınıfı oluştur. Hepsi src/main/java/com/smartcart/model/dto/ altında:
+
+1) ChatRequest.java
+- @Data, @NoArgsConstructor, @AllArgsConstructor
+- @NotNull Long productId
+- @NotBlank @Size(max = 500) String message
+- List<String> history (nullable, boş olabilir)
+
+2) ChatResponse.java
+- @Data, @NoArgsConstructor, @AllArgsConstructor
+- String reply
+- Integer matchScore (0-100)
+- String visualInsights
+- List<String> warnings (boş olabilir ama null OLMAZ)
+- List<String> followUpQuestions
+- List<String> dataSources
+- public static ChatResponse fallback(String msg) metodu ekle:
+  reply=msg, matchScore=0, visualInsights="", warnings=List.of(),
+  followUpQuestions=List.of("Ürün hakkında ne öğrenmek istersiniz?"),
+  dataSources=List.of("Temel analiz")
+
+3) ProductContext.java
+- @Data, @NoArgsConstructor, @AllArgsConstructor
+- Product product
+- List<ProductSpec> specs
+- List<Review> reviews
+- List<Product> similarProducts
+
+4) DataAnalysisResult.java
+- @Data, @NoArgsConstructor, @AllArgsConstructor, @Builder
+- int specScore, reviewScore, visualScore, variantScore
+- int similarityScore, userFitScore, trustScore
+- List<String> warnings (default: new ArrayList<>())
+- List<String> insights (default: new ArrayList<>())
+- List<String> usedSources (default: new ArrayList<>())
+
+5) GeminiRequest.java
+- @Data, @NoArgsConstructor, @AllArgsConstructor
+- String textPrompt
+- String imageBase64 (nullable)
+- String imageMimeType (nullable)
+
+Sonra "mvn clean compile" çalıştır.
+
+==============================
+PROMPT 6 — data.sql
+==============================
+
+src/main/resources/data.sql oluştur. Frontend'deki 8 ürünle BİREBİR eşleşen demo verisi.
+
+PRODUCTS tablosu (8 kayıt):
+INSERT INTO products (id, name, category, brand, description, image_url, price) VALUES
+(1, 'Oversize Keten Gömlek', 'GIYIM', 'Koton', 'Yazlık oversize keten gömlek. %100 doğal keten kumaş, serin ve rahat. Manken üzerindeki beden: M, Ürün Boyu: 75cm, Göğüs: 56cm', 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600', 349.99),
+(2, 'Slim Fit Jean Pantolon', 'GIYIM', 'Mavi', 'Slim fit kesim jean pantolon. %98 Pamuk, %2 Elastan. Esnek ve rahat kalıp. Manken üzerindeki beden: 32', 'https://images.unsplash.com/photo-1542272604-787c3835535d?w=600', 599.99),
+(3, 'MALM Çekmeceli Şifonyer', 'MOBILYA', 'IKEA', 'Modern çekmeceli şifonyer. Masif ahşap ve MDF kaplama. Genişlik: 80cm, Derinlik: 48cm, Yükseklik: 100cm', 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600', 4299.00),
+(4, 'Modern TV Ünitesi', 'MOBILYA', 'Kelebek', 'Modern tasarım TV ünitesi. Suntalam, melamin kaplama, metal ayak. Genişlik: 180cm, Derinlik: 40cm, Yükseklik: 45cm', 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=600', 3199.00),
+(5, 'iPhone 15 Pro Max 256GB', 'ELEKTRONIK', 'Apple', 'Apple iPhone 15 Pro Max. Titanyum çerçeve, A17 Pro çip, 48MP kamera sistemi. Ekran: 6.7 inç, Ağırlık: 221g', 'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=600', 74999.00),
+(6, '65 inch QLED 4K Smart TV', 'ELEKTRONIK', 'Samsung', 'Samsung QLED 4K Smart TV. Quantum Dot ekran, metal çerçeve. Ekran: 65 inç, Genişlik: 145cm, Yükseklik: 83cm, Ağırlık: 21kg', 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600', 42999.00),
+(7, 'Thermoball Eco Mont', 'OUTDOOR', 'The North Face', 'Thermoball Eco yalıtımlı mont. Geri dönüştürülmüş polyester, DWR su itici kaplama. Ağırlık: 450g', 'https://images.unsplash.com/photo-1544923246-77307dd270cb?w=600', 5499.00),
+(8, 'X Ultra 4 GTX Outdoor Ayakkabı', 'OUTDOOR', 'Salomon', 'Gore-Tex su geçirmez outdoor ayakkabı. Contagrip MA taban, sentetik üst. Ağırlık: 385g (42 numara)', 'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600', 4299.00);
+
+PRODUCT_SPECS tablosu (her ürün için 3-5 spec):
+Ürün 1 (Gömlek): kumas=%100 Keten Doğal Kumaş, beden_tablosu=S:36-38 M:38-40 L:40-42 XL:42-44, urun_boyu_cm=75, gogus_cm=56, renkler=Beyaz Mavi Bej
+Ürün 2 (Jean): kumas=%98 Pamuk %2 Elastan, beden_tablosu=28-30-32-34-36, bel_cm=82, paca_cm=32, renkler=Koyu Mavi Açık Mavi
+Ürün 3 (Şifonyer): malzeme=Masif Ahşap MDF Kaplama, genislik_cm=80, derinlik_cm=48, yukseklik_cm=100, agirlik_kg=45
+Ürün 4 (TV Ünitesi): malzeme=Suntalam Melamin Kaplama Metal Ayak, genislik_cm=180, derinlik_cm=40, yukseklik_cm=45, renkler=Ceviz Beyaz Antrasit
+Ürün 5 (iPhone): ekran_boyutu=6.7 inç, agirlik_g=221, islemci=A17 Pro, kamera=48MP Ana + 12MP Ultra Geniş + 12MP Telefoto, depolama=256GB
+Ürün 6 (TV): ekran_boyutu=65 inç, genislik_cm=145, yukseklik_cm=83, agirlik_kg=21, panel_tipi=QLED Quantum Dot
+Ürün 7 (Mont): malzeme=Geri Dönüştürülmüş Polyester, yalitim=Thermoball Eco, agirlik_g=450, su_gecirmezlik=DWR Kaplama, bedenler=S M L XL XXL
+Ürün 8 (Ayakkabı): malzeme=Gore-Tex Membran Sentetik Üst, taban=Contagrip MA, agirlik_g=385, numaralar=40-41-42-43-44-45, su_gecirmezlik=Gore-Tex
+
+REVIEWS tablosu (her ürün için 3-4 yorum):
+Frontend'deki yorumları birebir kullan. helpfulTags ekle:
+- Ürün 1: Elif Y.(5,kalite_iyi), Ahmet K.(4,renk_farkli), Zeynep M.(5,kalite_iyi), Murat S.(3,beden_dar,dikis_hatali)
+- Ürün 2: Can B.(5,kalip_iyi), Selin T.(4,renk_atti), Burak A.(5,kalite_iyi)
+- Ürün 3: Deniz K.(5,montaj_kolay), Ayşe L.(4,ray_zayif), Emre Y.(3,renk_farkli)
+- Ürün 4: Fatma N.(5,tasarim_guzel), Ali R.(4,montaj_kilavuz_yetersiz)
+- Ürün 5: Kerem T.(5,kamera_iyi,premium), Gamze S.(5,batarya_iyi), Onur M.(4,adaptor_yok)
+- Ürün 6: Hakan D.(5,goruntu_kalitesi), Sibel A.(4,yazilim_yavas)
+- Ürün 7: Berk O.(5,hafif,sicak), Ceren K.(5,kalite_iyi), Tolga Y.(4,fermuar_sert)
+- Ürün 8: Serkan M.(5,su_gecirmez), Pınar E.(4,kalip_dar), Cem B.(5,tutus_iyi)
+
+Sonra "mvn spring-boot:run" çalıştır. H2 console'dan (http://localhost:8080/h2-console) tabloları kontrol et.
+Ardından "mvn clean compile" ile derleme başarılı olduğunu doğrula.

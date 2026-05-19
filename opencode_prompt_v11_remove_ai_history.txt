@@ -1,0 +1,74 @@
+# FIX — "AI Analiz Geçmişi" Bölümünü Kaldır
+
+## Proje: `/Users/arif/Desktop/btk/e-commerce-prototype-2`
+## Dosya: `app/page.tsx`
+
+---
+
+## NE YAPILACAK
+
+Navbar'daki kullanıcı profili Sheet panelinde (sağ üst köşedeki kullanıcı ikonu tıklanınca açılan panel) **"AI Analiz Geçmişi"** bölümünü tamamen kaldır. Sadece bu bölümü sil, diğer hiçbir şeye dokunma.
+
+## KALDIRILACAK KOD
+
+### 1. `aiHistory` statik verisini sil (`page.tsx` satır ~95-99)
+
+Şu satırları tamamen kaldır:
+```tsx
+  const aiHistory = [
+    { productName: "Apple Pencil (USB-C)", seller: "Apple", imageUrl: "...", chatId: "apple-pencil-usbc-0892", date: "2 saat önce", score: 87 },
+    { productName: "Pamuklu Skinny Jean", seller: "Koton", imageUrl: "...", chatId: "koton-jean-skinny-0812", date: "Dün", score: 72 },
+    { productName: "Bambu Tabaklık", seller: "IKEA", imageUrl: "...", chatId: "ikea-bambu-tabaklik-0765", date: "3 gün önce", score: 91 },
+  ]
+```
+
+### 2. "AI Analiz Geçmişi" UI bölümünü ve hemen ÜSTÜNDEKİ Separator'ı sil (`page.tsx` satır ~194-225)
+
+Şu bloğu tamamen kaldır (Separator dahil):
+```tsx
+                    <Separator className="bg-border/50" />
+
+                    <div>
+                      <div className="flex items-center gap-2.5 mb-4">
+                        <History className="h-4 w-4 text-accent" strokeWidth={1.5} />
+                        <h3 className="text-[11px] tracking-[0.2em] text-foreground uppercase font-medium">AI Analiz Geçmişi</h3>
+                      </div>
+                      <div className="space-y-3">
+                        {aiHistory.map((item) => (
+                          <button key={item.chatId} className="...">
+                            {/* ... tüm içerik ... */}
+                          </button>
+                        ))}
+                      </div>
+                      <button className="w-full text-center ...">
+                        Tüm Analizler <ExternalLink ... />
+                      </button>
+                    </div>
+```
+
+### 3. Kullanılmayan import'ları kontrol et
+
+`aiHistory` bölümü kaldırıldıktan sonra bu import'ların başka yerde kullanılıp kullanılmadığını kontrol et:
+- `History` — başka yerde kullanılmıyorsa import'tan kaldır
+- `Clock` — başka yerde kullanılmıyorsa import'tan kaldır  
+- `MessageSquare` — başka yerde kullanılmıyorsa import'tan kaldır
+
+Eğer başka yerlerde hala kullanılıyorsa DOKUNMA, sadece bu bölüme özelerse kaldır.
+
+---
+
+## ÖNEMLİ
+
+- Adreslerim bölümünü KALDIRMA
+- Siparişlerim bölümünü KALDIRMA
+- Hesap Ayarları ve Çıkış Yap butonlarını KALDIRMA
+- Sheet'in açılıp kapanma mekanizmasını BOZMA
+- Sadece "AI Analiz Geçmişi" bölümünü ve ilgili Separator'ı kaldır
+
+## TEST
+1. Sağ üstteki kullanıcı ikonuna tıkla → Panel açılıyor mu? ✅
+2. Panelde "Siparişlerim" görünüyor mu? ✅
+3. Panelde "Adreslerim" görünüyor mu? ✅
+4. Panelde "AI Analiz Geçmişi" bölümü YOK mu? ✅
+5. "Hesap Ayarları" ve "Çıkış Yap" butonları altta duruyor mu? ✅
+6. Console'da hata yok mu? ✅

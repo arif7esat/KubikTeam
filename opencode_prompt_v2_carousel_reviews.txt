@@ -1,0 +1,145 @@
+# SmartCart — Carousel Geçiş Animasyonu + Yorum Görseli Büyütme Düzeltmeleri
+
+## Proje Bilgisi
+- **Proje dizini**: `/Users/arif/Desktop/btk/e-commerce-prototype-2`
+- **Ana dosya**: `app/page.tsx` (tek dosyalı Next.js uygulaması, tüm componentler burada)
+- **CSS dosyası**: `app/globals.css`
+- **İlgili componentler**: 
+  - Görsel galerisi: `ProductDetailPage` fonksiyonu içindeki görsel alanı (satır ~649-690)
+  - Yorum kartları: `MagazineReviewCard` fonksiyonu (satır ~376-440)
+
+---
+
+## PROBLEM 1: Görsel Geçişleri Çok Sert — Tren Vagonu Gibi Kayarak Geçiş İsteniyor
+
+**Mevcut durum**: Ok butonlarına tıklandığında görseller arası geçiş `slideIn` animasyonu kullanıyor ama bu tek bir görsel fade+translate yapıyor. Sert ve aniden oluyor. İstenen şey: fotoğrafların bir tren vagonları gibi yan yana durduğu ve ok tuşuna basınca tüm sıranın sola/sağa kaydığı (slide) bir carousel efekti.
+
+**Mevcut kod** (satır ~652-682):
+Şu anda `selectedImage` state'i değiştiğinde sadece `<img>` tag'ının `key` değişiyor ve `slideIn` animasyonu tetikleniyor. Bu yaklaşım iki görseli aynı anda göstermiyor, sadece yeni görseli animasyonla gösteriyor.
+
+**Mevcut CSS** (`globals.css`, satır 173-176):
+```css
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+```
+
+**Önerilen çözüm — Gerçek Carousel (Tren Vagonu Efekti)**:
+
+Tek tek `<img>` render etmek yerine, TÜM görselleri yan yana bir `flex` container içinde yatay olarak diz ve `transform: translateX()` ile kaydır. Bu sayede geçişte iki görsel de görünür: biri çıkarken diğeri girermiş gibi bir tren vagonu efekti oluşur.
+
+Yapı şu şekilde olmalı:
+```tsx
+<div className="col-span-4 aspect-[3/4] max-h-[60vh] bg-secondary overflow-hidden relative group rounded-[2rem]">
+  {/* Carousel track — tüm görseller yan yana */}
+  <div 
+    className="flex h-full"
+    style={{
+      transform: `translateX(-${selectedImage * 100}%)`,
+      transition: 'transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1)',
+      // veya daha yumuşak: 'transform 1s cubic-bezier(0.16, 1, 0.3, 1)'
+    }}
+  >
+    {displayImages.map((url, i) => (
+      <div key={i} className="min-w-full h-full flex-shrink-0">
+        <img src={url} alt={displayProduct.title} className="w-full h-full object-cover" 
+          onError={(e) => { const t = e.target as HTMLImageElement; t.src = displayProduct.image }} />
+      </div>
+    ))}
+  </div>
+  
+  {/* Ok butonları ve diğer overlay'ler burada kalır */}
+</div>
+```
+
+**Önemli noktalar**:
+1. **Transition süresi**: En az `0.6s`, tercihen `0.8s` olsun. `cubic-bezier(0.25, 0.1, 0.25, 1)` veya `cubic-bezier(0.16, 1, 0.3, 1)` easing kullan. Hedef: yavaş, akıcı, premium bir kayma hissi.
+2. `globals.css`'deki mevcut `@keyframes slideIn` artık kullanılmayacak (ana galeri için). Silme ama, başka yerde kullanılıyor olabilir.
+3. Ok butonlarındaki `setSelectedImage` mantığı aynı kalacak, sadece render yaklaşımı değişiyor.
+4. Mevcut `key={selectedImage}` ve `style={{ animation: 'slideIn ...' }}` satırlarını kaldır, artık gerekli değil.
+5. Geçiş yönüne göre farklı easing kullanabilirsin ama şart değil.
+
+**Eğer daha iyi bir alternatif bulursan** (örneğin CSS scroll-snap veya Framer Motion benzeri bir yaklaşım) onu da deneyebilirsin. Ama önemli olan: geçiş YAVAS ve AKICI olmalı, fotoğraflar bir tren vagonu gibi kayarak geçmeli, sert/ani olmamalı.
+
+---
+
+## PROBLEM 2: Yorum Görsellerine Tıklanınca Büyütme ve Kolay Görüntüleme
+
+**Mevcut durum**: `MagazineReviewCard` componentinde kullanıcı yorum fotoğrafları küçük yuvarlak/kare thumbnail olarak gösteriliyor. Ekteki ekran görüntüsünde görüldüğü gibi, yorumlarda `w-16 h-16 rounded-xl` boyutunda küçük kareler var. Şu anda tıklanınca `window.open(img.imageUrl, '_blank')` yapılıyor — yeni sekme açılıyor. Bu kötü bir UX.
+
+**İlgili kod konumları** (3 farklı variant'da yorum görselleri):
+- **featured** variant (satır ~394-398): `className="w-16 h-16 rounded-xl"` — tıklama yok
+- **compact** variant (satır ~415-417): `className="w-10 h-10 rounded-lg"` — tıklama yok
+- **default** variant (satır ~428-430): `className="w-16 h-16 rounded-xl cursor-pointer"` — tıklayınca `window.open`
+
+**İstenen davranış**: Kullanıcı yuvarlak/kare yorum fotoğrafına tıkladığında fotoğraf büyüsün. AMA tam ekran modal/lightbox tarzı DEĞİL — kullanıcıyı yoruyor. Daha ferah, yorum akışını bozmayan bir yaklaşım olmalı.
+
+**Önerilen çözüm — "Inline Expand" / "Gentle Preview" Yaklaşımı**:
+
+Birkaç seçenek var, en uygun olanı seç veya daha iyi bir çözüm bul:
+
+### Seçenek A: Inline Genişleme (Tercih edilen)
+Küçük görsele tıklanınca, yorum kartının İÇİNDE görsel genişlesin. Animasyonla `w-16 h-16` → `w-full max-h-[300px]` olsun. Tekrar tıklanınca küçülsün (toggle). Bu yorum akışını bozmaz, kullanıcı scroll konumunu kaybetmez.
+
+```tsx
+// MagazineReviewCard içinde state ekle:
+const [expandedImage, setExpandedImage] = useState<number | null>(null)
+
+// Görsel render:
+{review.images.map((img, i) => (
+  <div key={i} className="relative">
+    <img 
+      src={img.imageUrl} 
+      className={`
+        object-cover border border-border/30 cursor-pointer 
+        transition-all duration-500 ease-out
+        ${expandedImage === i 
+          ? 'w-full max-h-[300px] rounded-2xl' 
+          : 'w-16 h-16 rounded-xl hover:scale-105 hover:shadow-md'
+        }
+      `}
+      onClick={() => setExpandedImage(expandedImage === i ? null : i)} 
+    />
+  </div>
+))}
+```
+
+### Seçenek B: Soft Overlay (Yorum kartı üzerinde hafif büyütme)
+Tıklanınca görselin üzerinde bir "popup" açılır ama tam ekran değil. Yorum kartının hemen üstünde/altında, hafif gölgeli, backdrop-blur ile. Kapatma X butonu veya dışına tıklama ile kapanır.
+
+### Seçenek C: Bottom Sheet / Drawer Stili
+Sayfanın altından kayan bir panel içinde görsel büyük gösterilir. Kullanıcı aşağı kaydırarak veya X ile kapatır. Bu da yorum akışını bozmaz.
+
+**Önemli kurallar**:
+1. Tüm 3 variant'ta da (featured, compact, default) bu özellik çalışmalı.
+2. Birden fazla görsel varsa (bir yorumda 2-3 resim), büyütülmüş görselin yanında diğer görseller arasında geçiş yapılabilmeli (mini carousel veya sol-sağ oklar).
+3. Animasyon yumuşak olmalı: `transition-all duration-500` minimum.
+4. Küçük görsellere hover'da hafif scale efekti ekle (`hover:scale-105`), böylece tıklanabilir olduğu anlaşılır.
+5. Büyütülmüş görselde caption (varsa `img.caption`) gösterilsin.
+6. MagazineReviewCard şu anda functional component olarak arrow function ile tanımlanmış. State ekleyeceğin için bunun sorun olmayacağından emin ol (zaten bir function component, hooks kullanabilirsin).
+
+---
+
+## GENEL NOTLAR
+
+- Bu proje **Maison/luxury e-commerce** tarzında tasarlanmış. Tüm değişikliklerde bu premium estetiği koru.
+- Renk paleti: `accent` (altın/gold tonları), `foreground` (koyu), `background` (açık/krem).
+- Animasyonlar **subtle ve yavaş** olmalı. Sert/hızlı geçişler bu tasarıma uymuyor.
+- Tüm componentler tek dosyada: `app/page.tsx`. CSS: `app/globals.css`.
+- Shadcn UI + Lucide React ikonları kullanılıyor.
+
+**Eğer yukarıdaki çözümlerden daha iyi bir yaklaşım bulursan onu uygula. Önemli olan:**
+1. ✅ Görsel carousel geçişi yavaş ve akıcı olsun — tren vagonları gibi kayarak geçsin, sert/ani olmasın
+2. ✅ Yorum fotoğraflarına tıklayınca büyüsün, ama kullanıcıyı yormayan, yorum akışını bozmayan bir şekilde
+3. ✅ Her iki özellik de premium/Maison estetiğine uygun olsun
+
+---
+
+## TEST
+Değişikliklerden sonra `npm run dev` ile çalıştır ve şunları kontrol et:
+1. Ürün detay sayfasında ok butonlarına tıkla → Görseller yavaşça, akıcı bir şekilde kayarak geçiyor mu?
+2. Hızlı art arda tıklamada animasyon kırılıyor mu?
+3. Yorum bölümünde fotoğraflı bir yorum bul → Küçük fotoğrafa tıkla → Büyüyor mu? Tekrar tıklayınca küçülüyor mu?
+4. Featured, compact ve default variant'larda yorum görselleri doğru çalışıyor mu?
+5. Mobilde de düzgün çalışıyor mu?

@@ -1,0 +1,84 @@
+# ACIL FIX — "messages is not defined" Runtime Error
+
+## Dosya: `components/maison-chat.tsx`
+
+## HATA
+```
+Runtime ReferenceError: messages is not defined
+components/maison-chat.tsx (205:7) @ MaisonChat
+```
+
+## NEDEN
+localStorage refactoru sırasında 4 kritik derived değişken silinmiş. Bu değişkenler `activeProductId`'ye göre doğru chat'in mesajlarını ve pending ürünlerini seçiyordu. Şu an hiçbiri tanımlı değil ama kodun birçok yerinde hala kullanılıyor.
+
+## FIX
+
+`maison-chat.tsx` dosyasında, `generalMessages` state tanımından hemen sonra (satır ~122 civarı, `return INITIAL_MESSAGES` satırından sonraki `})`'den hemen sonra) şu 4 derived değişkeni ekle:
+
+```tsx
+  // Current messages (derived from active chat or general)
+  const messages = activeProductId 
+    ? (chatHistories[activeProductId]?.messages || [])
+    : generalMessages
+  
+  // Pending products derived from active chat or general
+  const pendingProducts = activeProductId
+    ? (chatHistories[activeProductId]?.pendingProducts || [])
+    : generalPendingProducts
+  
+  const setMessages = useCallback((updater: Message[] | ((prev: Message[]) => Message[])) => {
+    if (activeProductId) {
+      setChatHistories(prev => {
+        const newMessages = typeof updater === 'function' 
+          ? updater(prev[activeProductId]?.messages || [])
+          : updater
+        return {
+          ...prev,
+          [activeProductId]: {
+            ...prev[activeProductId],
+            messages: newMessages,
+          }
+        }
+      })
+    } else {
+      setGeneralMessages(updater as Message[] | ((prev: Message[]) => Message[]))
+    }
+  }, [activeProductId])
+  
+  const setPendingProducts = useCallback((updater: PendingProduct[] | ((prev: PendingProduct[]) => PendingProduct[])) => {
+    if (activeProductId) {
+      setChatHistories(prev => {
+        const newPending = typeof updater === 'function' 
+          ? updater(prev[activeProductId]?.pendingProducts || [])
+          : updater
+        return {
+          ...prev,
+          [activeProductId]: {
+            ...prev[activeProductId],
+            pendingProducts: newPending,
+          }
+        }
+      })
+    } else {
+      setGeneralPendingProducts(updater as PendingProduct[] | ((prev: PendingProduct[]) => PendingProduct[]))
+    }
+  }, [activeProductId])
+```
+
+Bu bloğu `generalMessages` state'in kapanış parantezinden hemen sonra, localStorage useEffect'lerinden ÖNCE yerleştir. Yani dosyada sıralama şöyle olmalı:
+
+1. `sidebarProducts` state
+2. `activeProductId` state
+3. `chatHistories` state
+4. `generalPendingProducts` state
+5. `generalMessages` state
+6. **→ BURAYA EKLE: `messages`, `pendingProducts`, `setMessages`, `setPendingProducts` ←**
+7. localStorage persist useEffect'leri
+8. Diğer state'ler ve handler'lar
+
+## KONTROL
+Bu 4 değişken dosyanın geri kalanında şu yerlerde kullanılıyor — hepsi çalışmalı:
+- `messages` → satır ~205 (useEffect dependency), ~520 (messages.map render)
+- `setMessages` → handleSend, handleEdit, handleRegenerate, handleCloseComparison
+- `pendingProducts` → handleProductDrop, ChatInput prop
+- `setPendingProducts` → handleProductDrop, handleRemovePending, handleCompare

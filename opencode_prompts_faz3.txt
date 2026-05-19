@@ -1,0 +1,104 @@
+==============================================================
+SMARTCART AI — OPENCODE PROMPTLARI
+Faz 3: Controller + Config + Test
+==============================================================
+Backend dizini: /Users/arif/Desktop/btk/smartcart-backend/
+==============================================================
+
+==============================
+PROMPT 13 — ProductController
+==============================
+
+src/main/java/com/smartcart/controller/ProductController.java oluştur.
+
+@RestController
+@RequestMapping("/api/products")
+Constructor injection: ProductRepository productRepository
+
+3 endpoint:
+
+1. @GetMapping
+   public List<Product> getProducts(@RequestParam(required = false) String category)
+   - category null → findAll()
+   - category var → findByCategory(category.toUpperCase())
+
+2. @GetMapping("/{id}")
+   public Product getProduct(@PathVariable Long id)
+   - findById(id).orElseThrow(() -> new ProductNotFoundException(id))
+
+"mvn clean compile" çalıştır.
+
+==============================
+PROMPT 14 — ChatController
+==============================
+
+src/main/java/com/smartcart/controller/ChatController.java oluştur.
+
+@RestController
+@RequestMapping("/api")
+Constructor injection: AgentOrchestrator orchestrator
+
+@PostMapping("/chat")
+public ResponseEntity<ChatResponse> chat(@Valid @RequestBody ChatRequest request)
+  - return ResponseEntity.ok(orchestrator.process(request));
+
+"mvn clean compile" çalıştır.
+
+==============================
+PROMPT 15 — CorsConfig
+==============================
+
+src/main/java/com/smartcart/config/CorsConfig.java oluştur.
+
+@Configuration implements WebMvcConfigurer
+
+@Override addCorsMappings(CorsRegistry registry):
+  registry.addMapping("/api/**")
+    .allowedOrigins(
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "https://*.vercel.app"
+    )
+    .allowedMethods("GET", "POST", "OPTIONS")
+    .allowedHeaders("*");
+
+"mvn clean compile" çalıştır.
+
+==============================
+PROMPT 16 — Son Compile + Çalıştırma Testi
+==============================
+
+1. "mvn clean compile" çalıştır — hata OLMAMALI
+2. "mvn spring-boot:run" çalıştır
+
+Çalıştıktan sonra şu testleri yap:
+
+curl http://localhost:8080/api/products
+→ 8 ürün JSON listesi gelmeli
+
+curl http://localhost:8080/api/products?category=GIYIM
+→ 2 ürün gelmeli
+
+curl http://localhost:8080/api/products/1
+→ Koton gömlek + specs + reviews gelmeli
+
+curl http://localhost:8080/api/products/999
+→ 404 + hata mesajı gelmeli
+
+curl -X POST http://localhost:8080/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"productId": 1, "message": "Boyum 170, bu gömlek oversize mi düşer?"}'
+→ reply, matchScore, visualInsights, warnings, followUpQuestions, dataSources gelmeli
+
+Eğer GEMINI_API_KEY tanımlı değilse Gemini çağrısı fallback dönecek — bu beklenen davranış.
+
+Hata varsa düzelt. Tüm endpoint'ler çalışana kadar devam et.
+
+==============================================================
+TAMAMLANDI!
+Backend hazır. Şimdi şu kontrolleri yap:
+1. GET /api/products → 8 ürün
+2. GET /api/products/1 → specs + reviews dahil
+3. POST /api/chat → tam pipeline (fallback bile olsa çalışıyor)
+4. Hata durumları → doğru HTTP kodları
+==============================================================

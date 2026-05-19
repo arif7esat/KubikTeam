@@ -1,0 +1,147 @@
+# SmartCart — Ürünlerin Kaybolması Sorunu
+
+## Proje Bilgisi
+- **Ana proje dizini**: `/Users/arif/Desktop/btk/e-commerce-prototype-2`
+- **Ana dosya**: `app/page.tsx`
+
+---
+
+## SORUN
+
+Ana sayfadaki ürünler görünmüyor. Sayfa açılınca ürün kartları yok veya boş.
+
+## TEŞHIS ve OLASI NEDENLER
+
+### Neden 1: Backend API 500 Hatası Veriyor
+
+Backend `/api/products` endpoint'i şu an HTTP 500 döndürüyor:
+```
+HTTP/1.1 500
+{"error":"Bir hata oluştu. Lütfen tekrar deneyin."}
+```
+
+`page.tsx` satır ~865-906'daki fetch mantığı:
+```tsx
+fetch(`${apiUrl}/api/products`)
+  .then(r => { if (!r.ok) throw new Error("API error"); return r.json() })
+  .then(data => {
+    const mapped = (data as any[]).map(...)
+    setProducts(mapped.length > 0 ? mapped : FALLBACK_PRODUCTS)
+    setLoading(false)
+  })
+  .catch(() => { 
+    console.log("API erişilemedi, fallback veriler kullanılıyor")
+    setProducts(FALLBACK_PRODUCTS)
+    setLoading(false) 
+  })
+```
+
+Bu kod DOĞRU ÇALIŞMALI — API hata verince `.catch()` bloğuna düşüp `FALLBACK_PRODUCTS` yüklenmeli. Eğer ürünler yine de görünmüyorsa şunları kontrol et:
+
+1. **`FALLBACK_PRODUCTS` dizisi boş mu veya silinmiş mi?** → `page.tsx` satır 71-81'de tanımlı olmalı. İçinde 9 ürün var. Boşsa veya yoksa geri ekle.
+
+2. **Catch bloğu çalışıyor mu?** → Tarayıcıda Console'a bak, "API erişilemedi, fallback veriler kullanılıyor" log'u var mı? Yoksa catch'e düşmüyor demektir.
+
+3. **`loading` state'i true'da mı kalıyor?** → Eğer `setLoading(false)` çağrılmıyorsa ekranda sadece "Ürünler yükleniyor..." spinner'ı görünür.
+
+### Neden 2: Backend Response JSON Array Değil
+
+Backend 500 döndüğünde response body `{"error":"..."}` şeklinde bir obje. `.then(r => { if (!r.ok) throw })` bu durumu yakalıyor ve catch'e düşürüyor. DOĞRU.
+
+Ama eğer backend 200 döndürüp boş array `[]` veya beklenmeyen format (`{"products":[...]}` gibi) döndürürse:
+- `(data as any[]).map(...)` boş array üretir
+- `mapped.length > 0` false olur
+- `FALLBACK_PRODUCTS` yüklenir → DOĞRU
+
+Bu senaryoda da fallback çalışmalı.
+
+### Neden 3: Son Yapılan CSS/Layout Değişiklikleri Ürünleri Gizlemiş Olabilir
+
+Eğer son değişikliklerde `HomePage` component'ına veya ana container'a `display:none`, `overflow:hidden` veya yanlış `height:0` gibi bir CSS eklendiyse ürünler render ediliyor ama görünmüyor olabilir.
+
+**Kontrol et**:
+- `page.tsx` satır ~799-847'deki `HomePage` component'ını kontrol et
+- `max-w-[1800px]` container ve `grid grid-cols-2 lg:grid-cols-4` ürün grid'i bozulmuş mu?
+- Ürün kartlarının `ProductCard` component'ı hala doğru çalışıyor mu?
+
+### Neden 4: Backend Veritabanı Bağlantısı Kopmuş
+
+Backend çalışıyor (port 8080 açık) ama 500 hatası veriyor. Muhtemelen veritabanı bağlantısı kopmuş veya tablo erişilemiyor.
+
+**Backend'i düzelt**:
+```bash
+# Backend loglarına bak:
+cd /Users/arif/Desktop/btk/e-commerce-prototype-2
+# Backend başka bir dizindeyse oraya git
+# Spring Boot loglarını kontrol et
+```
+
+---
+
+## ÇÖZÜM — Hızlı ve Kesin
+
+### Adım 1: Catch bloğunun çalıştığını doğrula
+Tarayıcıda Console'u aç. Sayfayı yenile. "API erişilemedi, fallback veriler kullanılıyor" mesajı varsa catch çalışıyor demektir.
+
+### Adım 2: FALLBACK_PRODUCTS'ın bozulmadığını doğrula
+`page.tsx` satır 71'de `const FALLBACK_PRODUCTS: Product[] = [` ile başlayan array'i kontrol et. 9 ürün olmalı, satır 81'de `]` ile kapanmalı.
+
+### Adım 3: Eğer catch çalışıyor ama ürünler görünmüyorsa — rendering problemi
+`HomePage` component'ındaki ürün grid'ini kontrol et (`page.tsx` satır ~825):
+```tsx
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+  {productsByCategory[category]?.map((product, index) => (
+    <ProductCard key={product.id} product={product} onClick={() => onProductClick(product)} featured={index === 0 && catIndex === 0} />
+  ))}
+</div>
+```
+
+`productsByCategory` objesi doğru üretiliyor mu? `categoryLabels` ve `categoryFromBackend` mapping'leri FALLBACK_PRODUCTS'taki category değerleriyle uyuşuyor mu?
+
+### Adım 4: Eğer backend düzeltilemiyorsa — catch bloğunu güçlendir
+```tsx
+// Mevcut (satır ~867-868):
+fetch(`${apiUrl}/api/products`)
+  .then(r => { if (!r.ok) throw new Error("API error"); return r.json() })
+
+// Daha güvenli hale getir:
+fetch(`${apiUrl}/api/products`)
+  .then(r => r.json().catch(() => []))
+  .then(data => {
+    // data array değilse fallback kullan
+    const products = Array.isArray(data) ? data : (data?.products || data?.data || [])
+    if (products.length === 0) {
+      setProducts(FALLBACK_PRODUCTS)
+      setLoading(false)
+      return
+    }
+    const mapped = products.map((p: any) => {
+      // ... mevcut mapping kodu ...
+    })
+    setProducts(mapped.length > 0 ? mapped : FALLBACK_PRODUCTS)
+    setLoading(false)
+  })
+  .catch(() => { 
+    console.log("API erişilemedi, fallback veriler kullanılıyor")
+    setProducts(FALLBACK_PRODUCTS)
+    setLoading(false) 
+  })
+```
+
+### Adım 5: Backend'i yeniden başlat
+```bash
+# Backend dizinine git ve yeniden başlat
+# Eğer Spring Boot ise:
+./mvnw spring-boot:run
+# veya docker-compose kullanılıyorsa:
+docker-compose restart backend
+```
+
+---
+
+## TEST
+1. Sayfayı aç → "Ürünler yükleniyor..." spinner'dan sonra ürünler görünüyor mu?
+2. Console'da "API erişilemedi, fallback veriler kullanılıyor" log'u var mı?
+3. En az 9 ürün kartı görünüyor mu? (4 kategori: Giyim, Mobilya, Elektronik, Outdoor)
+4. Ürün kartlarına tıklayınca detay sayfası açılıyor mu?
+5. Backend düzeldikten sonra gerçek ürünler yükleniyor mu?

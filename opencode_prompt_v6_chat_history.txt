@@ -1,0 +1,176 @@
+# SmartCart — Sohbet Geçmişi Kalıcı Hale Getir (localStorage Persist)
+
+## Proje Bilgisi
+- **Ana proje dizini**: `/Users/arif/Desktop/btk/e-commerce-prototype-2`
+- **Chat component**: `components/maison-chat.tsx` (tüm değişiklikler bu dosyada)
+
+---
+
+## SORUN
+
+Kullanıcı bir ürün sayfasında AI chat ile sohbet ediyor, sonra "Koleksiyona Dön" butonuyla ana sayfaya dönüp başka bir ürüne tıklıyor. İkinci üründe de sohbet ettikten sonra ilk ürüne geri döndüğünde eski sohbet mesajları tamamen kaybolmuş.
+
+## NEDEN OLUYOR
+
+`page.tsx` satır ~944-945'teki yapı:
+```tsx
+currentView === "home" ? (
+  <HomePage ... />
+) : (
+  selectedProduct && <ProductDetailPage product={selectedProduct} onBack={handleBackToHome} />
+)
+```
+
+Bu conditional rendering yüzünden:
+1. Kullanıcı "Koleksiyona Dön"e bastığında `currentView` → `"home"` olur
+2. `ProductDetailPage` component'ı **tamamen unmount** oluyor (DOM'dan kaldırılıyor)
+3. İçindeki `MaisonChat` component'ı da unmount oluyor
+4. `MaisonChat` içindeki tüm React state (`chatHistories`, `generalMessages`, `sidebarProducts`) **bellekten siliniyor**
+5. Başka ürüne tıklanınca yeni bir `ProductDetailPage` + `MaisonChat` **sıfırdan** oluşuyor
+6. Sonuç: tüm eski sohbet geçmişi kayıp
+
+## ÇÖZÜM — localStorage ile state persistence
+
+Tüm değişiklikler `components/maison-chat.tsx` dosyasında yapılacak.
+
+---
+
+### ADIM 1: chatHistories state'ini localStorage'dan başlat ve değişince kaydet
+
+Mevcut kod (satır ~100):
+```tsx
+const [chatHistories, setChatHistories] = useState<Record<string, ChatHistory>>(() => generateInitialChatHistories())
+```
+
+Değiştir:
+```tsx
+const [chatHistories, setChatHistories] = useState<Record<string, ChatHistory>>(() => {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('smartcart-chat-histories')
+    if (saved) {
+      try { return JSON.parse(saved) } catch {}
+    }
+  }
+  return {}
+})
+```
+
+Ve hemen altına useEffect ekle:
+```tsx
+useEffect(() => {
+  if (typeof window !== 'undefined' && Object.keys(chatHistories).length > 0) {
+    localStorage.setItem('smartcart-chat-histories', JSON.stringify(chatHistories))
+  }
+}, [chatHistories])
+```
+
+---
+
+### ADIM 2: generalMessages state'ini localStorage'dan başlat ve değişince kaydet
+
+Mevcut kod (satır ~106):
+```tsx
+const [generalMessages, setGeneralMessages] = useState<Message[]>(INITIAL_MESSAGES)
+```
+
+Değiştir:
+```tsx
+const [generalMessages, setGeneralMessages] = useState<Message[]>(() => {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('smartcart-general-messages')
+    if (saved) {
+      try { return JSON.parse(saved) } catch {}
+    }
+  }
+  return INITIAL_MESSAGES
+})
+```
+
+Ve useEffect ekle:
+```tsx
+useEffect(() => {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('smartcart-general-messages', JSON.stringify(generalMessages))
+  }
+}, [generalMessages])
+```
+
+---
+
+### ADIM 3: sidebarProducts state'ini localStorage'dan başlat ve değişince kaydet
+
+sidebarProducts'ın tanımlandığı yeri bul (muhtemelen boş array ile başlatılıyor). Değiştir:
+
+```tsx
+const [sidebarProducts, setSidebarProducts] = useState<Array<{id: string, name: string, image: string, seller: string}>>(() => {
+  if (typeof window !== 'undefined') {
+    const saved = localStorage.getItem('smartcart-sidebar-products')
+    if (saved) {
+      try { return JSON.parse(saved) } catch {}
+    }
+  }
+  return []
+})
+```
+
+Ve useEffect ekle:
+```tsx
+useEffect(() => {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('smartcart-sidebar-products', JSON.stringify(sidebarProducts))
+  }
+}, [sidebarProducts])
+```
+
+---
+
+### ADIM 4: Component mount olduğunda doğru ürün sohbetini aktif et
+
+MaisonChat her mount olduğunda (yani her ürün sayfası açıldığında) initialProductId'ye göre doğru sohbeti aktif etmeli. Component'ın başına şu useEffect'i ekle:
+
+```tsx
+useEffect(() => {
+  if (initialProductId) {
+    const productKey = `product-${initialProductId}`
+    setActiveProductId(productKey)
+    setCurrentProduct({
+      name: initialProductName || "Maison Collection",
+      seller: initialSellerName || "Maison Atelier"
+    })
+  }
+}, [initialProductId])
+```
+
+---
+
+### ADIM 5: generateInitialChatHistories fonksiyonunu temizle
+
+`generateInitialChatHistories()` fonksiyonu artık kullanılmıyor çünkü state localStorage'dan yükleniyor. Bu fonksiyonu kaldır veya boş obje döndürecek şekilde güncelle:
+
+```tsx
+// Bu fonksiyonu ya tamamen sil ya da şu hale getir:
+const generateInitialChatHistories = (): Record<string, ChatHistory> => ({})
+```
+
+---
+
+## AKIŞ SONUCU
+
+Değişikliklerden sonraki kullanıcı deneyimi:
+
+1. Kullanıcı Ürün A sayfasında → Chat'e mesaj yazar → mesajlar `chatHistories["product-A"]`'ya kaydedilir → localStorage'a yazılır
+2. "Koleksiyona Dön" → `ProductDetailPage` unmount olur ama veriler localStorage'da duruyor
+3. Ürün B'ye tıklar → Yeni `MaisonChat` mount olur → localStorage'dan tüm chatHistories yüklenir → `initialProductId=B` ile `product-B` sohbeti aktif olur
+4. Ürün B'de sohbet eder → `chatHistories["product-B"]`'ye kaydedilir → localStorage güncellenir
+5. Geri dönüp tekrar Ürün A'ya tıklar → localStorage'dan yüklenir → `product-A` sohbeti aktif olur → **eski mesajlar görünür** ✅
+6. Sidebar'da hem Ürün A hem Ürün B daireleri görünür (sidebarProducts da persist ediliyor) ✅
+
+## TEST
+1. Ürün A'da 2-3 mesaj yaz
+2. Ana sayfaya dön
+3. Ürün B'de 2-3 mesaj yaz
+4. Ana sayfaya dön
+5. Ürün A'ya geri dön → Eski mesajlar görünüyor mu? ✅
+6. Sidebar'da hem A hem B ürünü var mı? ✅
+7. Sayfayı yenile (F5) → Sohbet geçmişi hala duruyor mu? ✅
+8. Farklı tarayıcı sekmesinde aç → localStorage paylaşıldığı için aynı geçmiş görünmeli ✅
