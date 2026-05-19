@@ -1,0 +1,135 @@
+SmartCart AI - Güncel Geliştirme Durumu
+=========================================
+
+BACKEND: /Users/arif/Desktop/btk/smartcart-backend/ (Spring Boot)
+------------------------------------------------------------------
+16 promptun tamamı uygulandı. Çalışıyor.
+
+Proje iskeleti:
+- Spring Boot 3.5.0 (promptta 3.2.5 yazıyordu, API kabul etmedi -> 3.5.0)
+- Java 21, Maven, H2 (in-memory)
+- Port: 8080
+
+Entity (3): Product, ProductSpec, Review
+Repository (3): ProductRepository, ProductSpecRepository, ReviewRepository
+DTO (5): ChatRequest, ChatResponse, ProductContext, DataAnalysisResult, GeminiRequest
+
+Servisler (5):
+- ContextBuilderService -> ürün+specs+reviews+similarProducts derler
+- DataAnalysisService -> 7 skorlu deterministik analiz (LLM kullanmaz)
+- PromptBuilderService -> Gemini promptu oluşturur, görseli base64 encode eder
+- GeminiService -> Gemini API çağrısı + JSON parse + fallback
+- AgentOrchestrator -> pipeline orkestrasyonu
+
+Controller (2): ProductController, ChatController
+Config: CorsConfig (localhost:3000, 5173, *.vercel.app)
+Exception: ProductNotFoundException (404), GlobalExceptionHandler
+
+data.sql: 8 ürün, 40 spec, 23 review (frontend'deki verilerle birebir)
+
+Kritik Düzeltmeler:
+1. application.properties'e spring.jpa.defer-datasource-initialization=true EKLENDİ
+   (Hibernate tabloları oluşturmadan data.sql çalışıyordu)
+2. Gemini model: gemini-2.5-flash (promptta 1.5-flash -> desteklenmiyor)
+3. thinkingConfig eklendi: thinkingBudget=256 (yoksa model tüm token'ı düşünmeye harcıyordu)
+4. GEMINI_API_KEY .env dosyasından okunuyor: ${GEMINI_API_KEY:test-key}
+
+API Endpoint'leri:
+- GET  /api/products              -> 8 ürün (specs+reviews dahil)
+- GET  /api/products?category=XX  -> filtre
+- GET  /api/products/{id}         -> tek ürün
+- GET  /api/products/999          -> 404
+- POST /api/chat                  -> ChatResponse (reply, matchScore, visualInsights, warnings[], followUpQuestions[], dataSources[])
+
+Pipeline: ContextBuilder -> DataAnalysis -> matchScore -> PromptBuilder -> Gemini -> merge -> ChatResponse
+matchScore BACKEND hesaplar, Gemini'den alınmaz.
+
+Çalışıyor: localhost:8080
+
+
+FRONTEND: /Users/arif/Desktop/btk/e-commerce-prototype-2/ (Next.js)
+------------------------------------------------------------------
+Değişiklikler sadece app/page.tsx'te yapıldı.
+
+Eklenenler:
+1. .env.local -> NEXT_PUBLIC_API_URL=http://localhost:8080
+2. Chat state: messages[], isLoading, error, matchScore
+3. sendMessage() -> POST /api/chat fetch
+4. Mesaj baloncukları (user sağda, assistant solda)
+5. Loading animasyonu (Loader2 spinner)
+6. Hata gösterimi
+7. matchScore -> RealityScoreCircle (dinamik skor)
+8. warnings -> turuncu AlertTriangle ile
+9. dataSources -> Database ikonu ile
+10. followUpQuestions -> tıklanabilir soru butonları
+11. visualInsights -> Lightbulb ikonu ile
+
+CSS düzeltmeleri:
+- Card: overflow-hidden eklendi (mesajlar taşıyordu)
+- CardContent: flex-1 min-h-0 overflow-hidden (scroll çalışmıyordu)
+- messagesEndRef + useEffect -> otomatik scroll
+
+Build: next build başarılı (Turbopack)
+npm install yapıldı (node_modules eksikti)
+
+Çalışıyor: localhost:3000
+
+
+BİLİNEN DURUMLAR:
+- GEMINI_API_KEY tanımlı değilse fallback dönüyor (beklenen davranış)
+- Gemini 2.5 flash thinking modeli, thinkingBudget=256 ile çalışıyor
+- Rate limit (429) olursa GeminiService fallback'e düşüyor
+- Görseller prompt'a base64 encode edilip gönderiliyor (çalışıyor)
+- H2 in-memory, her restart'ta data.sql tekrar yükleniyor
+
+
+PROMPTLARDAKİ SORUNLAR VE DÜZELTMELER
+=======================================
+
+1) Spring Boot 3.2.5 -> 3.5.0
+   Prompt: bootVersion=3.2.5
+   Sorun: Spring Initializr API ">=3.5.0" istedi, 3.2.5 reddedildi.
+   Çözüm: 3.5.0 kullanıldı.
+
+2) data.sql Hibernate'ten ÖNCE çalışıyordu
+   Prompt: spring.jpa.hibernate.ddl-auto=create-drop + spring.sql.init.mode=always
+   Sorun: data.sql Hibernate tabloları oluşturmadan çalıştı -> "Table PRODUCTS not found"
+   Çözüm: spring.jpa.defer-datasource-initialization=true eklendi.
+
+3) Gemini model: 1.5-flash desteklenmiyor
+   Prompt: gemini-1.5-flash
+   Sorun: API "models/gemini-1.5-flash is not found" döndü (404)
+   Çözüm: gemini-2.5-flash kullanıldı.
+
+4) Gemini 2.5-flash thinking modeli token tüketimi
+   Sorun: Model 979 token'ı "düşünme"ye harcadı, yanıta sadece 41 token kaldı.
+   Sonuç: Yanıt hep yarım kesildi (JSON parse hatası).
+   Çözüm: thinkingConfig.thinkingBudget=256 eklendi.
+
+5) Prompt 1'de "mvn clean compile ÇALIŞTIRMA" demişti ama sonraki promptlarda 
+   compile istedi. Prompt 2'de Product.java oluşturup ProductSpec/Review yokken 
+   compile etmek hata verirdi. Promptu doğru okudum - compile etmedim.
+   Prompt 3'te her ikisi de oluşunca compile ettim. Sorun yok.
+
+6) Prompt 6'da "mvn spring-boot:run + H2 console kontrol" dendi ama 
+   ProductController henüz yoktu (Prompt 13'te). /api/products 404 döndü.
+   Bu beklenen bir durum, prompt sırasından kaynaklı. Sorun değil.
+
+7) Frontend build: node_modules yoktu
+   pnpm-lock.yaml vardı ama node_modules kurulu değildi.
+   npm install gerekti.
+
+8) Frontend chat scroll sorunu
+   Card bileşeninin flex yapısı mesajların taşmasına izin veriyordu.
+   overflow-hidden + min-h-0 eklenerek düzeltildi.
+   Ayrıca otomatik scroll için useRef + useEffect eklendi.
+
+9) Gemini response body'de düzensiz boşluklar vardı
+   parseJson'daki ```json fence temizliği düzgün çalıştı.
+   Ek olarak { ve } arası substring alma var. Sorun çıkmadı.
+
+10) Prompt 6 data.sql'deki INSERT'ler tek seferde yazıldı. 
+    H2 birden fazla value setini tek INSERT'te destekliyor. Sorun yok.
+
+11) Port çakışması: Eski backend process'i 8080'i tutuyordu.
+    lsof -ti:8080 | xargs kill -9 ile temizlendi. Rutin işlem.
