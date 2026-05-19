@@ -1,0 +1,1 @@
+-- TrendyolDataLoader tarafından dolduruluyor
