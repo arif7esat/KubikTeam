@@ -1,0 +1,89 @@
+{
+  "name": "Akıllı Saat 1 Saat Alana 1 Saat ve 8 Kordon Hediye 2025 Süper Kampanya Hediyeli Akıllı Saat",
+  "brand": "TECHNOMEN",
+  "price": null,
+  "rating": 3.171511627906977,
+  "reviewCount": 344,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Garanti Tipi",
+      "value": "İthalatçı Garantili"
+    },
+    {
+      "key": "Sim Kart Uyumu",
+      "value": "Var"
+    },
+    {
+      "key": "Nabız Sensörü",
+      "value": "Var"
+    },
+    {
+      "key": "Renk",
+      "value": "Beyaz"
+    },
+    {
+      "key": "Uyku Takibi",
+      "value": "Var"
+    },
+    {
+      "key": "Kasa Renk",
+      "value": "Gümüş"
+    },
+    {
+      "key": "Kordon Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Batarya Kapasitesi Aralığı",
+      "value": "300-400 mAh"
+    },
+    {
+      "key": "Adımsayar",
+      "value": "Var"
+    },
+    {
+      "key": "GPS",
+      "value": "Yok"
+    },
+    {
+      "key": "Kasa Çapı",
+      "value": "49 mm"
+    },
+    {
+      "key": "Suya/Toza Dayanıklılık",
+      "value": "Var"
+    },
+    {
+      "key": "Titreşim",
+      "value": "Var"
+    },
+    {
+      "key": "Sesli Görüşme",
+      "value": "Var"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Kordon Materyali",
+      "value": "Silikon"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1597/prod/QC/20241102/12/64dca941-b6d9-3aca-bb3b-fbf5102bce8e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1596/prod/QC/20241102/12/88c2ab19-79ec-3abf-a849-f7ba268c7981/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1597/prod/QC/20241102/12/059c1dab-70fa-354a-9024-5ef1cd97f026/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    }
+  ]
+}

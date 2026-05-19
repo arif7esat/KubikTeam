@@ -1,0 +1,117 @@
+{
+  "name": "Kadın Siyah Krem Desenli Viskon Tesettür Elbise 2423",
+  "brand": "Bigdart",
+  "price": null,
+  "rating": 4.554509722796856,
+  "reviewCount": 9668,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Oversize"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Denim"
+    },
+    {
+      "key": "Materyal",
+      "value": "Polyester Karışımlı"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Cep",
+      "value": "Cepsiz"
+    },
+    {
+      "key": "Desen",
+      "value": "Etnik"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Bisiklet Yaka"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Uzun Kol"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Astar Durumu",
+      "value": "Astarsız"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Design"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Siluet",
+      "value": "A-line"
+    },
+    {
+      "key": "Boy",
+      "value": "Uzun"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "%100 Viskoz"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "Terryviskon"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Ek Özellik Mevcut Değil"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 1"
+    },
+    {
+      "key": "Kemer/Kuşak Durumu",
+      "value": "Kemersiz"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1570/prod/QC/20240926/10/6c1b613f-5caf-39e8-90fd-68520d360d44/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1569/prod/QC/20240926/10/792c5776-9ca9-33cb-a09b-34182e73e6b0/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1569/prod/QC/20240926/10/61979a7a-28c7-3f9e-8f0f-e73b7e368259/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1570/prod/QC/20240926/10/d8e04e91-0242-34cd-95e9-e869ca99157b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    }
+  ]
+}

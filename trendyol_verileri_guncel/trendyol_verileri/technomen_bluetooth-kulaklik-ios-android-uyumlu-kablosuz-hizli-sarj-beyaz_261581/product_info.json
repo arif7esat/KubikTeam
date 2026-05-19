@@ -1,0 +1,69 @@
+{
+  "name": "Bluetooth Kulaklık Ios Android Uyumlu Kablosuz Hızlı Şarj Beyaz",
+  "brand": "TECHNOMEN",
+  "price": null,
+  "rating": 2.7947269303201505,
+  "reviewCount": 531,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Garanti Tipi",
+      "value": "İthalatçı Garantili"
+    },
+    {
+      "key": "Dokunmatik Kontrol",
+      "value": "Var"
+    },
+    {
+      "key": "Aktif Gürültü Önleme (ANC)",
+      "value": "Yok"
+    },
+    {
+      "key": "Renk",
+      "value": "Beyaz"
+    },
+    {
+      "key": "Suya/Tere Dayanıklılık",
+      "value": "Var"
+    },
+    {
+      "key": "Mikrofon",
+      "value": "Var"
+    },
+    {
+      "key": "Bluetooth Versiyon",
+      "value": "5.2"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Çift Telefon Desteği",
+      "value": "Yok"
+    },
+    {
+      "key": "Tamir Edilebilirlik",
+      "value": "Tamir Edilebilir, Satıcı ile İletişime Geçiniz."
+    },
+    {
+      "key": "Özellik",
+      "value": "Kablosuz"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1766/prod/QC_ENRICHMENT/20250929/12/09d077ac-e754-3ee0-90e4-3d108c338143/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1765/prod/QC_ENRICHMENT/20250929/12/7529908f-e4cc-30eb-af0d-1cf4d0512cd9/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1765/prod/QC_ENRICHMENT/20250929/12/33d42ab6-8140-359a-a4ad-d45164868fd4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    }
+  ]
+}

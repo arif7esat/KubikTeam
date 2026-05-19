@@ -1,0 +1,101 @@
+{
+  "name": "Qrevo L Akıllı Robot Süpürge - Beyaz",
+  "brand": "Roborock",
+  "price": null,
+  "rating": 4.574538570752485,
+  "reviewCount": 2113,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Ses Seviyesi",
+      "value": "61 Dba - 70 Dba"
+    },
+    {
+      "key": "Garanti Tipi",
+      "value": "Resmi Distribütör Garantili"
+    },
+    {
+      "key": "Özellik",
+      "value": "Robot"
+    },
+    {
+      "key": "Haritalandırma",
+      "value": "Lazer (LIDAR + SLAM)"
+    },
+    {
+      "key": "Şarjlı Kullanım Süresi",
+      "value": "2-3 Saat"
+    },
+    {
+      "key": "Çalışma Modu Sayısı",
+      "value": "3 ve üzeri"
+    },
+    {
+      "key": "Yer Silme Özelliği",
+      "value": "Var"
+    },
+    {
+      "key": "Uygulama Üzerinden Kontrol",
+      "value": "Var"
+    },
+    {
+      "key": "Aşılabilir Engel Seviyesi",
+      "value": "2 cm"
+    },
+    {
+      "key": "Hazne Kapasitesi",
+      "value": "0-250 L"
+    },
+    {
+      "key": "Frekans",
+      "value": "50 Hz / 60 Hz"
+    },
+    {
+      "key": "Voltaj",
+      "value": "220 - 240 V"
+    },
+    {
+      "key": "Çöp İstasyonu",
+      "value": "Var"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1714/prod/QC_PREP/20250719/15/33277887-bc9f-3a41-971c-b41a52774568/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1714/prod/QC_PREP/20250719/15/8f4a5ce3-7f06-3a89-b1bb-3e8a37bffdf3/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1713/prod/QC_PREP/20250719/15/41ead312-692d-389c-ba8e-d83db4ff54cd/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1713/prod/QC_PREP/20250719/15/42816fee-f8c3-3956-b34d-271d32669b8f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1714/prod/QC_PREP/20250719/15/f2dafd50-6898-3c82-bea5-edf12cfa3fb4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1715/prod/QC_PREP/20250719/15/ba7b82c1-6215-3d7d-8e87-998104f5542f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1797/prod/QC_PREP/20251208/12/6a2eab04-c5e3-3606-bc62-c1de8eff1125/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1715/prod/QC_PREP/20250719/15/0333437e-50f6-3cb4-8f89-222674f1f79e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    }
+  ]
+}

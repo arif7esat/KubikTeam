@@ -1,0 +1,125 @@
+{
+  "name": "Nice Köşe Koltuk Takımı - Krem",
+  "brand": "nikshop",
+  "price": null,
+  "rating": 1,
+  "reviewCount": 2,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Boyut/Ebat",
+      "value": "140 x 230"
+    },
+    {
+      "key": "Kumaş",
+      "value": "Keten"
+    },
+    {
+      "key": "Ayak Malzemesi",
+      "value": "Plastik"
+    },
+    {
+      "key": "Genişlik",
+      "value": "230 cm"
+    },
+    {
+      "key": "Derinlik",
+      "value": "145 cm"
+    },
+    {
+      "key": "Köşe Yönü",
+      "value": "Sağ-Sol Değiştirilebilir"
+    },
+    {
+      "key": "Materyal",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Renk",
+      "value": "Bej"
+    },
+    {
+      "key": "Gövde Materyali",
+      "value": "Metal"
+    },
+    {
+      "key": "Fonksiyon",
+      "value": "Yataklı ve bazalı"
+    },
+    {
+      "key": "Koltuk Tipi",
+      "value": "Tam Köşe Koltuk"
+    },
+    {
+      "key": "Tasarım",
+      "value": "Modern"
+    },
+    {
+      "key": "Oturum Yumuşaklığı",
+      "value": "Orta Sert"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Ayak Malzemesi Rengi",
+      "value": "Siyah"
+    },
+    {
+      "key": "Stil",
+      "value": "İskandinav"
+    },
+    {
+      "key": "Tema / Stil",
+      "value": "İskandinav"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Özellik",
+      "value": "Diğer"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1823/prod/QC_ENRICHMENT/20260205/15/97d84998-e35a-30ba-ba2e-aa2ea20b98b0/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1757/prod/QC_ENRICHMENT/20250917/14/bf560414-90f3-3c4b-95e3-bf394910b16b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1757/prod/QC_ENRICHMENT/20250917/14/93ea1d0c-2d04-3ad0-ba74-4f6a1865b29a/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1757/prod/QC_ENRICHMENT/20250917/14/c14cd4fc-5526-39cd-a5e6-5ed40e676aa6/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1757/prod/QC_ENRICHMENT/20250917/14/1ab809b2-8b4f-3237-8e6b-a9f1646b2ce4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1757/prod/QC_ENRICHMENT/20250917/14/49cab240-f182-3c7d-ac5b-a9985cdf4d98/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1757/prod/QC_ENRICHMENT/20250917/14/cb9d5421-a3e9-35cc-8b06-9bf6c2931afb/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1822/prod/QC_ENRICHMENT/20260205/15/1e3d3ae3-9670-33c4-a642-86fd811943c3/1_org_zoom.jpg",
+      "localPath": "product_images/urun_9.jpg"
+    }
+  ]
+}

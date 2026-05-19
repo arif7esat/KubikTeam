@@ -1,0 +1,69 @@
+{
+  "name": "Festival Tv Ünitesi G3008-3",
+  "brand": "Myniture Home & Living",
+  "price": null,
+  "rating": 4.590189873417722,
+  "reviewCount": 632,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Materyal",
+      "value": "Suntalam"
+    },
+    {
+      "key": "Özellik",
+      "value": "Dolaplı"
+    },
+    {
+      "key": "Renk",
+      "value": "Kahverengi"
+    },
+    {
+      "key": "Boyut/Ebat",
+      "value": "Tek Ebat"
+    },
+    {
+      "key": "Yükseklik",
+      "value": "49 cm"
+    },
+    {
+      "key": "Genişlik",
+      "value": "180 cm"
+    },
+    {
+      "key": "Derinlik",
+      "value": "20 cm"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Stil",
+      "value": "Modern"
+    },
+    {
+      "key": "Tema / Stil",
+      "value": "Modern"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1356/product/media/images/prod/QC/20240611/18/670fc5f2-0c59-3b38-9cd5-ec878fe9cf87/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1357/product/media/images/prod/QC/20240611/18/7652c027-c2c1-3322-8322-f6cdd895c66c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1357/product/media/images/prod/QC/20240611/18/7b94f95b-b795-3f48-aaac-0572e6261bbe/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1356/product/media/images/prod/QC/20240611/18/8a847a62-0fba-38e5-8edc-ae211b8e6355/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "4 Kişilik Kamp Çadırı Su Geçirmez Kolay Kurulum Kaliteli Çadır",
+  "brand": "Realx",
+  "price": null,
+  "rating": 4.011764705882353,
+  "reviewCount": 85,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kapasite",
+      "value": "4 Kişilik ve üstü"
+    },
+    {
+      "key": "Mevsim",
+      "value": "Yaz"
+    },
+    {
+      "key": "Renk",
+      "value": "Mavi"
+    },
+    {
+      "key": "Çadır Tipi",
+      "value": "Kamp"
+    },
+    {
+      "key": "Bakım Talimatları (Genel)",
+      "value": "Ürünün kullanım ömrünü korumak için ürüne özel bakım talimatlarını takip ediniz."
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1374/product/media/images/prod/QC/20240622/00/d8154b39-df01-3635-9c46-e20aa357e8d2/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1376/product/media/images/prod/QC/20240622/00/d51682c5-7e66-338f-8fd1-5424c35c8320/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1375/product/media/images/prod/QC/20240622/00/d0588762-264e-373d-9460-f37f0a44bf36/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1374/product/media/images/prod/QC/20240622/00/c35ee187-6802-3043-baaa-568feb41a71c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1376/product/media/images/prod/QC/20240622/00/6b725f0c-c72d-3490-aacb-db7a7ee7398e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1375/product/media/images/prod/QC/20240622/00/43628352-6890-3c25-af90-51346891536b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    }
+  ]
+}

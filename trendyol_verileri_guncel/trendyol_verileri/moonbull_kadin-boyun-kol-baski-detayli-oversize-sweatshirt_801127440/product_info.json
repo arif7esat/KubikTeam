@@ -1,0 +1,125 @@
+{
+  "name": "Kadın Boyun-Kol Baskı Detaylı Oversize Sweatshirt",
+  "brand": "MOONBULL",
+  "price": null,
+  "rating": 3.9114877589453863,
+  "reviewCount": 531,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Desen",
+      "value": "Baskılı"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Oversize"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Bisiklet Yaka"
+    },
+    {
+      "key": "Materyal",
+      "value": "Pamuk Polyester"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Sportswear"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Düşük Kol"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Örme"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Kapamasız"
+    },
+    {
+      "key": "Cep",
+      "value": "Cepsiz"
+    },
+    {
+      "key": "Ürün Detayı",
+      "value": "Mevcut Değil"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "Tekli"
+    },
+    {
+      "key": "Ortam",
+      "value": "Günlük"
+    },
+    {
+      "key": "Boy",
+      "value": "Standart"
+    },
+    {
+      "key": "Siluet",
+      "value": "Regular"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Ek Özellik Mevcut Değil"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "2 İplik Şardonlu"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Baskı/Nakış Tekniği",
+      "value": "Baskısız"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "%92 Pamuk, %8 Elastan"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "30 derecede tersten yıkanması önerilir."
+    },
+    {
+      "key": "Sezon",
+      "value": "İlkbahar / Sonbahar"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1149/product/media/images/prod/SPM/PIM/20240129/14/5b502886-fe05-38f2-a98e-d96e96455fdd/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1149/product/media/images/prod/SPM/PIM/20240129/14/dcbe96f3-4224-3e0c-830e-0eb34cb67c36/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1150/product/media/images/prod/SPM/PIM/20240129/14/da3d8191-af27-3b02-80a1-7a041bd158df/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    }
+  ]
+}

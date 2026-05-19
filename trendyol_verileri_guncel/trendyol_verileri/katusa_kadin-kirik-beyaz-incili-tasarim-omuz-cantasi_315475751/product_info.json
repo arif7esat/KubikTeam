@@ -1,0 +1,81 @@
+{
+  "name": "Kadın Kırık Beyaz Incili Tasarım Omuz Çantası",
+  "brand": "Katusa",
+  "price": null,
+  "rating": 4.743241752179191,
+  "reviewCount": 9063,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Materyal",
+      "value": "Jüt"
+    },
+    {
+      "key": "Deri Kalitesi",
+      "value": "Parça Mevcut Değil"
+    },
+    {
+      "key": "Renk",
+      "value": "Beyaz"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "100% Pamuk"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 4"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Örme"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "1'li"
+    },
+    {
+      "key": "Yaş",
+      "value": "Tüm Yaş Grupları"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1323/product/media/images/prod/QC/20240523/17/ab764b64-3176-39c7-b747-253d8ccd5a6e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1327/product/media/images/prod/QC/20240523/17/c2097071-d9a3-3f75-b05b-ea7fc28301a4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1324/product/media/images/prod/QC/20240523/17/478ae72f-30e6-3c10-b350-94614e1b594c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1327/product/media/images/prod/QC/20240523/17/d41cfce4-094e-32d5-80b7-e2bcdb632f00/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    }
+  ]
+}

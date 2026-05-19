@@ -1,0 +1,61 @@
+{
+  "name": "make up maruderm Uzun Süre Kalıcı Kadifemsi Mat Likit Ruj – Liquid Matte Rouge Royal Red",
+  "brand": "Maru.Derm",
+  "price": null,
+  "rating": 5,
+  "reviewCount": 1,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Görünüm",
+      "value": "Mat"
+    },
+    {
+      "key": "Boy",
+      "value": "Orijinal Boy"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    },
+    {
+      "key": "Form",
+      "value": "Sıvı"
+    },
+    {
+      "key": "Renk",
+      "value": "Bordo"
+    },
+    {
+      "key": "RGB",
+      "value": "#7A2D2C"
+    },
+    {
+      "key": "Ürün Güvenliği Bilgisi",
+      "value": "Tehlikeli Değil"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1851/prod/QC_ENRICHMENT/20260408/01/8c29bb9c-c041-33b8-bfba-a60f868f73b0/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1851/prod/QC_ENRICHMENT/20260408/01/5bce0a57-131a-3a1e-9ab9-285d359fef52/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1853/prod/QC_ENRICHMENT/20260408/01/ee727a7a-2519-37ce-984b-db6bcd602b3a/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1852/prod/QC_ENRICHMENT/20260408/01/5ffd9e52-8ca4-3113-9123-2b1203109da1/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1852/prod/QC_ENRICHMENT/20260408/01/7e123ede-0aec-3b3c-870e-f2ad81d59d37/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    }
+  ]
+}

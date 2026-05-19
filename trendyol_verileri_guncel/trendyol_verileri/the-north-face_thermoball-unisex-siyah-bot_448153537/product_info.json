@@ -1,0 +1,121 @@
+{
+  "name": "Thermoball Unisex Siyah Bot",
+  "brand": "THE NORTH FACE",
+  "price": 6319.21,
+  "rating": 4.538461538461538,
+  "reviewCount": 156,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Topuk Tipi",
+      "value": "Düz Topuklu"
+    },
+    {
+      "key": "Topuk Boyu",
+      "value": "Kısa Topuklu (1- 4 cm)"
+    },
+    {
+      "key": "Kumaş Teknolojisi",
+      "value": "Suya Dayanıklı"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutulu"
+    },
+    {
+      "key": "Kullanım Alanı",
+      "value": "Günlük"
+    },
+    {
+      "key": "Bağlama Şekli",
+      "value": "Bağcıklı"
+    },
+    {
+      "key": "Materyal",
+      "value": "Belirtilmemiş"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Dış Materyal",
+      "value": "Suni Deri"
+    },
+    {
+      "key": "Alt Taban Materyali",
+      "value": "Kauçuk"
+    },
+    {
+      "key": "İç Astar & İç Taban Materyali",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Su Geçirmez"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "100% sentetik deri"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "type 4"
+    },
+    {
+      "key": "Ürün Detayı",
+      "value": "Suni Deri"
+    },
+    {
+      "key": "Burun Tipi",
+      "value": "Yuvarlak"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Sezon",
+      "value": "Kış"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1625/prod/QC/20250117/18/42d472c1-5710-3b1b-affb-eefa5f422cce/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1625/prod/QC/20250117/18/d769e8be-e092-3370-9449-3b3d9f5afe4d/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1624/prod/QC/20250117/18/eaef0fae-6fe7-3f3b-9538-081b2c0131b3/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1627/prod/QC/20250117/18/6ed4a4f5-a089-37b4-afc7-d5b9770580e7/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1627/prod/QC/20250117/18/576bf686-1406-38af-b245-a5692861dde4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1628/prod/QC/20250117/18/70ca0424-45e7-367d-a72d-e4e66c28131a/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    }
+  ]
+}

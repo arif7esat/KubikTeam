@@ -1,0 +1,61 @@
+{
+  "name": "Eylül 4 Kişilik Mutfak Masası Takımı Ceviz Siyah",
+  "brand": "Evdemo",
+  "price": null,
+  "rating": 4,
+  "reviewCount": 8,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Materyal",
+      "value": "Suntalam"
+    },
+    {
+      "key": "Masa Fonksiyonu",
+      "value": "Sabit"
+    },
+    {
+      "key": "Sandalye ve Bank Sayısı",
+      "value": "4"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Sandalye Rengi",
+      "value": "Mürdüm"
+    },
+    {
+      "key": "Sandalye Kumaşı",
+      "value": "Diğer"
+    },
+    {
+      "key": "Masa Ölçüsü",
+      "value": "120 x 80"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Tema / Stil",
+      "value": "Modern"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty101/product/media/images/20210406/17/44fcde30/62096272/1/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty100/product/media/images/20210406/17/618d0e10/62096272/2/2_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    }
+  ]
+}

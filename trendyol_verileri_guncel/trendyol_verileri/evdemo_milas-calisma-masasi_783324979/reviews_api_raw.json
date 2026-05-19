@@ -1,0 +1,456 @@
+{
+  "content": [
+    {
+      "id": 111403578,
+      "userFullName": "O** G**",
+      "rate": 1,
+      "comment": "masanın tasarımı güzel, fakat ne yazık ki sağ taraftaki suntanın kenar bandı yok, hiç uygulanmamış. Ayrıca arkalığın hiç silinmeyen çizikler ve lekeler mevcut. Hemen kurmadığımız için iade hakkını da kullanamadık",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 111403578,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2021916/2043850/783324979/13875167-1742909812852.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1742466981198/img/2018925/2021916/2043850/783324979/13875167-1742909812852.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1742909814282,
+      "reviewId": 483086125
+    },
+    {
+      "id": 103593750,
+      "userFullName": "**** ****",
+      "rate": 4,
+      "comment": "Genel olarak güzel bir ürün fakat bir cok yerinde maalesef bu tarz defolar var ve kargo 20 günde anca elimize ulaşti.",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 103593750,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2029892/2040859/783324979/158402884-1734947619078.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756825987906/img/2017928/2029892/2040859/783324979/158402884-1734947619078.jpeg",
+        "mediaType": "IMAGE",
+        "height": 5664,
+        "weight": 4248
+      },
+      "lastModifiedDate": 1734947619857,
+      "reviewId": 454775614
+    },
+    {
+      "id": 136676873,
+      "userFullName": "**** ****",
+      "rate": 5,
+      "comment": "Gayet güzl boydan biraz noksan",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 136676873,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2031886/783324979/118677391-1776025772844.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2031886/783324979/118677391-1776025772844.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 1884
+      },
+      "lastModifiedDate": 1775648008801,
+      "reviewId": 627810972
+    },
+    {
+      "id": 120982984,
+      "userFullName": "E** A**",
+      "rate": 1,
+      "comment": "alalı 2 ay oldu kenara çekerken kırıldı bu kabul edilir değil umarım telafi ederler.",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 120982984,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2026901/2040859/783324979/19198129-1755851372334.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media-migrated_1755700289924/img/2018925/2026901/2040859/783324979/19198129-1755851372334.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 3060
+      },
+      "lastModifiedDate": 1755851373377,
+      "reviewId": 564918915
+    },
+    {
+      "id": 137350025,
+      "userFullName": "L** G** B**",
+      "rate": 4,
+      "comment": "Küçük odalar için çok ideal ve kullanışlı. Birkaç vida eksik çıktı ama satıcı tedarik etti .",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 137350025,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2047838/783324979/6389695-1777365112824.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2047838/783324979/6389695-1777365112824.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 2296
+      },
+      "lastModifiedDate": 1777365114148,
+      "reviewId": 632781851
+    },
+    {
+      "id": 123025434,
+      "userFullName": "E** S**",
+      "rate": 2,
+      "comment": "23 günde geldi ve defolu 4 yerden üzüldüm heyecanla bekliyodm",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 123025434,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2027898/2040859/783324979/15126856-1758565063576.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media-migrated_1755700289924/img/2018925/2027898/2040859/783324979/15126856-1758565063576.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3264,
+        "weight": 2448
+      },
+      "lastModifiedDate": 1758565065658,
+      "reviewId": 571886457
+    },
+    {
+      "id": 137899992,
+      "userFullName": "m** m**",
+      "rate": 5,
+      "comment": "olduğu gibi geldi parasına göre çok güzel tavsiye ederim YALNIZ BÜYÜK VIDALAR EKSİK GELI ÇOK YERE BAKTIM BULAMADIM",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 137899992,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2029892/783324979/73606071-1778426409197.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2029892/783324979/73606071-1778426409197.jpeg",
+        "mediaType": "IMAGE",
+        "height": 9248,
+        "weight": 6936
+      },
+      "lastModifiedDate": 1778426411545,
+      "reviewId": 635903367
+    },
+    {
+      "id": 137798026,
+      "userFullName": "A** y**",
+      "rate": 5,
+      "comment": "yani güzel tam 6 yaş çocuk için boyu küçük istediği yere erebiliyor bayıldık tek sorun dicem ama yok 🙂",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 137798026,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2027898/783324979/24739809-1778236030591.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2027898/783324979/24739809-1778236030591.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4160,
+        "weight": 3120
+      },
+      "lastModifiedDate": 1778236033061,
+      "reviewId": 635345978
+    },
+    {
+      "id": 112314204,
+      "userFullName": "Ö** K**",
+      "rate": 1,
+      "comment": "delikleri yanlış yere Fotoğrafta görüldüğü gibi bantsız yere olması gerek.",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 112314204,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2022913/2026901/783324979/29943496-1744135602742.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1742466981198/img/2018925/2022913/2026901/783324979/29943496-1744135602742.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1744135604399,
+      "reviewId": 486437032
+    },
+    {
+      "id": 112314205,
+      "userFullName": "Ö** K**",
+      "rate": 1,
+      "comment": "delikleri yanlış yere Fotoğrafta görüldüğü gibi bantsız yere olması gerek.",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 112314205,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2022913/2026901/783324979/29943496-1744135603341.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1742466981198/img/2018925/2022913/2026901/783324979/29943496-1744135603341.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1744135604399,
+      "reviewId": 486437032
+    },
+    {
+      "id": 137899991,
+      "userFullName": "m** m**",
+      "rate": 5,
+      "comment": "olduğu gibi geldi parasına göre çok güzel tavsiye ederim YALNIZ BÜYÜK VIDALAR EKSİK GELI ÇOK YERE BAKTIM BULAMADIM",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 137899991,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2029892/783324979/73606071-1778426406973.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2029892/783324979/73606071-1778426406973.jpeg",
+        "mediaType": "IMAGE",
+        "height": 9248,
+        "weight": 6936
+      },
+      "lastModifiedDate": 1778426411545,
+      "reviewId": 635903367
+    },
+    {
+      "id": 137798028,
+      "userFullName": "A** y**",
+      "rate": 5,
+      "comment": "yani güzel tam 6 yaş çocuk için boyu küçük istediği yere erebiliyor bayıldık tek sorun dicem ama yok 🙂",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 137798028,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2027898/783324979/24739809-1778236032255.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2027898/783324979/24739809-1778236032255.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4160,
+        "weight": 3120
+      },
+      "lastModifiedDate": 1778236033061,
+      "reviewId": 635345978
+    },
+    {
+      "id": 134602395,
+      "userFullName": "**** ****",
+      "rate": 3,
+      "comment": "3 tane Alyanli vida eksik resimdekiler fazla çıktı önemli olan vida eksik . çok sallanıyor beklentimi karşılamadı maalesef",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 134602395,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2022913/2020919/783324979/202451183-1772391236617.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2022913/2020919/783324979/202451183-1772391236617.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1772391238432,
+      "reviewId": 616683977
+    },
+    {
+      "id": 137798027,
+      "userFullName": "A** y**",
+      "rate": 5,
+      "comment": "yani güzel tam 6 yaş çocuk için boyu küçük istediği yere erebiliyor bayıldık tek sorun dicem ama yok 🙂",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 137798027,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2027898/783324979/24739809-1778236031547.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2027898/783324979/24739809-1778236031547.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4160,
+        "weight": 3120
+      },
+      "lastModifiedDate": 1778236033061,
+      "reviewId": 635345978
+    },
+    {
+      "id": 112624527,
+      "userFullName": "D** Ç**",
+      "rate": 5,
+      "comment": "eksik parca gonderildi",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 112624527,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2022913/2030889/783324979/112720050-1744450862389.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1742466981198/img/2018925/2022913/2030889/783324979/112720050-1744450862389.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 1800
+      },
+      "lastModifiedDate": 1741801210152,
+      "reviewId": 479204055
+    },
+    {
+      "id": 92729163,
+      "userFullName": "F** Ö**",
+      "rate": 4,
+      "comment": "gzl ürün sadece arka sunta catlak geldi sanirim vidalarin kelebeklerin oldugu poşete denk gelmiş ezilmiş. iade etme geregi görmedim onun disinda gayer iyi.",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 92729163,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2046841/783324979/83041599-1724958981450.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2046841/783324979/83041599-1724958981450.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4032,
+        "weight": 1960
+      },
+      "lastModifiedDate": 1724958982154,
+      "reviewId": 421711157
+    },
+    {
+      "id": 134600333,
+      "userFullName": "M** Ö**",
+      "rate": 3,
+      "comment": "Teslim süreci çok uzun oldu. ( 3 hafta) gelen ürün hatalı geldi. 1 parçasının montaj alanı yanlış. çok sırıtıyor maalesef. daha dikkatli çalışmanızı öneririm. kalite olarakta fiyatına göre çok bir şey beklemeyin suntalam kalitesi işte.",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 134600333,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2022913/2020919/783324979/10038912-1772385506951.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2022913/2020919/783324979/10038912-1772385506951.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4096,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1772385510135,
+      "reviewId": 616662451
+    },
+    {
+      "id": 134600335,
+      "userFullName": "M** Ö**",
+      "rate": 3,
+      "comment": "Teslim süreci çok uzun oldu. ( 3 hafta) gelen ürün hatalı geldi. 1 parçasının montaj alanı yanlış. çok sırıtıyor maalesef. daha dikkatli çalışmanızı öneririm. kalite olarakta fiyatına göre çok bir şey beklemeyin suntalam kalitesi işte.",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 134600335,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2022913/2020919/783324979/10038912-1772385508840.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2022913/2020919/783324979/10038912-1772385508840.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4096,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1772385510135,
+      "reviewId": 616662451
+    },
+    {
+      "id": 137350024,
+      "userFullName": "L** G** B**",
+      "rate": 4,
+      "comment": "Küçük odalar için çok ideal ve kullanışlı. Birkaç vida eksik çıktı ama satıcı tedarik etti .",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 137350024,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2047838/783324979/6389695-1777365112219.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2047838/783324979/6389695-1777365112219.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 2296
+      },
+      "lastModifiedDate": 1777365114148,
+      "reviewId": 632781851
+    },
+    {
+      "id": 125153720,
+      "userFullName": "**** ****",
+      "rate": 5,
+      "comment": "çok güzel ama  kenarda kırık var",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 125153720,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2028895/2041856/783324979/112644871-1761210361192.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media-migrated_1755700289924/img/2018925/2028895/2041856/783324979/112644871-1761210361192.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1761210362313,
+      "reviewId": 579671394
+    },
+    {
+      "id": 134602396,
+      "userFullName": "**** ****",
+      "rate": 3,
+      "comment": "3 tane Alyanli vida eksik resimdekiler fazla çıktı önemli olan vida eksik . çok sallanıyor beklentimi karşılamadı maalesef",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 134602396,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2022913/2020919/783324979/202451183-1772391237544.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2022913/2020919/783324979/202451183-1772391237544.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1772391238432,
+      "reviewId": 616683977
+    },
+    {
+      "id": 134600334,
+      "userFullName": "M** Ö**",
+      "rate": 3,
+      "comment": "Teslim süreci çok uzun oldu. ( 3 hafta) gelen ürün hatalı geldi. 1 parçasının montaj alanı yanlış. çok sırıtıyor maalesef. daha dikkatli çalışmanızı öneririm. kalite olarakta fiyatına göre çok bir şey beklemeyin suntalam kalitesi işte.",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 134600334,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2022913/2020919/783324979/10038912-1772385507960.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2022913/2020919/783324979/10038912-1772385507960.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3982,
+        "weight": 1677
+      },
+      "lastModifiedDate": 1772385510135,
+      "reviewId": 616662451
+    },
+    {
+      "id": 137242424,
+      "userFullName": "s** k**",
+      "rate": 2,
+      "comment": "bu kısım tam oturmuyor nasıl yapabilirm cm mi kısa anlamadim",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 137242424,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2044847/783324979/50542206-1777071616061.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2044847/783324979/50542206-1777071616061.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1777071617270,
+      "reviewId": 632122587
+    },
+    {
+      "id": 137662399,
+      "userFullName": "S** Ş**",
+      "rate": 1,
+      "comment": "Ürün parçaları ölçüsüne uygun gelmedi. Firma tedarik edecek ancak bir hafta oldu hala kargoya verilmedi oğlum için acele olduğunu söylememe rağmen firma tedarik konusunda çok ilgisiz. Ben memnun kalmadım. İadeyle uğraşmak istemediğim için parçanın gelmesini bekliyorum ama bu haftada gelmezse direkt iade. Anlamıyorım kontrol edilmiyo mu bu ürünler!!!!",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 137662399,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2024907/783324979/10215030-1778010295303.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2024907/783324979/10215030-1778010295303.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4284,
+        "weight": 5712
+      },
+      "lastModifiedDate": 1778010297384,
+      "reviewId": 634593348
+    },
+    {
+      "id": 137662400,
+      "userFullName": "S** Ş**",
+      "rate": 1,
+      "comment": "Ürün parçaları ölçüsüne uygun gelmedi. Firma tedarik edecek ancak bir hafta oldu hala kargoya verilmedi oğlum için acele olduğunu söylememe rağmen firma tedarik konusunda çok ilgisiz. Ben memnun kalmadım. İadeyle uğraşmak istemediğim için parçanın gelmesini bekliyorum ama bu haftada gelmezse direkt iade. Anlamıyorım kontrol edilmiyo mu bu ürünler!!!!",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 137662400,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2024907/783324979/10215030-1778010296295.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2024907/783324979/10215030-1778010296295.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4284,
+        "weight": 5712
+      },
+      "lastModifiedDate": 1778010297384,
+      "reviewId": 634593348
+    }
+  ],
+  "totalPages": 9,
+  "totalElements": 265
+}

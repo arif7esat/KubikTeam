@@ -1,0 +1,32 @@
+{
+  "name": "Honda Civic 2017 Uyumlu Deri Direksiyon Kılıfı, Siyah Yüzük, Gri Ip",
+  "brand": "sergulpzr",
+  "price": null,
+  "rating": null,
+  "reviewCount": null,
+  "seller": null,
+  "description": "",
+  "specs": [],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty524/product/media/images/20220905/10/169277038/559138927/1/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty523/product/media/images/20220905/10/169277038/559138927/2/2_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty524/product/media/images/20220905/10/169277038/559138927/3/3_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty522/product/media/images/20220905/10/169277038/559138927/4/4_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty524/product/media/images/20220905/10/169277038/559138927/5/5_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    }
+  ]
+}

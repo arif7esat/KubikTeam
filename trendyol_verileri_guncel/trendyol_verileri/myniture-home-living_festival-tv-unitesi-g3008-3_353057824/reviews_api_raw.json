@@ -1,0 +1,114 @@
+{
+  "content": [
+    {
+      "id": 100862522,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "ürünümden iki byük parça kırık geldi bir hevesle alıp bir hevesle açmıştım 🥺🥺😞😞",
+      "trusted": true,
+      "sellerName": "Festival Mobilya",
+      "mediaFile": {
+        "id": 100862522,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2017928/2028895/2045844/353057824/111135450-1732799425908.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756760527960/img/2017928/2028895/2045844/353057824/111135450-1732799425908.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 1800
+      },
+      "lastModifiedDate": 1732799426402,
+      "reviewId": 446809539
+    },
+    {
+      "id": 84750755,
+      "userFullName": "s** ç**",
+      "rate": 5,
+      "comment": "bu kadar ağır bir eşya adresime teslim edilmedi köylere dağıtım yoksa hiç getirmeyin çarşı'dan alacam olsam saten mağaza dan ucretsiz getirtirdim tam bir fiyasko",
+      "trusted": true,
+      "sellerName": "Festival Mobilya",
+      "mediaFile": {
+        "id": 84750755,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756808468433/img/2017928/2022913/2032883/353057824/117010143-1715803154958.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756808468433/img/2017928/2022913/2032883/353057824/117010143-1715803154958.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1715803155896,
+      "reviewId": 398904766
+    },
+    {
+      "id": 117054511,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "Ürünün üst kısımları beyaz geldi ve içinde vida yok . Teslimat çok uzun sürdü .",
+      "trusted": true,
+      "sellerName": "Festival Mobilya",
+      "mediaFile": {
+        "id": 117054511,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2024907/2036871/353057824/18095128-1750247636812.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1749859208957/img/2018925/2024907/2036871/353057824/18095128-1750247636812.jpeg",
+        "mediaType": "IMAGE",
+        "height": 1599,
+        "weight": 899
+      },
+      "lastModifiedDate": 1750247329654,
+      "reviewId": 551319250
+    },
+    {
+      "id": 117054510,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "Ürünün üst kısımları beyaz geldi ve içinde vida yok . Teslimat çok uzun sürdü .",
+      "trusted": true,
+      "sellerName": "Festival Mobilya",
+      "mediaFile": {
+        "id": 117054510,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2024907/2036871/353057824/18095128-1750247636185.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1749859208957/img/2018925/2024907/2036871/353057824/18095128-1750247636185.jpeg",
+        "mediaType": "IMAGE",
+        "height": 1599,
+        "weight": 899
+      },
+      "lastModifiedDate": 1750247329654,
+      "reviewId": 551319250
+    },
+    {
+      "id": 97539866,
+      "userFullName": "H** G**",
+      "rate": 1,
+      "comment": "Minifix gövde 16 adet eksik kargolarken bakılmıyor mu anlamadım sinirlenmemek elde değil ya",
+      "trusted": true,
+      "sellerName": "Festival Mobilya",
+      "mediaFile": {
+        "id": 97539866,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2017928/2027898/2044847/353057824/43050299-1730017306680.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756760527960/img/2017928/2027898/2044847/353057824/43050299-1730017306680.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1730017307513,
+      "reviewId": 436155865
+    },
+    {
+      "id": 100862521,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "ürünümden iki byük parça kırık geldi bir hevesle alıp bir hevesle açmıştım 🥺🥺😞😞",
+      "trusted": true,
+      "sellerName": "Festival Mobilya",
+      "mediaFile": {
+        "id": 100862521,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2028895/2045844/353057824/111135450-1732799425518.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756825987906/img/2017928/2028895/2045844/353057824/111135450-1732799425518.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3840,
+        "weight": 2160
+      },
+      "lastModifiedDate": 1732799426402,
+      "reviewId": 446809539
+    }
+  ],
+  "totalPages": 11,
+  "totalElements": 306
+}

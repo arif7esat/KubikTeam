@@ -1,0 +1,133 @@
+{
+  "name": "Erkek Polo Yaka Siyah Oversize Sweatshirt",
+  "brand": "North London",
+  "price": null,
+  "rating": 4.211132437619962,
+  "reviewCount": 521,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Oversize"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Polo Yaka"
+    },
+    {
+      "key": "Materyal",
+      "value": "Pamuk Polyester"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Uzun Kol"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Kapamasız"
+    },
+    {
+      "key": "Cep",
+      "value": "Cepsiz"
+    },
+    {
+      "key": "Ürün Detayı",
+      "value": "Aksesuar Detaylı"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "Tekli"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Boy",
+      "value": "Standart"
+    },
+    {
+      "key": "Siluet",
+      "value": "Basic"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Ek Özellik Mevcut Değil"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "3 İplik Şardonlu"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Baskı/Nakış Tekniği",
+      "value": "Baskısız"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "%100 Polyester/Pamuk"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "T1"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty531/product/media/images/20220912/15/174440142/568162753/4/4_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty532/product/media/images/20220912/15/174440142/568162753/1/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty532/product/media/images/20220912/15/174440142/568162753/2/2_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty533/product/media/images/20220912/15/174440142/568162753/3/3_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty531/product/media/images/20220912/15/174440142/568162753/5/5_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty533/product/media/images/20220912/15/174440142/568162753/6/6_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    }
+  ]
+}

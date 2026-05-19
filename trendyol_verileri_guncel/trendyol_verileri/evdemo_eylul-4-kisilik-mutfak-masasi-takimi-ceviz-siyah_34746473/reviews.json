@@ -1,0 +1,73 @@
+{
+  "productId": "34746473",
+  "productName": "Eylül 4 Kişilik Mutfak Masası Takımı Ceviz Siyah",
+  "totalReviews": 4,
+  "averageRating": 4,
+  "scrapedAt": "2026-05-19T00:18:37.628Z",
+  "reviews": [
+    {
+      "id": 1,
+      "reviewId": 281397163,
+      "userName": "a** s**",
+      "rating": 5,
+      "date": "2023-03-21T16:00:53.488Z",
+      "comment": "Çok iyi çok güzel",
+      "sellerName": "Evdemo",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756670947523/img/2016931/2024907/2041856/34746473/18371973-1692969691707.jpeg",
+          "localPath": "review_images/review_001.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "reviewId": 323822008,
+      "userName": "F** Ç**",
+      "rating": 2,
+      "date": "2023-07-21T19:49:13.749Z",
+      "comment": "sandalyeleri çok kötü ayaklar dengesiz ve rahatsız fiyatı uygun ama yinede değmez bence",
+      "sellerName": "Evdemo",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2037868/34746473/38022534-1689968951859.jpeg",
+          "localPath": "review_images/review_002.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "reviewId": 323822008,
+      "userName": "F** Ç**",
+      "rating": 2,
+      "date": "2023-07-21T19:49:13.749Z",
+      "comment": "sandalyeleri çok kötü ayaklar dengesiz ve rahatsız fiyatı uygun ama yinede değmez bence",
+      "sellerName": "Evdemo",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2037868/34746473/38022534-1689968952562.jpeg",
+          "localPath": "review_images/review_003.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "reviewId": 323822008,
+      "userName": "F** Ç**",
+      "rating": 2,
+      "date": "2023-07-21T19:49:13.749Z",
+      "comment": "sandalyeleri çok kötü ayaklar dengesiz ve rahatsız fiyatı uygun ama yinede değmez bence",
+      "sellerName": "Evdemo",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756670947523/img/2016931/2023910/2037868/34746473/38022534-1689968953030.jpeg",
+          "localPath": "review_images/review_004.jpg"
+        }
+      ]
+    }
+  ]
+}

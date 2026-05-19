@@ -1,0 +1,77 @@
+{
+  "name": "Retro Minimal Şık Deri Kordon Kadın Kol Saati",
+  "brand": "Sobce",
+  "price": null,
+  "rating": 4.095060893098782,
+  "reviewCount": 2956,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kasa Çapı",
+      "value": "20-25 mm"
+    },
+    {
+      "key": "Kasa Materyali",
+      "value": "Metal"
+    },
+    {
+      "key": "Kordon Materyali",
+      "value": "Deri"
+    },
+    {
+      "key": "Mekanizma",
+      "value": "Quartz"
+    },
+    {
+      "key": "Kasa Renk",
+      "value": "Rose Gold"
+    },
+    {
+      "key": "Kordon Renk",
+      "value": "Kahverengi"
+    },
+    {
+      "key": "Su Geçirmezlik",
+      "value": "0 ATM"
+    },
+    {
+      "key": "Cam Tipi",
+      "value": "Cam"
+    },
+    {
+      "key": "Cam Şekli",
+      "value": "Düz"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "Garantisiz"
+    },
+    {
+      "key": "Renk",
+      "value": "Pembe"
+    },
+    {
+      "key": "Bakım Talimatları (Genel)",
+      "value": "Ürünün kullanım ömrünü korumak için ürüne özel bakım talimatlarını takip ediniz."
+    },
+    {
+      "key": "Özellik",
+      "value": "Hava"
+    },
+    {
+      "key": "Kadran Renk",
+      "value": "Beyaz"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1844/prod/QC_ENRICHMENT/20260325/22/fb80bdb0-6b8b-3c7b-b7f2-638b17b12f3e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1837/prod/QC_ENRICHMENT/20260310/01/a2e7cb18-95b5-3eba-bfba-e50e44ca736e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    }
+  ]
+}

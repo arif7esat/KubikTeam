@@ -1,0 +1,133 @@
+{
+  "name": "Erkek Bisiklet Yaka Whatever Baskı Detaylı Oversize Tshirt",
+  "brand": "KAPHONE",
+  "price": null,
+  "rating": 1,
+  "reviewCount": 1,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Oversize"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Bisiklet Yaka"
+    },
+    {
+      "key": "Materyal",
+      "value": "Pamuklu"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "Tekli"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Young"
+    },
+    {
+      "key": "Desen",
+      "value": "Baskılı"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Örme"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Kısa Kol"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Teknik",
+      "value": "Yok"
+    },
+    {
+      "key": "Cep",
+      "value": "Cepsiz"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Kısa"
+    },
+    {
+      "key": "Boy",
+      "value": "Standart"
+    },
+    {
+      "key": "Ortam",
+      "value": "Günlük"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Ek Özellik Mevcut Değil"
+    },
+    {
+      "key": "Baskı/Nakış Tekniği",
+      "value": "Dijital Baskı"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Organik"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "Süprem"
+    },
+    {
+      "key": "Persona",
+      "value": "Young"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "30 Derece"
+    },
+    {
+      "key": "Sezon",
+      "value": "Yaz"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1647/prod/QC/20250307/23/a8a7d4f3-ef64-3fd7-b57c-e73582b88cb9/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1649/prod/QC/20250307/23/81e1569d-b898-3351-b466-e079297faf90/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1649/prod/QC/20250307/23/094289a8-1577-31d9-bffc-9872860e4e30/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1647/prod/QC/20250307/23/34482c18-facb-301b-b1a3-2c5b19248c09/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1648/prod/QC/20250307/23/05c5eac4-db00-3086-9763-62dc0d678df5/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1649/prod/QC/20250307/23/7d172f63-7ed8-356d-abd6-6928f6db9319/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1648/prod/QC/20250307/23/0f188a42-bd4d-327f-aa98-74958a4cbb5a/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1648/prod/QC/20250307/23/21550b15-16d0-3f20-8c28-782494f5eb92/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    }
+  ]
+}

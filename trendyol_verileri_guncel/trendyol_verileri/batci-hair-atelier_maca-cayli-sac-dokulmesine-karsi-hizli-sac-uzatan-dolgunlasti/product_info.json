@@ -1,0 +1,49 @@
+{
+  "name": "Maça Çaylı Saç Dökülmesine Karşı Hızlı Sac Uzatan Dolgunlaştırıcı Onarıcı Besleyici Şampuan 500 ml",
+  "brand": "Batçı Hair Atelier",
+  "price": null,
+  "rating": 4.603448275862069,
+  "reviewCount": 174,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Özellik",
+      "value": "Sülfatsız"
+    },
+    {
+      "key": "Etki",
+      "value": "Dökülme Karşıtı"
+    },
+    {
+      "key": "Hacim",
+      "value": "500 ml"
+    },
+    {
+      "key": "Saç Tipi",
+      "value": "Tüm Saç Tipleri"
+    },
+    {
+      "key": "Refill",
+      "value": "Hayır"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1791/prod/QC_ENRICHMENT/20251127/11/becbe6b0-6618-3cf8-9283-aab2eb9c608f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1772/prod/QC_ENRICHMENT/20251013/09/cc1e615e-f85f-30fb-b470-cac07403abbb/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1770/prod/QC_ENRICHMENT/20251013/09/fb020464-0a3e-3bea-b6a0-2cf8e1356cc8/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1772/prod/QC_ENRICHMENT/20251013/09/63f042c8-faff-3f03-b387-80c7815475d6/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    }
+  ]
+}

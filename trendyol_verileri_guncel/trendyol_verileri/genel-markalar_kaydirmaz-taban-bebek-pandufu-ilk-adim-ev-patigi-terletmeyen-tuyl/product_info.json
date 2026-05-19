@@ -1,0 +1,113 @@
+{
+  "name": "Kaydırmaz Taban, Bebek Pandufu, Ilk Adım Ev Patiği, Terletmeyen, Tüylenmeyen Polar",
+  "brand": "Genel Markalar",
+  "price": null,
+  "rating": 4.575726141078838,
+  "reviewCount": 964,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Materyal",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 1"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Taban",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Renk",
+      "value": "Bej"
+    },
+    {
+      "key": "Alt Taban Materyali",
+      "value": "PVC"
+    },
+    {
+      "key": "Topuk Boyu",
+      "value": "Kısa Topuklu (1- 4 cm)"
+    },
+    {
+      "key": "İç Astar & İç Taban Materyali",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Bağlama Şekli",
+      "value": "Bağcıksız"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "%100 Tekstil"
+    },
+    {
+      "key": "Topuk Tipi",
+      "value": "Düz Topuklu"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Eco-friendly"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Eco-friendly"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Recycle"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "1'li"
+    },
+    {
+      "key": "Saya Materyali",
+      "value": "Tekstil"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1591/prod/QC/20241023/01/c837a145-56d8-374d-9729-35eb492f34e0/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1590/prod/QC/20241023/01/917d93cc-2282-3ecc-bc9b-ce7ab6ead5b6/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1590/prod/QC/20241023/01/30ee9e96-03ca-3fcc-9ee9-b5fe8f9b2f42/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1590/prod/QC/20241023/01/df962d5b-2be5-3f32-a18b-745d3e9f9b4f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1592/prod/QC/20241023/01/441556bc-2589-38db-ab9b-783f16a9652b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1590/prod/QC/20241023/01/ae6c90ca-3691-33f7-8a9e-60a7e4c638d8/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    }
+  ]
+}

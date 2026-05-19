@@ -1,0 +1,109 @@
+{
+  "name": "Runfalcon 5 Unisex Koşu Ayakkabısı IH7758 Siyah",
+  "brand": "adidas",
+  "price": null,
+  "rating": 4.48062015503876,
+  "reviewCount": 129,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Dış Materyal",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Materyal",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Bağlama Şekli",
+      "value": "Bağcıklı"
+    },
+    {
+      "key": "İç Astar & İç Taban Materyali",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Alt Taban Materyali",
+      "value": "Kauçuk"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Topuk Boyu",
+      "value": "Kısa Topuklu (1- 4 cm)"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "100% Materyal bilgisi için iç etiketi kontrol ediniz"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 4"
+    },
+    {
+      "key": "Topuk Tipi",
+      "value": "Düz Topuklu"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Belirtilmemiş"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Ek Özellik Mevcut Değil"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Ortam",
+      "value": "Günlük"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1695/prod/QC_ENRICHMENT/20250619/12/a5099d30-9c81-3809-805a-55964da426a5/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1697/prod/QC_ENRICHMENT/20250619/12/18cc9557-dbad-3565-b729-8ac2aeca3bd3/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1695/prod/QC_ENRICHMENT/20250619/12/c636e92d-8696-358f-a2bd-0bae9a329695/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1696/prod/QC_ENRICHMENT/20250619/12/2dafbe44-5ff8-3d05-83a8-95f6d4733c44/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1696/prod/QC_ENRICHMENT/20250619/12/a59085f9-b570-3419-bce6-bf9081119df5/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1696/prod/QC_ENRICHMENT/20250619/12/e7f5ff35-80f6-38b8-90f1-82f2e0f79c5f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1696/prod/QC_ENRICHMENT/20250619/12/62984660-105b-367f-8dd0-43ee13aba54c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1696/prod/QC_ENRICHMENT/20250619/12/e6180a3a-676f-30f5-a17f-8b3e48438a1e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    }
+  ]
+}

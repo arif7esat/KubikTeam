@@ -1,0 +1,60 @@
+{
+  "content": [
+    {
+      "id": 107895726,
+      "userFullName": "G** O**",
+      "rate": 3,
+      "comment": "ürün kusurlu geldi iade ettim ama rengi çok güzel",
+      "trusted": true,
+      "sellerName": "Trendyol",
+      "mediaFile": {
+        "id": 107895726,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2031886/773391079/88483173-1739448450770.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2031886/773391079/88483173-1739448450770.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1739448451339,
+      "reviewId": 472216301
+    },
+    {
+      "id": 106415054,
+      "userFullName": "Ö** E**",
+      "rate": 4,
+      "comment": "beğenemedim :(",
+      "trusted": true,
+      "sellerName": "Trendyol",
+      "mediaFile": {
+        "id": 106415054,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2019922/2043850/773391080/943362-1737806012697.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756843808113/img/2018925/2019922/2043850/773391080/943362-1737806012697.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1737806013413,
+      "reviewId": 467036565
+    },
+    {
+      "id": 121913587,
+      "userFullName": "M** G**",
+      "rate": 1,
+      "comment": "ürün 3 giyimde sokuldu",
+      "trusted": true,
+      "sellerName": "Trendyol",
+      "mediaFile": {
+        "id": 121913587,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2027898/2024907/773391080/11106473-1757153615409.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media-migrated_1755700289924/img/2018925/2027898/2024907/773391080/11106473-1757153615409.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1732399568823,
+      "reviewId": 445462292
+    }
+  ],
+  "totalPages": 2,
+  "totalElements": 33
+}

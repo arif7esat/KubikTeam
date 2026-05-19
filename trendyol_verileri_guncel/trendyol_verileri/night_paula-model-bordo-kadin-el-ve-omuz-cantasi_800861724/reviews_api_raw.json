@@ -1,0 +1,24 @@
+{
+  "content": [
+    {
+      "id": 136202388,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "üstünde leke var gitmiyor askısı yırtık biraz kullansam daha çok yırtılacak şekilde o kadar para veriyoruz niye adam gibi ürün göndermezsiniz ki",
+      "trusted": true,
+      "sellerName": "Night",
+      "mediaFile": {
+        "id": 136202388,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2021916/800861724/121067453-1775133657791.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2021916/800861724/121067453-1775133657791.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 1836
+      },
+      "lastModifiedDate": 1775133659013,
+      "reviewId": 626253788
+    }
+  ],
+  "totalPages": 68,
+  "totalElements": 2011
+}

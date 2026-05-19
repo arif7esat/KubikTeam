@@ -1,0 +1,537 @@
+{
+  "productId": "872446278",
+  "productName": "İndigo Stone Erkek Jeans 5WAM40120ID",
+  "totalReviews": 33,
+  "averageRating": 4.3577981651376145,
+  "scrapedAt": "2026-05-18T13:58:53.691Z",
+  "reviews": [
+    {
+      "id": 1,
+      "reviewId": 323462431,
+      "userName": "D** B**",
+      "rating": 5,
+      "date": "2023-07-20T15:07:59.126Z",
+      "comment": "Rengini bgndik tam kalip guzel",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2016931/2023910/2036871/727785296/108588937-1689865677915.jpeg",
+          "localPath": "review_images/review_001.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "reviewId": 440833111,
+      "userName": "S** K**",
+      "rating": 5,
+      "date": "2024-11-12T15:10:57.992Z",
+      "comment": "Çok güzel ve uygun . Alabilirsiniz . Eşimde çok beğendi . Tam beden alın",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2028895/2029892/771846869/16840250-1731424257315.jpeg",
+          "localPath": "review_images/review_002.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "reviewId": 480028761,
+      "userName": "M** B** Ö**",
+      "rating": 5,
+      "date": "2025-03-15T11:12:30.755Z",
+      "comment": "Kafileyi rahat güzel",
+      "sellerName": "Koton",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2021916/2033880/781021108/46426231-1742037149677.jpeg",
+          "localPath": "review_images/review_003.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "reviewId": 468009347,
+      "userName": "Y** E** D**",
+      "rating": 5,
+      "date": "2025-01-28T15:33:50.087Z",
+      "comment": "Çok beğendim",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2019922/2046841/781021325/106135723-1738078429406.jpeg",
+          "localPath": "review_images/review_004.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "reviewId": 345978342,
+      "userName": "A** K**",
+      "rating": 4,
+      "date": "2023-10-16T12:58:09.339Z",
+      "comment": "Ben 30/30 sipariş vermiştim ama gelen 30/32 ? Ama yinede güzel kaliteli ürün",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756692487258/img/2016931/2026901/2044847/737055297/21766181-1698518272026.jpeg",
+          "localPath": "review_images/review_005.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "reviewId": 454814465,
+      "userName": "K** S**",
+      "rating": 1,
+      "date": "2024-12-23T11:32:22.926Z",
+      "comment": "ürün görselde straight kalıp diye belirtilmiş.  sipariş verdim. ancak gönderilen ürün tapered (havuç kalıp) geldi... üstelik 32 boy sipariş verdim ve denediğimde 30 boy olduğunu fark ettim! boş yere zaman kaybediyoruz. lütfen dikkat edelim!",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2029892/2040859/872446251/114188047-1734953542394.jpeg",
+          "localPath": "review_images/review_006.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "reviewId": 454814465,
+      "userName": "K** S**",
+      "rating": 1,
+      "date": "2024-12-23T11:32:22.926Z",
+      "comment": "ürün görselde straight kalıp diye belirtilmiş.  sipariş verdim. ancak gönderilen ürün tapered (havuç kalıp) geldi... üstelik 32 boy sipariş verdim ve denediğimde 30 boy olduğunu fark ettim! boş yere zaman kaybediyoruz. lütfen dikkat edelim!",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2040859/872446251/114188047-1734953542037.jpeg",
+          "localPath": "review_images/review_007.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "reviewId": 440468781,
+      "userName": "G** n**",
+      "rating": 5,
+      "date": "2024-11-11T16:06:49.718Z",
+      "comment": "ürün harika koton kalitesini bu fiyata almak da efsaneee☺️☺️",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2028895/2028895/771846869/16421512-1731341209004.jpeg",
+          "localPath": "review_images/review_008.jpg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "reviewId": 322714004,
+      "userName": "Ç** Ş**",
+      "rating": 5,
+      "date": "2023-07-18T07:34:19.663Z",
+      "comment": "kalıbı tam. eşim çok beğendi.",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2034877/727785167/9468990-1689665658411.jpeg",
+          "localPath": "review_images/review_009.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "reviewId": 322714004,
+      "userName": "Ç** Ş**",
+      "rating": 5,
+      "date": "2023-07-18T07:34:19.663Z",
+      "comment": "kalıbı tam. eşim çok beğendi.",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2016931/2023910/2034877/727785167/9468990-1689665656555.jpeg",
+          "localPath": "review_images/review_010.jpg"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "reviewId": 462128355,
+      "userName": "ö** t** ç**",
+      "rating": 5,
+      "date": "2025-01-08T18:43:54.786Z",
+      "comment": "Çok güzel kumaşı da bedende",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2018925/2019922/2026901/773391079/4481517-1736361833887.jpeg",
+          "localPath": "review_images/review_011.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "reviewId": 544532617,
+      "userName": "A** T**",
+      "rating": 5,
+      "date": "2025-05-21T12:26:59.061Z",
+      "comment": "Fiyatına göre gayet iyi",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2039862/781021325/15823749-1747830418175.jpeg",
+          "localPath": "review_images/review_012.jpg"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "reviewId": 478755010,
+      "userName": "Z** d**",
+      "rating": 5,
+      "date": "2025-03-11T08:50:09.245Z",
+      "comment": "çık çık beğendim tam istediğim gibi geldi",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756863847499/img/2018925/2021916/2029892/773391079/53750977-1741683008561.jpeg",
+          "localPath": "review_images/review_013.jpg"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "reviewId": 341791037,
+      "userName": "pınar ş.",
+      "rating": 5,
+      "date": "2023-09-29T12:23:38.131Z",
+      "comment": "Çok hızlı kargo teşekkürler",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2016931/2025904/2045844/727793052/18246895-1695990216673.jpeg",
+          "localPath": "review_images/review_014.jpg"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "reviewId": 341791037,
+      "userName": "pınar ş.",
+      "rating": 5,
+      "date": "2023-09-29T12:23:38.131Z",
+      "comment": "Çok hızlı kargo teşekkürler",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756692487258/img/2016931/2025904/2045844/727793052/18246895-1695990217405.jpeg",
+          "localPath": "review_images/review_015.jpg"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "reviewId": 323462431,
+      "userName": "D** B**",
+      "rating": 5,
+      "date": "2023-07-20T15:07:59.126Z",
+      "comment": "Rengini bgndik tam kalip guzel",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2036871/727785296/108588937-1689865677147.jpeg",
+          "localPath": "review_images/review_016.jpg"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "reviewId": 323462431,
+      "userName": "D** B**",
+      "rating": 5,
+      "date": "2023-07-20T15:07:59.126Z",
+      "comment": "Rengini bgndik tam kalip guzel",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2036871/727785296/108588937-1689865678384.jpeg",
+          "localPath": "review_images/review_017.jpg"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "reviewId": 450217231,
+      "userName": "G** G**",
+      "rating": 5,
+      "date": "2024-12-08T19:34:08.909Z",
+      "comment": "Fiyat performans ürünü. Tam bedeninizi tercih edebilirsiniz",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2017928/2029892/2025904/771839926/70359891-1733686448630.jpeg",
+          "localPath": "review_images/review_018.jpg"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "reviewId": 480855727,
+      "userName": "E** Ç**",
+      "rating": 5,
+      "date": "2025-03-18T10:59:03.275Z",
+      "comment": "Rengi çok güzel çok beğendim. Ama paçası fazla uzum geldiği için kestirmek durumunda kaldım. Kalıbı tam kalıp esnek yapılı",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756791427264/img/2018925/2021916/2036871/773391079/34786408-1742295541686.jpeg",
+          "localPath": "review_images/review_019.jpg"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "reviewId": 480855727,
+      "userName": "E** Ç**",
+      "rating": 5,
+      "date": "2025-03-18T10:59:03.275Z",
+      "comment": "Rengi çok güzel çok beğendim. Ama paçası fazla uzum geldiği için kestirmek durumunda kaldım. Kalıbı tam kalıp esnek yapılı",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756863847499/img/2018925/2021916/2036871/773391079/34786408-1742295542317.jpeg",
+          "localPath": "review_images/review_020.jpg"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "reviewId": 480855727,
+      "userName": "E** Ç**",
+      "rating": 5,
+      "date": "2025-03-18T10:59:03.275Z",
+      "comment": "Rengi çok güzel çok beğendim. Ama paçası fazla uzum geldiği için kestirmek durumunda kaldım. Kalıbı tam kalıp esnek yapılı",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756791427264/img/2018925/2021916/2036871/773391079/34786408-1742295541064.jpeg",
+          "localPath": "review_images/review_021.jpg"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "reviewId": 610853130,
+      "userName": "A** K**",
+      "rating": 1,
+      "date": "2026-02-07T10:03:41.316Z",
+      "comment": "kardeşim için almıştım, gönderilen ürünün sipariş çıktığımla alakası yok",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2021916/2026901/872446278/45854662-1770458620322.jpeg",
+          "localPath": "review_images/review_022.jpg"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "reviewId": 357292071,
+      "userName": "G** Ö**",
+      "rating": 5,
+      "date": "2023-11-25T19:18:42.822Z",
+      "comment": "Tam beden, rengi çok güzel",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2016931/2027898/2041856/727785244/92078533-1700939921740.jpeg",
+          "localPath": "review_images/review_023.jpg"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "reviewId": 357292071,
+      "userName": "G** Ö**",
+      "rating": 5,
+      "date": "2023-11-25T19:18:42.822Z",
+      "comment": "Tam beden, rengi çok güzel",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2016931/2027898/2041856/727785244/92078533-1700939922170.jpeg",
+          "localPath": "review_images/review_024.jpg"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "reviewId": 582398174,
+      "userName": "S** A**",
+      "rating": 5,
+      "date": "2025-11-03T20:40:41.169Z",
+      "comment": "Kot çok iyi. Rengi koyu. Beden çok iyi oldu. 1.75 m 79 kg  33/30 tam oldu",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2029892/2021916/737059434/11214652-1762202439998.jpeg",
+          "localPath": "review_images/review_025.jpg"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "reviewId": 582398174,
+      "userName": "S** A**",
+      "rating": 5,
+      "date": "2025-11-03T20:40:41.169Z",
+      "comment": "Kot çok iyi. Rengi koyu. Beden çok iyi oldu. 1.75 m 79 kg  33/30 tam oldu",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2029892/2021916/737059434/11214652-1762202439113.jpeg",
+          "localPath": "review_images/review_026.jpg"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "reviewId": 447530660,
+      "userName": "C** C**",
+      "rating": 4,
+      "date": "2024-11-30T14:04:20.508Z",
+      "comment": "ürünün rengi güzel kaliteli tavsiye ederim. ancak küçük ve çok dar geldi.",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2028895/2047838/167828762/5854165-1732975459662.jpeg",
+          "localPath": "review_images/review_027.jpg"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "reviewId": 472216301,
+      "userName": "G** O**",
+      "rating": 3,
+      "date": "2025-02-13T12:07:31.339Z",
+      "comment": "ürün kusurlu geldi iade ettim ama rengi çok güzel",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2031886/773391079/88483173-1739448449649.jpeg",
+          "localPath": "review_images/review_028.jpg"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "reviewId": 448297994,
+      "userName": "Ö** Ö**",
+      "rating": 5,
+      "date": "2024-12-02T19:55:08.485Z",
+      "comment": "güzel urun ama dar",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2019922/773391079/2929602-1733169307639.jpeg",
+          "localPath": "review_images/review_029.jpg"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "reviewId": 472216301,
+      "userName": "G** O**",
+      "rating": 3,
+      "date": "2025-02-13T12:07:31.339Z",
+      "comment": "ürün kusurlu geldi iade ettim ama rengi çok güzel",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2031886/773391079/88483173-1739448450311.jpeg",
+          "localPath": "review_images/review_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "reviewId": 472216301,
+      "userName": "G** O**",
+      "rating": 3,
+      "date": "2025-02-13T12:07:31.339Z",
+      "comment": "ürün kusurlu geldi iade ettim ama rengi çok güzel",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2031886/773391079/88483173-1739448450770.jpeg",
+          "localPath": "review_images/review_031.jpg"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "reviewId": 467036565,
+      "userName": "Ö** E**",
+      "rating": 4,
+      "date": "2025-01-25T11:53:33.413Z",
+      "comment": "beğenemedim :(",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2019922/2043850/773391080/943362-1737806012697.jpeg",
+          "localPath": "review_images/review_032.jpg"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "reviewId": 445462292,
+      "userName": "M** G**",
+      "rating": 1,
+      "date": "2024-11-23T22:06:08.823Z",
+      "comment": "ürün 3 giyimde sokuldu",
+      "sellerName": "Trendyol",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2027898/2024907/773391080/11106473-1757153615409.jpeg",
+          "localPath": "review_images/review_033.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "name": "One Therma-FIT Top Polar Kadın Yeşil Sweatshirt Mat Sportswear",
+  "brand": "Nike",
+  "price": null,
+  "rating": null,
+  "reviewCount": null,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Uzun Kol"
+    },
+    {
+      "key": "Renk",
+      "value": "Yeşil"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Dik Yaka"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Ortam",
+      "value": "Sportswear"
+    },
+    {
+      "key": "Siluet",
+      "value": "Jogger"
+    },
+    {
+      "key": "Cep",
+      "value": "Kanguru Cep"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1918/prod/QC_PREP/20260516/22/e3704727-6a74-3f4f-969d-7b1fa1a0a9c2/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1911/prod/QC_PREP/20260516/22/ad883f02-c1b0-30bf-88a6-e5ffc83334ac/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1942/prod/QC_PREP/20260516/22/ca0091cc-79f7-3c2a-a542-e5c75224c206/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1922/prod/QC_PREP/20260516/22/61a6bffb-78dc-3102-8eab-69a24a3ef0c4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1911/prod/QC_PREP/20260516/22/7385a581-be74-3ef8-952b-2bed03bc6d19/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1923/prod/QC_PREP/20260516/22/4d7038c7-44be-3975-b079-e3c1fcc5f402/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    }
+  ]
+}

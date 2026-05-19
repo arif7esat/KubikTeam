@@ -1,0 +1,873 @@
+{
+  "productId": "718230290",
+  "productName": "Otomatik Çadır - 4 Kişilik",
+  "totalReviews": 54,
+  "averageRating": 4.333333333333332,
+  "scrapedAt": "2026-05-19T00:20:57.361Z",
+  "reviews": [
+    {
+      "id": 1,
+      "reviewId": 421098850,
+      "userName": "C** D**",
+      "rating": 5,
+      "date": "2024-08-27T16:46:43.933Z",
+      "comment": "Görselde göründüğü gibi geldi henüz kullanmadık içi inanılmaz geniş ve rahat salonumuzun ortasını kapladı gönül rahatlığıyla alınır sorunsuz geldi🙏🏻kargo çok hızlıydı pazar sipariş ettim salı günü geldi",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2044847/718230290/27602948-1724777203068.jpeg",
+          "localPath": "review_images/review_001.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "reviewId": 343938942,
+      "userName": "B** Ö**",
+      "rating": 5,
+      "date": "2023-10-08T08:56:10.487Z",
+      "comment": "Kurulumu çok kolay ve çok geniş kullanışlı…tavsiye ederim.",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2016931/2026901/2024907/718230290/2063443-1696755369590.jpeg",
+          "localPath": "review_images/review_002.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "reviewId": 632163469,
+      "userName": "İ** Y**",
+      "rating": 5,
+      "date": "2026-04-25T08:33:02.951Z",
+      "comment": "Çok kaliteli ve güzel. Kurulumu çok kolay.Toplaması da kolay. Oldukça geniş. Yüksekliği de yeterli.",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2044847/718230290/18963136-1777105981552.jpeg",
+          "localPath": "review_images/review_003.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "reviewId": 325711470,
+      "userName": "O** Ö**",
+      "rating": 5,
+      "date": "2023-07-29T09:15:19.260Z",
+      "comment": "Çok beğendin kolay kurulum",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2045844/718230290/111637848-1690622117347.jpeg",
+          "localPath": "review_images/review_004.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "reviewId": 544957773,
+      "userName": "kamil e.",
+      "rating": 5,
+      "date": "2025-05-22T22:05:45.282Z",
+      "comment": "Fiyatına göre çok çok iyi bir ürün beklentimin üstünde geldi boyu genişliği gayet güzel",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2041856/718230290/76858535-1747951544407.jpeg",
+          "localPath": "review_images/review_005.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "reviewId": 325711470,
+      "userName": "O** Ö**",
+      "rating": 5,
+      "date": "2023-07-29T09:15:19.260Z",
+      "comment": "Çok beğendin kolay kurulum",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2045844/718230290/111637848-1690622118043.jpeg",
+          "localPath": "review_images/review_006.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "reviewId": 325711470,
+      "userName": "O** Ö**",
+      "rating": 5,
+      "date": "2023-07-29T09:15:19.260Z",
+      "comment": "Çok beğendin kolay kurulum",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2045844/718230290/111637848-1690622118541.jpeg",
+          "localPath": "review_images/review_007.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "reviewId": 549983579,
+      "userName": "**** ****",
+      "rating": 1,
+      "date": "2025-06-12T15:14:38.433Z",
+      "comment": "Üst bölümü kırık geldi kesinlikle oturmuyor geri iade edeceğim",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2024907/2030889/718230290/18496948-1749741276099.jpeg",
+          "localPath": "review_images/review_008.jpg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "reviewId": 544062847,
+      "userName": "a** s**",
+      "rating": 5,
+      "date": "2025-05-19T08:22:42.330Z",
+      "comment": "şimdilik evde kurulumunu yaptık beklediğimizden geniş ve güzel ... kurulumu çok kolay ve hiç uğraştırmıyor !! tek endişem kumaşı ince aşırı yağmurda sıkıntı olabilir , öyle havalarda üstüne brandayla ikinci bir katman yapmak lazım !",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2037868/718230290/90627267-1747642961074.jpeg",
+          "localPath": "review_images/review_009.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "reviewId": 548688171,
+      "userName": "S** E**",
+      "rating": 5,
+      "date": "2025-06-05T08:32:06.901Z",
+      "comment": "ÜRÜN KISA BİR SÜREDE GELDİ, DOĞRUSU BÖYLE BEKLEMİYORDUM ÇOK GENİŞ ODAYA SIĞMADI TERASA KOYDUK KALİTESİ ve KURULUMU ÇOK GÜZEL",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2024907/2023910/718230290/70192539-1749112325683.jpeg",
+          "localPath": "review_images/review_010.jpg"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "reviewId": 544062847,
+      "userName": "a** s**",
+      "rating": 5,
+      "date": "2025-05-19T08:22:42.330Z",
+      "comment": "şimdilik evde kurulumunu yaptık beklediğimizden geniş ve güzel ... kurulumu çok kolay ve hiç uğraştırmıyor !! tek endişem kumaşı ince aşırı yağmurda sıkıntı olabilir , öyle havalarda üstüne brandayla ikinci bir katman yapmak lazım !",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2037868/718230290/90627267-1747642960620.jpeg",
+          "localPath": "review_images/review_011.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "reviewId": 411942467,
+      "userName": "fatih C.",
+      "rating": 5,
+      "date": "2024-07-18T12:45:05.337Z",
+      "comment": "10 yıldız olsa 10 yıldız veririm cok gzuel büyük 3 kişilik şişme yatak sıgdı içine bosluk bile kaldı",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2024907/2035874/718230290/20739606-1721306704357.jpeg",
+          "localPath": "review_images/review_012.jpg"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "reviewId": 547342347,
+      "userName": "F** c** Ç**",
+      "rating": 5,
+      "date": "2025-05-30T20:13:35.579Z",
+      "comment": "Çok güzel ve kaliteli",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2048835/718230290/77570845-1748636014718.jpeg",
+          "localPath": "review_images/review_013.jpg"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "reviewId": 544957773,
+      "userName": "kamil e.",
+      "rating": 5,
+      "date": "2025-05-22T22:05:45.282Z",
+      "comment": "Fiyatına göre çok çok iyi bir ürün beklentimin üstünde geldi boyu genişliği gayet güzel",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2041856/718230290/76858535-1747951543694.jpeg",
+          "localPath": "review_images/review_014.jpg"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "reviewId": 544062847,
+      "userName": "a** s**",
+      "rating": 5,
+      "date": "2025-05-19T08:22:42.330Z",
+      "comment": "şimdilik evde kurulumunu yaptık beklediğimizden geniş ve güzel ... kurulumu çok kolay ve hiç uğraştırmıyor !! tek endişem kumaşı ince aşırı yağmurda sıkıntı olabilir , öyle havalarda üstüne brandayla ikinci bir katman yapmak lazım !",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2037868/718230290/90627267-1747642961557.jpeg",
+          "localPath": "review_images/review_015.jpg"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "reviewId": 501292912,
+      "userName": "G** Y**",
+      "rating": 5,
+      "date": "2025-05-03T22:33:59.915Z",
+      "comment": "Çok güzel muazzam geniş 🤌🏻",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2022913/718230290/28655887-1746311639059.jpeg",
+          "localPath": "review_images/review_016.jpg"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "reviewId": 501292912,
+      "userName": "G** Y**",
+      "rating": 5,
+      "date": "2025-05-03T22:33:59.915Z",
+      "comment": "Çok güzel muazzam geniş 🤌🏻",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2022913/718230290/28655887-1746311638402.jpeg",
+          "localPath": "review_images/review_017.jpg"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "reviewId": 421723461,
+      "userName": "D** A**",
+      "rating": 5,
+      "date": "2024-08-29T20:04:24.758Z",
+      "comment": "Çadır gerçekten çok güzel kurulumunu katlanışını yotubeden izleyip yaptım gerçekten çok kolay bu fiyata çok uygun içi çok geniş kesinlikle tavsiye ediyorum",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2017928/2025904/2046841/718230290/29647913-1724961864387.jpeg",
+          "localPath": "review_images/review_018.jpg"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "reviewId": 421723461,
+      "userName": "D** A**",
+      "rating": 5,
+      "date": "2024-08-29T20:04:24.758Z",
+      "comment": "Çadır gerçekten çok güzel kurulumunu katlanışını yotubeden izleyip yaptım gerçekten çok kolay bu fiyata çok uygun içi çok geniş kesinlikle tavsiye ediyorum",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2046841/718230290/29647913-1724961864257.jpeg",
+          "localPath": "review_images/review_019.jpg"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "reviewId": 543402396,
+      "userName": "K** G**",
+      "rating": 5,
+      "date": "2025-05-15T19:39:55.422Z",
+      "comment": "çok güzel bir ürün cocıklar bayıldı",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2033880/718230290/25435150-1747337994323.jpeg",
+          "localPath": "review_images/review_020.jpg"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "reviewId": 543639059,
+      "userName": "E** K**",
+      "rating": 1,
+      "date": "2025-05-16T19:31:48.241Z",
+      "comment": "tepesindeki mekanizma çıkmış şekilde geldi açmaya çalışınca diğeri de çıkmaya başladı. kullanamadım iade ediyorum.",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2034877/718230290/14926474-1747423907126.jpeg",
+          "localPath": "review_images/review_021.jpg"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "reviewId": 418228644,
+      "userName": "M** E**",
+      "rating": 5,
+      "date": "2024-08-16T10:51:21.939Z",
+      "comment": "ürün kısa sürede elimize ulaştı beklediğimden daha büyük geldi kalite olarak normal incelikte iş görür kurulumu çok kolay toplarken de sıkıntısız.",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2017928/2025904/2033880/718230290/18652584-1723805481374.jpeg",
+          "localPath": "review_images/review_022.jpg"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "reviewId": 543098527,
+      "userName": "E** K**",
+      "rating": 5,
+      "date": "2025-05-14T16:07:02.117Z",
+      "comment": "bu fiyata bu kalite👌",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2032883/718230290/14937497-1747238821432.jpeg",
+          "localPath": "review_images/review_023.jpg"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "reviewId": 421890183,
+      "userName": "**** ****",
+      "rating": 5,
+      "date": "2024-08-30T13:33:34.296Z",
+      "comment": "ürün harika çok çok beğendim fiyatına göre muhteşem kesinlikle tavsiye ediyorum alın aldırın",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756808468433/img/2017928/2025904/2047838/718230290/139399463-1725024813023.jpeg",
+          "localPath": "review_images/review_024.jpg"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "reviewId": 514928851,
+      "userName": "M** K**",
+      "rating": 5,
+      "date": "2025-05-07T20:39:55.382Z",
+      "comment": "kutulamasi gayet iyi ama daha henüz açmadığım için yorum yapamıyorum açtıktan sonra tekrar yorum yapacağım",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2025904/718230290/47657474-1746650394141.jpeg",
+          "localPath": "review_images/review_025.jpg"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "reviewId": 418228644,
+      "userName": "M** E**",
+      "rating": 5,
+      "date": "2024-08-16T10:51:21.939Z",
+      "comment": "ürün kısa sürede elimize ulaştı beklediğimden daha büyük geldi kalite olarak normal incelikte iş görür kurulumu çok kolay toplarken de sıkıntısız.",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2017928/2025904/2033880/718230290/18652584-1723805480792.jpeg",
+          "localPath": "review_images/review_026.jpg"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "reviewId": 407759601,
+      "userName": "f** b**",
+      "rating": 4,
+      "date": "2024-06-27T19:50:48.082Z",
+      "comment": "paketleme sini beğendim gayet güzel görünüyor aşırı bı kalite beklemeyin parasına göre gayet geniş ve güzel",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756808468433/img/2017928/2023910/2044847/718230290/114497402-1719517846889.jpeg",
+          "localPath": "review_images/review_027.jpg"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "reviewId": 558813039,
+      "userName": "M** F** ç** B**",
+      "rating": 1,
+      "date": "2025-07-23T15:34:58.000Z",
+      "comment": "ürün ile ilgili çok problem var eklem yerleri yuvalarından çıkmış takamıyorum",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2025904/2041856/718230290/20429470-1753285030744.jpeg",
+          "localPath": "review_images/review_028.jpg"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "reviewId": 501463705,
+      "userName": "S** O**",
+      "rating": 5,
+      "date": "2025-05-05T08:10:44.187Z",
+      "comment": "henüz kullanmadım fakat yorumlar genel olarak olumlu olduğu için aldım kullandığımda yorumu güncellerim mutlaka",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2023910/718230290/9468056-1746432642071.jpeg",
+          "localPath": "review_images/review_029.jpg"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "reviewId": 421890183,
+      "userName": "**** ****",
+      "rating": 5,
+      "date": "2024-08-30T13:33:34.296Z",
+      "comment": "ürün harika çok çok beğendim fiyatına göre muhteşem kesinlikle tavsiye ediyorum alın aldırın",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2047838/718230290/139399463-1725024812407.jpeg",
+          "localPath": "review_images/review_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "reviewId": 501463705,
+      "userName": "S** O**",
+      "rating": 5,
+      "date": "2025-05-05T08:10:44.187Z",
+      "comment": "henüz kullanmadım fakat yorumlar genel olarak olumlu olduğu için aldım kullandığımda yorumu güncellerim mutlaka",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2023910/718230290/9468056-1746432641438.jpeg",
+          "localPath": "review_images/review_031.jpg"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "reviewId": 407958737,
+      "userName": "S** Ç**",
+      "rating": 4,
+      "date": "2024-06-28T17:37:05.973Z",
+      "comment": "çadırın perdelerinin dışarıdan açılıp kapanması çok ilginç :)kurulum biraz güç istiyor belki zamanla alışırım.  ürün elime çabuk geldi paketi düzgün yapılmış..",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2023910/2045844/718230290/1853176-1719596219895.jpeg",
+          "localPath": "review_images/review_032.jpg"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "reviewId": 421098850,
+      "userName": "C** D**",
+      "rating": 5,
+      "date": "2024-08-27T16:46:43.933Z",
+      "comment": "Görselde göründüğü gibi geldi henüz kullanmadık içi inanılmaz geniş ve rahat salonumuzun ortasını kapladı gönül rahatlığıyla alınır sorunsuz geldi🙏🏻kargo çok hızlıydı pazar sipariş ettim salı günü geldi",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756808468433/img/2017928/2025904/2044847/718230290/27602948-1724777203326.jpeg",
+          "localPath": "review_images/review_033.jpg"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "reviewId": 421890183,
+      "userName": "**** ****",
+      "rating": 5,
+      "date": "2024-08-30T13:33:34.296Z",
+      "comment": "ürün harika çok çok beğendim fiyatına göre muhteşem kesinlikle tavsiye ediyorum alın aldırın",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2047838/718230290/139399463-1725024813591.jpeg",
+          "localPath": "review_images/review_034.jpg"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "reviewId": 558813039,
+      "userName": "M** F** ç** B**",
+      "rating": 1,
+      "date": "2025-07-23T15:34:58.000Z",
+      "comment": "ürün ile ilgili çok problem var eklem yerleri yuvalarından çıkmış takamıyorum",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2025904/2041856/718230290/20429470-1753285029795.jpeg",
+          "localPath": "review_images/review_035.jpg"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "reviewId": 543402396,
+      "userName": "K** G**",
+      "rating": 5,
+      "date": "2025-05-15T19:39:55.422Z",
+      "comment": "çok güzel bir ürün cocıklar bayıldı",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2033880/718230290/25435150-1747337993621.jpeg",
+          "localPath": "review_images/review_036.jpg"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "reviewId": 548907721,
+      "userName": "S** E**",
+      "rating": 5,
+      "date": "2025-06-06T16:01:08.589Z",
+      "comment": "On numara beş yıldız kurulum çok kolay biz kendimize iş çıkardık vidaları söktük ama çıtalar takılı geldi ipi yukarı çekmeniz yeterli toplama sanki daha zordu😂videolar hep kurulum için.salonumuz büyük sığar sanmıştık ama çadır gerçekten çok büyük .",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2024907/2024907/718230290/16980747-1749225666050.jpeg",
+          "localPath": "review_images/review_037.jpg"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "reviewId": 421098850,
+      "userName": "C** D**",
+      "rating": 5,
+      "date": "2024-08-27T16:46:43.933Z",
+      "comment": "Görselde göründüğü gibi geldi henüz kullanmadık içi inanılmaz geniş ve rahat salonumuzun ortasını kapladı gönül rahatlığıyla alınır sorunsuz geldi🙏🏻kargo çok hızlıydı pazar sipariş ettim salı günü geldi",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2044847/718230290/27602948-1724777202438.jpeg",
+          "localPath": "review_images/review_038.jpg"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "reviewId": 490313099,
+      "userName": "S** y**",
+      "rating": 4,
+      "date": "2025-04-26T09:45:47.174Z",
+      "comment": "böyle çıktı yerinede oturturamıyorum uğraşmakta istemiyorum kırılır diye",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2022913/2044847/718230290/108088206-1745660746316.jpeg",
+          "localPath": "review_images/review_039.jpg"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "reviewId": 490313099,
+      "userName": "S** y**",
+      "rating": 4,
+      "date": "2025-04-26T09:45:47.174Z",
+      "comment": "böyle çıktı yerinede oturturamıyorum uğraşmakta istemiyorum kırılır diye",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2022913/2044847/718230290/108088206-1745660745719.jpeg",
+          "localPath": "review_images/review_040.jpg"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "reviewId": 416381438,
+      "userName": "A** K**",
+      "rating": 4,
+      "date": "2024-08-08T07:07:01.447Z",
+      "comment": "Beklediğimden büyük geldi. Kullanmadım, kullanınca yorumu güncelleyeceğim",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2017928/2025904/2025904/718230290/12653733-1723100820491.jpeg",
+          "localPath": "review_images/review_041.jpg"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "reviewId": 548907721,
+      "userName": "S** E**",
+      "rating": 5,
+      "date": "2025-06-06T16:01:08.589Z",
+      "comment": "On numara beş yıldız kurulum çok kolay biz kendimize iş çıkardık vidaları söktük ama çıtalar takılı geldi ipi yukarı çekmeniz yeterli toplama sanki daha zordu😂videolar hep kurulum için.salonumuz büyük sığar sanmıştık ama çadır gerçekten çok büyük .",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2024907/2024907/718230290/16980747-1749225667131.jpeg",
+          "localPath": "review_images/review_042.jpg"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "reviewId": 555940232,
+      "userName": "m** Y**",
+      "rating": 5,
+      "date": "2025-07-10T13:51:51.821Z",
+      "comment": "tamir edip yollanacak dediniz ama açmadan ürün sağlam mı anlayamam yok kullanılmış dediniz bu kadar kısa sürede nerede kullanmış olabilirim yine aynı yerlerden zannederim çıktı kul yapımı bişey diyemem ama 2.500 tl çöpe atacak param yok rica ediyorum beni bununla daha fazla uğraştırmayın iade ... oğlumla ay sonu kamp yapacağım.tüketici mahkemesiylede uğraştırmayın ama belliki uğraşacağım ve asla bundan sonra trenyol diye bir sayfa tanımayacağım",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2025904/2034877/718230290/33949883-1752685249822.jpeg",
+          "localPath": "review_images/review_043.jpg"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "reviewId": 563642347,
+      "userName": "N** K**",
+      "rating": 5,
+      "date": "2025-08-16T07:52:10.128Z",
+      "comment": "Büyük içi çok güzel beğendik tavsiye ederim",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2026901/2034877/718230290/6805746-1755330729254.jpeg",
+          "localPath": "review_images/review_044.jpg"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "reviewId": 632163469,
+      "userName": "İ** Y**",
+      "rating": 5,
+      "date": "2026-04-25T08:33:02.951Z",
+      "comment": "Çok kaliteli ve güzel. Kurulumu çok kolay.Toplaması da kolay. Oldukça geniş. Yüksekliği de yeterli.",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2044847/718230290/18963136-1777105980712.jpeg",
+          "localPath": "review_images/review_045.jpg"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "reviewId": 407759601,
+      "userName": "f** b**",
+      "rating": 4,
+      "date": "2024-06-27T19:50:48.082Z",
+      "comment": "paketleme sini beğendim gayet güzel görünüyor aşırı bı kalite beklemeyin parasına göre gayet geniş ve güzel",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2017928/2023910/2044847/718230290/114497402-1719517847351.jpeg",
+          "localPath": "review_images/review_046.jpg"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "reviewId": 632163469,
+      "userName": "İ** Y**",
+      "rating": 5,
+      "date": "2026-04-25T08:33:02.951Z",
+      "comment": "Çok kaliteli ve güzel. Kurulumu çok kolay.Toplaması da kolay. Oldukça geniş. Yüksekliği de yeterli.",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2044847/718230290/18963136-1777105979861.jpeg",
+          "localPath": "review_images/review_047.jpg"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "reviewId": 543639059,
+      "userName": "E** K**",
+      "rating": 1,
+      "date": "2025-05-16T19:31:48.241Z",
+      "comment": "tepesindeki mekanizma çıkmış şekilde geldi açmaya çalışınca diğeri de çıkmaya başladı. kullanamadım iade ediyorum.",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2034877/718230290/14926474-1747423906140.jpeg",
+          "localPath": "review_images/review_048.jpg"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "reviewId": 407759601,
+      "userName": "f** b**",
+      "rating": 4,
+      "date": "2024-06-27T19:50:48.082Z",
+      "comment": "paketleme sini beğendim gayet güzel görünüyor aşırı bı kalite beklemeyin parasına göre gayet geniş ve güzel",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2017928/2023910/2044847/718230290/114497402-1719517846262.jpeg",
+          "localPath": "review_images/review_049.jpg"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "reviewId": 416493715,
+      "userName": "E** m** T**",
+      "rating": 4,
+      "date": "2024-08-08T13:33:17.238Z",
+      "comment": "Merhabalar kardeşim kargo gelmeyle açıp kurmaya çalışmış ve demirleri çıkarmış geri takamıyoruz yardımcı olabilir misiniz",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756808468433/img/2017928/2025904/2025904/718230290/17904059-1723123996948.jpeg",
+          "localPath": "review_images/review_050.jpg"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "reviewId": 549983579,
+      "userName": "**** ****",
+      "rating": 1,
+      "date": "2025-06-12T15:14:38.433Z",
+      "comment": "Üst bölümü kırık geldi kesinlikle oturmuyor geri iade edeceğim",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2024907/2030889/718230290/18496948-1749741277062.jpeg",
+          "localPath": "review_images/review_051.jpg"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "reviewId": 555940232,
+      "userName": "m** Y**",
+      "rating": 5,
+      "date": "2025-07-10T13:51:51.821Z",
+      "comment": "tamir edip yollanacak dediniz ama açmadan ürün sağlam mı anlayamam yok kullanılmış dediniz bu kadar kısa sürede nerede kullanmış olabilirim yine aynı yerlerden zannederim çıktı kul yapımı bişey diyemem ama 2.500 tl çöpe atacak param yok rica ediyorum beni bununla daha fazla uğraştırmayın iade ... oğlumla ay sonu kamp yapacağım.tüketici mahkemesiylede uğraştırmayın ama belliki uğraşacağım ve asla bundan sonra trenyol diye bir sayfa tanımayacağım",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2025904/2034877/718230290/33949883-1752685247817.jpeg",
+          "localPath": "review_images/review_052.jpg"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "reviewId": 555940232,
+      "userName": "m** Y**",
+      "rating": 5,
+      "date": "2025-07-10T13:51:51.821Z",
+      "comment": "tamir edip yollanacak dediniz ama açmadan ürün sağlam mı anlayamam yok kullanılmış dediniz bu kadar kısa sürede nerede kullanmış olabilirim yine aynı yerlerden zannederim çıktı kul yapımı bişey diyemem ama 2.500 tl çöpe atacak param yok rica ediyorum beni bununla daha fazla uğraştırmayın iade ... oğlumla ay sonu kamp yapacağım.tüketici mahkemesiylede uğraştırmayın ama belliki uğraşacağım ve asla bundan sonra trenyol diye bir sayfa tanımayacağım",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2025904/2034877/718230290/33949883-1752685248842.jpeg",
+          "localPath": "review_images/review_053.jpg"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "reviewId": 549918800,
+      "userName": "M** e** Ö**",
+      "rating": 1,
+      "date": "2025-06-12T11:06:49.641Z",
+      "comment": "0.üzerin den 0 bu nasıl bir çadır plastiği çıkıp cikip duruyor olmuyor kaç saat tir özürlü çıktı plastiği.   Kesinlikle tavsiye etmiyorum  çok kizginim inşallah manuel olarak kullana bilirim",
+      "sellerName": "enevar",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2024907/2030889/718230290/82025193-1749726408724.jpeg",
+          "localPath": "review_images/review_054.jpg"
+        }
+      ]
+    }
+  ]
+}

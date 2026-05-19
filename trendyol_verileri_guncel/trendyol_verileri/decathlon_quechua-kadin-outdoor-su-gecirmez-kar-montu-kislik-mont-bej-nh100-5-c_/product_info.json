@@ -1,0 +1,117 @@
+{
+  "name": "Quechua Kadın Outdoor Su Geçirmez Kar Montu/Kışlık Mont - Bej - NH100 -5 °C",
+  "brand": "Decathlon",
+  "price": null,
+  "rating": 4.0394736842105265,
+  "reviewCount": 76,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    },
+    {
+      "key": "Materyal",
+      "value": "Su Geçirmez"
+    },
+    {
+      "key": "Astar Durumu",
+      "value": "Astarsız"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Kapüşonlu"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Renk",
+      "value": "Bej"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Cep",
+      "value": "Cepsiz"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Uzun Kol"
+    },
+    {
+      "key": "Boy",
+      "value": "Standart"
+    },
+    {
+      "key": "Siluet",
+      "value": "Basic"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Kemer/Kuşak Durumu",
+      "value": "Kemersiz"
+    },
+    {
+      "key": "Dolgu Materyali",
+      "value": "Polyester"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "Micro"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 2"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1712/prod/QC_PREP/20250718/15/46e96725-4ff2-3c46-a1c4-888d969b78a4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1712/prod/QC_PREP/20250718/15/c5cdcd06-1cb7-3dcf-9ab4-6c5f19b7cdb8/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1712/prod/QC_PREP/20250718/15/e52e0617-dc6c-3ca7-b2e8-b698c15c0fad/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1712/prod/QC_PREP/20250718/15/1cb18fae-2e5d-3b84-aaf9-c52262e0adc3/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1711/prod/QC_PREP/20250718/15/e7bc0fae-feb9-3c93-9b06-512dec1dd233/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1710/prod/QC_PREP/20250718/15/bba9ddc9-e93f-319d-b8ff-5d23563d849c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1710/prod/QC_PREP/20250718/15/747eb666-3123-3c1d-88a6-22c36b33a720/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1825/prod/QC_ENRICHMENT/20260212/10/7e711629-800f-3be4-9c4d-4f1716bf2c8c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    }
+  ]
+}

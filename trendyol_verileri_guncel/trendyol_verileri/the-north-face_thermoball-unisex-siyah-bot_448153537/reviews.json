@@ -1,0 +1,857 @@
+{
+  "productId": "448153537",
+  "productName": "Thermoball Unisex Siyah Bot",
+  "totalReviews": 53,
+  "averageRating": 4.538461538461538,
+  "scrapedAt": "2026-05-18T14:07:16.969Z",
+  "reviews": [
+    {
+      "id": 1,
+      "reviewId": 606531920,
+      "userName": "Özge Ö.",
+      "rating": 5,
+      "date": "2026-01-22T06:32:09.395Z",
+      "comment": "Firmaya teşekkür ederim güzel paketleme hızlı geldi. Başka bir modeli sipariş ettim yorumlara bakarak bir numara büyük aldım iade etmek zorunda kaldım. Ayak numaranız ne ise onu alın. Bilekten biraz zor geçiyor ama çekicek yardımı ile daha kolay giyiliyor çok sıcak tutuyor. Emeği geçen herkese teşşekür ederim 🌺🌸",
+      "sellerName": "LVS BRANDS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2020919/2041856/448153537/2473456-1769063527943.jpeg",
+          "localPath": "review_images/review_001.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "reviewId": 464292523,
+      "userName": "S** B**",
+      "rating": 5,
+      "date": "2025-01-15T14:48:58.346Z",
+      "comment": "Tam numara alabilirsiniz benim ayağım ince yapılı orantılı bileklerim ince bir numara büyük alın diyenlerin ayakları taraklı ya da bilekleri falan kalın heralde bir orantısızlık olsa gerek hep 37 numara giyerim ayakkabının kalıbı büyük ya da küçük değilse bunda da 37 aldım tam oldu henüz dışarıda giymedim ama evde denediğim kadarıyla oldukça rahat ve sıcacık tutuyor ayağı..Dışarıda da giydim bugün 40 dk karda yürüyüş yaptım ayaklarım hiç üşümedi bile evdeki sıcaklık gibiydi kar soğuk yağmur performansı çok güzel 👍",
+      "sellerName": "BOYNER",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2031886/385060276/15223762-1739461157021.jpeg",
+          "localPath": "review_images/review_002.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "reviewId": 606531920,
+      "userName": "Özge Ö.",
+      "rating": 5,
+      "date": "2026-01-22T06:32:09.395Z",
+      "comment": "Firmaya teşekkür ederim güzel paketleme hızlı geldi. Başka bir modeli sipariş ettim yorumlara bakarak bir numara büyük aldım iade etmek zorunda kaldım. Ayak numaranız ne ise onu alın. Bilekten biraz zor geçiyor ama çekicek yardımı ile daha kolay giyiliyor çok sıcak tutuyor. Emeği geçen herkese teşşekür ederim 🌺🌸",
+      "sellerName": "LVS BRANDS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2020919/2041856/448153537/2473456-1769063528639.jpeg",
+          "localPath": "review_images/review_003.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "reviewId": 339830812,
+      "userName": "T** A**",
+      "rating": 5,
+      "date": "2023-09-21T20:44:42.617Z",
+      "comment": "Bayıldımmm sadece 38 mi alsaydım 39 yerine diye bir düşünmedim değil",
+      "sellerName": "TNJ SPORTS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2025904/2037868/385060276/20358865-1695329081992.jpeg",
+          "localPath": "review_images/review_004.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "reviewId": 307331641,
+      "userName": "E** T** y**",
+      "rating": 5,
+      "date": "2023-05-23T17:38:56.336Z",
+      "comment": "Ürünün kalıbı küçük yazmışlardı ama bana tam kendi numaram oldu kalıbı tam kalıp. Çok güzel duruyor ve aşırı rahat aynı zamanda çok sıcak tutuyor fiyatını hakeden bir ürün tavsiye ederim.",
+      "sellerName": "Koray Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756692487258/img/2016931/2021916/2039862/385060276/9955338-1684863535599.jpeg",
+          "localPath": "review_images/review_005.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "reviewId": 464292523,
+      "userName": "S** B**",
+      "rating": 5,
+      "date": "2025-01-15T14:48:58.346Z",
+      "comment": "Tam numara alabilirsiniz benim ayağım ince yapılı orantılı bileklerim ince bir numara büyük alın diyenlerin ayakları taraklı ya da bilekleri falan kalın heralde bir orantısızlık olsa gerek hep 37 numara giyerim ayakkabının kalıbı büyük ya da küçük değilse bunda da 37 aldım tam oldu henüz dışarıda giymedim ama evde denediğim kadarıyla oldukça rahat ve sıcacık tutuyor ayağı..Dışarıda da giydim bugün 40 dk karda yürüyüş yaptım ayaklarım hiç üşümedi bile evdeki sıcaklık gibiydi kar soğuk yağmur performansı çok güzel 👍",
+      "sellerName": "BOYNER",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2031886/385060276/15223762-1739461156599.jpeg",
+          "localPath": "review_images/review_006.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "reviewId": 428486634,
+      "userName": "H** T**",
+      "rating": 5,
+      "date": "2024-09-25T10:00:33.820Z",
+      "comment": "İçi sıcacık . Uzun zamandır baktığım bi modeldi. Düşünmeden alınması gereken bi bot bence çok beklemişim 😄 normalde 40 giyiyorum Bir numara büyük aldım tam oldu 👍",
+      "sellerName": "LVS BRANDS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2026901/2042853/385060276/10259739-1727258432069.jpeg",
+          "localPath": "review_images/review_007.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "reviewId": 471408260,
+      "userName": "D** C**",
+      "rating": 1,
+      "date": "2025-02-10T18:19:10.592Z",
+      "comment": "Çok beğenerek aldım. Malesef bir tekinde ön iplere bağlı yerde açılma var. Bu şekilde gelmesi çok üzücü malesef iade",
+      "sellerName": "athleticzone",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2028895/448153537/3060875-1739211548637.jpeg",
+          "localPath": "review_images/review_008.jpg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "reviewId": 555680471,
+      "userName": "S** Ç**",
+      "rating": 4,
+      "date": "2025-07-09T14:07:36.140Z",
+      "comment": "iyi ki bir bedeb buyuk aldim",
+      "sellerName": "Koray Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2025904/2027898/448153537/35459759-1752070054419.jpeg",
+          "localPath": "review_images/review_009.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "reviewId": 471408260,
+      "userName": "D** C**",
+      "rating": 1,
+      "date": "2025-02-10T18:19:10.592Z",
+      "comment": "Çok beğenerek aldım. Malesef bir tekinde ön iplere bağlı yerde açılma var. Bu şekilde gelmesi çok üzücü malesef iade",
+      "sellerName": "athleticzone",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2028895/448153537/3060875-1739211549830.jpeg",
+          "localPath": "review_images/review_010.jpg"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "reviewId": 428486634,
+      "userName": "H** T**",
+      "rating": 5,
+      "date": "2024-09-25T10:00:33.820Z",
+      "comment": "İçi sıcacık . Uzun zamandır baktığım bi modeldi. Düşünmeden alınması gereken bi bot bence çok beklemişim 😄 normalde 40 giyiyorum Bir numara büyük aldım tam oldu 👍",
+      "sellerName": "LVS BRANDS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2026901/2042853/385060276/10259739-1727258432700.jpeg",
+          "localPath": "review_images/review_011.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "reviewId": 587490237,
+      "userName": "Berna E.",
+      "rating": 5,
+      "date": "2025-11-18T12:48:52.929Z",
+      "comment": "harika bir bot iyi ki almışım",
+      "sellerName": "TNJ SPORTS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1762732810909/img/2018925/2029892/2036871/448153537/12078122-1763470184932.jpeg",
+          "localPath": "review_images/review_012.jpg"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "reviewId": 359948724,
+      "userName": "b** a**",
+      "rating": 5,
+      "date": "2023-12-03T17:48:32.186Z",
+      "comment": "Ürün kaliteli karda kışta giyerim diye düşünüyorum inşallah",
+      "sellerName": "TNJ SPORTS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756692487258/img/2016931/2028895/2019922/385060276/10925467-1701625711319.jpeg",
+          "localPath": "review_images/review_013.jpg"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "reviewId": 459731814,
+      "userName": "n** b**",
+      "rating": 5,
+      "date": "2025-01-01T11:55:54.161Z",
+      "comment": "Çok güzel bir bot ayak olarak tam kalıp fakat bilek kısmından giymesi epey zor bileği kalın olanlara olmaz",
+      "sellerName": "TNJ SPORTS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2019922/2019922/385060276/5945256-1735732552323.jpeg",
+          "localPath": "review_images/review_014.jpg"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "reviewId": 459956767,
+      "userName": "Begüm T.",
+      "rating": 5,
+      "date": "2025-01-02T08:35:34.944Z",
+      "comment": "Merhaba 38 numara giyiyorum normalde. Daha önce mağazada denemıstım. 38 de baş parmağım çok bastırdı ön kısmı. İyi kı 39 almışım. Yarım numara gibi büyük gelse de kalın çorapla falan çok rahat ettim. Satıcıya da hemen kargoladıgı ıcın teşekkürler",
+      "sellerName": "Korayspor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2018925/2019922/2020919/448153537/11933360-1735806933319.jpeg",
+          "localPath": "review_images/review_015.jpg"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "reviewId": 606318530,
+      "userName": "S** O**",
+      "rating": 5,
+      "date": "2026-01-21T13:03:41.774Z",
+      "comment": "Çok rahat ve güzel ısıtıyor, yorumlara bakarak bir numara büyük istedim ama büyük geldi iade edip kendi numaramı aldım",
+      "sellerName": "Koray Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2020919/2040859/448153537/52957246-1769000621314.jpeg",
+          "localPath": "review_images/review_016.jpg"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "reviewId": 459956767,
+      "userName": "Begüm T.",
+      "rating": 5,
+      "date": "2025-01-02T08:35:34.944Z",
+      "comment": "Merhaba 38 numara giyiyorum normalde. Daha önce mağazada denemıstım. 38 de baş parmağım çok bastırdı ön kısmı. İyi kı 39 almışım. Yarım numara gibi büyük gelse de kalın çorapla falan çok rahat ettim. Satıcıya da hemen kargoladıgı ıcın teşekkürler",
+      "sellerName": "Korayspor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2019922/2020919/448153537/11933360-1735806934306.jpeg",
+          "localPath": "review_images/review_017.jpg"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "reviewId": 464292523,
+      "userName": "S** B**",
+      "rating": 5,
+      "date": "2025-01-15T14:48:58.346Z",
+      "comment": "Tam numara alabilirsiniz benim ayağım ince yapılı orantılı bileklerim ince bir numara büyük alın diyenlerin ayakları taraklı ya da bilekleri falan kalın heralde bir orantısızlık olsa gerek hep 37 numara giyerim ayakkabının kalıbı büyük ya da küçük değilse bunda da 37 aldım tam oldu henüz dışarıda giymedim ama evde denediğim kadarıyla oldukça rahat ve sıcacık tutuyor ayağı..Dışarıda da giydim bugün 40 dk karda yürüyüş yaptım ayaklarım hiç üşümedi bile evdeki sıcaklık gibiydi kar soğuk yağmur performansı çok güzel 👍",
+      "sellerName": "BOYNER",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2031886/385060276/15223762-1739461156037.jpeg",
+          "localPath": "review_images/review_018.jpg"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "reviewId": 459956767,
+      "userName": "Begüm T.",
+      "rating": 5,
+      "date": "2025-01-02T08:35:34.944Z",
+      "comment": "Merhaba 38 numara giyiyorum normalde. Daha önce mağazada denemıstım. 38 de baş parmağım çok bastırdı ön kısmı. İyi kı 39 almışım. Yarım numara gibi büyük gelse de kalın çorapla falan çok rahat ettim. Satıcıya da hemen kargoladıgı ıcın teşekkürler",
+      "sellerName": "Korayspor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2018925/2019922/2020919/448153537/11933360-1735806933883.jpeg",
+          "localPath": "review_images/review_019.jpg"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "reviewId": 468463076,
+      "userName": "Ö** K**",
+      "rating": 4,
+      "date": "2025-01-30T09:13:24.111Z",
+      "comment": "Kalitesi görüntüsü rahatlığı çok güzel.36 giyerim ama 37 aldım tam oldu. Ayağım dar taraksız ve ince bilekliyim buna rağmen giymekte zorlandım. Bilek kısmı dar çok zor giyiliyor, bi fermuar koysaydınız yanına, çok üzülerek iade",
+      "sellerName": "athleticzone",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2018925/2019922/2048835/448153537/8591414-1738228403432.jpeg",
+          "localPath": "review_images/review_020.jpg"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "reviewId": 360150386,
+      "userName": "B** K**",
+      "rating": 4,
+      "date": "2023-12-04T12:59:16.190Z",
+      "comment": "Ürün güzel ve ayak yapınız taraklı,büyük değilse kesinlikle normal numaranızı alın. Fiyat pahalı mı evet ama piyasası bu maalesef…",
+      "sellerName": "Koray Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2028895/2020919/385060276/6596039-1701694755531.jpeg",
+          "localPath": "review_images/review_021.jpg"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "reviewId": 355520431,
+      "userName": "A** Ç**",
+      "rating": 5,
+      "date": "2023-11-21T08:03:42.900Z",
+      "comment": "Orginal ürün çok güzel",
+      "sellerName": "Macera Cumhuriyeti",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2027898/2037868/448153537/4872669-1700553822292.jpeg",
+          "localPath": "review_images/review_022.jpg"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "reviewId": 449178410,
+      "userName": "E** A**",
+      "rating": 4,
+      "date": "2024-12-05T11:04:04.041Z",
+      "comment": "Ayağım 36 ama büyük alınmalı yazdığını görünce 37 sipariş ettim böyle bile inanılmaz sıkıyor ki ayak yapım incedir. Kalıbı inanılmaz küçük. İçi polarlı ve kürklü tabanı hariç. Tabanının üşütebileceğini. Güncelleme: maalesef kayağa gittiğimde arkadaşlarım beni tutmaktan bi hal oldular buzlanan yerlerde tutuculuğu hiç yok çok kayıyordu. Ki onların ayakkabılarının decahtlon ve oysho olduğunu söyleyebilirim marka üzerinlerinde bu kadar bile bir iddia yokken daha iyilerdi. Su geçirmezliğine ve sıcak tutmasına diyecek lafım yok süper o konuda. düşünüyorum ve ayrıca girinti çıkıntı vardı ortasında. İncecik bir ek taban koyarak giyeceğim ben. Yoksa güzel ürün ve satıcıdan çok kısa bir sürede geldi",
+      "sellerName": "Korayspor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2022913/448153537/11399199-1733396639651.jpeg",
+          "localPath": "review_images/review_023.jpg"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "reviewId": 449178410,
+      "userName": "E** A**",
+      "rating": 4,
+      "date": "2024-12-05T11:04:04.041Z",
+      "comment": "Ayağım 36 ama büyük alınmalı yazdığını görünce 37 sipariş ettim böyle bile inanılmaz sıkıyor ki ayak yapım incedir. Kalıbı inanılmaz küçük. İçi polarlı ve kürklü tabanı hariç. Tabanının üşütebileceğini. Güncelleme: maalesef kayağa gittiğimde arkadaşlarım beni tutmaktan bi hal oldular buzlanan yerlerde tutuculuğu hiç yok çok kayıyordu. Ki onların ayakkabılarının decahtlon ve oysho olduğunu söyleyebilirim marka üzerinlerinde bu kadar bile bir iddia yokken daha iyilerdi. Su geçirmezliğine ve sıcak tutmasına diyecek lafım yok süper o konuda. düşünüyorum ve ayrıca girinti çıkıntı vardı ortasında. İncecik bir ek taban koyarak giyeceğim ben. Yoksa güzel ürün ve satıcıdan çok kısa bir sürede geldi",
+      "sellerName": "Korayspor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2022913/448153537/11399199-1733396643229.jpeg",
+          "localPath": "review_images/review_024.jpg"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "reviewId": 451237805,
+      "userName": "S** Ö**",
+      "rating": 5,
+      "date": "2024-12-12T07:25:09.619Z",
+      "comment": "inanılmaz rahat ve çok sıcak tutuyo",
+      "sellerName": "Korayspor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2033880/448153537/846102-1734331225168.jpeg",
+          "localPath": "review_images/review_025.jpg"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "reviewId": 443984269,
+      "userName": "S** Ç**",
+      "rating": 5,
+      "date": "2024-11-19T08:57:39.121Z",
+      "comment": "Aşırı sıcak tutuyor, içi kürklü. Rahatlığı da çok güzel ağır değil. Sadece 1 numara büyük almanızı tavsiye ederim. Normalde 37 giyiyorum ama 38 aldım kalın olmayan çoraplarla tam oldu kalın çorap giysem sıkar. Ama kalın çoraba ihtiyaç yok sıcacık oluyor zaten ayağınız.",
+      "sellerName": "Dalkılıç",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2017928/2028895/2036871/448153537/12337724-1732006658748.jpeg",
+          "localPath": "review_images/review_026.jpg"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "reviewId": 361024146,
+      "userName": "Aysen E.",
+      "rating": 5,
+      "date": "2023-12-07T06:52:55.683Z",
+      "comment": "kizim için aldım gayet memnun kaldı 39 numara çok kaba durmadı ayağında da",
+      "sellerName": "Kar Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2016931/2028895/2023910/385060276/4339208-1701931975108.jpeg",
+          "localPath": "review_images/review_027.jpg"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "reviewId": 434621681,
+      "userName": "B** K**",
+      "rating": 5,
+      "date": "2024-10-21T09:29:34.906Z",
+      "comment": "Ürün görseldeki gibi.rahat kullanışlı",
+      "sellerName": "LVS BRANDS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2027898/2038865/385060276/6472434-1729503201198.jpeg",
+          "localPath": "review_images/review_028.jpg"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "reviewId": 456060782,
+      "userName": "**** ****",
+      "rating": 4,
+      "date": "2024-12-24T06:38:41.358Z",
+      "comment": "Ürün çok güzel ancak boğaz kısmını dar yapmışlar. Tam numara olunca ayak içine girmiyor. Bir numara büyük almak lazım o zaman da tabanı büyük geliyor. Bu sıkıntısı haricinde sıcacık. hiç üşütmüyor.",
+      "sellerName": "Samuraysport",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2041856/385060276/31498091-1735022320259.jpeg",
+          "localPath": "review_images/review_029.jpg"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "reviewId": 356312862,
+      "userName": "T** K**",
+      "rating": 3,
+      "date": "2023-11-23T09:00:32.405Z",
+      "comment": "Biraz dar gibi ama güzel",
+      "sellerName": "Koray Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2027898/2039862/385060276/1035628-1700730031354.jpeg",
+          "localPath": "review_images/review_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "reviewId": 456060782,
+      "userName": "**** ****",
+      "rating": 4,
+      "date": "2024-12-24T06:38:41.358Z",
+      "comment": "Ürün çok güzel ancak boğaz kısmını dar yapmışlar. Tam numara olunca ayak içine girmiyor. Bir numara büyük almak lazım o zaman da tabanı büyük geliyor. Bu sıkıntısı haricinde sıcacık. hiç üşütmüyor.",
+      "sellerName": "Samuraysport",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2029892/2041856/385060276/31498091-1735022319568.jpeg",
+          "localPath": "review_images/review_031.jpg"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "reviewId": 359948724,
+      "userName": "b** a**",
+      "rating": 5,
+      "date": "2023-12-03T17:48:32.186Z",
+      "comment": "Ürün kaliteli karda kışta giyerim diye düşünüyorum inşallah",
+      "sellerName": "TNJ SPORTS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2028895/2019922/385060276/10925467-1701625710591.jpeg",
+          "localPath": "review_images/review_032.jpg"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "reviewId": 361024146,
+      "userName": "Aysen E.",
+      "rating": 5,
+      "date": "2023-12-07T06:52:55.683Z",
+      "comment": "kizim için aldım gayet memnun kaldı 39 numara çok kaba durmadı ayağında da",
+      "sellerName": "Kar Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2028895/2023910/385060276/4339208-1701931974060.jpeg",
+          "localPath": "review_images/review_033.jpg"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "reviewId": 307331641,
+      "userName": "E** T** y**",
+      "rating": 5,
+      "date": "2023-05-23T17:38:56.336Z",
+      "comment": "Ürünün kalıbı küçük yazmışlardı ama bana tam kendi numaram oldu kalıbı tam kalıp. Çok güzel duruyor ve aşırı rahat aynı zamanda çok sıcak tutuyor fiyatını hakeden bir ürün tavsiye ederim.",
+      "sellerName": "Koray Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756649646792/img/2016931/2021916/2039862/385060276/9955338-1684863534985.jpeg",
+          "localPath": "review_images/review_034.jpg"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "reviewId": 361024146,
+      "userName": "Aysen E.",
+      "rating": 5,
+      "date": "2023-12-07T06:52:55.683Z",
+      "comment": "kizim için aldım gayet memnun kaldı 39 numara çok kaba durmadı ayağında da",
+      "sellerName": "Kar Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2016931/2028895/2023910/385060276/4339208-1701931974660.jpeg",
+          "localPath": "review_images/review_035.jpg"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "reviewId": 360150386,
+      "userName": "B** K**",
+      "rating": 4,
+      "date": "2023-12-04T12:59:16.190Z",
+      "comment": "Ürün güzel ve ayak yapınız taraklı,büyük değilse kesinlikle normal numaranızı alın. Fiyat pahalı mı evet ama piyasası bu maalesef…",
+      "sellerName": "Koray Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2016931/2028895/2020919/385060276/6596039-1701694755146.jpeg",
+          "localPath": "review_images/review_036.jpg"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "reviewId": 501208301,
+      "userName": "seden a.",
+      "rating": 5,
+      "date": "2025-05-03T14:18:21.550Z",
+      "comment": "En sevdiğim bot 3 renk var suya soğuğa yağmura tek bu der gecerim",
+      "sellerName": "Korayspor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2023910/2021916/448153537/2633696-1746281900401.jpeg",
+          "localPath": "review_images/review_037.jpg"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "reviewId": 459731814,
+      "userName": "n** b**",
+      "rating": 5,
+      "date": "2025-01-01T11:55:54.161Z",
+      "comment": "Çok güzel bir bot ayak olarak tam kalıp fakat bilek kısmından giymesi epey zor bileği kalın olanlara olmaz",
+      "sellerName": "TNJ SPORTS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2018925/2019922/2019922/385060276/5945256-1735732553552.jpeg",
+          "localPath": "review_images/review_038.jpg"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "reviewId": 344181346,
+      "userName": "M** S**",
+      "rating": 5,
+      "date": "2023-10-09T11:45:29.954Z",
+      "comment": "Çok şık. Çok rahat. Bir numara büyük aldım tam oldu.  38 no 24 cm taban ölçüsüne denk geliyor.",
+      "sellerName": "Koray Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2026901/2025904/385060276/41477459-1696851929224.jpeg",
+          "localPath": "review_images/review_039.jpg"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "reviewId": 448613519,
+      "userName": "İ** H**",
+      "rating": 5,
+      "date": "2024-12-03T18:18:12.998Z",
+      "comment": "Alsam mı almasam mı ,minimalist hayata geçmenin zamanı mıdır acaba diye düşünmekten günlerce irade savaşı verdiğim bot….. amaaan kendime kıyak yapmayacağım da kime yapacağım diyerek sonunda aldım, pişman değilim..sıcacık, kalitesine zaten diyecek yok…north faceleri bir numara büyük alıyorsunuz beybiler , hatırlatırım..",
+      "sellerName": "Dalkılıç",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2020919/448153537/3201280-1733249892278.jpeg",
+          "localPath": "review_images/review_040.jpg"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "reviewId": 471408260,
+      "userName": "D** C**",
+      "rating": 1,
+      "date": "2025-02-10T18:19:10.592Z",
+      "comment": "Çok beğenerek aldım. Malesef bir tekinde ön iplere bağlı yerde açılma var. Bu şekilde gelmesi çok üzücü malesef iade",
+      "sellerName": "athleticzone",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2020919/2028895/448153537/3060875-1739211549307.jpeg",
+          "localPath": "review_images/review_041.jpg"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "reviewId": 459731814,
+      "userName": "n** b**",
+      "rating": 5,
+      "date": "2025-01-01T11:55:54.161Z",
+      "comment": "Çok güzel bir bot ayak olarak tam kalıp fakat bilek kısmından giymesi epey zor bileği kalın olanlara olmaz",
+      "sellerName": "TNJ SPORTS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2018925/2019922/2019922/385060276/5945256-1735732552957.jpeg",
+          "localPath": "review_images/review_042.jpg"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "reviewId": 344181346,
+      "userName": "M** S**",
+      "rating": 5,
+      "date": "2023-10-09T11:45:29.954Z",
+      "comment": "Çok şık. Çok rahat. Bir numara büyük aldım tam oldu.  38 no 24 cm taban ölçüsüne denk geliyor.",
+      "sellerName": "Koray Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2016931/2026901/2025904/385060276/41477459-1696851928577.jpeg",
+          "localPath": "review_images/review_043.jpg"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "reviewId": 349671279,
+      "userName": "M** K**",
+      "rating": 5,
+      "date": "2023-10-31T21:51:10.552Z",
+      "comment": "şahane bayıldım . çok cici tatlı duruyor ayağımda . kışın giymek için sabırsızlanıyorum. çok rahat . sürekli dışarda ayakta duran biriyim . umarım vaadleri yerine getirir . sıcak tutar ve su geçirmez. verdiğim paranın hakkını verir. ilk gozlenim olarak denedim rahat ve şık ♥️ bir numara büyük aldım iyikide büyük almışım. kaba da durmuyor.",
+      "sellerName": "Kar Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756692487258/img/2016931/2027898/2017928/385060276/29144644-1698789069893.jpeg",
+          "localPath": "review_images/review_044.jpg"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "reviewId": 448613519,
+      "userName": "İ** H**",
+      "rating": 5,
+      "date": "2024-12-03T18:18:12.998Z",
+      "comment": "Alsam mı almasam mı ,minimalist hayata geçmenin zamanı mıdır acaba diye düşünmekten günlerce irade savaşı verdiğim bot….. amaaan kendime kıyak yapmayacağım da kime yapacağım diyerek sonunda aldım, pişman değilim..sıcacık, kalitesine zaten diyecek yok…north faceleri bir numara büyük alıyorsunuz beybiler , hatırlatırım..",
+      "sellerName": "Dalkılıç",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2020919/448153537/3201280-1733249891613.jpeg",
+          "localPath": "review_images/review_045.jpg"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "reviewId": 349671279,
+      "userName": "M** K**",
+      "rating": 5,
+      "date": "2023-10-31T21:51:10.552Z",
+      "comment": "şahane bayıldım . çok cici tatlı duruyor ayağımda . kışın giymek için sabırsızlanıyorum. çok rahat . sürekli dışarda ayakta duran biriyim . umarım vaadleri yerine getirir . sıcak tutar ve su geçirmez. verdiğim paranın hakkını verir. ilk gozlenim olarak denedim rahat ve şık ♥️ bir numara büyük aldım iyikide büyük almışım. kaba da durmuyor.",
+      "sellerName": "Kar Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2016931/2027898/2017928/385060276/29144644-1698789069294.jpeg",
+          "localPath": "review_images/review_046.jpg"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "reviewId": 369560523,
+      "userName": "Tuşe A.",
+      "rating": 5,
+      "date": "2024-01-12T20:45:31.718Z",
+      "comment": "1 beden büyük alınmalı çok güzell duruyor",
+      "sellerName": "Dalkılıç",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2017928/2018925/2029892/448153537/11010925-1705092331179.jpeg",
+          "localPath": "review_images/review_047.jpg"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "reviewId": 444509689,
+      "userName": "Özlem B.",
+      "rating": 1,
+      "date": "2024-11-20T19:06:42.196Z",
+      "comment": "Ürünün kutusu çok parçalanmıştı bir de botta marka etiketi yok. Ürünün orijinal olduğunu anlayamıyorum.",
+      "sellerName": "Sarıyıldız Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2017928/2028895/2037868/385060276/2503709-1732129600923.jpeg",
+          "localPath": "review_images/review_048.jpg"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "reviewId": 444509689,
+      "userName": "Özlem B.",
+      "rating": 1,
+      "date": "2024-11-20T19:06:42.196Z",
+      "comment": "Ürünün kutusu çok parçalanmıştı bir de botta marka etiketi yok. Ürünün orijinal olduğunu anlayamıyorum.",
+      "sellerName": "Sarıyıldız Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2028895/2037868/385060276/2503709-1732129601478.jpeg",
+          "localPath": "review_images/review_049.jpg"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "reviewId": 428486634,
+      "userName": "H** T**",
+      "rating": 5,
+      "date": "2024-09-25T10:00:33.820Z",
+      "comment": "İçi sıcacık . Uzun zamandır baktığım bi modeldi. Düşünmeden alınması gereken bi bot bence çok beklemişim 😄 normalde 40 giyiyorum Bir numara büyük aldım tam oldu 👍",
+      "sellerName": "LVS BRANDS",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2026901/2042853/385060276/10259739-1727258433183.jpeg",
+          "localPath": "review_images/review_050.jpg"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "reviewId": 454084060,
+      "userName": "H** E**",
+      "rating": 1,
+      "date": "2024-12-21T10:32:09.671Z",
+      "comment": "39 numara istediğim halde 37 nasıl gönderebiliyorsunuz. Teşekkürler ilgisizliğinize.",
+      "sellerName": "Samuraysport",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2017928/2029892/2038865/385060276/15696556-1734777128435.jpeg",
+          "localPath": "review_images/review_051.jpg"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "reviewId": 360150386,
+      "userName": "B** K**",
+      "rating": 4,
+      "date": "2023-12-04T12:59:16.190Z",
+      "comment": "Ürün güzel ve ayak yapınız taraklı,büyük değilse kesinlikle normal numaranızı alın. Fiyat pahalı mı evet ama piyasası bu maalesef…",
+      "sellerName": "Koray Spor",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756692487258/img/2016931/2028895/2020919/385060276/6596039-1701694754573.jpeg",
+          "localPath": "review_images/review_052.jpg"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "reviewId": 454084060,
+      "userName": "H** E**",
+      "rating": 1,
+      "date": "2024-12-21T10:32:09.671Z",
+      "comment": "39 numara istediğim halde 37 nasıl gönderebiliyorsunuz. Teşekkürler ilgisizliğinize.",
+      "sellerName": "Samuraysport",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2017928/2029892/2038865/385060276/15696556-1734777129010.jpeg",
+          "localPath": "review_images/review_053.jpg"
+        }
+      ]
+    }
+  ]
+}

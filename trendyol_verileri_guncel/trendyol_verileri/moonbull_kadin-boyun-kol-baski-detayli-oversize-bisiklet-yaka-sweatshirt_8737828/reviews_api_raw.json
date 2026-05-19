@@ -1,0 +1,24 @@
+{
+  "content": [
+    {
+      "id": 132784597,
+      "userFullName": "Ahmed K.",
+      "rate": 2,
+      "comment": "Fotoğraftaki gibi aynısı gelmedi maalesef",
+      "trusted": true,
+      "sellerName": "MOONBULL",
+      "mediaFile": {
+        "id": 132784597,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2020919/2046841/873782809/175531422-1769502525554.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2020919/2046841/873782809/175531422-1769502525554.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1769502526702,
+      "reviewId": 607893464
+    }
+  ],
+  "totalPages": 1,
+  "totalElements": 1
+}

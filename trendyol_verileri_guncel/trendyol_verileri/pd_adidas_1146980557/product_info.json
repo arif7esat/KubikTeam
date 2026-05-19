@@ -1,0 +1,81 @@
+{
+  "name": "Germany 94 Erkek Sweatshirt",
+  "brand": "adidas",
+  "price": null,
+  "rating": null,
+  "reviewCount": null,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Standart Kol"
+    },
+    {
+      "key": "Renk",
+      "value": "Beyaz"
+    },
+    {
+      "key": "Desen",
+      "value": "Baskılı"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Dik Yaka"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Boy",
+      "value": "Regular"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Ortam",
+      "value": "Sportswear"
+    },
+    {
+      "key": "Siluet",
+      "value": "Jogger"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1909/prod/QC_PREP/20260516/21/06f1f984-9c95-3c96-ba56-6518a79eea36/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1912/prod/QC_PREP/20260516/21/002954df-9591-3374-8c05-7835cd264a6b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1917/prod/QC_PREP/20260516/21/b06fa5aa-129c-31db-a200-dd0d184fd78e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1893/prod/QC_PREP/20260516/21/05407eb2-45d1-34d6-a1a1-c8c609919fba/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1911/prod/QC_PREP/20260516/21/a135f011-6c9a-3226-a8d1-44ab6f3f7550/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1927/prod/QC_PREP/20260516/21/329a0f18-2998-399d-aa6c-1823df533a17/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1934/prod/QC_PREP/20260516/21/ef60946d-aa14-3423-af46-de05bb96210f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    }
+  ]
+}

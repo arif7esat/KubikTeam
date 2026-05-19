@@ -1,0 +1,109 @@
+{
+  "name": "Robot Vacuum H40 Akıllı Robot Süpürge + Mop 10000pa (Xiaomi Türkiye Garantili)",
+  "brand": "Xiaomi",
+  "price": null,
+  "rating": 4.492021276595745,
+  "reviewCount": 1128,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Ses Seviyesi",
+      "value": "61 Dba - 70 Dba"
+    },
+    {
+      "key": "Garanti Tipi",
+      "value": "Resmi Distribütör Garantili"
+    },
+    {
+      "key": "Özellik",
+      "value": "Robot"
+    },
+    {
+      "key": "Haritalandırma",
+      "value": "Lazer (LIDAR + SLAM)"
+    },
+    {
+      "key": "Şarjlı Kullanım Süresi",
+      "value": "2-3 Saat"
+    },
+    {
+      "key": "Çalışma Modu Sayısı",
+      "value": "3 ve üzeri"
+    },
+    {
+      "key": "Yer Silme Özelliği",
+      "value": "Var"
+    },
+    {
+      "key": "Uygulama Üzerinden Kontrol",
+      "value": "Var"
+    },
+    {
+      "key": "Aşılabilir Engel Seviyesi",
+      "value": "2 cm"
+    },
+    {
+      "key": "Hazne Kapasitesi",
+      "value": "0-250 L"
+    },
+    {
+      "key": "Frekans",
+      "value": "50 Hz / 60 Hz"
+    },
+    {
+      "key": "Voltaj",
+      "value": "220 - 240 V"
+    },
+    {
+      "key": "Çöp İstasyonu",
+      "value": "Var"
+    },
+    {
+      "key": "Güç (Watt)",
+      "value": "1501 - 2200 Watt"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1853/prod/QC_ENRICHMENT/20260407/13/e5268ce6-b2a3-324e-a24f-b18ef52900c7/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1851/prod/QC_ENRICHMENT/20260407/13/e4cb1e92-3845-3b4e-a824-7ed8e7c42cc2/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1852/prod/QC_ENRICHMENT/20260407/13/5cb70136-2c56-34f5-8791-e1d0d2dcb851/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1851/prod/QC_ENRICHMENT/20260407/13/14c872cd-0650-337c-b977-d539fd697554/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1852/prod/QC_ENRICHMENT/20260407/13/1ea08925-9622-39e9-87f2-8f75dfa3806c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1853/prod/QC_ENRICHMENT/20260407/13/f66cbce9-1ab8-3846-bac2-4dfb5586039f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1853/prod/QC_ENRICHMENT/20260407/13/08fb5375-01f1-38e5-a55f-c2d144e6e25f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1853/prod/QC_ENRICHMENT/20260407/13/e45bfc46-5c8e-3686-af95-fbf5449ce102/1_org_zoom.jpg",
+      "localPath": "product_images/urun_9.jpg"
+    }
+  ]
+}

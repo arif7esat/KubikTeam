@@ -1,0 +1,61 @@
+{
+  "name": "Ua Rival Terry Kadın Sweatshirt",
+  "brand": "Under Armour",
+  "price": null,
+  "rating": null,
+  "reviewCount": null,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Oversize"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Kapüşonlu"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Uzun Kol"
+    },
+    {
+      "key": "Renk",
+      "value": "Kahverengi"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Belirtilmemiş"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Ortam",
+      "value": "Sportswear"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1931/prod/QC_PREP/20260515/14/f78c494b-4333-305e-b449-20f7da117f32/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1898/prod/QC_PREP/20260515/14/954a487a-535d-3fce-ae6f-ab8710d662c5/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1935/prod/QC_PREP/20260515/14/2ec9bf22-80e5-370c-94da-02cbf3008d8d/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1928/prod/QC_PREP/20260515/14/c247e5c4-168b-3092-a492-c677ed38274b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    }
+  ]
+}

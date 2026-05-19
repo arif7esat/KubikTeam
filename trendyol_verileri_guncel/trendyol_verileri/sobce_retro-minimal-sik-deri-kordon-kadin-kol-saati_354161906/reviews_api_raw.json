@@ -1,0 +1,402 @@
+{
+  "content": [
+    {
+      "id": 104082111,
+      "userFullName": "a** b** ş**",
+      "rate": 1,
+      "comment": "urun fotoda gorundugu gini beyaz kadranli degil, altin sarisi.. pili de bitmis geldim. ayrica kadran lekeli",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 104082111,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2044847/354161906/10275247-1735320936335.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2044847/354161906/10275247-1735320936335.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4032,
+        "weight": 3024
+      },
+      "lastModifiedDate": 1735320937252,
+      "reviewId": 458381455
+    },
+    {
+      "id": 57819621,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "Hem yanlış ürün geldi hem de kordonda delik yok yani çok saçma ve komik bir hata 😞",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 57819621,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2016931/2024907/2031886/354161906/32526574-1692128829014.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756746367025/img/2016931/2024907/2031886/354161906/32526574-1692128829014.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1692128831095,
+      "reviewId": 330141496
+    },
+    {
+      "id": 58492076,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "kırık geldi",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 58492076,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756670947523/img/2016931/2024907/2038865/354161906/117687180-1692707493689.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756670947523/img/2016931/2024907/2038865/354161906/117687180-1692707493689.jpeg",
+        "mediaType": "IMAGE",
+        "height": 5664,
+        "weight": 4248
+      },
+      "lastModifiedDate": 1692707494335,
+      "reviewId": 331816340
+    },
+    {
+      "id": 84765903,
+      "userFullName": "k** d**",
+      "rate": 1,
+      "comment": "gorselde bulununan ürün gelmiyor dürüst bir firma değil",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 84765903,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756791427264/img/2017928/2022913/2033880/354161906/23533660-1715839129901.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756791427264/img/2017928/2022913/2033880/354161906/23533660-1715839129901.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1715839130655,
+      "reviewId": 398955110
+    },
+    {
+      "id": 137551914,
+      "userFullName": "S** N**",
+      "rate": 1,
+      "comment": "Ürün siyah geldi",
+      "trusted": true,
+      "sellerName": "OZG GROUP",
+      "mediaFile": {
+        "id": 137551914,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2022913/354161906/18149545-1777810801493.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2022913/354161906/18149545-1777810801493.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1777810802662,
+      "reviewId": 633948831
+    },
+    {
+      "id": 101368415,
+      "userFullName": "**** ****",
+      "rate": 2,
+      "comment": "bozuk geldi iade",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 101368415,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2019922/354161906/106597529-1733150190422.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756843808113/img/2017928/2029892/2019922/354161906/106597529-1733150190422.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1733150191341,
+      "reviewId": 448181547
+    },
+    {
+      "id": 128591616,
+      "userFullName": "A** O**",
+      "rate": 1,
+      "comment": "Ürünün içerisinde lekeler vardı ve ve içi zedelenmiş ayrıca acı kahve istemiştim siyah gibi duruyor hiç beğenmedim zaten",
+      "trusted": true,
+      "sellerName": "OZG GROUP",
+      "mediaFile": {
+        "id": 128591616,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1762732810909/img/2018925/2030889/2021916/354161906/81769840-1764767007390.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1762732810909/img/2018925/2030889/2021916/354161906/81769840-1764767007390.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1764767008317,
+      "reviewId": 592503856
+    },
+    {
+      "id": 56183741,
+      "userFullName": "F** B**",
+      "rate": 4,
+      "comment": "Kordonu kısa olduğu için bir yıldız kırdım",
+      "trusted": true,
+      "sellerName": "LUNA Eyewear",
+      "mediaFile": {
+        "id": 56183741,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2047838/354161906/16884570-1690787339237.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2047838/354161906/16884570-1690787339237.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1690787339926,
+      "reviewId": 326084036
+    },
+    {
+      "id": 77948001,
+      "userFullName": "H** B**",
+      "rate": 1,
+      "comment": "yanlış ürün gönderilmiş fotograftakinin aynisi değil bu gelen de kötü değil ama aşırı küçük gördüğünüz gibi 1 liradan bile daha küçük ekranı iade edicem o yüzden",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 77948001,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2017928/2019922/2046841/354161906/25544375-1709215056276.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756776128103/img/2017928/2019922/2046841/354161906/25544375-1709215056276.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 2250
+      },
+      "lastModifiedDate": 1709215056915,
+      "reviewId": 381385768
+    },
+    {
+      "id": 97261082,
+      "userFullName": "H** U**",
+      "rate": 2,
+      "comment": "derisi sert, kalitesiz duruyor..",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 97261082,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2027898/2040859/354161906/64536111-1729712798663.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756825987906/img/2017928/2027898/2040859/354161906/64536111-1729712798663.jpeg",
+        "mediaType": "IMAGE",
+        "height": 8000,
+        "weight": 6000
+      },
+      "lastModifiedDate": 1729712800685,
+      "reviewId": 435367449
+    },
+    {
+      "id": 68423512,
+      "userFullName": "S** A**",
+      "rate": 1,
+      "comment": "Görüntü güzel ama kayışı çok basit 1 hafta sonra pili bitti değiştirmek için açtım paslanmıştı pili de kabul etmedi pastan elimde kaldı :/",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 68423512,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756692487258/img/2016931/2027898/2041856/354161906/107649147-1700942465564.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756692487258/img/2016931/2027898/2041856/354161906/107649147-1700942465564.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1700942466364,
+      "reviewId": 357307785
+    },
+    {
+      "id": 58003833,
+      "userFullName": "Ö** T** A**",
+      "rate": 1,
+      "comment": "öncelikle ürünün görseliyle alakası olmayan bir saat gönderildi ayrıca 1 yıldız vermemin sebebi insan bir saate bakar kutuya koymadan önce saatin kordonunda kurumuş silikon lekesi var ne kadar ucuz olsa da almayin",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 58003833,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2016931/2024907/2033880/354161906/19994302-1692277498060.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756746367025/img/2016931/2024907/2033880/354161906/19994302-1692277498060.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1692277498661,
+      "reviewId": 330607811
+    },
+    {
+      "id": 72714888,
+      "userFullName": "G** s**",
+      "rate": 1,
+      "comment": "bı haftadır beklediğim kargom geldi ama nasıl geldi bakar mısınız lütfen ilgilenir misiniz  kırılmış ?",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 72714888,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2017928/2018925/2022913/354161906/38005901-1704451176645.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756776128103/img/2017928/2018925/2022913/354161906/38005901-1704451176645.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 2992
+      },
+      "lastModifiedDate": 1704451178610,
+      "reviewId": 368095230
+    },
+    {
+      "id": 136228853,
+      "userFullName": "**** ****",
+      "rate": 3,
+      "comment": "yani kulpları biraz dandik duruyor 5 6 takışa yırtılır gibi neyse sağlık olsun. Aynı markadan yine saat almıstım gene aynı",
+      "trusted": true,
+      "sellerName": "OZG GROUP",
+      "mediaFile": {
+        "id": 136228853,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2021916/354161906/45503218-1775160558042.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2021916/354161906/45503218-1775160558042.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1775160559297,
+      "reviewId": 626386836
+    },
+    {
+      "id": 72714890,
+      "userFullName": "G** s**",
+      "rate": 1,
+      "comment": "bı haftadır beklediğim kargom geldi ama nasıl geldi bakar mısınız lütfen ilgilenir misiniz  kırılmış ?",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 72714890,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2017928/2018925/2022913/354161906/38005901-1704451177746.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756760527960/img/2017928/2018925/2022913/354161906/38005901-1704451177746.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 2992
+      },
+      "lastModifiedDate": 1704451178610,
+      "reviewId": 368095230
+    },
+    {
+      "id": 116771181,
+      "userFullName": "S** B**",
+      "rate": 1,
+      "comment": "Orda gösterilen bileğe takılan takıyla alakası olmayan bir kolye geldi paslı ve izli bu ne arkadaşım saatte büyük değil yani güzel ama ne bilim şu kolye işi batırmış",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 116771181,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2024907/2031886/354161906/65929638-1749847648891.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1742466981198/img/2018925/2024907/2031886/354161906/65929638-1749847648891.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1749847651340,
+      "reviewId": 550334483
+    },
+    {
+      "id": 137077281,
+      "userFullName": "Ş** Ş**",
+      "rate": 3,
+      "comment": "Saat genel olarak güzel sadece fotoğraftakinden daha küçük ve maalesef uç kısmı kopuk geldi kargoyu açınca hayal kırıklığına uğradım",
+      "trusted": true,
+      "sellerName": "OZG GROUP",
+      "mediaFile": {
+        "id": 137077281,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2040859/354161906/88040076-1776785986174.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2040859/354161906/88040076-1776785986174.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4284,
+        "weight": 5712
+      },
+      "lastModifiedDate": 1776785987495,
+      "reviewId": 631270313
+    },
+    {
+      "id": 137077280,
+      "userFullName": "Ş** Ş**",
+      "rate": 3,
+      "comment": "Saat genel olarak güzel sadece fotoğraftakinden daha küçük ve maalesef uç kısmı kopuk geldi kargoyu açınca hayal kırıklığına uğradım",
+      "trusted": true,
+      "sellerName": "OZG GROUP",
+      "mediaFile": {
+        "id": 137077280,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2040859/354161906/88040076-1776785984962.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2040859/354161906/88040076-1776785984962.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4284,
+        "weight": 5712
+      },
+      "lastModifiedDate": 1776785987495,
+      "reviewId": 631270313
+    },
+    {
+      "id": 72714889,
+      "userFullName": "G** s**",
+      "rate": 1,
+      "comment": "bı haftadır beklediğim kargom geldi ama nasıl geldi bakar mısınız lütfen ilgilenir misiniz  kırılmış ?",
+      "trusted": true,
+      "sellerName": "SOBCE",
+      "mediaFile": {
+        "id": 72714889,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2017928/2018925/2022913/354161906/38005901-1704451177267.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756776128103/img/2017928/2018925/2022913/354161906/38005901-1704451177267.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 2992
+      },
+      "lastModifiedDate": 1704451178610,
+      "reviewId": 368095230
+    },
+    {
+      "id": 138266637,
+      "userFullName": "S** K**",
+      "rate": 5,
+      "comment": "fiyatına göre güzel bir ürün almak isteyenlere tavsiye ederim",
+      "trusted": true,
+      "sellerName": "OZG GROUP",
+      "mediaFile": {
+        "id": 138266637,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2037868/354161906/32009229-1779099498927.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2037868/354161906/32009229-1779099498927.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4624,
+        "weight": 3468
+      },
+      "lastModifiedDate": 1779099501270,
+      "reviewId": 637890586
+    },
+    {
+      "id": 138266636,
+      "userFullName": "S** K**",
+      "rate": 5,
+      "comment": "fiyatına göre güzel bir ürün almak isteyenlere tavsiye ederim",
+      "trusted": true,
+      "sellerName": "OZG GROUP",
+      "mediaFile": {
+        "id": 138266636,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2037868/354161906/32009229-1779099497864.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2037868/354161906/32009229-1779099497864.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4624,
+        "weight": 3468
+      },
+      "lastModifiedDate": 1779099501270,
+      "reviewId": 637890586
+    },
+    {
+      "id": 138266638,
+      "userFullName": "S** K**",
+      "rate": 5,
+      "comment": "fiyatına göre güzel bir ürün almak isteyenlere tavsiye ederim",
+      "trusted": true,
+      "sellerName": "OZG GROUP",
+      "mediaFile": {
+        "id": 138266638,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2037868/354161906/32009229-1779099499989.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2037868/354161906/32009229-1779099499989.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4624,
+        "weight": 3468
+      },
+      "lastModifiedDate": 1779099501270,
+      "reviewId": 637890586
+    }
+  ],
+  "totalPages": 43,
+  "totalElements": 1282
+}

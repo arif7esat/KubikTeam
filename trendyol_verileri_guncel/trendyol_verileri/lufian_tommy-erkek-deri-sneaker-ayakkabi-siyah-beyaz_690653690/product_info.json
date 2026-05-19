@@ -1,0 +1,121 @@
+{
+  "name": "Tommy Erkek Deri Sneaker Ayakkabı SİYAH BEYAZ",
+  "brand": "Lufian",
+  "price": null,
+  "rating": 4.422330097087378,
+  "reviewCount": 3090,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Dış Materyal",
+      "value": "Hakiki Deri"
+    },
+    {
+      "key": "Bağlama Şekli",
+      "value": "Bağcıklı"
+    },
+    {
+      "key": "Materyal",
+      "value": "Deri"
+    },
+    {
+      "key": "Taban Tipi",
+      "value": "Kalın Taban"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "İç Astar & İç Taban Materyali",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Alt Taban Materyali",
+      "value": "Kauçuk"
+    },
+    {
+      "key": "Topuk Boyu",
+      "value": "Kısa Topuklu (1- 4 cm)"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Ek Özellik Mevcut Değil"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Evet"
+    },
+    {
+      "key": "Topuk Tipi",
+      "value": "Düz Topuklu"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "100% Deri"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 4"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Örme"
+    },
+    {
+      "key": "Ürün Detayı",
+      "value": "Günlük"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    },
+    {
+      "key": "Sezon",
+      "value": "Tüm Sezonlar"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1829/prod/QC_ENRICHMENT/20260220/02/c35ca78b-e248-3d44-ad67-14eabae312c9/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1827/prod/QC_ENRICHMENT/20260220/02/97395076-14a0-3f5d-91b0-bb5dec720210/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1829/prod/QC_ENRICHMENT/20260220/02/cc80352e-5533-3329-86fc-8784d7d74001/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1828/prod/QC_ENRICHMENT/20260220/02/1024a4d5-651c-3712-ad5e-6bdc52d2ce04/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1828/prod/QC_ENRICHMENT/20260220/02/1cc21b78-09a4-3c09-a731-b3285dc4cc85/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1829/prod/QC_ENRICHMENT/20260220/02/bbbdfd66-2de3-337c-8a0a-7e187e6d1484/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    }
+  ]
+}

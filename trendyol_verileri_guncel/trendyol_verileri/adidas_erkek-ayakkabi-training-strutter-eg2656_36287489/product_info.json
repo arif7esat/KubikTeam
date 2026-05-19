@@ -1,0 +1,133 @@
+{
+  "name": "Erkek Ayakkabı Traınıng STRUTTER EG2656",
+  "brand": "adidas",
+  "price": null,
+  "rating": 4.284702549575071,
+  "reviewCount": 706,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Bağlama Şekli",
+      "value": "Bağcıklı"
+    },
+    {
+      "key": "Materyal",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Taban Tipi",
+      "value": "Kalın Taban"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Dış Materyal",
+      "value": "Suni Deri"
+    },
+    {
+      "key": "Renk",
+      "value": "Çok Renkli"
+    },
+    {
+      "key": "İç Astar & İç Taban Materyali",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Alt Taban Materyali",
+      "value": "Kauçuk"
+    },
+    {
+      "key": "Topuk Boyu",
+      "value": "Kısa Topuklu (1- 4 cm)"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Ek Özellik Mevcut Değil"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Topuk Tipi",
+      "value": "Düz Topuklu"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "%92 Pamuk, %8 Elastan"
+    },
+    {
+      "key": "Ortam",
+      "value": "Sportswear"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 4"
+    },
+    {
+      "key": "Desen",
+      "value": "Renkli"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Ürün Detayı",
+      "value": "Yürüyüş Ayakkabısı"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutulu"
+    },
+    {
+      "key": "Sezon",
+      "value": "Tüm Sezonlar"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1814/prod/QC_ENRICHMENT/20260116/21/98e018bf-927c-347a-9e7d-3a67a774349d/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1813/prod/QC_ENRICHMENT/20260116/21/ebd417fc-ae5d-347a-9fe8-8f42225d1566/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1814/prod/QC_ENRICHMENT/20260116/21/1cc05169-bd5c-327a-a9b3-ee8d02d28079/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1812/prod/QC_ENRICHMENT/20260116/21/8960c256-560b-341d-891a-aedcb10a4d42/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1812/prod/QC_ENRICHMENT/20260116/21/4ae56c57-a999-37a5-a9cd-9ce252ae31cc/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1812/prod/QC_ENRICHMENT/20260116/21/e616f05f-340f-3ca0-9a5e-4878a9783831/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1813/prod/QC_ENRICHMENT/20260116/21/ee3c4deb-c384-3bf4-92ea-e057457e7642/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1812/prod/QC_ENRICHMENT/20260116/21/984051ac-bfee-38f4-b109-ef29c76a59f6/1_org_zoom.jpg",
+      "localPath": "product_images/urun_9.jpg"
+    }
+  ]
+}

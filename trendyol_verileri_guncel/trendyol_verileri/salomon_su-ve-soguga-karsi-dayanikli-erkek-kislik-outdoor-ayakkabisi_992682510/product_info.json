@@ -1,0 +1,117 @@
+{
+  "name": "Su ve Soğuğa Karşı Dayanıklı Erkek Kışlık Outdoor Ayakkabısı",
+  "brand": "Salomon",
+  "price": 9222.21,
+  "rating": 4.382530120481927,
+  "reviewCount": 332,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Dış Materyal",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Materyal",
+      "value": "Keten"
+    },
+    {
+      "key": "Kumaş Teknolojisi",
+      "value": "Gore-Tex"
+    },
+    {
+      "key": "Bağlama Şekli",
+      "value": "Bağcıklı"
+    },
+    {
+      "key": "Renk",
+      "value": "Gri"
+    },
+    {
+      "key": "Taban Teknolojisi",
+      "value": "Vibram"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    },
+    {
+      "key": "Alt Taban Materyali",
+      "value": "Kauçuk"
+    },
+    {
+      "key": "Topuk Boyu",
+      "value": "Kısa Topuklu (1- 4 cm)"
+    },
+    {
+      "key": "İç Astar & İç Taban Materyali",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "100% Suni Deri"
+    },
+    {
+      "key": "Topuk Tipi",
+      "value": "Düz Topuklu"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Sportswear"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Su itici"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Ortam",
+      "value": "Sportswear"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1764/prod/QC_ENRICHMENT/20251002/12/d8b5857f-38a3-3ea7-a089-5844ef12754e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1765/prod/QC_ENRICHMENT/20251002/12/1583595f-6856-3ec5-a542-8c6308c458b3/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1766/prod/QC_ENRICHMENT/20251002/12/a5b7fdda-5de2-33f6-83d7-cc4b316b0ad7/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1766/prod/QC_ENRICHMENT/20251002/12/16e5c7c6-eed1-3176-b2e7-9f280fb8fdf1/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1765/prod/QC_ENRICHMENT/20251002/12/930a7a24-384f-3bbe-8caf-6b65e98f8e3a/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1766/prod/QC_ENRICHMENT/20251002/12/145f8fe1-0d10-3ad9-8c6c-6b4065b8c13f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1766/prod/QC_ENRICHMENT/20251002/12/2cb4d1be-26bd-3089-84e0-3b5cde715aeb/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1766/prod/QC_ENRICHMENT/20251002/12/ec06d6a4-ff44-3d16-8866-f5c80b0908d6/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    }
+  ]
+}

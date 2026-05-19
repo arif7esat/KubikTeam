@@ -1,0 +1,113 @@
+{
+  "name": "Softshell Su Geçirmez Tactical Mont | Polar İç Katmanlı, Rüzgar Geçirmez, Askeri Outdoor Mont",
+  "brand": "KORDAK",
+  "price": null,
+  "rating": null,
+  "reviewCount": null,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    },
+    {
+      "key": "Materyal",
+      "value": "Polar"
+    },
+    {
+      "key": "Kumaş Teknolojisi",
+      "value": "Suya Dayanıklı"
+    },
+    {
+      "key": "Boy / Ölçü",
+      "value": "Orta"
+    },
+    {
+      "key": "Model",
+      "value": "Kapüşonlu"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Kapüşonlu"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Belirtilmemiş"
+    },
+    {
+      "key": "Renk",
+      "value": "Bej"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Fermuarlı"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Standart Kol"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Boy",
+      "value": "Uzun"
+    },
+    {
+      "key": "Siluet",
+      "value": "Basic"
+    },
+    {
+      "key": "Ortam",
+      "value": "Sportswear"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 2"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Menswear"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Cep",
+      "value": "4"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1782/prod/QC_PREP/20251102/20/d276af8b-1297-38b9-83e8-86e2fdfc4901/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1782/prod/QC_PREP/20251102/20/d13e3192-e7b9-38d2-bb2d-014bff1123ca/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1784/prod/QC_PREP/20251102/20/446ee991-36f9-32b3-8d32-557210731d54/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1784/prod/QC_PREP/20251102/20/7ec62bec-5396-3e3c-8f4e-264c1b0a6a1d/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1784/prod/QC_PREP/20251102/20/91960a2e-9ff3-3ec2-8365-d606865511c5/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1782/prod/QC_PREP/20251102/20/d0714bcc-22da-38e0-8890-fa9d62b96238/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1782/prod/QC_PREP/20251102/20/781b9919-4c5c-3bbd-95c9-1db425fff88f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    }
+  ]
+}

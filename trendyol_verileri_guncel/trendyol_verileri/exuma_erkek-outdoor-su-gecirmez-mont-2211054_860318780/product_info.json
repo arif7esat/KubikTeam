@@ -1,0 +1,117 @@
+{
+  "name": "Erkek Outdoor Su Geçirmez Mont 2211054",
+  "brand": "Exuma",
+  "price": null,
+  "rating": null,
+  "reviewCount": null,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    },
+    {
+      "key": "Materyal",
+      "value": "Kumaş"
+    },
+    {
+      "key": "Astar Durumu",
+      "value": "Astarsız"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Dantel Yaka"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Renk",
+      "value": "Lacivert"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Ürün Tipi",
+      "value": "Düz"
+    },
+    {
+      "key": "Cep",
+      "value": "Cepsiz"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Standart Kol"
+    },
+    {
+      "key": "Boy",
+      "value": "Standart"
+    },
+    {
+      "key": "Ortam",
+      "value": "Günlük"
+    },
+    {
+      "key": "Siluet",
+      "value": "Basic"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Su Geçirmez"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Kemer/Kuşak Durumu",
+      "value": "Kemersiz"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 2"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1563/product/media/images/ty1563/prod/QC/20240921/22/a5a2a621-b5cf-38c6-bb87-ac51dcc798cd/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1564/product/media/images/ty1565/prod/QC/20240921/22/046304a3-9a63-3813-a06e-75e4ec93f1ee/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1565/product/media/images/ty1565/prod/QC/20240921/22/eb280f18-40e0-3bc0-b135-600ff536187c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1565/product/media/images/ty1565/prod/QC/20240921/22/f0e69586-12f8-3f2a-9e48-906f5da918ac/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1563/product/media/images/ty1565/prod/QC/20240921/22/e143c7e5-a15a-31cb-9a58-0d3eb99526df/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1564/product/media/images/ty1563/prod/QC/20240921/22/5728ed47-c177-3c7f-a04d-87640369a3b5/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1565/product/media/images/ty1564/prod/QC/20240921/22/c4c3ed3f-c2f3-361d-ada3-664453e319c2/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    }
+  ]
+}

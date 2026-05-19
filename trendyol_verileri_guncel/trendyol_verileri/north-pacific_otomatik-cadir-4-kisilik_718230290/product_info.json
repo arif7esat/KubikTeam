@@ -1,0 +1,61 @@
+{
+  "name": "Otomatik Çadır - 4 Kişilik",
+  "brand": "North Pacific",
+  "price": null,
+  "rating": 4.333333333333332,
+  "reviewCount": 153,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kapasite",
+      "value": "4 Kişilik ve üstü"
+    },
+    {
+      "key": "Mevsim",
+      "value": "Yaz"
+    },
+    {
+      "key": "Renk",
+      "value": "Gri"
+    },
+    {
+      "key": "Çadır Tipi",
+      "value": "Kamp"
+    },
+    {
+      "key": "Bakım Talimatları (Genel)",
+      "value": "Ürünün kullanım ömrünü korumak için ürüne özel bakım talimatlarını takip ediniz."
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1390/product/media/images/prod/QC/20240628/21/0fb21667-efdf-390f-805e-65f67167383e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1391/product/media/images/prod/QC/20240628/21/ee827788-7b7b-372b-ba82-ac7592908852/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1389/product/media/images/prod/QC/20240628/21/5195485c-8ad8-3f0e-a3b2-efe03d6eb433/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1390/product/media/images/prod/QC/20240628/21/b891264c-445f-3232-aa8a-ee9cd4ebd312/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1390/product/media/images/prod/QC/20240628/21/cb71b0d3-2082-355a-825a-a4ffa6ad2710/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1391/product/media/images/prod/QC/20240628/21/88c3d008-7b71-3ba0-b61a-47153bf56a59/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1391/product/media/images/prod/QC/20240628/21/a33206c7-8cf7-3c40-96db-db75f9884156/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    }
+  ]
+}

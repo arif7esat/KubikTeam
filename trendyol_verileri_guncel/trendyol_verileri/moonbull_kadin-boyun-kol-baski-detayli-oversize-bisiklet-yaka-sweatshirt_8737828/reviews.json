@@ -1,0 +1,25 @@
+{
+  "productId": "873782809",
+  "productName": "Kadın Boyun-Kol Baskı Detaylı Oversize Bisiklet Yaka Sweatshirt",
+  "totalReviews": 1,
+  "averageRating": 3.25,
+  "scrapedAt": "2026-05-19T00:16:54.257Z",
+  "reviews": [
+    {
+      "id": 1,
+      "reviewId": 607893464,
+      "userName": "Ahmed K.",
+      "rating": 2,
+      "date": "2026-01-27T08:28:46.702Z",
+      "comment": "Fotoğraftaki gibi aynısı gelmedi maalesef",
+      "sellerName": "MOONBULL",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2020919/2046841/873782809/175531422-1769502525554.jpeg",
+          "localPath": "review_images/review_001.jpg"
+        }
+      ]
+    }
+  ]
+}

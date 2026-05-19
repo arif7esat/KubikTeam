@@ -1,0 +1,78 @@
+{
+  "content": [
+    {
+      "id": 58845856,
+      "userFullName": "a** s**",
+      "rate": 5,
+      "comment": "Çok iyi çok güzel",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 58845856,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756670947523/img/2016931/2024907/2041856/34746473/18371973-1692969691707.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756670947523/img/2016931/2024907/2041856/34746473/18371973-1692969691707.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1679414453488,
+      "reviewId": 281397163
+    },
+    {
+      "id": 55275891,
+      "userFullName": "F** Ç**",
+      "rate": 2,
+      "comment": "sandalyeleri çok kötü ayaklar dengesiz ve rahatsız fiyatı uygun ama yinede değmez bence",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 55275891,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2037868/34746473/38022534-1689968951859.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2037868/34746473/38022534-1689968951859.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1689968953749,
+      "reviewId": 323822008
+    },
+    {
+      "id": 55275892,
+      "userFullName": "F** Ç**",
+      "rate": 2,
+      "comment": "sandalyeleri çok kötü ayaklar dengesiz ve rahatsız fiyatı uygun ama yinede değmez bence",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 55275892,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2037868/34746473/38022534-1689968952562.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756731731918/img/2016931/2023910/2037868/34746473/38022534-1689968952562.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1689968953749,
+      "reviewId": 323822008
+    },
+    {
+      "id": 55275893,
+      "userFullName": "F** Ç**",
+      "rate": 2,
+      "comment": "sandalyeleri çok kötü ayaklar dengesiz ve rahatsız fiyatı uygun ama yinede değmez bence",
+      "trusted": true,
+      "sellerName": "Evdemo",
+      "mediaFile": {
+        "id": 55275893,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756670947523/img/2016931/2023910/2037868/34746473/38022534-1689968953030.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756670947523/img/2016931/2023910/2037868/34746473/38022534-1689968953030.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1689968953749,
+      "reviewId": 323822008
+    }
+  ],
+  "totalPages": 1,
+  "totalElements": 4
+}

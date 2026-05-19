@@ -1,0 +1,85 @@
+{
+  "name": "Siyah Yavrulu Omuz Çantası",
+  "brand": "Katusa",
+  "price": null,
+  "rating": 4.549050207178603,
+  "reviewCount": 18583,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Materyal",
+      "value": "Suni Deri"
+    },
+    {
+      "key": "Deri Kalitesi",
+      "value": "Parça Mevcut Değil"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "Astar: Polyester; Dış: Deri"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 4"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Kapasite",
+      "value": "0 -1  L"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "2'li"
+    },
+    {
+      "key": "Yaş",
+      "value": "Tüm Yaş Grupları"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1692/prod/QC_PREP/20250612/18/b56f5264-b841-370e-863e-c0083fc4ca96/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1692/prod/QC_PREP/20250612/18/a77332d2-7305-360e-b07a-da42d9393868/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1694/prod/QC_PREP/20250612/18/457b2168-8435-32b8-97cb-ba1d7297c4d9/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1694/prod/QC_PREP/20250612/18/7d42e06f-d984-34f2-848f-d77a7774dfd4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1694/prod/QC_PREP/20250612/18/fd5d7dee-8c5d-347d-8524-7686498563a9/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    }
+  ]
+}

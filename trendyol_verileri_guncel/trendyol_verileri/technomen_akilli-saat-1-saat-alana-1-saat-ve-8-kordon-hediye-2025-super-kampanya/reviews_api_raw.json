@@ -1,0 +1,114 @@
+{
+  "content": [
+    {
+      "id": 134110068,
+      "userFullName": "M** Ö**",
+      "rate": 5,
+      "comment": "harika gayet iyi tavsiye ederim",
+      "trusted": true,
+      "sellerName": "TECHNOMEN",
+      "mediaFile": {
+        "id": 134110068,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2021916/2038865/871643920/93167478-1771507699441.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2021916/2038865/871643920/93167478-1771507699441.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4096,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1771507701822,
+      "reviewId": 613877416
+    },
+    {
+      "id": 118115393,
+      "userFullName": "**** ****",
+      "rate": 2,
+      "comment": "tek araba oyunu var çok sıkıcı  şarjı hemen biter ama ürün fıyatına göre iyi",
+      "trusted": true,
+      "sellerName": "TECHNOMEN",
+      "mediaFile": {
+        "id": 118115393,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2025904/2024907/871643920/183917806-1751779221213.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1749859208957/img/2018925/2025904/2024907/871643920/183917806-1751779221213.jpeg",
+        "mediaType": "IMAGE",
+        "height": 2160,
+        "weight": 3840
+      },
+      "lastModifiedDate": 1751126224819,
+      "reviewId": 553399779
+    },
+    {
+      "id": 135349347,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "aldığım akılı saat bozuk geldi lütfen ilgilenir misiniz",
+      "trusted": true,
+      "sellerName": "TECHNOMEN",
+      "mediaFile": {
+        "id": 135349347,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2022913/2033880/871643920/225750278-1773518160388.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2022913/2033880/871643920/225750278-1773518160388.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4096,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1773518161917,
+      "reviewId": 620978754
+    },
+    {
+      "id": 135439846,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "ürün kutusu kırık geldi  cihazlar acilmiyor",
+      "trusted": true,
+      "sellerName": "TECHNOMEN",
+      "mediaFile": {
+        "id": 135439846,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2022913/2036871/871643920/228329960-1773731713824.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2022913/2036871/871643920/228329960-1773731713824.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1773731714898,
+      "reviewId": 621679106
+    },
+    {
+      "id": 135349346,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "aldığım akılı saat bozuk geldi lütfen ilgilenir misiniz",
+      "trusted": true,
+      "sellerName": "TECHNOMEN",
+      "mediaFile": {
+        "id": 135349346,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2022913/2033880/871643920/225750278-1773518159732.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2022913/2033880/871643920/225750278-1773518159732.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4096,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1773518161917,
+      "reviewId": 620978754
+    },
+    {
+      "id": 135349348,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "aldığım akılı saat bozuk geldi lütfen ilgilenir misiniz",
+      "trusted": true,
+      "sellerName": "TECHNOMEN",
+      "mediaFile": {
+        "id": 135349348,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2022913/2033880/871643920/225750278-1773518161080.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2022913/2033880/871643920/225750278-1773518161080.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4096,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1773518161917,
+      "reviewId": 620978754
+    }
+  ],
+  "totalPages": 3,
+  "totalElements": 66
+}

@@ -1,0 +1,353 @@
+{
+  "scrapedAt": "2026-05-19T00:46:27.663Z",
+  "totalProducts": 68,
+  "successful": 1,
+  "skipped": 67,
+  "failed": 0,
+  "elapsedSeconds": 1172,
+  "results": [
+    {
+      "url": "https://www.trendyol.com/north-london/erkek-polo-yaka-siyah-oversize-sweatshirt-p-353176750",
+      "folder": "north-london_erkek-polo-yaka-siyah-oversize-sweatshirt_353176750",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/kaphone/erkek-bisiklet-yaka-whatever-baski-detayli-oversize-tshirt-p-905137928",
+      "folder": "kaphone_erkek-bisiklet-yaka-whatever-baski-detayli-oversize-tshirt_905137928",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/moonbull/kadin-boyun-kol-baski-detayli-oversize-sweatshirt-p-801127440",
+      "folder": "moonbull_kadin-boyun-kol-baski-detayli-oversize-sweatshirt_801127440",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/moonbull/kadin-boyun-kol-baski-detayli-oversize-bisiklet-yaka-sweatshirt-p-873782809",
+      "folder": "moonbull_kadin-boyun-kol-baski-detayli-oversize-bisiklet-yaka-sweatshirt_8737828",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/madmext/siyah-baskili-oversize-kapusonlu-kadin-sweatshirt-mg1581-p-372597981",
+      "folder": "madmext_siyah-baskili-oversize-kapusonlu-kadin-sweatshirt-mg1581_372597981",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/defacto/oversize-fit-kase-kaban-p-767135388",
+      "folder": "defacto_oversize-fit-kase-kaban_767135388",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/gant/erkek-mavi-regular-fit-jean-pantolon-p-825447756",
+      "folder": "gant_erkek-mavi-regular-fit-jean-pantolon_825447756",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/mavi/erkek-jake-black-pro-siyah-jean-pantolon-0042232200-p-692688221",
+      "folder": "mavi_erkek-jake-black-pro-siyah-jean-pantolon-0042232200_692688221",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/dgn/2026-erkek-sneaker-ayakkabi-p-944119158",
+      "folder": "dgn_2026-erkek-sneaker-ayakkabi_944119158",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/adidas/erkek-ayakkabi-training-strutter-eg2656-p-36287489",
+      "folder": "adidas_erkek-ayakkabi-training-strutter-eg2656_36287489",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/lufian/tommy-erkek-deri-sneaker-ayakkabi-siyah-beyaz-p-690653690",
+      "folder": "lufian_tommy-erkek-deri-sneaker-ayakkabi-siyah-beyaz_690653690",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/adidas/runfalcon-5-unisex-kosu-ayakkabisi-ih7758-siyah-p-860697714",
+      "folder": "adidas_runfalcon-5-unisex-kosu-ayakkabisi-ih7758-siyah_860697714",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/puma/31114001-velocity-nitro-4-erkek-kosu-ayakkabisi-p-356218974",
+      "folder": "puma_31114001-velocity-nitro-4-erkek-kosu-ayakkabisi_356218974",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/koton/oversize-kapusonlu-basic-sweatshirt-ici-polarli-p-338927519",
+      "folder": "koton_oversize-kapusonlu-basic-sweatshirt-ici-polarli_338927519",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/lc-waikiki/lcw-vision-kruvaze-yaka-oversize-kadin-kase-kaban-p-338927489",
+      "folder": "lc-waikiki_lcw-vision-kruvaze-yaka-oversize-kadin-kase-kaban_338927489",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/koton/crop-oversize-sweatshirt-kapusonlu-kedi-baskili-sardonlu-p-346504513",
+      "folder": "koton_crop-oversize-sweatshirt-kapusonlu-kedi-baskili-sardonlu_346504513",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/bigdart/kadin-kusakli-kase-kaban-9162-haki-p-389274561",
+      "folder": "bigdart_kadin-kusakli-kase-kaban-9162-haki_389274561",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/lescon/etna-4-flex-erkek-spor-ayakkabi-p-423871095",
+      "folder": "lescon_etna-4-flex-erkek-spor-ayakkabi_423871095",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/elif-ozbey-butik/siyah-omuzu-dugmeli-premium-kaban-p-374125890",
+      "folder": "elif-ozbey-butik_siyah-omuzu-dugmeli-premium-kaban_374125890",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/madmext/gri-kruvaze-yaka-desenli-kase-kaban-7250-p-361287340",
+      "folder": "madmext_gri-kruvaze-yaka-desenli-kase-kaban-7250_361287340",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/xside/beli-kemerli-kruvaze-yaka-kadin-kase-kaban-p-348712560",
+      "folder": "xside_beli-kemerli-kruvaze-yaka-kadin-kase-kaban_348712560",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/evdemo/milas-calisma-masasi-p-783324979",
+      "folder": "evdemo_milas-calisma-masasi_783324979",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/myniture-home-living/festival-tv-unitesi-g3008-3-p-353057824",
+      "folder": "myniture-home-living_festival-tv-unitesi-g3008-3_353057824",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/nikshop/nice-kose-koltuk-takimi-krem-p-809235080",
+      "folder": "nikshop_nice-kose-koltuk-takimi-krem_809235080",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/joy-mob/joy-tv-unitesi-tv-sehpasi-alt-modul-beyaz-240-cm-mdf-p-324928200",
+      "folder": "joy-mob_joy-tv-unitesi-tv-sehpasi-alt-modul-beyaz-240-cm-mdf_324928200",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/evdemo/eylul-4-kisilik-mutfak-masasi-takimi-ceviz-siyah-p-34746473",
+      "folder": "evdemo_eylul-4-kisilik-mutfak-masasi-takimi-ceviz-siyah_34746473",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/intergo/calisma-masasi-bilgisayar-masasi-ofis-ders-4-rafli-ahsap-ayakli-atlantik-cam-p-346504538",
+      "folder": "intergo_calisma-masasi-bilgisayar-masasi-ofis-ders-4-rafli-ahsap-ayakli-atlantik",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/vivense/eva-calisma-masasi-8-rafli-4-kapakli-p-312450987",
+      "folder": "vivense_eva-calisma-masasi-8-rafli-4-kapakli_312450987",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/nexhome/nova-4-modul-moduler-l-kose-koltuk-takimi-p-326781234",
+      "folder": "nexhome_nova-4-modul-moduler-l-kose-koltuk-takimi_326781234",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/arada/vesna-4-modul-l-koltuk-kose-takimi-p-335218760",
+      "folder": "arada_vesna-4-modul-l-koltuk-kose-takimi_335218760",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/moonlife/istanbul-tv-unitesi-ceviz-p-348125630",
+      "folder": "moonlife_istanbul-tv-unitesi-ceviz_348125630",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/myniture-home-living/festival-tv-unitesi-q3002-4-antrasit-p-359124780",
+      "folder": "myniture-home-living_festival-tv-unitesi-q3002-4-antrasit_359124780",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/modalife/bella-6-sandalye-1-sabit-masa-yemek-masasi-takimi-6-kisilik-antrasit-p-372561890",
+      "folder": "modalife_bella-6-sandalye-1-sabit-masa-yemek-masasi-takimi-6-kisilik-antrasit_37",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/s-home-design-concept/molly-4-modul-kose-koltuk-p-387124650",
+      "folder": "s-home-design-concept_molly-4-modul-kose-koltuk_387124650",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/elawoodworking/modern-country-l-tipi-tasarim-calisma-masasi-p-394258710",
+      "folder": "elawoodworking_modern-country-l-tipi-tasarim-calisma-masasi_394258710",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/mobigoom/4-kisilik-masa-sandalye-takimi-teddy-p-401237850",
+      "folder": "mobigoom_4-kisilik-masa-sandalye-takimi-teddy_401237850",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/roborock/s8-pro-akilli-robot-supurge-p-930469542",
+      "folder": "roborock_s8-pro-akilli-robot-supurge_930469542",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/xiaomi/robot-vacuum-h40-akilli-robot-supurge-mop-10000pa-p-969731936",
+      "folder": "xiaomi_robot-vacuum-h40-akilli-robot-supurge-mop-10000pa_10000",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/technomen/bluetooth-kulaklik-ios-android-uyumlu-kablosuz-hizli-sarj-beyaz-p-261581352",
+      "folder": "technomen_bluetooth-kulaklik-ios-android-uyumlu-kablosuz-hizli-sarj-beyaz_261581",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/technomen/akilli-saat-1-saat-alana-1-saat-ve-8-kordon-hediye-2025-super-kampanya-hediyeli-akilli-saat-p-871643920",
+      "folder": "technomen_akilli-saat-1-saat-alana-1-saat-ve-8-kordon-hediye-2025-super-kampanya",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/xiaomi/mi-robot-vacuum-8000pa-akilli-robot-supurge-p-385748420",
+      "folder": "xiaomi_mi-robot-vacuum-8000pa-akilli-robot-supurge_385748420",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/roborock/qrevo-l-akilli-robot-supurge-beyaz-p-929961715",
+      "folder": "roborock_qrevo-l-akilli-robot-supurge-beyaz_929961715",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/jbl/tune-570bt-kablosuz-kulak-ustu-kulaklik-p-329768260",
+      "folder": "jbl_tune-570bt-kablosuz-kulak-ustu-kulaklik_329768260",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/jbl/live-beam-3-kablosuz-kulakici-kulaklik-mor-p-356124890",
+      "folder": "jbl_live-beam-3-kablosuz-kulakici-kulaklik-mor_356124890",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/anker/soundcore-select-4-go-kablosuz-bluetooth-hoparlor-p-363125670",
+      "folder": "anker_soundcore-select-4-go-kablosuz-bluetooth-hoparlor_363125670",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/jbl/go-4-tasinabilir-bluetooth-hoparlor-kum-beji-p-378124590",
+      "folder": "jbl_go-4-tasinabilir-bluetooth-hoparlor-kum-beji_378124590",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/jabra/elite-4-kulak-ici-bluetooth-kulaklik-p-385671230",
+      "folder": "jabra_elite-4-kulak-ici-bluetooth-kulaklik_385671230",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/huawei/watch-fit-4-siyah-p-392145680",
+      "folder": "huawei_watch-fit-4-siyah_392145680",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/seyuwatch/watch-hx-4-pro-harvox-akilli-saat-p-398712450",
+      "folder": "seyuwatch_watch-hx-4-pro-harvox-akilli-saat_398712450",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/apple/airpods-4-aktif-gurultu-onleme-ozellikli-p-405128790",
+      "folder": "apple_airpods-4-aktif-gurultu-onleme-ozellikli_405128790",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/north-pacific/otomatik-cadir-4-kisilik-p-718230290",
+      "folder": "north-pacific_otomatik-cadir-4-kisilik_718230290",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/exuma/erkek-outdoor-su-gecirmez-mont-2211054-p-860318780",
+      "folder": "exuma_erkek-outdoor-su-gecirmez-mont-2211054_860318780",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/dolunay-is-elbiseleri/outdoor-softshell-su-gecirmez-mont-p-896017703",
+      "folder": "dolunay-is-elbiseleri_outdoor-softshell-su-gecirmez-mont_896017703",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/mero-life/outdoor-kapusonlu-su-ve-ruzgar-gecirmez-quilted-mont-p-850855588",
+      "folder": "mero-life_outdoor-kapusonlu-su-ve-ruzgar-gecirmez-quilted-mont_850855588",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/norway-geographical/su-gecirmez-cikarilabilir-kapusonlu-outdoor-mont-erkek-mont-taboo-p-32172917",
+      "folder": "norway-geographical_su-gecirmez-cikarilabilir-kapusonlu-outdoor-mont-erkek-mont-",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/kordak/softshell-su-gecirmez-tactical-mont-polar-ic-katmanli-ruzgar-gecirmez-outdoor-mont-p-1043863219",
+      "folder": "kordak_softshell-su-gecirmez-tactical-mont-polar-ic-katmanli-ruzgar-gecirmez-out",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/boymen/erkek-mont-su-gecirmez-ceket-premium-yagmurluk-p-1092156573",
+      "folder": "boymen_erkek-mont-su-gecirmez-ceket-premium-yagmurluk_1092156573",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/nivaro/erkek-siyah-softshell-outdoor-mont-sok-tak-kapusonlu-su-gecirmez-p-1125166786",
+      "folder": "nivaro_erkek-siyah-softshell-outdoor-mont-sok-tak-kapusonlu-su-gecirmez_11251667",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/big-king/beyaz-outdoor-trekking-erkek-ayakkabi-p-767456566",
+      "folder": "big-king_beyaz-outdoor-trekking-erkek-ayakkabi_767456566",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/decathlon/quechua-erkek-outdoor-su-gecirmez-kar-montu-kislik-mont-siyah-nh500-10-c-p-375617924",
+      "folder": "decathlon_quechua-erkek-outdoor-su-gecirmez-kar-montu-kislik-mont-siyah-nh500-10",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/decathlon/quechua-kadin-outdoor-su-gecirmez-kar-montu-kislik-mont-bej-nh100-5-c-p-958119728",
+      "folder": "decathlon_quechua-kadin-outdoor-su-gecirmez-kar-montu-kislik-mont-bej-nh100-5-c_",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/realx/4-kisilik-kamp-cadiri-su-gecirmez-kolay-kurulum-kaliteli-cadir-p-46484466",
+      "folder": "realx_4-kisilik-kamp-cadiri-su-gecirmez-kolay-kurulum-kaliteli-cadir_46484466",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/onetick/4-kisilik-tam-otomatik-kamp-cadiri-200x200x140-p-412563210",
+      "folder": "onetick_4-kisilik-tam-otomatik-kamp-cadiri-200x200x140_412563210",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/shufa/4-tarafi-kare-tenteli-tam-otomatik-kamp-cadiri-p-418725630",
+      "folder": "shufa_4-tarafi-kare-tenteli-tam-otomatik-kamp-cadiri_418725630",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/lescon/alaska-4-kadin-trekking-ayakkabi-p-425871240",
+      "folder": "lescon_alaska-4-kadin-trekking-ayakkabi_425871240",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/riccon/thoknyl-erkek-trekking-ayakkabi-001268-haki-p-432156890",
+      "folder": "riccon_thoknyl-erkek-trekking-ayakkabi-001268-haki_432156890",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/bestway/pavillo-activeridge-4-kisilik-cadir-p-439128760",
+      "folder": "bestway_pavillo-activeridge-4-kisilik-cadir_439128760",
+      "status": "skipped"
+    },
+    {
+      "url": "https://www.trendyol.com/xiaomi/redmi-watch-3-active-akilli-saat-p-744379766",
+      "folder": "xiaomi_redmi-watch-3-active-akilli-saat_744379766",
+      "status": "success",
+      "mode": "partial",
+      "reviews": 5672,
+      "reviewImages": 5672
+    }
+  ]
+}

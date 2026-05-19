@@ -1,0 +1,101 @@
+{
+  "name": "Pamuklu Normal Bel Skinny Fit Jean Pantolon - Michael Jean",
+  "brand": "Koton",
+  "price": 1290.99,
+  "rating": 4.475609756097561,
+  "reviewCount": 82,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Paça Tipi",
+      "value": "Boru Paça"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Skinny"
+    },
+    {
+      "key": "Materyal",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Belirtilmemiş"
+    },
+    {
+      "key": "Bel",
+      "value": "Belirtilmemiş"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Renk",
+      "value": "Altın"
+    },
+    {
+      "key": "Cep",
+      "value": "5"
+    },
+    {
+      "key": "Astar Durumu",
+      "value": "Astarsız"
+    },
+    {
+      "key": "Boy",
+      "value": "Belirtilmemiş"
+    },
+    {
+      "key": "Siluet",
+      "value": "Skinny"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "Kumaş"
+    },
+    {
+      "key": "Kemer/Kuşak Durumu",
+      "value": "Kemersiz"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "%99 PAMUK, %1 ELASTAN"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Detaylı bakım talimatları için lütfen ürün etiketini kontrol ediniz."
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1767/prod/QC_PREP/20251009/17/f79cf230-e1a6-3cf8-b2c4-0e10d7a6d63e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1768/prod/QC_PREP/20251009/17/ef5cf58d-521e-3882-b3ca-48fd3fd6f386/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1904/prod/QC_ENRICHMENT/20260508/12/b7cb9f56-5c06-345f-852e-e0d8a293eef0/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1767/prod/QC_PREP/20251009/17/97e85039-f7dc-3a99-8e2f-bd6f923241bd/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "name": "S8 Pro Akıllı Robot Süpürge",
+  "brand": "Roborock",
+  "price": null,
+  "rating": 4.334938469769931,
+  "reviewCount": 1869,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Ses Seviyesi",
+      "value": "61 Dba - 70 Dba"
+    },
+    {
+      "key": "Garanti Tipi",
+      "value": "Resmi Distribütör Garantili"
+    },
+    {
+      "key": "Özellik",
+      "value": "Robot"
+    },
+    {
+      "key": "Haritalandırma",
+      "value": "Lazer (LIDAR + SLAM)"
+    },
+    {
+      "key": "Şarjlı Kullanım Süresi",
+      "value": "2-3 Saat"
+    },
+    {
+      "key": "Çalışma Modu Sayısı",
+      "value": "3 ve üzeri"
+    },
+    {
+      "key": "Yer Silme Özelliği",
+      "value": "Var"
+    },
+    {
+      "key": "Uygulama Üzerinden Kontrol",
+      "value": "Var"
+    },
+    {
+      "key": "Aşılabilir Engel Seviyesi",
+      "value": "2 cm"
+    },
+    {
+      "key": "Hazne Kapasitesi",
+      "value": "0-250 L"
+    },
+    {
+      "key": "Frekans",
+      "value": "50 Hz / 60 Hz"
+    },
+    {
+      "key": "Voltaj",
+      "value": "220 - 240 V"
+    },
+    {
+      "key": "Çöp İstasyonu",
+      "value": "Yok"
+    },
+    {
+      "key": "Tamir Edilebilirlik",
+      "value": "Yetkili Servis ile Tamiri Gerekir."
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1670/prod/QC/20250425/18/9e643a50-5bb5-3844-a3a8-caac2c066cf7/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1669/prod/QC/20250429/15/96279dc3-be02-3dc3-8855-0eb2414f64cf/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1670/prod/QC/20250429/15/3cd0f628-455b-3065-9eef-a40afdeecb24/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1669/prod/QC/20250429/15/37a3ee4e-dbad-39b6-815c-c087865a4390/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1669/prod/QC/20250429/15/422c0ab8-a289-3b41-b34a-ca75e637a90d/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1669/prod/QC/20250429/15/251a6adb-b0e8-3eeb-bc66-c3c1043d5662/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1670/prod/QC/20250429/15/6b62c23b-7f93-3a0a-886d-6633013a48d2/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    }
+  ]
+}

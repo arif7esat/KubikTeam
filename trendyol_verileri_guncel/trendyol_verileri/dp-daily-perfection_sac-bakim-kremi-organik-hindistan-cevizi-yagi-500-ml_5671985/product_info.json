@@ -1,0 +1,49 @@
+{
+  "name": "Saç Bakım Kremi Organik Hindistan Cevizi Yağı 500 ml",
+  "brand": "dp Daily Perfection",
+  "price": null,
+  "rating": 4.385659486574212,
+  "reviewCount": 3389,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Özellik",
+      "value": "Sülfatsız"
+    },
+    {
+      "key": "Saç Tipi",
+      "value": "Tüm Saç Tipleri"
+    },
+    {
+      "key": "Form",
+      "value": "Krem"
+    },
+    {
+      "key": "Etki",
+      "value": "Canlandırıcı"
+    },
+    {
+      "key": "Hacim",
+      "value": "500 ml"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1815/prod/QC_ENRICHMENT/20260124/11/045f3080-af93-31e2-a5a5-edf7c9de92de/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1699/prod/QC_ENRICHMENT/20250624/10/34aa31ae-dcb5-3ff0-873e-73ce94c62630/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1610/prod/QC/20241206/16/0c11bb1f-709d-3233-911e-ed0b9c8db1a8/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1610/prod/QC/20241206/16/275121d9-1aef-3463-80fa-6d7d9c9b3a2a/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    }
+  ]
+}

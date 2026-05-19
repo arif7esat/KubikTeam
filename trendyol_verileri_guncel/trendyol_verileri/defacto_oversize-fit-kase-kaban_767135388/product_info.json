@@ -1,0 +1,145 @@
+{
+  "name": "Oversize Fit Kaşe Kaban",
+  "brand": "DeFacto",
+  "price": null,
+  "rating": 3.858064516129032,
+  "reviewCount": 155,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Oversize"
+    },
+    {
+      "key": "Astar Durumu",
+      "value": "Astarsız"
+    },
+    {
+      "key": "Materyal",
+      "value": "Kaşe"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Renk",
+      "value": "Bej"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Kruvaze"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Ürün Tipi",
+      "value": "Düz"
+    },
+    {
+      "key": "Cep",
+      "value": "Çift cepli"
+    },
+    {
+      "key": "Boy",
+      "value": "Uzun"
+    },
+    {
+      "key": "Siluet",
+      "value": "Kruvaze"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Standart Kol"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Su Geçirmez"
+    },
+    {
+      "key": "Dolgu Tekniği",
+      "value": "Dolgusuz"
+    },
+    {
+      "key": "Persona",
+      "value": "Fashion Forward"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Düğmeli"
+    },
+    {
+      "key": "Baskı/Nakış Tekniği",
+      "value": "Baskısız"
+    },
+    {
+      "key": "Kemer/Kuşak Durumu",
+      "value": "Kemersiz"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "%100 Polyester"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "Kaşe"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 2"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "Tekli"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1838/prod/QC_ENRICHMENT/20260312/22/8c4fbb38-0081-3f4e-b463-2f0b03c4e158/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1837/prod/QC_ENRICHMENT/20260312/22/7227e265-334c-348a-8797-c3873ef62729/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1838/prod/QC_ENRICHMENT/20260312/22/734692e5-62bd-341e-bd09-aae1862f0fb5/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1838/prod/QC_ENRICHMENT/20260312/22/ce5f9636-2989-33a6-b2be-1439251a07aa/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1838/prod/QC_ENRICHMENT/20260312/22/1ede9643-5963-3e36-9fa6-dd337e15ddb2/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1837/prod/QC_ENRICHMENT/20260312/22/ee1370fe-2772-3599-8b03-0c5893227304/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1837/prod/QC_ENRICHMENT/20260312/22/ecdb643e-37a0-341c-8042-00635a545049/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1838/prod/QC_ENRICHMENT/20260312/22/fd6edade-2dee-3131-8762-fe78cd709144/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    }
+  ]
+}

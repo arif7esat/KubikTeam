@@ -1,8 +1,8 @@
 # macOS
 .DS_Store
 
-# Scraped data - too large for git
-trendyol_verileri_guncel/
+# Scraped images (JSON data is in git)
+trendyol_verileri_guncel/**/*.jpg
 
 # Dependencies
 node_modules/

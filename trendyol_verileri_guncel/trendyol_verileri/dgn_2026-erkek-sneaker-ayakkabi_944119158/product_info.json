@@ -1,0 +1,65 @@
+{
+  "name": "2026 Erkek Sneaker Ayakkabı",
+  "brand": "DGN",
+  "price": null,
+  "rating": 5,
+  "reviewCount": 1,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Bağlama Şekli",
+      "value": "Bağcıklı"
+    },
+    {
+      "key": "Materyal",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Dış Materyal",
+      "value": "Süet"
+    },
+    {
+      "key": "Renk",
+      "value": "Lacivert"
+    },
+    {
+      "key": "Topuk Boyu",
+      "value": "Kısa Topuklu (1- 4 cm)"
+    },
+    {
+      "key": "Topuk Tipi",
+      "value": "Düz Topuklu"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 4"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1693/prod/QC_PREP/20250611/18/2b6089aa-2769-37b3-b312-89ce77bff956/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1694/prod/QC_PREP/20250611/18/48f6a9ba-3f10-3a1c-88cf-a1adfeb41be1/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1693/prod/QC_PREP/20250611/18/ece63aff-fba5-3235-b40a-a7c8cf6c4e93/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1694/prod/QC_PREP/20250611/18/a5742717-eed4-3d52-9396-e17e3fbd042c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    }
+  ]
+}

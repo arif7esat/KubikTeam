@@ -1,0 +1,60 @@
+{
+  "content": [
+    {
+      "id": 137186873,
+      "userFullName": "B** B**",
+      "rate": 5,
+      "comment": "İnanılmaz bir renk yaa, kırmızının koyu bir tonu diyebilirim, mat bitişli ama bitişi kuru kuru değil rahatsız etmiyor görsele de ekledim. Özenle paketlenmiş bir kargo, Aryene parfüm tester kokusuna da bayıldım.",
+      "trusted": true,
+      "sellerName": "MARUDERM",
+      "mediaFile": {
+        "id": 137186873,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2042853/1089873828/15464699-1776964412034.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2042853/1089873828/15464699-1776964412034.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1776964412904,
+      "reviewId": 631815716
+    },
+    {
+      "id": 137186871,
+      "userFullName": "B** B**",
+      "rate": 5,
+      "comment": "İnanılmaz bir renk yaa, kırmızının koyu bir tonu diyebilirim, mat bitişli ama bitişi kuru kuru değil rahatsız etmiyor görsele de ekledim. Özenle paketlenmiş bir kargo, Aryene parfüm tester kokusuna da bayıldım.",
+      "trusted": true,
+      "sellerName": "MARUDERM",
+      "mediaFile": {
+        "id": 137186871,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2042853/1089873828/15464699-1776964410741.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2042853/1089873828/15464699-1776964410741.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1776964412904,
+      "reviewId": 631815716
+    },
+    {
+      "id": 137186872,
+      "userFullName": "B** B**",
+      "rate": 5,
+      "comment": "İnanılmaz bir renk yaa, kırmızının koyu bir tonu diyebilirim, mat bitişli ama bitişi kuru kuru değil rahatsız etmiyor görsele de ekledim. Özenle paketlenmiş bir kargo, Aryene parfüm tester kokusuna da bayıldım.",
+      "trusted": true,
+      "sellerName": "MARUDERM",
+      "mediaFile": {
+        "id": 137186872,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2023910/2042853/1089873828/15464699-1776964411408.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1768435207133/img/2019922/2023910/2042853/1089873828/15464699-1776964411408.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1776964412904,
+      "reviewId": 631815716
+    }
+  ],
+  "totalPages": 1,
+  "totalElements": 3
+}

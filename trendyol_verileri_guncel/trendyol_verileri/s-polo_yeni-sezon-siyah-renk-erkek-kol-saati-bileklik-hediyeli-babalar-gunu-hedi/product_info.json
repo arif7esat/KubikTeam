@@ -1,0 +1,113 @@
+{
+  "name": "Yeni Sezon Siyah Renk Erkek Kol Saati Bileklik Hediyeli Babalar Günü Hediyesi",
+  "brand": "S.POLO",
+  "price": null,
+  "rating": 4.19041095890411,
+  "reviewCount": 5110,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kasa Çapı",
+      "value": "41-45 mm"
+    },
+    {
+      "key": "Kasa Materyali",
+      "value": "Çelik"
+    },
+    {
+      "key": "Kordon Materyali",
+      "value": "Çelik"
+    },
+    {
+      "key": "Mekanizma",
+      "value": "Quartz"
+    },
+    {
+      "key": "Kasa Renk",
+      "value": "Sarı"
+    },
+    {
+      "key": "Kordon Renk",
+      "value": "Gümüş"
+    },
+    {
+      "key": "Su Geçirmezlik",
+      "value": "0 ATM"
+    },
+    {
+      "key": "Cam Tipi",
+      "value": "Cam"
+    },
+    {
+      "key": "Cam Şekli",
+      "value": "Düz"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "Garantisiz"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "ÇELİK"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Bakım Talimatları (Genel)",
+      "value": "Nemli bir bezle silin."
+    },
+    {
+      "key": "Batarya Türü",
+      "value": "Alkalin"
+    },
+    {
+      "key": "Batarya Boyutu",
+      "value": "AAA"
+    },
+    {
+      "key": "Özellik",
+      "value": "Uzun"
+    },
+    {
+      "key": "Kadran Renk",
+      "value": "Siyah"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1513/product/media/images/prod/QC/20240830/12/aaf18623-ed3f-3f24-9a2c-a3228e33339e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1513/product/media/images/prod/QC/20240830/12/f4f47675-0d60-30de-8464-b436948b7c2b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1513/product/media/images/prod/QC/20240830/12/fadfedd2-85cf-302b-bc2e-5a34cccbc909/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1514/product/media/images/prod/QC/20240830/12/ad72084d-5c92-37c2-8f26-c88bb8210530/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1514/product/media/images/prod/QC/20240830/12/462acbce-5484-3daf-ab9d-da1431e47abd/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1513/product/media/images/prod/QC/20240830/12/78991852-5f1f-3638-8ab4-a743ec3acdc5/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1513/product/media/images/prod/QC/20240830/12/ca2a9a5f-1721-37e7-a442-91f681286d3b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1512/product/media/images/prod/QC/20240830/12/7a8ad8e4-98b4-37f3-9551-2bfcf29e612d/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    }
+  ]
+}

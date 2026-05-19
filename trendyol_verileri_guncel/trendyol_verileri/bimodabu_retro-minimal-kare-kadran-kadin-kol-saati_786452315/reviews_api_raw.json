@@ -1,0 +1,42 @@
+{
+  "content": [
+    {
+      "id": 137548959,
+      "userFullName": "h** Ö**",
+      "rate": 1,
+      "comment": "renk soldu bileğime rengi çıktı simsiyah",
+      "trusted": true,
+      "sellerName": "Bimodabu",
+      "mediaFile": {
+        "id": 137548959,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2022913/786452315/42335023-1777802409222.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2022913/786452315/42335023-1777802409222.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1777802410522,
+      "reviewId": 633924259
+    },
+    {
+      "id": 137548958,
+      "userFullName": "h** Ö**",
+      "rate": 1,
+      "comment": "renk soldu bileğime rengi çıktı simsiyah",
+      "trusted": true,
+      "sellerName": "Bimodabu",
+      "mediaFile": {
+        "id": 137548958,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2022913/786452315/42335023-1777802408165.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1777680012294/img/2019922/2024907/2022913/786452315/42335023-1777802408165.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4000,
+        "weight": 3000
+      },
+      "lastModifiedDate": 1777802410522,
+      "reviewId": 633924259
+    }
+  ],
+  "totalPages": 35,
+  "totalElements": 1022
+}

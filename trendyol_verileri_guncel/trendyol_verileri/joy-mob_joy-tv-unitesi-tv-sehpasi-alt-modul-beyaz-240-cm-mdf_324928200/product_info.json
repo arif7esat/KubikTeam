@@ -1,0 +1,81 @@
+{
+  "name": "Joy Tv Ünitesi Tv Sehpası Alt Modül Beyaz 240 Cm Mdf",
+  "brand": "joy mob",
+  "price": null,
+  "rating": 4.56,
+  "reviewCount": 150,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Materyal",
+      "value": "MDF"
+    },
+    {
+      "key": "Özellik",
+      "value": "Duvara Monte"
+    },
+    {
+      "key": "Renk",
+      "value": "Beyaz"
+    },
+    {
+      "key": "Boyut/Ebat",
+      "value": "240 x 240"
+    },
+    {
+      "key": "Yükseklik",
+      "value": "30 cm"
+    },
+    {
+      "key": "Genişlik",
+      "value": "240 cm"
+    },
+    {
+      "key": "Derinlik",
+      "value": "30 cm"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "6 Yıl"
+    },
+    {
+      "key": "Stil",
+      "value": "İskandinav"
+    },
+    {
+      "key": "Tema / Stil",
+      "value": "Modern"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1545/product/media/images/ty1546/prod/QC/20240916/00/533eb998-71d3-3429-872c-58e3815c8e8b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1546/product/media/images/ty1545/prod/QC/20240916/00/3e7a5c21-5d44-3cac-aba5-ce7ec8c18702/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1547/product/media/images/ty1545/prod/QC/20240916/00/31b9b7b3-d4a6-3e0b-9edb-4b643510fe95/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1547/product/media/images/ty1545/prod/QC/20240916/00/ce28e4a5-cf64-3501-8231-4a0a9010e32a/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1545/product/media/images/ty1547/prod/QC/20240916/00/275d9dea-a345-3962-bb75-9e35f54afd29/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1545/product/media/images/ty1545/prod/QC/20240916/00/f23d02bf-87bb-37e8-84ce-8e061c9b6d21/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    }
+  ]
+}

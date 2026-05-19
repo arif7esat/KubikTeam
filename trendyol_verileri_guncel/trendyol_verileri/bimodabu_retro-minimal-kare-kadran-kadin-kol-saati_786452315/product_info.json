@@ -1,0 +1,93 @@
+{
+  "name": "Retro Minimal Kare Kadran Kadın Kol Saati",
+  "brand": "Bimodabu",
+  "price": null,
+  "rating": 4.130061349693252,
+  "reviewCount": 2445,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kasa Çapı",
+      "value": "26-30 mm"
+    },
+    {
+      "key": "Kasa Materyali",
+      "value": "Metal"
+    },
+    {
+      "key": "Kordon Materyali",
+      "value": "Metal"
+    },
+    {
+      "key": "Su Geçirmezlik",
+      "value": "3 ATM"
+    },
+    {
+      "key": "Mekanizma",
+      "value": "Quartz"
+    },
+    {
+      "key": "Kasa Renk",
+      "value": "Çok Renkli"
+    },
+    {
+      "key": "Kordon Renk",
+      "value": "Altın"
+    },
+    {
+      "key": "Cam Tipi",
+      "value": "Cam"
+    },
+    {
+      "key": "Cam Şekli",
+      "value": "Düz"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Renk",
+      "value": "Altın"
+    },
+    {
+      "key": "Bakım Talimatları (Genel)",
+      "value": "Nemli bir bezle silin."
+    },
+    {
+      "key": "Özellik",
+      "value": "Uzun"
+    },
+    {
+      "key": "Kadran Renk",
+      "value": "Beyaz"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1480/product/media/images/prod/QC/20240813/22/9721b84f-290b-31e9-8df5-9935ede4d18e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1479/product/media/images/prod/QC/20240813/22/97166c30-c8a1-33a6-a85d-b4bf3ff2012d/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1479/product/media/images/prod/QC/20240813/22/f6a7314f-a9af-34d8-8c21-05a03ba82335/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1479/product/media/images/prod/QC/20240813/22/27e18504-055e-3b9a-aa92-70f8b61b0839/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1481/product/media/images/prod/QC/20240813/22/bc207363-47db-3b3e-87d5-90914c5a5d9d/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    }
+  ]
+}

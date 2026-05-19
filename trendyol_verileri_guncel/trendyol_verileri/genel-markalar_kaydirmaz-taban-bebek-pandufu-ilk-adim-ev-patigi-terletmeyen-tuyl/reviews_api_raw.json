@@ -1,0 +1,96 @@
+{
+  "content": [
+    {
+      "id": 91544892,
+      "userFullName": "A** A** K**",
+      "rate": 3,
+      "comment": "Güzel ama ön kısımları yamuk dikilmiş",
+      "trusted": true,
+      "sellerName": "YOYO JUNIOR",
+      "mediaFile": {
+        "id": 91544892,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2031886/467706767/11464927-1723667402170.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2031886/467706767/11464927-1723667402170.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1723667402978,
+      "reviewId": 417881500
+    },
+    {
+      "id": 124456675,
+      "userFullName": "E** Ç**",
+      "rate": 1,
+      "comment": "bu kadar kötü olacağını düşünmemiştim şansımıza herhalde çocuk yürü yemedi önü bi tuhaf şekilsiz defolu ürün bize geldi herhalde iade edeceğim",
+      "trusted": true,
+      "sellerName": "YOYO JUNIOR",
+      "mediaFile": {
+        "id": 124456675,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2028895/2031886/467706767/79786688-1760360059981.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media-migrated_1755700289924/img/2018925/2028895/2031886/467706767/79786688-1760360059981.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4608,
+        "weight": 3456
+      },
+      "lastModifiedDate": 1760360061290,
+      "reviewId": 577107054
+    },
+    {
+      "id": 70643063,
+      "userFullName": "H** S**",
+      "rate": 5,
+      "comment": "Ürünü satın aldım ama kızıma daha dün giydirdim birisi çok dar önü yanlış dikilmiş abuk subuk bi biçimde dikilmiş  ayak uçlarını rahatsız ediyor fotoğrafta ekledim , sağ tarafın yenisini istiyorum 5 yıldız verdim öne çıkması için",
+      "trusted": true,
+      "sellerName": "YOYO JUNIOR",
+      "mediaFile": {
+        "id": 70643063,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756692487258/img/2016931/2028895/2030889/467706767/13708695-1702539978081.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-migrated-product-review-media_1756692487258/img/2016931/2028895/2030889/467706767/13708695-1702539978081.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1702539978794,
+      "reviewId": 363164956
+    },
+    {
+      "id": 125072293,
+      "userFullName": "N** B**",
+      "rate": 1,
+      "comment": "üründe dikiş hatası var sol.ayak upuzun duruyordu anlamıyorum kalite kontrol yapmadan mi gönderiyorsunuz ürünleri",
+      "trusted": true,
+      "sellerName": "YOYO JUNIOR",
+      "mediaFile": {
+        "id": 125072293,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2028895/2040859/467706767/68295845-1761124452920.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media-migrated_1755700289924/img/2018925/2028895/2040859/467706767/68295845-1761124452920.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4080,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1761124455187,
+      "reviewId": 579397237
+    },
+    {
+      "id": 124456673,
+      "userFullName": "E** Ç**",
+      "rate": 1,
+      "comment": "bu kadar kötü olacağını düşünmemiştim şansımıza herhalde çocuk yürü yemedi önü bi tuhaf şekilsiz defolu ürün bize geldi herhalde iade edeceğim",
+      "trusted": true,
+      "sellerName": "YOYO JUNIOR",
+      "mediaFile": {
+        "id": 124456673,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2028895/2031886/467706767/79786688-1760360058325.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media-migrated_1755700289924/img/2018925/2028895/2031886/467706767/79786688-1760360058325.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4608,
+        "weight": 3456
+      },
+      "lastModifiedDate": 1760360061290,
+      "reviewId": 577107054
+    }
+  ],
+  "totalPages": 14,
+  "totalElements": 395
+}

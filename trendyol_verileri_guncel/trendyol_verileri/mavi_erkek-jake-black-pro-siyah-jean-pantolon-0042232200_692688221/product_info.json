@@ -1,0 +1,137 @@
+{
+  "name": "Jake Pro Siyah Jean Pantolon 0042232200",
+  "brand": "Mavi",
+  "price": null,
+  "rating": 4.444444444444445,
+  "reviewCount": 261,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Paça Tipi",
+      "value": "Dar Paça"
+    },
+    {
+      "key": "Materyal",
+      "value": "Elastan"
+    },
+    {
+      "key": "Boy",
+      "value": "Standart"
+    },
+    {
+      "key": "Kemer/Kuşak Durumu",
+      "value": "Kemersiz"
+    },
+    {
+      "key": "Bel",
+      "value": "Normal Bel"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Cep",
+      "value": "5 Cep"
+    },
+    {
+      "key": "Ürün Tipi",
+      "value": "Düz"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Denim"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Denim"
+    },
+    {
+      "key": "Siluet",
+      "value": "Skinny"
+    },
+    {
+      "key": "Ortam",
+      "value": "Günlük"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Skinny"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Yıkamalı"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Fermuarlı"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "Denim"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "97% Pamuk, 3% Elastan"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "."
+    },
+    {
+      "key": "Sezon",
+      "value": "Tüm Sezonlar"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1915/prod/QC_ENRICHMENT/20260518/04/a6683b5f-d4a0-3777-a791-1650e9a29841/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1922/prod/QC_ENRICHMENT/20260518/04/b22b51fe-9ae3-3011-bf1e-a4b147d5b13e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1892/prod/QC_ENRICHMENT/20260518/04/03ade904-dd5d-3dce-986f-0bbd6bdd976f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1893/prod/QC_ENRICHMENT/20260518/04/de58f932-9cce-328f-bfe7-f66a84c3628a/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1902/prod/QC_ENRICHMENT/20260518/04/9943115c-d003-3ee7-b1dc-ff8f851b6c22/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1897/prod/QC_ENRICHMENT/20260518/04/c57db729-a5b9-3bb4-98ba-2cd56ce4fdc2/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1918/prod/QC_ENRICHMENT/20260518/04/6c9b85fd-a8ae-3211-9353-0299bc4adf5a/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1934/prod/QC_ENRICHMENT/20260518/04/fb7b468c-6caa-3dd3-b1ba-1e79bafb51eb/1_org_zoom.jpg",
+      "localPath": "product_images/urun_8.jpg"
+    }
+  ]
+}

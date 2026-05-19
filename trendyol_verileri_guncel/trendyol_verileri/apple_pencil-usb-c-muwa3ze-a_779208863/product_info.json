@@ -1,0 +1,57 @@
+{
+  "name": "Pencil (USB-C) MUWA3ZE/A",
+  "brand": "Apple",
+  "price": 3749,
+  "rating": 4.732704402515723,
+  "reviewCount": 2544,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Mouse Hassasiyeti (Dpi)",
+      "value": "1000 - 5000 Dpi"
+    },
+    {
+      "key": "Mouse Tipi",
+      "value": "Optik"
+    },
+    {
+      "key": "Bağlantılar",
+      "value": "Bluetooth"
+    },
+    {
+      "key": "Garanti Tipi",
+      "value": "Resmi Distribütör Garantili"
+    },
+    {
+      "key": "Renk",
+      "value": "Beyaz"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Buton Sayısı",
+      "value": "2"
+    },
+    {
+      "key": "Özellik",
+      "value": "Kablosuz"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1610/prod/QC/20241202/10/5eafa70b-63e3-3aaa-940d-95d6e753f010/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1609/prod/QC/20241202/10/3f2e9e88-78f5-3acf-afa5-32be898ecceb/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1610/prod/QC/20241202/10/3bcf10a9-43db-3a9c-9dab-64586867c1e1/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    }
+  ]
+}

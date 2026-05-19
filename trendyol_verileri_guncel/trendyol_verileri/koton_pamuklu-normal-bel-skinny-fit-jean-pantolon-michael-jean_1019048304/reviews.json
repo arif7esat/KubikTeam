@@ -1,0 +1,73 @@
+{
+  "productId": "1019048304",
+  "productName": "Pamuklu Normal Bel Skinny Fit Jean Pantolon - Michael Jean",
+  "totalReviews": 4,
+  "averageRating": 4.475609756097561,
+  "scrapedAt": "2026-05-18T13:58:33.215Z",
+  "reviews": [
+    {
+      "id": 1,
+      "reviewId": 583702209,
+      "userName": "P** A**",
+      "rating": 5,
+      "date": "2025-11-07T17:13:23.351Z",
+      "comment": "Ürünü çok beğendik çok kullanışlı çok da yumuşak sadece boyu uzun oldu",
+      "sellerName": "Koton",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2029892/2025904/953290757/3911692-1762535602089.jpeg",
+          "localPath": "review_images/review_001.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "reviewId": 588979919,
+      "userName": "S** Y**",
+      "rating": 5,
+      "date": "2025-11-22T19:54:05.502Z",
+      "comment": "Ürün güzel tam üzerime oturdu. likralı bir yapısı var. Michael Jean modeli ama Justin Jean gibi tam oturuyor ona göre hareket edin. Rengi ve dokusu iyi.",
+      "sellerName": "Koton",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1762732810909/img/2018925/2029892/2040859/1019048304/18628975-1763841244239.jpeg",
+          "localPath": "review_images/review_002.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "reviewId": 588979919,
+      "userName": "S** Y**",
+      "rating": 5,
+      "date": "2025-11-22T19:54:05.502Z",
+      "comment": "Ürün güzel tam üzerime oturdu. likralı bir yapısı var. Michael Jean modeli ama Justin Jean gibi tam oturuyor ona göre hareket edin. Rengi ve dokusu iyi.",
+      "sellerName": "Koton",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1762732810909/img/2018925/2029892/2040859/1019048304/18628975-1763841243167.jpeg",
+          "localPath": "review_images/review_003.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "reviewId": 572735973,
+      "userName": "**** ****",
+      "rating": 1,
+      "date": "2025-09-25T19:17:07.740Z",
+      "comment": "Cebi yırtık geldi",
+      "sellerName": "Koton",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2027898/2043850/955318590/180175210-1758827826446.jpeg",
+          "localPath": "review_images/review_004.jpg"
+        }
+      ]
+    }
+  ]
+}

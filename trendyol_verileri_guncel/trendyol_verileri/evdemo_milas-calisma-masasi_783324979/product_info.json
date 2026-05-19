@@ -1,0 +1,69 @@
+{
+  "name": "Milas Çalışma Masası",
+  "brand": "Evdemo",
+  "price": null,
+  "rating": 4.580931263858093,
+  "reviewCount": 451,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Yükseklik",
+      "value": "141 cm"
+    },
+    {
+      "key": "Genişlik",
+      "value": "80 cm"
+    },
+    {
+      "key": "Derinlik",
+      "value": "50 cm"
+    },
+    {
+      "key": "Materyal",
+      "value": "Suntalam"
+    },
+    {
+      "key": "Renk",
+      "value": "Beyaz"
+    },
+    {
+      "key": "Stil",
+      "value": "İskandinav"
+    },
+    {
+      "key": "Tema / Stil",
+      "value": "İskandinav"
+    },
+    {
+      "key": "Özellik",
+      "value": "Ayaklı"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1062/product/media/images/prod/SPM/PIM/20231124/16/e76b6a96-2284-3bca-97a5-02792acc4baf/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1064/product/media/images/prod/SPM/PIM/20231124/16/e838436c-3927-300d-bccc-04ca5ab88bdc/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1063/product/media/images/prod/SPM/PIM/20231124/16/20445ae5-3794-32c2-a7dc-e373e85be41e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1064/product/media/images/prod/SPM/PIM/20231124/16/3dcebdda-098c-3f9c-9a56-61d704e65909/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1062/product/media/images/prod/SPM/PIM/20231124/16/0a91d242-9447-3dbd-b128-2b1c9375bc8b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1064/product/media/images/prod/SPM/PIM/20231124/16/962934bd-84f0-3f0e-b709-95d56aefd71a/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "name": "Siyah Baskılı Oversize Kapüşonlu Kadın Sweatshirt MG1581",
+  "brand": "Madmext",
+  "price": null,
+  "rating": 4.384146341463414,
+  "reviewCount": 164,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Desen",
+      "value": "Baskılı"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Oversize"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Kapüşonlu"
+    },
+    {
+      "key": "Materyal",
+      "value": "Pamuk Polyester"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Uzun Kol"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Kapamasız"
+    },
+    {
+      "key": "Cep",
+      "value": "Kanguru Cep"
+    },
+    {
+      "key": "Ürün Detayı",
+      "value": "Sırt Baskılı"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "Tekli"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Boy",
+      "value": "Uzun"
+    },
+    {
+      "key": "Siluet",
+      "value": "Basic"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Ek Özellik Mevcut Değil"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "3 İplik Şardonlu"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Baskı/Nakış Tekniği",
+      "value": "Dijital Baskı"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "%90 Pamuk, %10 Polyester"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 1"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1669/prod/QC/20250424/16/0b6bc27f-c05a-3af0-9f68-113186e852b5/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1670/prod/QC/20250424/16/becc8145-9b6e-329e-983f-86b498f3eb54/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1668/prod/QC/20250424/16/3caa803c-a1fd-3852-84ea-3b0c497a9a62/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1670/prod/QC/20250424/16/4c53121e-e626-3f3d-ae3d-0e3174187f3e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    }
+  ]
+}

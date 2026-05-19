@@ -1,0 +1,121 @@
+{
+  "name": "Kadın Boyun-Kol Baskı Detaylı Oversize Bisiklet Yaka Sweatshirt",
+  "brand": "MOONBULL",
+  "price": null,
+  "rating": 3.25,
+  "reviewCount": 20,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Desen",
+      "value": "Baskılı"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Oversize"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Bisiklet Yaka"
+    },
+    {
+      "key": "Materyal",
+      "value": "Pamuk Polyester"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Sportswear"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Düşük Kol"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    },
+    {
+      "key": "Renk",
+      "value": "Gri"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Örme"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Kapamasız"
+    },
+    {
+      "key": "Cep",
+      "value": "Cepsiz"
+    },
+    {
+      "key": "Ürün Detayı",
+      "value": "Mevcut Değil"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "Tekli"
+    },
+    {
+      "key": "Ortam",
+      "value": "Günlük"
+    },
+    {
+      "key": "Boy",
+      "value": "Standart"
+    },
+    {
+      "key": "Siluet",
+      "value": "Regular"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Ek Özellik Mevcut Değil"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "2 İplik Şardonlu"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Baskı/Nakış Tekniği",
+      "value": "Baskısız"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "%92 Pamuk, %8 Elastan"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "30 derecede tersten yıkanması önerilir."
+    },
+    {
+      "key": "Sezon",
+      "value": "İlkbahar / Sonbahar"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1601/prod/QC/20241108/19/bac4b123-804c-3d52-b3e7-1bc84519b2b1/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1600/prod/QC/20241108/19/de031770-8236-3483-9321-b65845aa0f41/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    }
+  ]
+}

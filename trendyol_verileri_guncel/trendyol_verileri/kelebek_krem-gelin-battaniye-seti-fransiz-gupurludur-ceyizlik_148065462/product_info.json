@@ -1,0 +1,57 @@
+{
+  "name": "Krem Gelin Battaniye Seti Fransız Güpürlüdür Çeyizlik",
+  "brand": "Kelebek",
+  "price": 1889.03,
+  "rating": 3.994161801501251,
+  "reviewCount": 1199,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Materyal",
+      "value": "Polyester"
+    },
+    {
+      "key": "Boyut/Ebat",
+      "value": "220 x 240"
+    },
+    {
+      "key": "Özellik",
+      "value": "Antibakteriyel"
+    },
+    {
+      "key": "Renk",
+      "value": "Beyaz"
+    },
+    {
+      "key": "Dolgu Materyali",
+      "value": "Belirtilmemiş"
+    },
+    {
+      "key": "Desen",
+      "value": "Geometrik"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "30 DERECEDE YIKANABİLİR"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1445/product/media/images/prod/QC/20240726/18/5191ce17-792f-3cf4-b22e-fb8f40340252/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    }
+  ]
+}

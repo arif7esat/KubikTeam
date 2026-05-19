@@ -1,0 +1,93 @@
+{
+  "name": "Paula Model Bordo Kadın El Ve Omuz Çantası",
+  "brand": "Night",
+  "price": null,
+  "rating": 4.674516400336416,
+  "reviewCount": 5945,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Materyal",
+      "value": "Suni Deri"
+    },
+    {
+      "key": "Deri Kalitesi",
+      "value": "İmitasyon Deri"
+    },
+    {
+      "key": "Renk",
+      "value": "Bordo"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "100% Suni Deri"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "type 4"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Örme"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Kapasite",
+      "value": "0 -1  L"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "1'li"
+    },
+    {
+      "key": "Yaş",
+      "value": "21 - 40 Yaş"
+    },
+    {
+      "key": "Sezon",
+      "value": "Tüm Sezonlar"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1492/product/media/images/prod/QC/20240820/15/c2bdbed0-9c56-3a13-862d-41a9e1f7aded/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1491/product/media/images/prod/QC/20240820/15/9c008dae-a02d-31a0-b6bf-3648e7eed6e4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1491/product/media/images/prod/QC/20240820/15/4a82e2f8-3fc1-3ef3-9ac0-89ba29fc745e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1491/product/media/images/prod/QC/20240820/15/90bed619-7c08-3b54-aea7-cdb88058dbcc/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1493/product/media/images/prod/QC/20240820/15/e04ca5ef-8726-321a-932b-de33d2ffd257/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "name": "İndigo Stone Erkek Jeans 5WAM40120ID",
+  "brand": "Koton",
+  "price": 1399,
+  "rating": 4.3577981651376145,
+  "reviewCount": 218,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Paça Tipi",
+      "value": "Boru Paça"
+    },
+    {
+      "key": "Materyal",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Kemer/Kuşak Durumu",
+      "value": "Kemersiz"
+    },
+    {
+      "key": "Bel",
+      "value": "Normal Bel"
+    },
+    {
+      "key": "Renk",
+      "value": "Lacivert"
+    },
+    {
+      "key": "Cep",
+      "value": "5 Cep"
+    },
+    {
+      "key": "Ürün Tipi",
+      "value": "Düz"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Boy",
+      "value": "Regular"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Denim"
+    },
+    {
+      "key": "Siluet",
+      "value": "Straight"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Slim"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Yıkamalı"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Düğmeli"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "Rigid"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "99% Pamuk, 1% Elastan"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Detaylı bakım talimatları için lütfen ürün etiketini kontrol ediniz."
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1805/prod/QC_ENRICHMENT/20251227/19/5f236384-7a57-331b-bb93-0c6f6eeaa531/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1805/prod/QC_ENRICHMENT/20251227/19/da1de10c-116b-329d-bacf-2d2d9c4002ac/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1805/prod/QC_ENRICHMENT/20251227/19/eabae539-bd28-3dc9-9c1a-194e425b9e23/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1804/prod/QC_ENRICHMENT/20251227/19/72d795a4-e85e-3bc1-b682-22bb214e3a41/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1804/prod/QC_ENRICHMENT/20251227/19/ed72b9f7-2b00-3675-b318-80014938768e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1804/prod/QC_ENRICHMENT/20251227/19/1b26f70d-1c2b-39a1-9f7a-83ae01d4f115/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    }
+  ]
+}

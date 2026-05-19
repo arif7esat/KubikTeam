@@ -1,0 +1,873 @@
+{
+  "productId": "767456566",
+  "productName": "Beyaz Outdoor Trekking Erkek Ayakkabı",
+  "totalReviews": 54,
+  "averageRating": 4.267415730337079,
+  "scrapedAt": "2026-05-19T00:21:25.977Z",
+  "reviews": [
+    {
+      "id": 1,
+      "reviewId": 447014484,
+      "userName": "A** T**",
+      "rating": 3,
+      "date": "2024-11-29T00:40:30.719Z",
+      "comment": "Sert taban ortopedik model değil ama güzel",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2028895/2046841/767456566/104839249-1732840830065.jpeg",
+          "localPath": "review_images/review_001.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "reviewId": 483282216,
+      "userName": "U** A**",
+      "rating": 5,
+      "date": "2025-03-26T08:34:06.312Z",
+      "comment": "teşekkürler beğendim 😊👍",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1742466981198/img/2018925/2021916/2044847/767456566/24767762-1742978045759.jpeg",
+          "localPath": "review_images/review_002.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "reviewId": 350054298,
+      "userName": "N** K**",
+      "rating": 5,
+      "date": "2023-11-02T15:29:29.025Z",
+      "comment": "Ürün Geldi Teşekkürler BIG KING Gerçektende Çok Güzel Resimdekiyle Tıpa Tıp Aynısı Tekrardan Teşekküler",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2027898/2018925/767456566/43531018-1698938968367.jpeg",
+          "localPath": "review_images/review_003.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "reviewId": 422661014,
+      "userName": "Elif D. H.",
+      "rating": 4,
+      "date": "2024-09-02T17:13:00.762Z",
+      "comment": "Ürün tam anlatıldığı gibi güzel ama kalıbı geniş olduğundan bir beden küçük alınmalı",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2026901/2035874/767456566/44209808-1726675485250.jpeg",
+          "localPath": "review_images/review_004.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "reviewId": 447014484,
+      "userName": "A** T**",
+      "rating": 3,
+      "date": "2024-11-29T00:40:30.719Z",
+      "comment": "Sert taban ortopedik model değil ama güzel",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2028895/2046841/767456566/104839249-1732840829626.jpeg",
+          "localPath": "review_images/review_005.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "reviewId": 430511240,
+      "userName": "G** A**",
+      "rating": 5,
+      "date": "2024-10-03T20:23:55.225Z",
+      "comment": "Ürünümüz geldi bunu 42 aldık tamoldu çok güzel eşim beyendi paketleme güzel kargo hızlıydı çok teşekkürler 👍🙂",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2017928/2027898/2022913/767456566/94242576-1728137597182.jpeg",
+          "localPath": "review_images/review_006.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "reviewId": 616366279,
+      "userName": "**** ****",
+      "rating": 5,
+      "date": "2026-02-28T11:42:18.493Z",
+      "comment": "esime aldim cookkk beyendi  Tam istedigim gibi geldi dedi",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2021916/2047838/767456566/205661358-1772278936189.jpeg",
+          "localPath": "review_images/review_007.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "reviewId": 350054298,
+      "userName": "N** K**",
+      "rating": 5,
+      "date": "2023-11-02T15:29:29.025Z",
+      "comment": "Ürün Geldi Teşekkürler BIG KING Gerçektende Çok Güzel Resimdekiyle Tıpa Tıp Aynısı Tekrardan Teşekküler",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2016931/2027898/2018925/767456566/43531018-1698938968214.jpeg",
+          "localPath": "review_images/review_008.jpg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "reviewId": 447014484,
+      "userName": "A** T**",
+      "rating": 3,
+      "date": "2024-11-29T00:40:30.719Z",
+      "comment": "Sert taban ortopedik model değil ama güzel",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2028895/2046841/767456566/104839249-1732840829007.jpeg",
+          "localPath": "review_images/review_009.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "reviewId": 559761214,
+      "userName": "İ** a**",
+      "rating": 5,
+      "date": "2025-07-28T12:29:52.977Z",
+      "comment": "gayet güzel",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1749859208957/img/2018925/2025904/2046841/767456566/70866470-1753705791752.jpeg",
+          "localPath": "review_images/review_010.jpg"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "reviewId": 399029010,
+      "userName": "E** A**",
+      "rating": 5,
+      "date": "2024-05-16T11:36:24.029Z",
+      "comment": "ürün sağlam malzemeden yapılmıs sadece biraz yapıskanı kötü ama idare eder",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756808468433/img/2017928/2022913/2033880/767456566/97433451-1715859382762.jpeg",
+          "localPath": "review_images/review_011.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "reviewId": 429007810,
+      "userName": "**** ****",
+      "rating": 5,
+      "date": "2024-09-27T10:00:29.225Z",
+      "comment": "siyahını almıştım fiyatına göre kaliteli olduğu için beyazinida aldım tam numaranızı alabilirsiniz",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2026901/2044847/767456566/87287553-1727431228533.jpeg",
+          "localPath": "review_images/review_012.jpg"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "reviewId": 352578068,
+      "userName": "**** ****",
+      "rating": 4,
+      "date": "2023-11-11T19:39:37.965Z",
+      "comment": "Tam beden. Ayni gorseldeki kimi. Beyendim. Kaliteli. Guncelliyicem o kadar da kaliteli diyil. Giydikden sonra ust tarafi ezik ezik oldu",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2016931/2027898/2027898/767456566/26778905-1699731577084.jpeg",
+          "localPath": "review_images/review_013.jpg"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "reviewId": 616366279,
+      "userName": "**** ****",
+      "rating": 5,
+      "date": "2026-02-28T11:42:18.493Z",
+      "comment": "esime aldim cookkk beyendi  Tam istedigim gibi geldi dedi",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2021916/2047838/767456566/205661358-1772278936900.jpeg",
+          "localPath": "review_images/review_014.jpg"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "reviewId": 612230824,
+      "userName": "**** ****",
+      "rating": 3,
+      "date": "2026-02-12T18:36:47.132Z",
+      "comment": "oglum cok begenerek aldi ama cabuk sokuldu o yuzden ayakkabici da diktirmek zorunda kaldim.",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2021916/2031886/767456566/14561715-1770921512703.jpeg",
+          "localPath": "review_images/review_015.jpg"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "reviewId": 612230824,
+      "userName": "**** ****",
+      "rating": 3,
+      "date": "2026-02-12T18:36:47.132Z",
+      "comment": "oglum cok begenerek aldi ama cabuk sokuldu o yuzden ayakkabici da diktirmek zorunda kaldim.",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2021916/2031886/767456566/14561715-1770921511724.jpeg",
+          "localPath": "review_images/review_016.jpg"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "reviewId": 412880395,
+      "userName": "G** G**",
+      "rating": 5,
+      "date": "2024-07-23T10:27:34.409Z",
+      "comment": "Çok güzel ve kaliteli",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2017928/2024907/2040859/767456566/73192347-1721730453460.jpeg",
+          "localPath": "review_images/review_017.jpg"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "reviewId": 412880395,
+      "userName": "G** G**",
+      "rating": 5,
+      "date": "2024-07-23T10:27:34.409Z",
+      "comment": "Çok güzel ve kaliteli",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2024907/2040859/767456566/73192347-1721730452754.jpeg",
+          "localPath": "review_images/review_018.jpg"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "reviewId": 430511240,
+      "userName": "G** A**",
+      "rating": 5,
+      "date": "2024-10-03T20:23:55.225Z",
+      "comment": "Ürünümüz geldi bunu 42 aldık tamoldu çok güzel eşim beyendi paketleme güzel kargo hızlıydı çok teşekkürler 👍🙂",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2027898/2022913/767456566/94242576-1728137595903.jpeg",
+          "localPath": "review_images/review_019.jpg"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "reviewId": 616366279,
+      "userName": "**** ****",
+      "rating": 5,
+      "date": "2026-02-28T11:42:18.493Z",
+      "comment": "esime aldim cookkk beyendi  Tam istedigim gibi geldi dedi",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1768435207133/img/2019922/2021916/2047838/767456566/205661358-1772278937610.jpeg",
+          "localPath": "review_images/review_020.jpg"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "reviewId": 433684659,
+      "userName": "M** Ç**",
+      "rating": 4,
+      "date": "2024-10-17T11:19:50.879Z",
+      "comment": "idare eder sıkıyor biraz bı büyüğünü alın",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2027898/2034877/767456566/112708907-1729163989796.jpeg",
+          "localPath": "review_images/review_021.jpg"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "reviewId": 398271637,
+      "userName": "N** N** S**",
+      "rating": 5,
+      "date": "2024-05-13T10:51:51.917Z",
+      "comment": "beklediğimden çok çok daha güzel geldi",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2017928/2022913/2030889/767456566/38537477-1715597511185.jpeg",
+          "localPath": "review_images/review_022.jpg"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "reviewId": 477086064,
+      "userName": "A** a**",
+      "rating": 5,
+      "date": "2025-03-04T18:33:10.307Z",
+      "comment": "Ürünüm elime sorunsuz bir şekilde ulaştı. Satıcıya teşekkür ederim.",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756863847499/img/2018925/2021916/2022913/767456566/52348661-1741113189144.jpeg",
+          "localPath": "review_images/review_023.jpg"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "reviewId": 383794175,
+      "userName": "Y** A**",
+      "rating": 5,
+      "date": "2024-03-10T12:18:39.704Z",
+      "comment": "ürünüm güzel sadece tabanı daha ortapedik altlık koyabilirlerdi fakat ayakkabı yinede güzel,, herkes nerden aldın diye soranlarda oldu aciksözlulukle beğenen insanlarımız var ..alın kendini zaten begenirsinz numaram normal.oldu.. giydikten bayağı sonra yorum yapabildim. satıcının 3 çeşitli ayakkabaisndan aldım gerisini.dusunun güzel ürünler..tavsiye,ederim.",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756712888417/img/2017928/2020919/2027898/767456566/22648612-1710073118084.jpeg",
+          "localPath": "review_images/review_024.jpg"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "reviewId": 354239120,
+      "userName": "aziz ç.",
+      "rating": 5,
+      "date": "2023-11-16T19:16:17.204Z",
+      "comment": "40 numara ayaklarım ayağıma tam oturdu çok beğendim rahat ve gösterişli",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2027898/2032883/767456566/42656410-1700162176509.jpeg",
+          "localPath": "review_images/review_025.jpg"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "reviewId": 350054298,
+      "userName": "N** K**",
+      "rating": 5,
+      "date": "2023-11-02T15:29:29.025Z",
+      "comment": "Ürün Geldi Teşekkürler BIG KING Gerçektende Çok Güzel Resimdekiyle Tıpa Tıp Aynısı Tekrardan Teşekküler",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2027898/2018925/767456566/43531018-1698938967794.jpeg",
+          "localPath": "review_images/review_026.jpg"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "reviewId": 354961498,
+      "userName": "S** Ö**",
+      "rating": 5,
+      "date": "2023-11-19T10:24:57.135Z",
+      "comment": "Kargo geç gelsene beklediğime değdi teşekkürler",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2016931/2027898/2035874/767456566/67962117-1700389496186.jpeg",
+          "localPath": "review_images/review_027.jpg"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "reviewId": 369787153,
+      "userName": "**** ****",
+      "rating": 5,
+      "date": "2024-01-13T19:42:55.389Z",
+      "comment": "Sorunsuz geldi",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756791427264/img/2017928/2018925/2032883/767456566/55709288-1705328626669.jpeg",
+          "localPath": "review_images/review_028.jpg"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "reviewId": 383794175,
+      "userName": "Y** A**",
+      "rating": 5,
+      "date": "2024-03-10T12:18:39.704Z",
+      "comment": "ürünüm güzel sadece tabanı daha ortapedik altlık koyabilirlerdi fakat ayakkabı yinede güzel,, herkes nerden aldın diye soranlarda oldu aciksözlulukle beğenen insanlarımız var ..alın kendini zaten begenirsinz numaram normal.oldu.. giydikten bayağı sonra yorum yapabildim. satıcının 3 çeşitli ayakkabaisndan aldım gerisini.dusunun güzel ürünler..tavsiye,ederim.",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756791427264/img/2017928/2020919/2027898/767456566/22648612-1710073118761.jpeg",
+          "localPath": "review_images/review_029.jpg"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "reviewId": 408874541,
+      "userName": "f** A**",
+      "rating": 5,
+      "date": "2024-07-03T13:29:54.091Z",
+      "comment": "harika bir ürün herzaman alırım yine aldım tskkrler hızlı kargo çok sasirtti",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2017928/2024907/2020919/767456566/20743577-1720013393439.jpeg",
+          "localPath": "review_images/review_030.jpg"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "reviewId": 396445214,
+      "userName": "H** A**",
+      "rating": 5,
+      "date": "2024-05-05T08:04:20.255Z",
+      "comment": "çok şık bir ayakkabı oğluma aldım , hızlı kargo",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756791427264/img/2017928/2022913/2022913/767456566/3354196-1714896259131.jpeg",
+          "localPath": "review_images/review_031.jpg"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "reviewId": 418274197,
+      "userName": "H** Ö**",
+      "rating": 1,
+      "date": "2024-08-16T13:48:58.870Z",
+      "comment": "500 bile fazla",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2017928/2025904/2033880/767456566/82879898-1723816138125.jpeg",
+          "localPath": "review_images/review_032.jpg"
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "reviewId": 580602761,
+      "userName": "**** ****",
+      "rating": 1,
+      "date": "2025-10-27T12:00:05.257Z",
+      "comment": "bu ürün ile gelen ürün Aynı ama isimleri farklı bu da demek oluyur ki çakması olabilir",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2028895/2045844/767456566/100449175-1761566404235.jpeg",
+          "localPath": "review_images/review_033.jpg"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "reviewId": 573096814,
+      "userName": "k** c**",
+      "rating": 1,
+      "date": "2025-09-27T09:18:45.369Z",
+      "comment": "tabanı çok ince ve sert ayrıca yapıştırma taban beğenmedim",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2027898/2045844/767456566/186886367-1758964724032.jpeg",
+          "localPath": "review_images/review_034.jpg"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "reviewId": 419401577,
+      "userName": "**** ****",
+      "rating": 5,
+      "date": "2024-08-21T11:12:04.805Z",
+      "comment": "Kaliteli ürün beğendim👍🏻",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2038865/767456566/159901415-1724238724014.jpeg",
+          "localPath": "review_images/review_035.jpg"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "reviewId": 433684659,
+      "userName": "M** Ç**",
+      "rating": 4,
+      "date": "2024-10-17T11:19:50.879Z",
+      "comment": "idare eder sıkıyor biraz bı büyüğünü alın",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756843808113/img/2017928/2027898/2034877/767456566/112708907-1729163989341.jpeg",
+          "localPath": "review_images/review_036.jpg"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "reviewId": 397770959,
+      "userName": "M** A**",
+      "rating": 2,
+      "date": "2024-05-10T18:23:04.999Z",
+      "comment": "Ayakkabının altı maalesef çok ince ve rahatsız edici",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2017928/2022913/2027898/767456566/76855711-1715365384300.jpeg",
+          "localPath": "review_images/review_037.jpg"
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "reviewId": 377514306,
+      "userName": "**** ****",
+      "rating": 2,
+      "date": "2024-02-14T10:16:47.571Z",
+      "comment": "tabanla ayakkabı arasında yapıştırıcı gözüküyor 1 ay bile olmadan hemen onundeki boya silindi",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756776128103/img/2017928/2019922/2031886/767456566/104408831-1707905806263.jpeg",
+          "localPath": "review_images/review_038.jpg"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "reviewId": 430511240,
+      "userName": "G** A**",
+      "rating": 5,
+      "date": "2024-10-03T20:23:55.225Z",
+      "comment": "Ürünümüz geldi bunu 42 aldık tamoldu çok güzel eşim beyendi paketleme güzel kargo hızlıydı çok teşekkürler 👍🙂",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2017928/2027898/2022913/767456566/94242576-1728137596530.jpeg",
+          "localPath": "review_images/review_039.jpg"
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "reviewId": 581455833,
+      "userName": "**** ****",
+      "rating": 5,
+      "date": "2025-10-31T08:52:26.452Z",
+      "comment": "ürün çok güzel",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2028895/2049832/767456566/161468190-1761900745621.jpeg",
+          "localPath": "review_images/review_040.jpg"
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "reviewId": 396445214,
+      "userName": "H** A**",
+      "rating": 5,
+      "date": "2024-05-05T08:04:20.255Z",
+      "comment": "çok şık bir ayakkabı oğluma aldım , hızlı kargo",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756731731918/img/2017928/2022913/2022913/767456566/3354196-1714896258520.jpeg",
+          "localPath": "review_images/review_041.jpg"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "reviewId": 433684659,
+      "userName": "M** Ç**",
+      "rating": 4,
+      "date": "2024-10-17T11:19:50.879Z",
+      "comment": "idare eder sıkıyor biraz bı büyüğünü alın",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2027898/2034877/767456566/112708907-1729163990177.jpeg",
+          "localPath": "review_images/review_042.jpg"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "reviewId": 479855452,
+      "userName": "f** ö**",
+      "rating": 5,
+      "date": "2025-03-14T19:12:34.378Z",
+      "comment": "görüntüsü güzel rahat ama kalitesi nasıl bilmem",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756863847499/img/2018925/2021916/2032883/767456566/32072005-1741979553475.jpeg",
+          "localPath": "review_images/review_043.jpg"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "reviewId": 397770959,
+      "userName": "M** A**",
+      "rating": 2,
+      "date": "2024-05-10T18:23:04.999Z",
+      "comment": "Ayakkabının altı maalesef çok ince ve rahatsız edici",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756791427264/img/2017928/2022913/2027898/767456566/76855711-1715365382870.jpeg",
+          "localPath": "review_images/review_044.jpg"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "reviewId": 377514306,
+      "userName": "**** ****",
+      "rating": 2,
+      "date": "2024-02-14T10:16:47.571Z",
+      "comment": "tabanla ayakkabı arasında yapıştırıcı gözüküyor 1 ay bile olmadan hemen onundeki boya silindi",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756791427264/img/2017928/2019922/2031886/767456566/104408831-1707905806797.jpeg",
+          "localPath": "review_images/review_045.jpg"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "reviewId": 414574046,
+      "userName": "**** ****",
+      "rating": 2,
+      "date": "2024-07-31T07:18:28.931Z",
+      "comment": "Daha kaliteli birşey bekliyordum. Serçe parmak kısmına gelen yanlardaki siyah boyalar silinmiş hep. Öyle çok bir kalite görüntü beklemeyin. Yapıştırmalarıda çok özensiz. 1 numara büyük almanazı tavsiye ederim",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756746367025/img/2017928/2024907/2048835/767456566/103510759-1722410307481.jpeg",
+          "localPath": "review_images/review_046.jpg"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "reviewId": 418274197,
+      "userName": "H** Ö**",
+      "rating": 1,
+      "date": "2024-08-16T13:48:58.870Z",
+      "comment": "500 bile fazla",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2025904/2033880/767456566/82879898-1723816137661.jpeg",
+          "localPath": "review_images/review_047.jpg"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "reviewId": 397770959,
+      "userName": "M** A**",
+      "rating": 2,
+      "date": "2024-05-10T18:23:04.999Z",
+      "comment": "Ayakkabının altı maalesef çok ince ve rahatsız edici",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756808468433/img/2017928/2022913/2027898/767456566/76855711-1715365383602.jpeg",
+          "localPath": "review_images/review_048.jpg"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "reviewId": 434392027,
+      "userName": "Y** T**",
+      "rating": 1,
+      "date": "2024-10-20T05:05:52.911Z",
+      "comment": "1 ay olmadı tabanları ezildi, kir tutunca silsende lekeleri gitmiyor",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756760527960/img/2017928/2027898/2043850/767456566/33869297-1729926489820.jpeg",
+          "localPath": "review_images/review_049.jpg"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "reviewId": 434392027,
+      "userName": "Y** T**",
+      "rating": 1,
+      "date": "2024-10-20T05:05:52.911Z",
+      "comment": "1 ay olmadı tabanları ezildi, kir tutunca silsende lekeleri gitmiyor",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756825987906/img/2017928/2027898/2043850/767456566/33869297-1729926489196.jpeg",
+          "localPath": "review_images/review_050.jpg"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "reviewId": 399029010,
+      "userName": "E** A**",
+      "rating": 5,
+      "date": "2024-05-16T11:36:24.029Z",
+      "comment": "ürün sağlam malzemeden yapılmıs sadece biraz yapıskanı kötü ama idare eder",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756791427264/img/2017928/2022913/2033880/767456566/97433451-1715859382191.jpeg",
+          "localPath": "review_images/review_051.jpg"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "reviewId": 414574046,
+      "userName": "**** ****",
+      "rating": 2,
+      "date": "2024-07-31T07:18:28.931Z",
+      "comment": "Daha kaliteli birşey bekliyordum. Serçe parmak kısmına gelen yanlardaki siyah boyalar silinmiş hep. Öyle çok bir kalite görüntü beklemeyin. Yapıştırmalarıda çok özensiz. 1 numara büyük almanazı tavsiye ederim",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756808468433/img/2017928/2024907/2048835/767456566/103510759-1722410308170.jpeg",
+          "localPath": "review_images/review_052.jpg"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "reviewId": 399029010,
+      "userName": "E** A**",
+      "rating": 5,
+      "date": "2024-05-16T11:36:24.029Z",
+      "comment": "ürün sağlam malzemeden yapılmıs sadece biraz yapıskanı kötü ama idare eder",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-migrated-product-review-media_1756808468433/img/2017928/2022913/2033880/767456566/97433451-1715859383238.jpeg",
+          "localPath": "review_images/review_053.jpg"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "reviewId": 637620702,
+      "userName": "**** ****",
+      "rating": 1,
+      "date": "2026-05-16T22:13:46.055Z",
+      "comment": "kalitesi iyi değil beğenmedim",
+      "sellerName": "Big King",
+      "trusted": true,
+      "images": [
+        {
+          "originalUrl": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1777680012294/img/2019922/2024907/2036871/767456566/172815007-1778970283798.jpeg",
+          "localPath": "review_images/review_054.jpg"
+        }
+      ]
+    }
+  ]
+}

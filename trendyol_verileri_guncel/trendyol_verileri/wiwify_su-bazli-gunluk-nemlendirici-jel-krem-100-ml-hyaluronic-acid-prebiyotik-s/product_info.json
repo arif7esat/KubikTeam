@@ -1,0 +1,77 @@
+{
+  "name": "Su Bazlı Günlük Nemlendirici Jel Krem 100 ML | Hyaluronic Acid, Prebiyotik, Squalane, Niacinamide",
+  "brand": "WIWIFY",
+  "price": null,
+  "rating": 4.633333333333334,
+  "reviewCount": 240,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Cilt Tipi",
+      "value": "Tüm Cilt Tipleri"
+    },
+    {
+      "key": "Kullanma Amacı",
+      "value": "Nemlendirici"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Parfüm İçermeyen"
+    },
+    {
+      "key": "İçerik",
+      "value": "Hyalüronik Asit"
+    },
+    {
+      "key": "SPF",
+      "value": "Korumasız"
+    },
+    {
+      "key": "Hacim",
+      "value": "100 ml"
+    },
+    {
+      "key": "Tip",
+      "value": "Tüp"
+    },
+    {
+      "key": "Form",
+      "value": "Krem"
+    },
+    {
+      "key": "Yaşlanma Karşıtı",
+      "value": "Evet"
+    },
+    {
+      "key": "Ürün Güvenliği Bilgisi",
+      "value": "Tehlikeli Değil"
+    },
+    {
+      "key": "Refill",
+      "value": "Hayır"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1861/prod/QC_ENRICHMENT/20260428/08/bde5ac82-1766-31a7-9e1c-2db0f427271c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1860/prod/QC_PREP/20260425/16/b7df0d5c-0de8-3de5-9590-ed52267064d7/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1860/prod/QC_PREP/20260425/16/5a5a16d2-d72a-3a3f-a2e5-fee198df35e1/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1862/prod/QC_PREP/20260425/16/d7850f2a-767c-32e1-9d5e-df24c46d83f1/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1860/prod/QC_PREP/20260425/16/2eaaf6e5-a182-350b-867d-d7e1c6c736fd/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    }
+  ]
+}

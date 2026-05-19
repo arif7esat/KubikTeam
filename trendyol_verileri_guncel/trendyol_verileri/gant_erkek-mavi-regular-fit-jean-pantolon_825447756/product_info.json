@@ -1,0 +1,105 @@
+{
+  "name": "Erkek Mavi Regular Fit Jean Pantolon",
+  "brand": "Gant",
+  "price": null,
+  "rating": 2,
+  "reviewCount": 2,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Paça Tipi",
+      "value": "Regular"
+    },
+    {
+      "key": "Kemer/Kuşak Durumu",
+      "value": "Kemersiz"
+    },
+    {
+      "key": "Bel",
+      "value": "Normal Bel"
+    },
+    {
+      "key": "Renk",
+      "value": "Mavi"
+    },
+    {
+      "key": "Materyal",
+      "value": "Belirtilmemiş"
+    },
+    {
+      "key": "Cep",
+      "value": "5 Cep"
+    },
+    {
+      "key": "Ürün Tipi",
+      "value": "Düz"
+    },
+    {
+      "key": "Boy",
+      "value": "Regular"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Siluet",
+      "value": "Regular"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Fermuarlı"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 1"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1596/prod/QC/20241106/18/314a99d6-3a92-3d9a-bbc4-ada02d5fbd5b/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1598/prod/QC/20241106/18/79451e00-d97b-3df3-93bf-41456fabf33e/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1598/prod/QC/20241106/18/67926aa1-056b-355c-88b7-8fc5ca6b7f41/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1597/prod/QC/20241106/18/dca8e5a8-ddd8-39c1-aa49-d9496eae8ae0/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1597/prod/QC/20241106/18/144775f8-16b7-35aa-a347-0e4684d2330f/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1596/prod/QC/20241106/18/7fee264d-e40b-32ba-849c-7aa139f45901/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "name": "Redmi Watch 3 Active Akıllı Saat",
+  "brand": "Xiaomi",
+  "price": null,
+  "rating": 4.6506055140427724,
+  "reviewCount": 15524,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Garanti Tipi",
+      "value": "Resmi Distribütör Garantili"
+    },
+    {
+      "key": "Sim Kart Uyumu",
+      "value": "Var"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Nabız Sensörü",
+      "value": "Var"
+    },
+    {
+      "key": "Uyku Takibi",
+      "value": "Var"
+    },
+    {
+      "key": "Kasa Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Kordon Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Batarya Kapasitesi Aralığı",
+      "value": "200-300 mAh"
+    },
+    {
+      "key": "Adımsayar",
+      "value": "Var"
+    },
+    {
+      "key": "GPS",
+      "value": "Yok"
+    },
+    {
+      "key": "Suya/Toza Dayanıklılık",
+      "value": "Var"
+    },
+    {
+      "key": "Kasa Çapı",
+      "value": "45 mm"
+    },
+    {
+      "key": "Titreşim",
+      "value": "Var"
+    },
+    {
+      "key": "Sesli Görüşme",
+      "value": "Var"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Kordon Materyali",
+      "value": "Silikon"
+    },
+    {
+      "key": "Tamir Edilebilirlik",
+      "value": "Yetkili Servis ile Tamiri Gerekir."
+    },
+    {
+      "key": "Özellik",
+      "value": "Hava"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1689/prod/QC_PREP/20250606/14/4001d298-9eca-3e91-984c-fb9a6f6d1d81/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1690/prod/QC_PREP/20250606/14/cd10b816-0b06-38fa-9e67-adc7c0b89adf/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1691/prod/QC_PREP/20250606/14/30ce0691-03ea-395c-9ac3-d9a93c1555cc/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1691/prod/QC_PREP/20250606/14/31ef0a85-4417-3ac3-a838-96f9416e4e37/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1691/prod/QC_PREP/20250606/14/651db7c4-b9f7-325e-8fdb-4fc12689df52/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1691/prod/QC_PREP/20250606/14/d3bd5914-a733-3b45-9409-7995fe6ccd78/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    }
+  ]
+}

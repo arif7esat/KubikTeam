@@ -1,0 +1,149 @@
+{
+  "name": "Erkek Mont Su Geçirmez Ceket Premium Yağmurluk",
+  "brand": "Boymen",
+  "price": null,
+  "rating": 4,
+  "reviewCount": 12,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    },
+    {
+      "key": "Materyal",
+      "value": "Su Geçirmez"
+    },
+    {
+      "key": "Astar Durumu",
+      "value": "Astarlı"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Kapüşonlu"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Renk",
+      "value": "Haki"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Fermuarlı"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Ürün Detayı",
+      "value": "Suni Kürk"
+    },
+    {
+      "key": "Ürün Tipi",
+      "value": "Şardonlu"
+    },
+    {
+      "key": "Cep",
+      "value": "2"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Uzun Kol"
+    },
+    {
+      "key": "Kalınlık",
+      "value": "Kalın"
+    },
+    {
+      "key": "Boy",
+      "value": "Orta"
+    },
+    {
+      "key": "Ortam",
+      "value": "Günlük"
+    },
+    {
+      "key": "Siluet",
+      "value": "Parka"
+    },
+    {
+      "key": "Teknik",
+      "value": "Kaşe ve Kürk"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Casual / Günlük"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Rüzgar Geçirmez"
+    },
+    {
+      "key": "Dolgu Tekniği",
+      "value": "Kapitone"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Evet"
+    },
+    {
+      "key": "Kemer/Kuşak Durumu",
+      "value": "Kemersiz"
+    },
+    {
+      "key": "Dolgu Materyali",
+      "value": "Hafif elyaf"
+    },
+    {
+      "key": "Persona",
+      "value": "Smart"
+    },
+    {
+      "key": "Baskı/Nakış Tekniği",
+      "value": "Baskısız"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "100% Polyester"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "Kürk"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "https://cdn.dsmcdn.com/ty375/product/charts/carelabel/do_not_wash.jpg"
+    },
+    {
+      "key": "Sezon",
+      "value": "Tüm Sezonlar"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1817/prod/QC_PREP/20260126/10/cd528dca-0c85-362e-8e27-ad60f8971940/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1817/prod/QC_PREP/20260126/10/42d02f7f-3a96-3709-b4c5-9ade78277cde/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1815/prod/QC_PREP/20260126/10/c055d7f2-9d6d-3f21-a4f0-1cad2eed1f81/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    }
+  ]
+}

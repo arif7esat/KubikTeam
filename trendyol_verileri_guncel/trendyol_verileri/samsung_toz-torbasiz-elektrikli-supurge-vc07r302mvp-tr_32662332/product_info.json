@@ -1,0 +1,89 @@
+{
+  "name": "Toz Torbasız Elektrikli Süpürge VC07R302MVP/TR",
+  "brand": "Samsung",
+  "price": 4499,
+  "rating": 4.654343807763401,
+  "reviewCount": 3787,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Ses Seviyesi",
+      "value": "71 Dba - 80 Dba"
+    },
+    {
+      "key": "Uygulama Üzerinden Kontrol",
+      "value": "Yok"
+    },
+    {
+      "key": "Güç (Watt)",
+      "value": "501 - 1000 Watt"
+    },
+    {
+      "key": "Garanti Tipi",
+      "value": "Resmi Distribütör Garantili"
+    },
+    {
+      "key": "Özellik",
+      "value": "Toz Torbasız"
+    },
+    {
+      "key": "Hazne Kapasitesi",
+      "value": "1500+ L"
+    },
+    {
+      "key": "Hepa Filtre",
+      "value": "EPA"
+    },
+    {
+      "key": "Güç Kontrolü",
+      "value": "Mekanik"
+    },
+    {
+      "key": "Frekans",
+      "value": "50 Hz / 60 Hz"
+    },
+    {
+      "key": "Voltaj",
+      "value": "220 - 240 V"
+    },
+    {
+      "key": "Filtre Seçeneği",
+      "value": "Filtresiz"
+    },
+    {
+      "key": "Haritalama",
+      "value": "Yok"
+    },
+    {
+      "key": "Turbo Başlık",
+      "value": "Yok"
+    },
+    {
+      "key": "Kir Algılama",
+      "value": "Yok"
+    },
+    {
+      "key": "Çalışma Tipi",
+      "value": "Elektrikli"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1714/prod/QC_ENRICHMENT/20250725/15/5b8819a4-4377-3839-a003-40bff45729c9/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1715/prod/QC_ENRICHMENT/20250725/15/76f00145-6d46-33d1-9b5d-38e718746dc8/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1713/prod/QC_ENRICHMENT/20250725/15/ea60c398-aafd-3f31-95c4-d92f6aebfb64/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    }
+  ]
+}

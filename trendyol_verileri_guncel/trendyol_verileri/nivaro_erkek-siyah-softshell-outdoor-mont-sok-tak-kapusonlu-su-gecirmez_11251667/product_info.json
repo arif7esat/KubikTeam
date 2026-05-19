@@ -1,0 +1,161 @@
+{
+  "name": "Erkek Siyah Softshell Outdoor Mont Sök Tak Kapüşonlu Su Geçirmez",
+  "brand": "NIVARO",
+  "price": null,
+  "rating": null,
+  "reviewCount": null,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    },
+    {
+      "key": "Materyal",
+      "value": "Polyester"
+    },
+    {
+      "key": "Astar Durumu",
+      "value": "Astarlı"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Kapüşonlu"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Renk",
+      "value": "Gümüş"
+    },
+    {
+      "key": "Kapama Şekli",
+      "value": "Fermuarlı"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Ürün Detayı",
+      "value": "Fermuar"
+    },
+    {
+      "key": "Ürün Tipi",
+      "value": "Düz"
+    },
+    {
+      "key": "Cep",
+      "value": "3"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Uzun Kol"
+    },
+    {
+      "key": "Kalınlık",
+      "value": "Kalın"
+    },
+    {
+      "key": "Boy",
+      "value": "Standart"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Siluet",
+      "value": "Relaxed"
+    },
+    {
+      "key": "Teknik",
+      "value": "Su İtici"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Su Geçirmez"
+    },
+    {
+      "key": "Dolgu Tekniği",
+      "value": "Dolgusuz"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Evet"
+    },
+    {
+      "key": "Kemer/Kuşak Durumu",
+      "value": "Kemersiz"
+    },
+    {
+      "key": "Dolgu Materyali",
+      "value": "Dolgusuz"
+    },
+    {
+      "key": "Persona",
+      "value": "Cool & Comfort"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "%100 Polyester"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "Polar"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "YIKAMA TALİMATLARINA UYUNUZ."
+    },
+    {
+      "key": "Sezon",
+      "value": "Tüm Sezonlar"
+    },
+    {
+      "key": "Kutu Durumu",
+      "value": "Kutu yok"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1845/prod/QC_PREP/20260328/16/6520122c-cf17-3bcf-9b15-76a20814df91/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1847/prod/QC_PREP/20260328/16/6b1b2346-534c-3227-bc55-02061307a610/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1845/prod/QC_PREP/20260328/16/a307b342-9bf1-301b-b71d-31456c8878bc/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1845/prod/QC_PREP/20260328/16/1e53e7b4-c0d7-3a31-999c-74f7cfad3348/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1846/prod/QC_PREP/20260328/16/3f7b00de-2084-3c4c-ba1a-496bd14d77fc/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1846/prod/QC_PREP/20260328/16/54e69522-5b62-358a-8f14-81a6d13b6faf/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1847/prod/QC_PREP/20260328/16/6d3df6af-0f2a-3068-8208-b6e4bdf01874/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    }
+  ]
+}

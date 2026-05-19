@@ -1,0 +1,121 @@
+{
+  "name": "D'S Regular Fit Cotton Düğmeli Yaka Pijama Takımı %100 Saf Pamuk Kumaş SİYAH",
+  "brand": "D'S Damat",
+  "price": null,
+  "rating": 4.518351214003387,
+  "reviewCount": 5313,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Kısa Kol"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Düğmeli Yaka"
+    },
+    {
+      "key": "Paça Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Materyal",
+      "value": "Pamuk"
+    },
+    {
+      "key": "Ürün Tipi",
+      "value": "Düz"
+    },
+    {
+      "key": "Ürün Detayı",
+      "value": "Paça"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Homewear"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Teknik",
+      "value": "Yok"
+    },
+    {
+      "key": "Kalıp",
+      "value": "Regular"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Örme"
+    },
+    {
+      "key": "Bel",
+      "value": "Normal Bel"
+    },
+    {
+      "key": "Dokuma Tipi",
+      "value": "Polar"
+    },
+    {
+      "key": "Parça Sayısı",
+      "value": "2 Parça"
+    },
+    {
+      "key": "Siluet",
+      "value": "Regular"
+    },
+    {
+      "key": "Ortam",
+      "value": "Homewear"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "100% Saf"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "T09"
+    },
+    {
+      "key": "Paça Tipi",
+      "value": "Düz Paça"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "2'li"
+    },
+    {
+      "key": "Boy",
+      "value": "Standart"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1818/prod/QC_ENRICHMENT/20260129/15/222d69c8-7d43-3dd8-b90f-01de79fa0a13/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1577/prod/QC/20241004/06/7d5b4ee5-229b-3239-a38f-ab3cd0b6147c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1576/prod/QC/20241004/06/f0e6843c-bc10-3f1c-96ad-e4c0da8e3edd/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    }
+  ]
+}

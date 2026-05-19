@@ -1,0 +1,93 @@
+{
+  "name": "Siyah Monogram Kadın Omuz Çantası 05PO22Y1534",
+  "brand": "Pierre Cardin",
+  "price": null,
+  "rating": 4.791598023064251,
+  "reviewCount": 1214,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Materyal",
+      "value": "Suni Deri"
+    },
+    {
+      "key": "Deri Kalitesi",
+      "value": "İmitasyon Deri"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "Suni Deri"
+    },
+    {
+      "key": "Ortam",
+      "value": "Casual/Günlük"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "1181723"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Kapasite",
+      "value": "0 -1  L"
+    },
+    {
+      "key": "Paket İçeriği",
+      "value": "1'li"
+    },
+    {
+      "key": "Yaş",
+      "value": "Tüm Yaş Grupları"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1392/product/media/images/prod/PIM/20240701/09/28f4a2e6-bd35-41f8-ae5f-d950aa1c1fe2/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1392/product/media/images/prod/PIM/20240701/09/e080ee76-ca7e-483d-8ea1-c102f816dd5c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1394/product/media/images/prod/PIM/20240701/09/80a39a93-83a6-4d39-83a0-33992a655ca9/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1392/product/media/images/prod/PIM/20240701/09/638dfe0f-294b-4dfd-a33d-8033e54cccc4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1393/product/media/images/prod/PIM/20240701/09/53261be1-d74a-4bd3-81af-b7370db9fbb4/1_org_zoom.jpg",
+      "localPath": "product_images/urun_5.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1392/product/media/images/prod/PIM/20240701/09/61c5558b-216b-4787-baf3-a2f77beb54ef/1_org_zoom.jpg",
+      "localPath": "product_images/urun_6.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1392/product/media/images/prod/PIM/20240701/09/5fc0fc16-0382-4a09-b91e-03dfb98411d7/1_org_zoom.jpg",
+      "localPath": "product_images/urun_7.jpg"
+    }
+  ]
+}

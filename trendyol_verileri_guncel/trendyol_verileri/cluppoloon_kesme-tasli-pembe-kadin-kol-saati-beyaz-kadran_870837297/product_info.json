@@ -1,0 +1,81 @@
+{
+  "name": "Kesme taşlı pembe kadın kol saati beyaz kadran",
+  "brand": "CLUPPOLOON",
+  "price": null,
+  "rating": 4.516476552598226,
+  "reviewCount": 1578,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kasa Çapı",
+      "value": "31-35 mm"
+    },
+    {
+      "key": "Kasa Materyali",
+      "value": "Çelik"
+    },
+    {
+      "key": "Kordon Materyali",
+      "value": "Çelik"
+    },
+    {
+      "key": "Su Geçirmezlik",
+      "value": "1 ATM"
+    },
+    {
+      "key": "Mekanizma",
+      "value": "Quartz"
+    },
+    {
+      "key": "Kasa Renk",
+      "value": "Altın"
+    },
+    {
+      "key": "Kordon Renk",
+      "value": "Pembe"
+    },
+    {
+      "key": "Cam Tipi",
+      "value": "Mineral"
+    },
+    {
+      "key": "Cam Şekli",
+      "value": "Düz"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "Garantisiz"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "çelik"
+    },
+    {
+      "key": "Renk",
+      "value": "Pembe"
+    },
+    {
+      "key": "Bakım Talimatları (Genel)",
+      "value": "Ürünün kullanım ömrünü korumak için ürüne özel bakım talimatlarını takip ediniz."
+    },
+    {
+      "key": "Özellik",
+      "value": "Uzun"
+    },
+    {
+      "key": "Kadran Renk",
+      "value": "Beyaz"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1834/prod/QC_ENRICHMENT/20260309/14/98a952e3-60e2-3cfd-bfed-d86da3eb4931/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1615/prod/QC/20241219/18/29762fbc-6581-3956-86c2-8ad6e8162485/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    }
+  ]
+}

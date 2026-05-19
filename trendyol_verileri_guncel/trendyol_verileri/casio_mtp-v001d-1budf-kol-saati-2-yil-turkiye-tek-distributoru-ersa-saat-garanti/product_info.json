@@ -1,0 +1,97 @@
+{
+  "name": "MTP-V001D-1BUDF Kol Saati ( 2 Yıl Türkiye Tek Distribütörü Ersa Saat Garantilidir)",
+  "brand": "Casio",
+  "price": null,
+  "rating": 4.662487205731832,
+  "reviewCount": 3908,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kasa Çapı",
+      "value": "38 mm"
+    },
+    {
+      "key": "Kasa Materyali",
+      "value": "Çelik"
+    },
+    {
+      "key": "Kordon Materyali",
+      "value": "Çelik"
+    },
+    {
+      "key": "Su Geçirmezlik",
+      "value": "1 ATM"
+    },
+    {
+      "key": "Mekanizma",
+      "value": "Quartz"
+    },
+    {
+      "key": "Kasa Renk",
+      "value": "Metalik"
+    },
+    {
+      "key": "Kordon Renk",
+      "value": "Gri"
+    },
+    {
+      "key": "Cam Tipi",
+      "value": "Mineral"
+    },
+    {
+      "key": "Cam Şekli",
+      "value": "Düz"
+    },
+    {
+      "key": "Garanti Süresi",
+      "value": "2 Yıl"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "Çelik"
+    },
+    {
+      "key": "Renk",
+      "value": "Beyaz"
+    },
+    {
+      "key": "Bakım Talimatları (Genel)",
+      "value": "Nemli bir bezle silin."
+    },
+    {
+      "key": "Batarya Türü",
+      "value": "Diğer"
+    },
+    {
+      "key": "Batarya Boyutu",
+      "value": "Uygulanabilir Değil"
+    },
+    {
+      "key": "Özellik",
+      "value": "Standart"
+    },
+    {
+      "key": "Kadran Renk",
+      "value": "Siyah"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1814/prod/QC_PREP/20260122/16/8accb76b-321e-32d3-8761-6a465814e3af/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/web/production/product-placeholder-v2.jpeg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1814/prod/QC_PREP/20260122/16/a2daba69-b85d-3f03-b0e1-501462428e50/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1812/prod/QC_PREP/20260122/16/ce3c2a96-8df7-3233-be56-dad2784c11e7/1_org_zoom.jpg",
+      "localPath": "product_images/urun_4.jpg"
+    }
+  ]
+}

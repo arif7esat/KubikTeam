@@ -1,0 +1,78 @@
+{
+  "content": [
+    {
+      "id": 126208366,
+      "userFullName": "P** A**",
+      "rate": 5,
+      "comment": "Ürünü çok beğendik çok kullanışlı çok da yumuşak sadece boyu uzun oldu",
+      "trusted": true,
+      "sellerName": "Koton",
+      "mediaFile": {
+        "id": 126208366,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2029892/2025904/953290757/3911692-1762535602089.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media-migrated_1755700289924/img/2018925/2029892/2025904/953290757/3911692-1762535602089.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1762535603351,
+      "reviewId": 583702209
+    },
+    {
+      "id": 127658966,
+      "userFullName": "S** Y**",
+      "rate": 5,
+      "comment": "Ürün güzel tam üzerime oturdu. likralı bir yapısı var. Michael Jean modeli ama Justin Jean gibi tam oturuyor ona göre hareket edin. Rengi ve dokusu iyi.",
+      "trusted": true,
+      "sellerName": "Koton",
+      "mediaFile": {
+        "id": 127658966,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1762732810909/img/2018925/2029892/2040859/1019048304/18628975-1763841244239.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1762732810909/img/2018925/2029892/2040859/1019048304/18628975-1763841244239.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4096,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1763841245502,
+      "reviewId": 588979919
+    },
+    {
+      "id": 127658965,
+      "userFullName": "S** Y**",
+      "rate": 5,
+      "comment": "Ürün güzel tam üzerime oturdu. likralı bir yapısı var. Michael Jean modeli ama Justin Jean gibi tam oturuyor ona göre hareket edin. Rengi ve dokusu iyi.",
+      "trusted": true,
+      "sellerName": "Koton",
+      "mediaFile": {
+        "id": 127658965,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media_1762732810909/img/2018925/2029892/2040859/1019048304/18628975-1763841243167.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media_1762732810909/img/2018925/2029892/2040859/1019048304/18628975-1763841243167.jpeg",
+        "mediaType": "IMAGE",
+        "height": 4096,
+        "weight": 3072
+      },
+      "lastModifiedDate": 1763841245502,
+      "reviewId": 588979919
+    },
+    {
+      "id": 123288384,
+      "userFullName": "**** ****",
+      "rate": 1,
+      "comment": "Cebi yırtık geldi",
+      "trusted": true,
+      "sellerName": "Koton",
+      "mediaFile": {
+        "id": 123288384,
+        "url": "https://cdn.dsmcdn.com/mnresize/-/820/prod-product-review-media-migrated_1755700289924/img/2018925/2027898/2043850/955318590/180175210-1758827826446.jpeg",
+        "thumbnailUrl": "https://cdn.dsmcdn.com/mnresize/300/300/prod-product-review-media-migrated_1755700289924/img/2018925/2027898/2043850/955318590/180175210-1758827826446.jpeg",
+        "mediaType": "IMAGE",
+        "height": 3024,
+        "weight": 4032
+      },
+      "lastModifiedDate": 1758827827740,
+      "reviewId": 572735973
+    }
+  ],
+  "totalPages": 1,
+  "totalElements": 4
+}

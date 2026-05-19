@@ -1,0 +1,89 @@
+{
+  "name": "Anka 950.E19K.224 İlk Adım Ayakkabısı Gri",
+  "brand": "Vicco",
+  "price": null,
+  "rating": 4.617467248908297,
+  "reviewCount": 1145,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Materyal",
+      "value": "Suni Deri"
+    },
+    {
+      "key": "Alt Taban Materyali",
+      "value": "Termoplastik"
+    },
+    {
+      "key": "İç Astar & İç Taban Materyali",
+      "value": "Tekstil"
+    },
+    {
+      "key": "Renk",
+      "value": "Gri"
+    },
+    {
+      "key": "Topuk Boyu",
+      "value": "Kısa Topuklu (1- 4 cm)"
+    },
+    {
+      "key": "Bağlama Şekli",
+      "value": "Bantlı"
+    },
+    {
+      "key": "Materyal Bileşeni",
+      "value": "100% Suni Deri"
+    },
+    {
+      "key": "Yıkama Talimatı",
+      "value": "Type 4"
+    },
+    {
+      "key": "Topuk Tipi",
+      "value": "Düz Topuklu"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Koleksiyon",
+      "value": "Basic"
+    },
+    {
+      "key": "Ek Özellik",
+      "value": "Ortopedik Taban"
+    },
+    {
+      "key": "Sürdürülebilirlik Detayı",
+      "value": "Hayır"
+    },
+    {
+      "key": "Ortam",
+      "value": "Sportswear"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Dış Materyal",
+      "value": "Tekstil"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1823/prod/QC_ENRICHMENT/20260209/19/96c13a0e-6e4b-337a-a0bd-9de3a402a64d/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1823/prod/QC_ENRICHMENT/20260209/19/406805d5-2015-37bd-8b16-b0de93e4339c/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1821/prod/QC_ENRICHMENT/20260209/19/7a006e82-cfe8-3746-881f-305eb14395f7/1_org_zoom.jpg",
+      "localPath": "product_images/urun_3.jpg"
+    }
+  ]
+}

@@ -1,0 +1,551 @@
+{
+  "successCount": 68,
+  "failedCount": 0,
+  "timestamp": "2026-05-19T00:18:35.913Z",
+  "results": [
+    {
+      "idx": 3,
+      "url": "https://www.trendyol.com/moonbull/kadin-boyun-kol-baski-detayli-oversize-sweatshirt-p-801127440",
+      "status": "SUCCESS",
+      "brand": "MOONBULL",
+      "productName": "Kadın Boyun-Kol Baskı Detaylı Oversize Sweatshirt",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 1,
+      "url": "https://www.trendyol.com/north-london/erkek-polo-yaka-siyah-oversize-sweatshirt-p-353176750",
+      "status": "SUCCESS",
+      "brand": "North London",
+      "productName": "Erkek Polo Yaka Siyah Oversize Sweatshirt",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 2,
+      "url": "https://www.trendyol.com/kaphone/erkek-bisiklet-yaka-whatever-baski-detayli-oversize-tshirt-p-905137928",
+      "status": "SUCCESS",
+      "brand": "KAPHONE",
+      "productName": "Erkek Bisiklet Yaka Whatever Baskı Detaylı Oversize Tshirt",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 4,
+      "url": "https://www.trendyol.com/moonbull/kadin-boyun-kol-baski-detayli-oversize-bisiklet-yaka-sweatshirt-p-873782809",
+      "status": "SUCCESS",
+      "brand": "MOONBULL",
+      "productName": "Kadın Boyun-Kol Baskı Detaylı Oversize Bisiklet Yaka Sweatshirt",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 5,
+      "url": "https://www.trendyol.com/madmext/siyah-baskili-oversize-kapusonlu-kadin-sweatshirt-mg1581-p-372597981",
+      "status": "SUCCESS",
+      "brand": "Madmext",
+      "productName": "Siyah Baskılı Oversize Kapüşonlu Kadın Sweatshirt MG1581",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 6,
+      "url": "https://www.trendyol.com/defacto/oversize-fit-kase-kaban-p-767135388",
+      "status": "SUCCESS",
+      "brand": "DeFacto",
+      "productName": "Oversize Fit Kaşe Kaban",
+      "detail": "Stokta Yok (Geçerli Ürün)"
+    },
+    {
+      "idx": 9,
+      "url": "https://www.trendyol.com/dgn/2026-erkek-sneaker-ayakkabi-p-944119158",
+      "status": "SUCCESS",
+      "brand": "DGN",
+      "productName": "2026 Erkek Sneaker Ayakkabı",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 7,
+      "url": "https://www.trendyol.com/gant/erkek-mavi-regular-fit-jean-pantolon-p-825447756",
+      "status": "SUCCESS",
+      "brand": "Gant",
+      "productName": "Erkek Mavi Regular Fit Jean Pantolon",
+      "detail": "Stokta Yok (Geçerli Ürün)"
+    },
+    {
+      "idx": 8,
+      "url": "https://www.trendyol.com/mavi/erkek-jake-black-pro-siyah-jean-pantolon-0042232200-p-692688221",
+      "status": "SUCCESS",
+      "brand": "Mavi",
+      "productName": "Jake Pro Siyah Jean Pantolon 0042232200",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 10,
+      "url": "https://www.trendyol.com/adidas/erkek-ayakkabi-training-strutter-eg2656-p-36287489",
+      "status": "SUCCESS",
+      "brand": "adidas",
+      "productName": "Erkek Ayakkabı Traınıng STRUTTER EG2656",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 11,
+      "url": "https://www.trendyol.com/lufian/tommy-erkek-deri-sneaker-ayakkabi-siyah-beyaz-p-690653690",
+      "status": "SUCCESS",
+      "brand": "Lufian",
+      "productName": "Tommy Erkek Deri Sneaker Ayakkabı SİYAH BEYAZ",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 12,
+      "url": "https://www.trendyol.com/adidas/runfalcon-5-unisex-kosu-ayakkabisi-ih7758-siyah-p-860697714",
+      "status": "SUCCESS",
+      "brand": "adidas",
+      "productName": "Runfalcon 5 Unisex Koşu Ayakkabısı IH7758 Siyah",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 13,
+      "url": "https://www.trendyol.com/puma/31114001-velocity-nitro-4-erkek-kosu-ayakkabisi-p-356218974",
+      "status": "SUCCESS",
+      "brand": "Afila",
+      "productName": "Hp 15-cs2000, 15-cs3000 Uyumlu Notebook Klavye",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 15,
+      "url": "https://www.trendyol.com/lc-waikiki/lcw-vision-kruvaze-yaka-oversize-kadin-kase-kaban-p-338927489",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 14,
+      "url": "https://www.trendyol.com/koton/oversize-kapusonlu-basic-sweatshirt-ici-polarli-p-338927519",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 16,
+      "url": "https://www.trendyol.com/koton/crop-oversize-sweatshirt-kapusonlu-kedi-baskili-sardonlu-p-346504513",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 17,
+      "url": "https://www.trendyol.com/bigdart/kadin-kusakli-kase-kaban-9162-haki-p-389274561",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 18,
+      "url": "https://www.trendyol.com/lescon/etna-4-flex-erkek-spor-ayakkabi-p-423871095",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 19,
+      "url": "https://www.trendyol.com/elif-ozbey-butik/siyah-omuzu-dugmeli-premium-kaban-p-374125890",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 20,
+      "url": "https://www.trendyol.com/madmext/gri-kruvaze-yaka-desenli-kase-kaban-7250-p-361287340",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 21,
+      "url": "https://www.trendyol.com/xside/beli-kemerli-kruvaze-yaka-kadin-kase-kaban-p-348712560",
+      "status": "SUCCESS",
+      "brand": "sergulpzr",
+      "productName": "Honda Civic 2017 Uyumlu Deri Direksiyon Kılıfı, Siyah Yüzük, Gri Ip",
+      "detail": "Stokta Yok (Geçerli Ürün)"
+    },
+    {
+      "idx": 23,
+      "url": "https://www.trendyol.com/myniture-home-living/festival-tv-unitesi-g3008-3-p-353057824",
+      "status": "SUCCESS",
+      "brand": "Myniture Home & Living",
+      "productName": "Festival Tv Ünitesi G3008-3",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 22,
+      "url": "https://www.trendyol.com/evdemo/milas-calisma-masasi-p-783324979",
+      "status": "SUCCESS",
+      "brand": "Evdemo",
+      "productName": "Milas Çalışma Masası",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 25,
+      "url": "https://www.trendyol.com/joy-mob/joy-tv-unitesi-tv-sehpasi-alt-modul-beyaz-240-cm-mdf-p-324928200",
+      "status": "SUCCESS",
+      "brand": "joy mob",
+      "productName": "Joy Tv Ünitesi Tv Sehpası Alt Modül Beyaz 240 Cm Mdf",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 26,
+      "url": "https://www.trendyol.com/evdemo/eylul-4-kisilik-mutfak-masasi-takimi-ceviz-siyah-p-34746473",
+      "status": "SUCCESS",
+      "brand": "Evdemo",
+      "productName": "Eylül 4 Kişilik Mutfak Masası Takımı Ceviz Siyah",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 27,
+      "url": "https://www.trendyol.com/intergo/calisma-masasi-bilgisayar-masasi-ofis-ders-4-rafli-ahsap-ayakli-atlantik-cam-p-346504538",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 24,
+      "url": "https://www.trendyol.com/nikshop/nice-kose-koltuk-takimi-krem-p-809235080",
+      "status": "SUCCESS",
+      "brand": "nikshop",
+      "productName": "Nice Köşe Koltuk Takımı - Krem",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 28,
+      "url": "https://www.trendyol.com/vivense/eva-calisma-masasi-8-rafli-4-kapakli-p-312450987",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 29,
+      "url": "https://www.trendyol.com/nexhome/nova-4-modul-moduler-l-kose-koltuk-takimi-p-326781234",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 30,
+      "url": "https://www.trendyol.com/arada/vesna-4-modul-l-koltuk-kose-takimi-p-335218760",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 31,
+      "url": "https://www.trendyol.com/moonlife/istanbul-tv-unitesi-ceviz-p-348125630",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 32,
+      "url": "https://www.trendyol.com/myniture-home-living/festival-tv-unitesi-q3002-4-antrasit-p-359124780",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 33,
+      "url": "https://www.trendyol.com/modalife/bella-6-sandalye-1-sabit-masa-yemek-masasi-takimi-6-kisilik-antrasit-p-372561890",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 34,
+      "url": "https://www.trendyol.com/s-home-design-concept/molly-4-modul-kose-koltuk-p-387124650",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 35,
+      "url": "https://www.trendyol.com/elawoodworking/modern-country-l-tipi-tasarim-calisma-masasi-p-394258710",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 36,
+      "url": "https://www.trendyol.com/mobigoom/4-kisilik-masa-sandalye-takimi-teddy-p-401237850",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 37,
+      "url": "https://www.trendyol.com/roborock/s8-pro-akilli-robot-supurge-p-930469542",
+      "status": "SUCCESS",
+      "brand": "Roborock",
+      "productName": "S8 Pro Akıllı Robot Süpürge",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 38,
+      "url": "https://www.trendyol.com/xiaomi/robot-vacuum-h40-akilli-robot-supurge-mop-10000pa-p-969731936",
+      "status": "SUCCESS",
+      "brand": "Xiaomi",
+      "productName": "Robot Vacuum H40 Akıllı Robot Süpürge + Mop 10000pa (Xiaomi Türkiye Garantili)",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 40,
+      "url": "https://www.trendyol.com/technomen/bluetooth-kulaklik-ios-android-uyumlu-kablosuz-hizli-sarj-beyaz-p-261581352",
+      "status": "SUCCESS",
+      "brand": "TECHNOMEN",
+      "productName": "Bluetooth Kulaklık Ios Android Uyumlu Kablosuz Hızlı Şarj Beyaz",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 39,
+      "url": "https://www.trendyol.com/xiaomi/redmi-watch-3-active-akilli-saat-p-744379766",
+      "status": "SUCCESS",
+      "brand": "Xiaomi",
+      "productName": "Redmi Watch 3 Active Akıllı Saat",
+      "detail": "Stokta Yok (Geçerli Ürün)"
+    },
+    {
+      "idx": 42,
+      "url": "https://www.trendyol.com/xiaomi/mi-robot-vacuum-8000pa-akilli-robot-supurge-p-385748420",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 41,
+      "url": "https://www.trendyol.com/technomen/akilli-saat-1-saat-alana-1-saat-ve-8-kordon-hediye-2025-super-kampanya-hediyeli-akilli-saat-p-871643920",
+      "status": "SUCCESS",
+      "brand": "TECHNOMEN",
+      "productName": "Akıllı Saat 1 Saat Alana 1 Saat ve 8 Kordon Hediye 2025 Süper Kampanya Hediyeli Akıllı Saat",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 43,
+      "url": "https://www.trendyol.com/roborock/qrevo-l-akilli-robot-supurge-beyaz-p-929961715",
+      "status": "SUCCESS",
+      "brand": "Roborock",
+      "productName": "Qrevo L Akıllı Robot Süpürge - Beyaz",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 44,
+      "url": "https://www.trendyol.com/jbl/tune-570bt-kablosuz-kulak-ustu-kulaklik-p-329768260",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 45,
+      "url": "https://www.trendyol.com/jbl/live-beam-3-kablosuz-kulakici-kulaklik-mor-p-356124890",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 46,
+      "url": "https://www.trendyol.com/anker/soundcore-select-4-go-kablosuz-bluetooth-hoparlor-p-363125670",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 47,
+      "url": "https://www.trendyol.com/jbl/go-4-tasinabilir-bluetooth-hoparlor-kum-beji-p-378124590",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 48,
+      "url": "https://www.trendyol.com/jabra/elite-4-kulak-ici-bluetooth-kulaklik-p-385671230",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 49,
+      "url": "https://www.trendyol.com/huawei/watch-fit-4-siyah-p-392145680",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 50,
+      "url": "https://www.trendyol.com/seyuwatch/watch-hx-4-pro-harvox-akilli-saat-p-398712450",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 51,
+      "url": "https://www.trendyol.com/apple/airpods-4-aktif-gurultu-onleme-ozellikli-p-405128790",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 52,
+      "url": "https://www.trendyol.com/north-pacific/otomatik-cadir-4-kisilik-p-718230290",
+      "status": "SUCCESS",
+      "brand": "North Pacific",
+      "productName": "Otomatik Çadır - 4 Kişilik",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 53,
+      "url": "https://www.trendyol.com/exuma/erkek-outdoor-su-gecirmez-mont-2211054-p-860318780",
+      "status": "SUCCESS",
+      "brand": "Exuma",
+      "productName": "Erkek Outdoor Su Geçirmez Mont 2211054",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 55,
+      "url": "https://www.trendyol.com/mero-life/outdoor-kapusonlu-su-ve-ruzgar-gecirmez-quilted-mont-p-850855588",
+      "status": "SUCCESS",
+      "brand": "Mero Life",
+      "productName": "Outdoor Kapüşonlu Su Ve Rüzgar Geçirmez Kapitone Içi Kürklü Elyaf Dolgulu Şişme Haki Softshell Mont",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 54,
+      "url": "https://www.trendyol.com/dolunay-is-elbiseleri/outdoor-softshell-su-gecirmez-mont-p-896017703",
+      "status": "SUCCESS",
+      "brand": "Dolunay İş Elbiseleri",
+      "productName": "Outdoor Softshell Su Geçirmez Mont",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 58,
+      "url": "https://www.trendyol.com/boymen/erkek-mont-su-gecirmez-ceket-premium-yagmurluk-p-1092156573",
+      "status": "SUCCESS",
+      "brand": "Boymen",
+      "productName": "Erkek Mont Su Geçirmez Ceket Premium Yağmurluk",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 56,
+      "url": "https://www.trendyol.com/norway-geographical/su-gecirmez-cikarilabilir-kapusonlu-outdoor-mont-erkek-mont-taboo-p-32172917",
+      "status": "SUCCESS",
+      "brand": "Norway Geographical",
+      "productName": "Su Geçirmez Çıkarılabilir Kapüşonlu Outdoor Mont Erkek MONT TABOO",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 57,
+      "url": "https://www.trendyol.com/kordak/softshell-su-gecirmez-tactical-mont-polar-ic-katmanli-ruzgar-gecirmez-outdoor-mont-p-1043863219",
+      "status": "SUCCESS",
+      "brand": "KORDAK",
+      "productName": "Softshell Su Geçirmez Tactical Mont | Polar İç Katmanlı, Rüzgar Geçirmez, Askeri Outdoor Mont",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 59,
+      "url": "https://www.trendyol.com/nivaro/erkek-siyah-softshell-outdoor-mont-sok-tak-kapusonlu-su-gecirmez-p-1125166786",
+      "status": "SUCCESS",
+      "brand": "NIVARO",
+      "productName": "Erkek Siyah Softshell Outdoor Mont Sök Tak Kapüşonlu Su Geçirmez",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 60,
+      "url": "https://www.trendyol.com/big-king/beyaz-outdoor-trekking-erkek-ayakkabi-p-767456566",
+      "status": "SUCCESS",
+      "brand": "BIG KING",
+      "productName": "Beyaz Outdoor Trekking Erkek Ayakkabı",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 61,
+      "url": "https://www.trendyol.com/decathlon/quechua-erkek-outdoor-su-gecirmez-kar-montu-kislik-mont-siyah-nh500-10-c-p-375617924",
+      "status": "SUCCESS",
+      "brand": "Decathlon",
+      "productName": "Quechua Erkek Outdoor Su Geçirmez Kar Montu/Kışlık Mont - Siyah - NH500 -10 °C",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 62,
+      "url": "https://www.trendyol.com/decathlon/quechua-kadin-outdoor-su-gecirmez-kar-montu-kislik-mont-bej-nh100-5-c-p-958119728",
+      "status": "SUCCESS",
+      "brand": "Decathlon",
+      "productName": "Quechua Kadın Outdoor Su Geçirmez Kar Montu/Kışlık Mont - Bej - NH100 -5 °C",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 64,
+      "url": "https://www.trendyol.com/onetick/4-kisilik-tam-otomatik-kamp-cadiri-200x200x140-p-412563210",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 63,
+      "url": "https://www.trendyol.com/realx/4-kisilik-kamp-cadiri-su-gecirmez-kolay-kurulum-kaliteli-cadir-p-46484466",
+      "status": "SUCCESS",
+      "brand": "Realx",
+      "productName": "4 Kişilik Kamp Çadırı Su Geçirmez Kolay Kurulum Kaliteli Çadır",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 66,
+      "url": "https://www.trendyol.com/lescon/alaska-4-kadin-trekking-ayakkabi-p-425871240",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 65,
+      "url": "https://www.trendyol.com/shufa/4-tarafi-kare-tenteli-tam-otomatik-kamp-cadiri-p-418725630",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 67,
+      "url": "https://www.trendyol.com/riccon/thoknyl-erkek-trekking-ayakkabi-001268-haki-p-432156890",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    },
+    {
+      "idx": 68,
+      "url": "https://www.trendyol.com/bestway/pavillo-activeridge-4-kisilik-cadir-p-439128760",
+      "status": "SUCCESS",
+      "brand": "",
+      "productName": "",
+      "detail": "Stokta Var"
+    }
+  ]
+}

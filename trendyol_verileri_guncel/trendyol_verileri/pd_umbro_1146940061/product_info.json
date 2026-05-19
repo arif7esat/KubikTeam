@@ -1,0 +1,65 @@
+{
+  "name": "Modal Kumaş Kadın Siyah Fermuarlı Spor Sweatshirt VC0064",
+  "brand": "UMBRO",
+  "price": null,
+  "rating": null,
+  "reviewCount": null,
+  "seller": null,
+  "description": "",
+  "specs": [
+    {
+      "key": "Kalıp",
+      "value": "Relaxed"
+    },
+    {
+      "key": "Materyal",
+      "value": "Pamuklu"
+    },
+    {
+      "key": "Kol Tipi",
+      "value": "Standart Kol"
+    },
+    {
+      "key": "Renk",
+      "value": "Siyah"
+    },
+    {
+      "key": "Desen",
+      "value": "Düz"
+    },
+    {
+      "key": "Yaka Tipi",
+      "value": "Dik Yaka"
+    },
+    {
+      "key": "Kumaş Tipi",
+      "value": "Dokuma"
+    },
+    {
+      "key": "Boy",
+      "value": "Standart"
+    },
+    {
+      "key": "Kol Boyu",
+      "value": "Uzun"
+    },
+    {
+      "key": "Ortam",
+      "value": "Spor"
+    },
+    {
+      "key": "Cep",
+      "value": "Cepli"
+    }
+  ],
+  "productImages": [
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1931/prod/QC_PREP/20260517/22/e02120d8-1d35-3891-a7b4-9401c69307a6/1_org_zoom.jpg",
+      "localPath": "product_images/urun_1.jpg"
+    },
+    {
+      "originalUrl": "https://cdn.dsmcdn.com/ty1895/prod/QC_PREP/20260517/22/65059930-18ee-39d0-a5d9-b250b6531b09/1_org_zoom.jpg",
+      "localPath": "product_images/urun_2.jpg"
+    }
+  ]
+}
