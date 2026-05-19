@@ -1,0 +1,47 @@
+==============================================================
+SMARTCART AI — REVİZE PROMPT 3
+Konu: Frontend (app/page.tsx) Tüm Ürün Özelliklerinin (Specs) Gösterilmesi
+==============================================================
+
+Şu an veritabanında (veya API'den dönen JSON'da) ürünlere ait pek çok özellik (Kumaş, Yaka Tipi, Bellek, Garanti, İşletim Sistemi vb.) bulunuyor. Ancak Frontend (app/page.tsx) tarafında "Product Details" sekmesi altında sadece statik olarak "Material" ve "Dimensions" gösteriliyor. Lütfen sayfayı güncelleyerek "product.specs" dizisindeki TÜM özellikleri dinamik olarak arayüzde göster.
+
+YAPILACAKLAR:
+
+ADIM 1: Product Tipini Güncelle
+- app/page.tsx içindeki "Product" type/interface tanımını bul.
+- İçerisine "specs" ve "description" alanlarını ekle:
+  description?: string;
+  specs?: { specKey: string; specValue: string }[]; 
+  (Not: Backend API'den gelen isimlendirmeye göre key/value veya specKey/specValue olarak uyarlayın)
+
+ADIM 2: Product Details (Ürün Özellikleri) Kısmını Dinamik Yap
+- app/page.tsx içindeki `<span className="tracking-[0.1em] uppercase text-[13px]">Product Details</span>` yazan Accordion bölümünü bul.
+- İçindeki statik `product.material` ve `product.dimensions` satırlarını kaldırıp yerine dinamik bir liste (map) yerleştir.
+- Örnek:
+  <div className="pb-6 space-y-2 text-sm text-muted-foreground">
+    {product.specs && product.specs.length > 0 ? (
+      product.specs.map((spec, index) => (
+        <div key={index} className="flex items-start justify-between py-2 border-b border-border/30 last:border-0">
+          <span className="text-foreground font-medium w-1/3">{spec.specKey || spec.key}</span>
+          <span className="text-right w-2/3">{spec.specValue || spec.value}</span>
+        </div>
+      ))
+    ) : (
+      <>
+         <p><span className="text-foreground">Material:</span> {product.material}</p>
+         <p><span className="text-foreground">Dimensions:</span> {product.dimensions}</p>
+      </>
+    )}
+  </div>
+
+ADIM 3: Ürün Açıklamasını (Description) Ekle
+- Eğer ürünün `description` alanı varsa (product.description), Product Details accordion'unun hemen üstüne veya Accordion içine bir paragraf olarak ekle.
+- Trendyol açıklamaları genellikle HTML içerir, bu yüzden şu şekilde render edebilirsin:
+  {product.description && (
+     <div className="mb-6 text-sm text-muted-foreground leading-relaxed" 
+          dangerouslySetInnerHTML={{ __html: product.description }} />
+  )}
+
+SON KONTROL:
+- Projeyi çalıştır. Giyim ürünlerinde "Kumaş", "Kalıp"; elektronik ürünlerde "Garanti Tipi", "Bağlantı Tipi" gibi Trendyol'dan çekilen gerçek özelliklerin alt alta çok şık bir tabloda listelendiğini gör!
+==============================================================

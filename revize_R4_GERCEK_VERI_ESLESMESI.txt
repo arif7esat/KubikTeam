@@ -1,0 +1,21 @@
+==============================================================
+SMARTCART AI — REVİZE PROMPT 4
+Konu: Frontend (app/page.tsx) Statik Verilerinin Gerçek JSON Verileriyle Eşleşmesi
+==============================================================
+
+Şu an app/page.tsx dosyasındaki statik `const products: Product[]` dizisinde bulunan 8 ürün ile bilgisayara çekilen gerçek JSON ürünleri uyuşmadığı için ürün özellikleri (specs) karışıyor ve yanlış ürüne yanlış özellik yazılıyor. Lütfen bu karmaşayı tamamen çöz.
+
+YAPILACAKLAR:
+
+ADIM 1: Hazır Eşleştirilmiş Veriyi Oku
+- Bilgisayarda halihazırda hatasız olarak oluşturulmuş "/Users/arif/Desktop/ürü_veri_çekme/new_products_array.ts" adında bir dosya var.
+- Bu dosya, 8 ürünün resimlerini, fiyatlarını, yorumlarını ve ürün özelliklerini (specs) birbirine karıştırmadan, %100 doğru eşleştirilmiş şekilde barındırıyor. Lütfen bu dosyayı belleğine al.
+
+ADIM 2: app/page.tsx Dosyasını Güncelle
+- Projendeki "app/page.tsx" dosyasını aç.
+- Dosyanın içindeki eski sahte ürünlerin olduğu `const products: Product[] = [ ... ]` dizisini (yaklaşık 55. satırdan 220. satıra kadar olan blok) TAMAMEN SİL.
+- Yerine, 1. Adımda okuduğun "new_products_array.ts" dosyasının içindeki yepyeni `const products: Product[] = [ ... ]` dizisini BİREBİR YAPIŞTIR.
+
+ADIM 3: Test
+- Sayfayı yenile. Eski uydurma ürünler yerine (Örn: Oversize Keten Gömlek vb.) Trendyol'dan çekilen gerçek ürünlerin (Apple Pencil, Salomon Ayakkabı vb.) tüm özellikleri ve yorumlarıyla ekranda sorunsuz listelendiğini teyit et.
+==============================================================

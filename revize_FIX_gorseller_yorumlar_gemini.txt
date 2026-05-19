@@ -1,0 +1,368 @@
+==============================================================
+SMARTCART AI — FIX PROMPT
+Konu: Ürün Görselleri (çoklu) + Gerçekçi Yorumlar + Gemini Fix
+Dizin: smartcart-backend + e-commerce-prototype-2
+ÖNCELİK SIRASI: Adım 1 → 2 → 3 → 4
+==============================================================
+
+SORUNLAR:
+1. Ürünlerin fotoğrafı yok / tek görsel var
+2. Yorumlar gerçekçi değil, ürüne özel değil
+3. Eski ürünlere yorum eklenmemiş (sadece yeni seed'e eklendi)
+4. "Yanıt şu an üretilemiyor" — Gemini API çalışmıyor
+
+==============================================================
+ADIM 1 — Backend: Çoklu ürün görseli + gerçekçi yorumlar
+Dizin: /Users/arif/Desktop/btk/smartcart-backend/
+==============================================================
+
+─── 1A: data.sql güncelle — Her ürüne 4 Unsplash URL (image_url alanı) ───
+
+data.sql'deki 8 ürünün imageUrl alanlarını şu URL'lerle değiştir.
+imageUrl artık virgülle ayrılmış 4 URL içerecek (ilk URL ana görsel):
+
+Ürün 1 — Koton Oversize Keten Gömlek (GIYIM):
+'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800,https://images.unsplash.com/photo-1562157873-818bc0726f68?w=800,https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800,https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800'
+
+Ürün 2 — Mavi Slim Fit Jean (GIYIM):
+'https://images.unsplash.com/photo-1542272604-787c3835535d?w=800,https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800,https://images.unsplash.com/photo-1555689502-c4b22d76c56f?w=800,https://images.unsplash.com/photo-1475178626620-a4d074967452?w=800'
+
+Ürün 3 — IKEA MALM Şifonyer (MOBILYA):
+'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800,https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800,https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800,https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600'
+
+Ürün 4 — Kelebek Modern TV Ünitesi (MOBILYA):
+'https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=800,https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800,https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600,https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600'
+
+Ürün 5 — Apple iPhone 15 Pro Max (ELEKTRONIK):
+'https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800,https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800,https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800,https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800'
+
+Ürün 6 — Samsung 65" QLED TV (ELEKTRONIK):
+'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800,https://images.unsplash.com/photo-1461151304267-38535e780c79?w=800,https://images.unsplash.com/photo-1509281373149-e957c6296406?w=800,https://images.unsplash.com/photo-1571415060716-baff5f717c37?w=800'
+
+Ürün 7 — The North Face Thermoball Mont (OUTDOOR):
+'https://images.unsplash.com/photo-1544923246-77307dd270cb?w=800,https://images.unsplash.com/photo-1578681994506-b8f463449011?w=800,https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800,https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=800'
+
+Ürün 8 — Salomon X Ultra 4 GTX Ayakkabı (OUTDOOR):
+'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800,https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800,https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800,https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800'
+
+─── 1B: Product.java güncelle — imageUrls listesi döndür ───
+
+Product.java entity'sine şu @Transient alanı ekle:
+
+@Transient
+public List<String> getImageUrls() {
+    if (imageUrl == null || imageUrl.isBlank()) return List.of();
+    return Arrays.asList(imageUrl.split(","));
+}
+
+@Transient
+public String getPrimaryImageUrl() {
+    List<String> urls = getImageUrls();
+    return urls.isEmpty() ? "" : urls.get(0).trim();
+}
+
+Import: java.util.Arrays
+
+─── 1C: SeedDataGenerator.java — Ürüne özel gerçekçi yorumlar ───
+
+SeedDataGenerator.java içindeki yorum dizilerini ve seed mantığını GÜNCELLEştir.
+
+Her ürün için ayrı yorum havuzu kullan. Aşağıdaki Map yapısını ekle:
+
+private static final Map<Long, String[]> PRODUCT_POSITIVE = new HashMap<>() {{
+    put(1L, new String[]{
+        "Harika bir gömlek, keten kumaş gerçekten serin tutuyor.",
+        "Oversize kalıp tam istediğim gibi, yazlık için mükemmel.",
+        "Beyaz renk fotoğraftaki kadar temiz geldi, memnunum.",
+        "Kumaş çok yumuşak, cilde dokunuşu iyi.",
+        "M beden aldım 170 boyum için, tam düştü.",
+        "Doğal keten kokusu bile hoş, organik hissettiriyor.",
+        "Birden fazla renk aldım, hepsinden memnunum."
+    });
+    put(2L, new String[]{
+        "Slim fit ama nefes aldırıyor, elastan hissettiriyor.",
+        "32 numara tam beden oldu, ölçüler tutarlı.",
+        "Yıkamada renk atmadı, kaliteli boya kullanılmış.",
+        "Koyu mavi renk fotoğraftakiyle aynı, aldatmaca yok.",
+        "Günlük kullanım için ideal, rahat bir jean."
+    });
+    put(3L, new String[]{
+        "Montajı gerçekten kolay, 45 dakikada bitirdim.",
+        "Çekmeceler pürüzsüz açılıp kapanıyor.",
+        "Beyaz renk odaya ferahlık katıyor.",
+        "IKEA kalitesi her zamanki gibi iyi.",
+        "Ölçüler tam istediğim gibiydi, yatak odasına sığdı."
+    });
+    put(4L, new String[]{
+        "Salonuma çok yakıştı, modern çizgileri güzel.",
+        "65 inch TV için genişliği tam yeterli.",
+        "Kablo kanalları düzenli, kablolar görünmüyor.",
+        "Antrasit renk gerçekten şık, fotoğrafa benziyor."
+    });
+    put(5L, new String[]{
+        "Kamera kalitesi inanılmaz, gece çekimleri mükemmel.",
+        "Titanyum çerçeve gerçekten premium hissettiriyor.",
+        "Batarya 2 gün rahat yetiyor.",
+        "A17 Pro çip hiçbir şeyde kasılmıyor.",
+        "USB-C geçişi çok pratik oldu.",
+        "Ekran parlaklığı güneşte bile okunabiliyor."
+    });
+    put(6L, new String[]{
+        "QLED renk doygunluğu inanılmaz, Netflix'te muhteşem görünüyor.",
+        "4K HDR içerikler canlı ve net, çok memnunum.",
+        "65 inç ama çerçevesi ince, şık duruyor.",
+        "Ses kalitesi de iyi, soundbar gerekmeyebilir."
+    });
+    put(7L, new String[]{
+        "Uludağ'da -10 derecede içim ısıcaktı, harika mont.",
+        "Hafifliği şaşırtıcı, sırt çantasına sığıyor.",
+        "DWR kaplama yağmurda gerçekten işe yarıyor.",
+        "Fermuarlar kaliteli, ilk günden sorunsuz.",
+        "Kış boyunca günlük kullanmak için ideal."
+    });
+    put(8L, new String[]{
+        "Gore-Tex gerçekten işe yarıyor, sızan yok.",
+        "Kaçkar'da 3 gün trekking yaptım, ayak ağrımadı.",
+        "Contagrip taban kayalıkta bile tutunuyor.",
+        "Yarım numara büyük almanızı öneririm, ben tam aldım dar geldi.",
+        "Su geçirmezlik mükemmel, dereyi geçtim bile ıslanmadı."
+    });
+}};
+
+private static final Map<Long, String[]> PRODUCT_NEUTRAL = new HashMap<>() {{
+    put(1L, new String[]{"Kumaş biraz buruşuyor, ütü gerekiyor.", "Fiyatına göre iyi ama daha iyisi de olabilirdi."});
+    put(2L, new String[]{"İlk yıkamada biraz gerildi, ama oturdu.", "Bel kısmı biraz dar, esnek kumaş kurtarıyor."});
+    put(3L, new String[]{"Raylar biraz sert ama kullandıkça yumuşayacak.", "Montaj kılavuzu yeterli ama daha iyi olabilirdi."});
+    put(4L, new String[]{"Montaj biraz zaman aldı ama sonuç güzel.", "Renk biraz açık geldi, ama alışıldı."});
+    put(5L, new String[]{"Şarj adaptörü yok kutuda, ayrı almak gerekiyor.", "Fiyatı yüksek ama değiyor."});
+    put(6L, new String[]{"Tizen bazen yavaşlıyor, ama genel iyi.", "Uzaktan kumanda basit, akıllı özellikler sınırlı."});
+    put(7L, new String[]{"Fermuarı biraz sert, kullandıkça açılır umarım.", "Renk seçeneği az olsa da siyah güzel."});
+    put(8L, new String[]{"Kalıp dar, tam numara alırsanız sıkar.", "Ağır hissettiriyor ilk başta ama alışıldı."});
+}};
+
+private static final Map<Long, String[]> PRODUCT_NEGATIVE = new HashMap<>() {{
+    put(1L, new String[]{"Beyaz renk aldım ama sarımsı geldi.", "Dikişlerde küçük hatalar vardı."});
+    put(2L, new String[]{"İlk yıkamada renk attı, dikkat edin.", "Bel ölçüsü tutmadı, büyük geldi."});
+    put(3L, new String[]{"Çekmecelerden biri raydan çıktı.", "Fotoğraftan daha mat bir görünümü var."});
+    put(4L, new String[]{"Montaj vidaları yetersiz geldi, ekstra aldım.", "Beklediğimden daha kısa, TV sığmadı."});
+    put(5L, new String[]{"Bu fiyata adaptör vermemesi kabul edilemez.", "Isınıyor yoğun kullanımda."});
+    put(6L, new String[]{"Kutu nakliyede ezilmişti, ürün tamam ama.", "Beklenen yanıt süresi geç geldi."});
+    put(7L, new String[]{"Kollar biraz kısa, uzun kollu olanlar 1 beden büyük alın.", "İç astarı ince hissettirdi."});
+    put(8L, new String[]{"İlk gün topuk kısmı sürtüp yara yaptı.", "Fiyatı yüksek kalitesine göre."});
+}};
+
+SeedDataGenerator.seed() metodunu şöyle güncelle:
+
+Mevcut reviews.size() > 0 kontrolünü KALDIR veya şöyle değiştir:
+if (userRepository.count() > 0 && reviewRepository.count() > 50) return;
+
+Yorum üretirken ürün spesifik havuzu kullan:
+String comment;
+String[] pool;
+if (roll < 70) {
+    pool = PRODUCT_POSITIVE.getOrDefault(product.getId(), positiveComments);
+    rating = rnd.nextInt(2) + 4;
+} else if (roll < 90) {
+    pool = PRODUCT_NEUTRAL.getOrDefault(product.getId(), neutralComments);
+    rating = 3;
+} else {
+    pool = PRODUCT_NEGATIVE.getOrDefault(product.getId(), negativeComments);
+    rating = rnd.nextInt(2) + 1;
+    // helpfulTags mantığı aynı kalsın
+}
+comment = pool[rnd.nextInt(pool.length)];
+
+─── 1D: mvn clean compile + mvn spring-boot:run ───
+
+Test:
+curl http://localhost:8080/api/products/1
+→ imageUrl: 4 URL virgülle ayrılmış olmalı
+→ imageUrls: ["url1","url2","url3","url4"] olmalı (Transient field)
+→ reviews: ürüne özel yorumlar olmalı, 150+ adet
+
+==============================================================
+ADIM 2 — Frontend: Çoklu görsel galerisi
+Dizin: /Users/arif/Desktop/btk/e-commerce-prototype-2/app/page.tsx
+==============================================================
+
+─── 2A: Product tipine imageUrls ekle ───
+
+page.tsx içindeki Product type tanımını güncelle.
+image: string alanını koru (ana görsel için).
+imageUrls?: string[] alanı ekle.
+
+─── 2B: API'den ürün çekme (Product tipine maplerken) ───
+
+Eğer ürünler API'den çekiliyorsa:
+imageUrls = p.imageUrls || (p.imageUrl ? p.imageUrl.split(',').map((u: string) => u.trim()) : [])
+image = imageUrls[0] || ''
+
+Eğer hardcoded ürünler hâlâ kullanılıyorsa, hardcoded product dizisindeki her ürünün
+image alanını birinci URL, imageUrls alanını 4 URL dizisi olarak güncelle. Örnek:
+{
+  id: 1,
+  image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800",
+  imageUrls: [
+    "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=800",
+    "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=800",
+    "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800",
+    "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800"
+  ],
+  // diğer alanlar aynı...
+}
+
+Diğer 7 ürün için de aynı URL'leri kullan (ADIM 1'deki URL listesi).
+
+─── 2C: ProductDetailPage — selectedImage state + galeri ───
+
+ProductDetailPage component'i içine state ekle:
+const [selectedImage, setSelectedImage] = useState(0)
+const images = product.imageUrls || [product.image]
+
+Ana büyük görsel alanını güncelle:
+<div className="aspect-[3/4] bg-muted rounded-lg overflow-hidden relative">
+  <img
+    src={images[selectedImage]}
+    alt={product.title}
+    className="absolute inset-0 w-full h-full object-cover"
+    onError={(e) => {
+      const t = e.target as HTMLImageElement;
+      t.src = product.image; // fallback
+    }}
+  />
+  <Badge className="absolute top-3 left-3 bg-destructive text-destructive-foreground font-semibold text-sm">
+    %{discount}
+  </Badge>
+</div>
+
+4'lü thumbnail grid'i güncelle:
+<div className="grid grid-cols-4 gap-2">
+  {images.map((url, i) => (
+    <div
+      key={i}
+      className={`aspect-square bg-muted rounded-lg overflow-hidden cursor-pointer border-2 transition-colors ${
+        i === selectedImage ? "border-primary" : "border-transparent hover:border-primary/50"
+      }`}
+      onClick={() => setSelectedImage(i)}
+    >
+      <img
+        src={`${url.split('?')[0]}?w=150`}
+        alt={`${product.title} görsel ${i + 1}`}
+        className="w-full h-full object-cover"
+        onError={(e) => {
+          const t = e.target as HTMLImageElement;
+          t.parentElement!.innerHTML = '<div class="w-full h-full flex items-center justify-center text-gray-300 text-lg">📷</div>';
+        }}
+      />
+    </div>
+  ))}
+</div>
+
+─── 2D: ProductCard görselini güncelle ───
+
+ProductCard içindeki görsel alanını güncelle (ADIM R2'de yapıldıysa atla, yoksa yap):
+
+<div className="relative aspect-[3/4] bg-muted overflow-hidden">
+  <img
+    src={product.image}
+    alt={product.title}
+    className="absolute inset-0 w-full h-full object-cover"
+    onError={(e) => {
+      const t = e.target as HTMLImageElement;
+      t.style.display = 'none';
+    }}
+  />
+  <Badge className="absolute top-2 left-2 bg-destructive text-destructive-foreground font-semibold">
+    %{discount}
+  </Badge>
+  ...
+</div>
+
+==============================================================
+ADIM 3 — Gemini "Yanıt üretilemiyor" sorunu
+Dizin: /Users/arif/Desktop/btk/smartcart-backend/
+==============================================================
+
+SORUN: POST /api/chat her zaman fallback dönüyor.
+Sebep: Gemini API çağrısı başarısız (key yok, rate limit, model adı yanlış, vs.)
+
+─── 3A: GeminiService.java — daha detaylı log ekle ───
+
+GeminiService.java'daki call() metoduna hata loglarını güçlendir:
+
+catch (HttpClientErrorException e) {
+    System.err.println("[GEMINI ERROR] HTTP " + e.getStatusCode() + ": " + e.getResponseBodyAsString());
+    return fallbackMap();
+}
+catch (ResourceAccessException e) {
+    System.err.println("[GEMINI TIMEOUT] " + e.getMessage());
+    return fallbackMap();
+}
+catch (Exception e) {
+    System.err.println("[GEMINI UNEXPECTED] " + e.getClass().getSimpleName() + ": " + e.getMessage());
+    return fallbackMap();
+}
+
+─── 3B: GeminiService.java — model URL kontrol ───
+
+application.properties'teki gemini.api.url şunu içermeli:
+gemini.api.url=https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent
+
+─── 3C: thinkingConfig kontrolü ───
+
+GeminiService.java'daki request body'de thinkingConfig var mı kontrol et.
+Yoksa şunu ekle, varsa budgetini 0 yap (hız için):
+
+"generationConfig", Map.of(
+    "temperature", 0.3,
+    "maxOutputTokens", 1024,
+    "thinkingConfig", Map.of("thinkingBudget", 0)
+)
+
+─── 3D: GEMINI_API_KEY kontrol ───
+
+Backend dizininde .env dosyası var mı kontrol et:
+cat /Users/arif/Desktop/btk/smartcart-backend/.env
+
+GEMINI_API_KEY gerçek key içermeli. Test için:
+export GEMINI_API_KEY=AIza... (gerçek key)
+mvn spring-boot:run
+
+Sonra:
+curl -X POST http://localhost:8080/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"productId": 1, "message": "Bu ürünün gerçek rengi fotoğraftaki gibi mi?"}'
+
+→ reply alanında gerçek Gemini yanıtı gelmeli, "Yanıt üretilemiyor" değil.
+
+─── 3E: Gemini yanıtını doğrula ───
+
+Backend çalışıyorken log'larda şu olmamalı:
+[GEMINI ERROR]
+[GEMINI TIMEOUT]
+[GEMINI UNEXPECTED]
+
+Eğer log'da 403 görüyorsan → API key yanlış
+Eğer log'da 404 görüyorsan → model adı yanlış
+Eğer log'da timeout görüyorsan → ağ sorunu, thinkingBudget=0 yap
+
+==============================================================
+ADIM 4 — Son kontrol
+==============================================================
+
+Backend:
+curl http://localhost:8080/api/products/1
+→ imageUrl dolu (4 URL virgülle ayrılmış)
+→ reviews 150+ adet, ürüne özel yorumlar
+
+curl -X POST http://localhost:8080/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"productId": 1, "message": "Bu gömleğin rengi fotoğraftaki gibi mi?"}'
+→ reply içinde gerçek Türkçe yanıt (fallback değil)
+
+Frontend (localhost:3000):
+→ Ana sayfada ürün kartlarında gerçek fotoğraflar görünüyor
+→ Ürüne tıklayınca büyük görsel + 4 thumbnail var
+→ Thumbnail'a tıklayınca büyük görsel değişiyor
+→ Gerçeklik Filtresi Ajanı'na soru sorulunca gerçek yanıt geliyor
+==============================================================

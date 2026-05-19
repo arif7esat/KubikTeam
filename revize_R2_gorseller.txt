@@ -1,0 +1,93 @@
+==============================================================
+SMARTCART AI — REVİZE PROMPT 2
+Konu: Frontend Görsel Fix (app/page.tsx)
+Dizin: /Users/arif/Desktop/btk/e-commerce-prototype-2/
+==============================================================
+
+SORUN:
+ProductCard ve ProductDetailPage içinde placeholder 📷 emoji gösteriliyor.
+Backend /api/products endpoint'i imageUrl (Unsplash URL) dönüyor AMA
+frontend bunu kullanmıyor, hardcoded placeholder var.
+
+ÇÖZÜM:
+app/page.tsx dosyasını aç. Sadece görsel alanlarını değiştir.
+
+─────────────────────────────
+DEĞİŞİKLİK 1: ProductCard component
+─────────────────────────────
+
+BUL (ProductCard içinde):
+<div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+  <span className="text-4xl text-gray-300">📷</span>
+</div>
+
+DEĞİŞTİR:
+<img
+  src={product.image}
+  alt={product.title}
+  className="absolute inset-0 w-full h-full object-cover"
+  onError={(e) => {
+    const t = e.target as HTMLImageElement;
+    t.style.display = 'none';
+    t.nextElementSibling?.classList.remove('hidden');
+  }}
+/>
+<div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 items-center justify-center hidden">
+  <span className="text-4xl text-gray-300">📷</span>
+</div>
+
+─────────────────────────────
+DEĞİŞİKLİK 2: ProductDetailPage — Ana görsel
+─────────────────────────────
+
+BUL (ProductDetailPage içinde büyük görsel alanı):
+<div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+  <span className="text-6xl text-gray-300">📷</span>
+</div>
+
+DEĞİŞTİR:
+<img
+  src={product.image}
+  alt={product.title}
+  className="absolute inset-0 w-full h-full object-cover"
+  onError={(e) => {
+    const t = e.target as HTMLImageElement;
+    t.style.display = 'none';
+    t.nextElementSibling?.classList.remove('hidden');
+  }}
+/>
+<div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 items-center justify-center hidden">
+  <span className="text-6xl text-gray-300">📷</span>
+</div>
+
+─────────────────────────────
+DEĞİŞİKLİK 3: ProductDetailPage — Thumbnail'lar
+─────────────────────────────
+
+BUL (4'lü thumbnail grid — [1,2,3,4].map...):
+<div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+  <span className="text-lg text-gray-300">📷</span>
+</div>
+
+DEĞİŞTİR:
+<img
+  src={`${product.image}${product.image.includes('?') ? '&' : '?'}w=150`}
+  alt={product.title}
+  className="w-full h-full object-cover"
+  onError={(e) => {
+    const t = e.target as HTMLImageElement;
+    t.style.display = 'none';
+    t.parentElement?.classList.add('bg-gradient-to-br', 'from-gray-100', 'to-gray-200');
+  }}
+/>
+
+─────────────────────────────
+ADIM 4: Kontrol
+─────────────────────────────
+
+Frontend çalışıyorsa (pnpm dev veya npm run dev):
+- http://localhost:3000 aç
+- Ürün kartlarında Unsplash görselleri görünmeli
+- Bir ürüne tıkla, detay sayfasında büyük görsel ve thumbnaillar görünmeli
+- next build çalıştır, hata olmamalı
+==============================================================

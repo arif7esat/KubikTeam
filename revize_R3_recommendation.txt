@@ -1,0 +1,175 @@
+==============================================================
+SMARTCART AI — REVİZE PROMPT 3
+Konu: Recommendation Endpoint + Frontend Gösterimi
+Dizin: /Users/arif/Desktop/btk/smartcart-backend/
+==============================================================
+
+MEVCUT SİSTEM:
+- Spring Boot 3.5.0, Java 21
+- Product, ProductSpec, Review entity'leri mevcut
+- DataAnalysisService, GeminiService mevcut (reuse edilecek)
+- GET /api/products mevcut
+
+YAPILACAKLAR:
+
+─────────────────────────────
+ADIM 1: RecommendationResult DTO
+─────────────────────────────
+
+Dosya: src/main/java/com/smartcart/model/dto/RecommendationResult.java
+
+@Data @NoArgsConstructor @AllArgsConstructor
+public class RecommendationResult {
+    private List<Product> products;
+    private List<ProductReason> reasons;
+
+    @Data @NoArgsConstructor @AllArgsConstructor
+    public static class ProductReason {
+        private Long productId;
+        private String why;
+    }
+}
+
+─────────────────────────────
+ADIM 2: RecommendationService.java
+─────────────────────────────
+
+Dosya: src/main/java/com/smartcart/service/RecommendationService.java
+
+@Service sınıfı. Constructor injection: ProductRepository, GeminiService (opsiyonel why için)
+
+public RecommendationResult recommend(List<Long> viewedIds, String category, int limit):
+
+1. Tüm ürünleri çek: productRepository.findAll()
+
+2. Görüntülenenleri çıkar: viewedIds null veya boşsa boş liste kabul et.
+
+3. Her ürün için skor hesapla (deterministik):
+   - viewedIds boş değilse:
+     a) Aynı kategori: +30
+     b) Görüntülenen ürünlerin avg price ±%30 aralığında fiyat: +20
+   - reviews ortalaması >= 4.5 → +25
+   - reviews ortalaması >= 4.0 → +15
+   - reviews.size() >= 50 → +10 (istatistiksel güven)
+   - Negatif helpfulTag oranı > %20 → -15
+   - category parametresi verilmişse ve eşleşiyorsa: +10
+
+4. Skora göre azalan sırada sırala
+
+5. İlk `limit` ürünü al
+
+6. Her ürün için why cümlesi üret (GeminiService KULLANMA, deterministik):
+   - avgRating >= 4.5 → "Yüksek kullanıcı memnuniyeti ve {reviewCount} değerlendirme."
+   - Aynı kategori → "İncelediğiniz ürünlerle aynı kategoride."
+   - Fiyat aralığı → "Bütçenize uygun bir seçenek."
+   - Default → "Popüler ve beğenilen bir ürün."
+
+7. RecommendationResult döndür.
+
+Null-safe kurallar:
+- viewedIds null gelebilir → empty list olarak işle
+- reviews null gelebilir → empty list kabul et
+- limit <= 0 → 8 kullan
+
+─────────────────────────────
+ADIM 3: RecommendationController.java
+─────────────────────────────
+
+Dosya: src/main/java/com/smartcart/controller/RecommendationController.java
+
+@RestController
+@RequestMapping("/api")
+Constructor injection: RecommendationService recommendationService
+
+@GetMapping("/recommendations")
+public RecommendationResult getRecommendations(
+    @RequestParam(required = false) String viewed,
+    @RequestParam(required = false) String category,
+    @RequestParam(defaultValue = "8") int limit
+) {
+    List<Long> viewedIds = new ArrayList<>();
+    if (viewed != null && !viewed.isBlank()) {
+        for (String s : viewed.split(",")) {
+            try { viewedIds.add(Long.parseLong(s.trim())); }
+            catch (NumberFormatException ignored) {}
+        }
+    }
+    return recommendationService.recommend(viewedIds, category, limit);
+}
+
+─────────────────────────────
+ADIM 4: mvn clean compile çalıştır
+─────────────────────────────
+
+Hata varsa düzelt. Başarılı olduktan sonra test et:
+
+curl "http://localhost:8080/api/recommendations"
+→ { products: [...8 ürün...], reasons: [{productId, why}, ...] }
+
+curl "http://localhost:8080/api/recommendations?viewed=1,2&category=GIYIM&limit=4"
+→ Görüntülenenlerin dışında, GIYIM kategorisi önde, 4 ürün
+
+─────────────────────────────
+ADIM 5: Frontend — "Senin İçin Öneriler" bölümü
+─────────────────────────────
+
+Dosya: /Users/arif/Desktop/btk/e-commerce-prototype-2/app/page.tsx
+
+HomePage component'inin içinde, mevcut "Çok Satanlar" section'ının ALTINA ekle:
+
+State (EcommercePagecomponent içine):
+const [recommendations, setRecommendations] = useState<{product: Product, why: string}[]>([])
+const [viewedIds, setViewedIds] = useState<number[]>([])
+
+handleProductClick içine ekle (mevcut setSelectedProduct satırından ÖNCE):
+setViewedIds(prev => prev.includes(product.id) ? prev : [...prev, product.id])
+
+useEffect ekle (viewedIds değişince çalışsın):
+useEffect(() => {
+  if (viewedIds.length === 0) return;
+  fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/recommendations?viewed=${viewedIds.join(',')}&limit=4`)
+    .then(r => r.json())
+    .then(data => {
+      const mapped = (data.products || []).map((p: any, i: number) => ({
+        product: { ...p, image: p.imageUrl, reviews: p.reviews || [] },
+        why: data.reasons?.[i]?.why || ''
+      }))
+      setRecommendations(mapped)
+    })
+    .catch(() => {})
+}, [viewedIds])
+
+HomePage'in prop listesine ekle: recommendations: {product: Product, why: string}[]
+
+Ana sayfada "Çok Satanlar" section'ının ALT kısmına ekle:
+{recommendations.length > 0 && (
+  <section className="mt-10">
+    <h2 className="text-xl font-bold text-foreground mb-4">✨ Senin İçin Öneriler</h2>
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {recommendations.map(({ product, why }) => (
+        <div key={product.id} className="relative">
+          <ProductCard product={product} onClick={() => onProductClick(product)} />
+          {why && (
+            <div className="mt-1 px-2 py-1 bg-accent/10 rounded text-xs text-accent">
+              {why}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+EcommercePage'de HomePage'e recommendations prop'u ilet:
+<HomePage onProductClick={handleProductClick} recommendations={recommendations} />
+
+─────────────────────────────
+ADIM 6: Son kontrol
+─────────────────────────────
+
+Backend: mvn clean compile + spring-boot:run
+Frontend: pnpm dev (veya npm run dev)
+
+- Bir ürüne tıkla → geri dön → "Senin İçin Öneriler" bölümü görünmeli
+- Her öneri kartının altında "why" açıklaması olmalı
+==============================================================

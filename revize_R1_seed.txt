@@ -1,0 +1,230 @@
+==============================================================
+SMARTCART AI — REVİZE PROMPT 1
+Konu: User Entity + Review Refactor + Seed Generator
+Dizin: /Users/arif/Desktop/btk/smartcart-backend/
+==============================================================
+
+MEVCUT SİSTEM:
+- Spring Boot 3.5.0, Java 21, H2 in-memory
+- Review entity'de username String alan var, User entity YOK
+- data.sql mevcut: 8 ürün, 40 spec, 23 review
+- spring.jpa.defer-datasource-initialization=true ZATEN VAR
+
+YAPILACAKLAR (sırayla):
+
+─────────────────────────────
+ADIM 1: User.java oluştur
+─────────────────────────────
+
+Dosya: src/main/java/com/smartcart/model/entity/User.java
+
+@Entity
+@Table(name = "users")
+@Data @NoArgsConstructor @AllArgsConstructor
+public class User {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String name;
+
+    @Column(unique = true, nullable = false)
+    private String email;
+}
+
+─────────────────────────────
+ADIM 2: UserRepository.java oluştur
+─────────────────────────────
+
+Dosya: src/main/java/com/smartcart/repository/UserRepository.java
+
+public interface UserRepository extends JpaRepository<User, Long> {
+}
+
+─────────────────────────────
+ADIM 3: Review.java güncelle
+─────────────────────────────
+
+Dosya: src/main/java/com/smartcart/model/entity/Review.java
+
+username(String) alanını KALDIR.
+Yerine şunu ekle:
+
+@ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "user_id")
+@JsonIgnore
+private User user;
+
+Yeni alan ekle:
+@Transient
+public String getUsername() {
+    return user != null ? user.getName() : "Anonim";
+}
+
+DİĞER ALANLAR DEĞİŞMEZ: id, product, rating, comment, helpfulTags
+
+─────────────────────────────
+ADIM 4: "mvn clean compile" çalıştır
+─────────────────────────────
+Hata varsa düzelt. Başarılı olduktan sonra devam et.
+
+─────────────────────────────
+ADIM 5: SeedDataGenerator.java oluştur
+─────────────────────────────
+
+Dosya: src/main/java/com/smartcart/config/SeedDataGenerator.java
+
+@Component
+public class SeedDataGenerator {
+
+    @Value("${seed.user.count:400}")
+    private int userCount;
+
+    @Value("${seed.review.count:1500}")
+    private int reviewCount;
+
+    @Autowired private UserRepository userRepository;
+    @Autowired private ReviewRepository reviewRepository;
+    @Autowired private ProductRepository productRepository;
+
+    @PostConstruct
+    public void seed() {
+        if (userRepository.count() > 0) return; // zaten seed edilmiş
+
+        // 400 kullanıcı oluştur
+        String[] firstNames = {"Ali","Ayşe","Mehmet","Zeynep","Can","Elif","Burak","Selin",
+            "Murat","Fatma","Emre","Deniz","Kerem","Ceren","Serkan","Pınar","Onur","Gamze",
+            "Tolga","Sibel","Hakan","Berk","Cem","Ahmet","Mustafa","Merve","Yunus","Esra",
+            "İbrahim","Gizem","Osman","Büşra","Yusuf","Neslihan","Furkan","Melis","Barış","Tuğçe"};
+        String[] lastNames = {"Yılmaz","Kaya","Demir","Şahin","Çelik","Aydın","Arslan","Doğan",
+            "Kılıç","Aslan","Koç","Kurt","Özkan","Şimşek","Polat","Yıldız","Güneş","Erdoğan",
+            "Bulut","Acar","Çetin","Öztürk","Kaplan","Yıldırım","Güler","Aktaş","Bozkurt"};
+
+        List<User> users = new ArrayList<>();
+        Set<String> usedEmails = new HashSet<>();
+        Random rnd = new Random(42);
+
+        for (int i = 0; i < userCount; i++) {
+            String first = firstNames[rnd.nextInt(firstNames.length)];
+            String last = lastNames[rnd.nextInt(lastNames.length)];
+            String email = (first.toLowerCase() + "." + last.toLowerCase() + i + "@example.com")
+                .replace("ş","s").replace("ğ","g").replace("ı","i")
+                .replace("ö","o").replace("ü","u").replace("ç","c")
+                .replace("İ","i").replace("Ş","s");
+            if (usedEmails.contains(email)) email = "user" + i + "@example.com";
+            usedEmails.add(email);
+            users.add(new User(null, first + " " + last, email));
+        }
+        users = userRepository.saveAll(users);
+
+        // Pozitif yorumlar (%70)
+        String[] positiveComments = {
+            "Harika bir ürün, çok memnun kaldım!",
+            "Beklentilerimin üzerinde geldi, herkese tavsiye ederim.",
+            "Kalitesi gerçekten iyi, fiyatına değer.",
+            "Çok hızlı kargo, ürün sağlam paketlenmişti.",
+            "Resimdekiyle birebir aynı, hayal kırıklığı yaşamadım.",
+            "Günlük kullanım için mükemmel.",
+            "Arkadaşıma da önerdim, o da aldı.",
+            "Uzun süre dayanır diye düşünüyorum, kaliteli.",
+            "Kullanımı çok kolay, sizi memnun eder.",
+            "Her şeyi düşünülmüş, detaylar güzel.",
+            "Kesinlikle tavsiye ederim, pişman olmadım.",
+            "5 yıldız hak ediyor, süper ürün."
+        };
+
+        // Nötr yorumlar (%20)
+        String[] neutralComments = {
+            "Fiyatına göre idare eder.",
+            "Ne çok iyi ne çok kötü, ortalama bir ürün.",
+            "Beklentimi karşıladı, fazlası değil.",
+            "Gayet normal, özel bir şey değil.",
+            "Resimden biraz farklı ama kullanılabilir.",
+            "Kargo gecikti ama ürün tamam geldi.",
+            "Fiyat biraz yüksek ama kaliteli.",
+            "Birkaç eksik var ama genel iyi."
+        };
+
+        // Negatif yorumlar (%10)
+        String[] negativeComments = {
+            "Beklediğim gibi çıkmadı, hayal kırıklığı.",
+            "Kalitesi düşük, çabuk bozuldu.",
+            "Rengi resimden çok farklı geldi.",
+            "Ölçüler tutmadı, değişmek zorunda kaldım.",
+            "Dikişler çok zayıf, ilk günden sorun çıktı.",
+            "İade ettim, tavsiye etmem."
+        };
+
+        String[] negativeTags = {"beden_buyuk","beden_dar","renk_farkli","kalite_kotu",
+                                  "dikis_hatali","beden_kucuk","fermuar_sert","ray_zayif"};
+
+        List<Product> products = productRepository.findAll();
+        List<Review> reviews = new ArrayList<>();
+        int reviewsPerProduct = reviewCount / products.size();
+
+        for (Product product : products) {
+            for (int i = 0; i < reviewsPerProduct; i++) {
+                User user = users.get(rnd.nextInt(users.size()));
+                int roll = rnd.nextInt(100);
+                String comment;
+                int rating;
+                String helpfulTags = "";
+
+                if (roll < 70) { // pozitif
+                    comment = positiveComments[rnd.nextInt(positiveComments.length)];
+                    rating = rnd.nextInt(2) + 4; // 4 veya 5
+                } else if (roll < 90) { // nötr
+                    comment = neutralComments[rnd.nextInt(neutralComments.length)];
+                    rating = 3;
+                } else { // negatif
+                    comment = negativeComments[rnd.nextInt(negativeComments.length)];
+                    rating = rnd.nextInt(2) + 1; // 1 veya 2
+                    int tagCount = rnd.nextInt(3);
+                    StringBuilder tags = new StringBuilder();
+                    for (int t = 0; t < tagCount; t++) {
+                        if (t > 0) tags.append(",");
+                        tags.append(negativeTags[rnd.nextInt(negativeTags.length)]);
+                    }
+                    helpfulTags = tags.toString();
+                }
+
+                Review review = new Review();
+                review.setUser(user);
+                review.setProduct(product);
+                review.setRating(rating);
+                review.setComment(comment);
+                review.setHelpfulTags(helpfulTags);
+                reviews.add(review);
+            }
+        }
+        reviewRepository.saveAll(reviews);
+    }
+}
+
+─────────────────────────────
+ADIM 6: application.properties'e ekle
+─────────────────────────────
+
+Mevcut application.properties'in SONUNA şunu ekle:
+seed.user.count=400
+seed.review.count=1600
+
+─────────────────────────────
+ADIM 7: data.sql'deki eski review INSERT'lerini temizle
+─────────────────────────────
+
+data.sql içindeki reviews tablosuna ait TÜM INSERT satırlarını SİL.
+(SeedDataGenerator artık bunu programatik yapıyor.)
+Product ve ProductSpec INSERT'lerine DOKUNMA.
+
+─────────────────────────────
+ADIM 8: SON KONTROL
+─────────────────────────────
+
+"mvn clean compile" çalıştır — başarılı olmalı.
+"mvn spring-boot:run" çalıştır.
+
+Kontrol et:
+curl http://localhost:8080/api/products/1
+→ reviews dizisi 200 yorum içermeli
+==============================================================

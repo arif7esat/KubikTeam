@@ -1,0 +1,158 @@
+==============================================================
+SMARTCART AI — REVİZE PROMPT 4
+Konu: Rate Limiting + SSRF Koruması + .env.example
+Dizin: /Users/arif/Desktop/btk/smartcart-backend/
+==============================================================
+
+MEVCUT SİSTEM:
+- Spring Boot 3.5.0, Java 21
+- GlobalExceptionHandler mevcut (404, 500 var)
+- PromptBuilderService imageUrl'den görsel indiriyor (URL.openStream)
+- CorsConfig mevcut
+
+YAPILACAKLAR:
+
+─────────────────────────────
+ADIM 1: RateLimitFilter.java oluştur
+─────────────────────────────
+
+Dosya: src/main/java/com/smartcart/config/RateLimitFilter.java
+
+@Component
+public class RateLimitFilter extends OncePerRequestFilter {
+
+    // IP başına istek sayısı — thread-safe
+    private final Map<String, Deque<Long>> requestLog = new ConcurrentHashMap<>();
+
+    private static final int PRODUCTS_LIMIT = 30;  // /api/products için dakikada max
+    private static final int CHAT_LIMIT = 10;       // /api/chat için dakikada max
+    private static final long WINDOW_MS = 60_000L;
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain chain)
+            throws ServletException, IOException {
+
+        String uri = request.getRequestURI();
+        boolean isChat = uri.startsWith("/api/chat");
+        boolean isProducts = uri.startsWith("/api/products") || uri.startsWith("/api/recommendations");
+
+        if (!isChat && !isProducts) {
+            chain.doFilter(request, response);
+            return;
+        }
+
+        String ip = getClientIp(request);
+        String key = ip + ":" + (isChat ? "chat" : "products");
+        int limit = isChat ? CHAT_LIMIT : PRODUCTS_LIMIT;
+
+        long now = System.currentTimeMillis();
+        requestLog.compute(key, (k, deque) -> {
+            if (deque == null) deque = new ArrayDeque<>();
+            while (!deque.isEmpty() && now - deque.peekFirst() > WINDOW_MS) {
+                deque.pollFirst();
+            }
+            deque.addLast(now);
+            return deque;
+        });
+
+        int count = requestLog.get(key).size();
+        if (count > limit) {
+            response.setStatus(429);
+            response.setHeader("Retry-After", "60");
+            response.setContentType("application/json");
+            response.getWriter().write("{\"error\":\"Çok fazla istek. Lütfen 60 saniye bekleyin.\"}");
+            return;
+        }
+
+        chain.doFilter(request, response);
+    }
+
+    private String getClientIp(HttpServletRequest request) {
+        String xForwardedFor = request.getHeader("X-Forwarded-For");
+        if (xForwardedFor != null && !xForwardedFor.isBlank()) {
+            return xForwardedFor.split(",")[0].trim();
+        }
+        return request.getRemoteAddr();
+    }
+}
+
+Import'lar:
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
+import java.io.IOException;
+import java.util.*;
+import java.util.concurrent.*;
+
+─────────────────────────────
+ADIM 2: PromptBuilderService'te SSRF koruması
+─────────────────────────────
+
+PromptBuilderService.java içinde imageUrl'den görsel indiren bloğu bul.
+(URL.openStream veya HttpURLConnection kullanan kısım)
+
+O bloğu şu mantıkla GÜNCELLEin:
+
+private static final List<String> ALLOWED_IMAGE_DOMAINS = List.of(
+    "images.unsplash.com",
+    "unsplash.com"
+);
+
+private boolean isAllowedImageUrl(String imageUrl) {
+    if (imageUrl == null || imageUrl.isBlank()) return false;
+    try {
+        java.net.URL url = new java.net.URL(imageUrl);
+        String host = url.getHost().toLowerCase();
+        return ALLOWED_IMAGE_DOMAINS.stream().anyMatch(host::contains);
+    } catch (Exception e) {
+        return false;
+    }
+}
+
+Görsel indirme bloğunu şöyle wrap et:
+if (isAllowedImageUrl(product.getImageUrl())) {
+    // mevcut base64 encode kodu buraya
+} else {
+    // base64 = null, mimeType = null
+    // log: "Image URL not in allowlist, skipping visual analysis"
+}
+
+─────────────────────────────
+ADIM 3: .env.example oluştur
+─────────────────────────────
+
+Dosya: /Users/arif/Desktop/btk/smartcart-backend/.env.example
+
+GEMINI_API_KEY=
+
+─────────────────────────────
+ADIM 4: GlobalExceptionHandler'a 429 ekle
+─────────────────────────────
+
+GlobalExceptionHandler.java içindeki sınıfa ekle:
+
+(RateLimitFilter zaten response'u direkt yazıyor, buna gerek olmayabilir.
+Ama ileride exception tabanlı rate limit için hazır olsun.)
+
+─────────────────────────────
+ADIM 5: mvn clean compile
+─────────────────────────────
+
+Başarılı olmalı. Test:
+
+# Rate limit testi (11 kez hızla at — 10. sonrası 429 gelmeli):
+for i in {1..12}; do
+  curl -s -o /dev/null -w "%{http_code}\n" \
+    -X POST http://localhost:8080/api/chat \
+    -H "Content-Type: application/json" \
+    -d '{"productId":1,"message":"test"}';
+done
+
+# 429 görünmeli son isteklerde.
+# Retry-After: 60 header gelmeli.
+==============================================================

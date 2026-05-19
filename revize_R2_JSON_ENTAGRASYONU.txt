@@ -1,0 +1,51 @@
+==============================================================
+SMARTCART AI — REVİZE PROMPT 2
+Konu: Trendyol'dan Çekilen JSON Ürün Detaylarının (Specs) Projeye Entegrasyonu
+==============================================================
+
+Lütfen aşağıdaki adımları sırasıyla uygulayarak "trendyol_verileri" klasöründeki gerçek ürün özelliklerini (specs ve description) Spring Boot projeme dahil et.
+
+MEVCUT SİSTEM:
+- Node.js botu ile bilgisayara "trendyol_verileri" klasörü altında her ürün için "product_info.json" çekildi.
+- "product_info.json" dosyasının içinde "description" (String) ve "specs" ([{key, value}]) alanları eklendi.
+- Frontend'de "app/page.tsx" zaten API'den gelecek "specs" dizisini bekliyor ve filtreliyor (Malzeme, Boyut vb. için).
+
+YAPILACAKLAR (Sırayla):
+
+─────────────────────────────
+ADIM 1: Product ve ProductSpec Entity'lerini Güncelle
+─────────────────────────────
+Dosya: src/main/java/com/smartcart/model/entity/Product.java
+- "description" alanı @Column(columnDefinition = "TEXT") veya @Lob olarak eklenmemişse ekle.
+- "specs" ilişkisi yoksa şu şekilde ekle:
+  @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  private List<ProductSpec> specs = new ArrayList<>();
+
+Dosya: src/main/java/com/smartcart/model/entity/ProductSpec.java
+- Eğer sistemde ProductSpec entity'si yoksa şu alanlarla oluştur: 
+  (Long id, Product product, String specKey, String specValue)
+
+─────────────────────────────
+ADIM 2: JSON Verilerini Veritabanına Yazacak Kodu Ekle
+─────────────────────────────
+Dosya: src/main/java/com/smartcart/config/SeedDataGenerator.java (veya yeni bir JsonSeeder.java)
+- @PostConstruct veya CommandLineRunner içinde "trendyol_verileri" klasörünü File I/O ile tarayan bir metod yaz.
+- Her klasördeki "product_info.json" dosyasını Jackson (ObjectMapper) kullanarak oku.
+- İçindeki "specs" listesini dönerek her biri için ProductSpec nesnesi yarat ve Product nesnesine bağlayıp veritabanına kaydet.
+- "description" alanını ürünün description kolonuna UPDATE et.
+- (Eğer klasör yolunu dinamik almak zor olursa, src/main/resources/trendyol_verileri altına da kopyalayabilirsin.)
+
+─────────────────────────────
+ADIM 3: API Yanıtını (DTO) Kontrol Et
+─────────────────────────────
+Dosya: src/main/java/com/smartcart/controller/ProductController.java (veya ilgili DTO'lar)
+- "/api/products/{id}" isteği atıldığında dönen JSON içinde "specs" dizisinin yer aldığından emin ol.
+- Dönen JSON'da özelliklerin {"specKey": "...", "specValue": "..."} formatında (veya Frontend'in beklediği formatta) olduğundan emin ol.
+
+─────────────────────────────
+ADIM 4: SON KONTROL VE TEST
+─────────────────────────────
+1. Spring Boot'u "mvn clean spring-boot:run" ile ayağa kaldır.
+2. H2 Veritabanı konsoluna girip "product_specs" tablosunun Kumaş, Materyal, Kalıp gibi gerçek verilerle dolduğunu teyit et.
+3. Frontend'i çalıştır ve ürün detay sayfasındaki "Malzeme" ve "Ölçüler" satırlarının başarıyla dolduğunu doğrula!
+==============================================================

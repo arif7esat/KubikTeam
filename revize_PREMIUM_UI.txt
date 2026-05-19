@@ -1,0 +1,378 @@
+==============================================================
+SMARTCART AI — PREMIUM DESIGN MIGRATION
+Kaynak: /Users/arif/Desktop/btk/premium-design-feedback/
+Hedef: /Users/arif/Desktop/btk/e-commerce-prototype-2/
+==============================================================
+
+AMAÇ:
+"premium-design-feedback" projesindeki tasarım dilini SmartCart AI'a geçir.
+Bu proje "MAISON" adlı bir luxury e-ticaret prototipidir.
+Bizim projede BACKEND ENTEGRASYONU, AI CHAT, GERÇEK YORUMLAR var.
+Onlarda sadece statik tasarım var.
+
+KURAL: Mevcut fonksiyonelliği (API çağrıları, chat sistemi, Gemini
+entegrasyonu, yorum filtreleme, iade verileri, görsel analiz) ASLA BOZMA.
+Sadece GÖRSEL DİLİ değiştir.
+
+İki proje AYNI package.json kullanıyor (Next 16, shadcn, Tailwind 4).
+Font farkı: kaynak Inter + Cormorant Garamond, bizimki Geist.
+
+==============================================================
+ADIM 1 — layout.tsx: Font + HTML class güncelle
+Dosya: /Users/arif/Desktop/btk/e-commerce-prototype-2/app/layout.tsx
+==============================================================
+
+Kaynaktaki layout.tsx'i referans al:
+/Users/arif/Desktop/btk/premium-design-feedback/app/layout.tsx
+
+DEĞİŞİKLİKLER:
+
+1. Google Fonts ekle — Inter + Cormorant Garamond:
+   import { Inter, Cormorant_Garamond } from 'next/font/google'
+
+   const inter = Inter({
+     subsets: ["latin"],
+     variable: '--font-inter',
+     display: 'swap',
+   })
+
+   const cormorant = Cormorant_Garamond({
+     subsets: ["latin"],
+     weight: ['300', '400', '500', '600', '700'],
+     variable: '--font-cormorant',
+     display: 'swap',
+   })
+
+2. html tag'ını güncelle:
+   <html lang="tr" className={`${inter.variable} ${cormorant.variable} bg-background`}>
+
+3. body'ye ekle:
+   <body className="font-sans antialiased min-h-screen">
+
+4. Metadata güncelle:
+   title: 'SmartCart AI — Akıllı Alışveriş'
+   description: 'Yapay zeka destekli alışveriş deneyimi'
+
+5. Mevcut Geist font importlarını ve localFont'ları KALDIR.
+   Sadece Inter ve Cormorant kullan.
+
+==============================================================
+ADIM 2 — globals.css: MAISON'un Champagne Gold paleti
+Dosya: /Users/arif/Desktop/btk/e-commerce-prototype-2/app/globals.css
+==============================================================
+
+globals.css dosyasını TAMAMEN değiştir.
+Kaynağı olduğu gibi kopyala:
+/Users/arif/Desktop/btk/premium-design-feedback/app/globals.css
+
+Bu dosyada MAISON'un "Champagne Gold" teması var:
+- Sıcak krem/altın tonları (light mode)
+- Koyu lacivert (dark mode)
+- Premium animasyonlar (fadeIn, stagger, hover-underline, reveal-text)
+- glass-card, shadow-soft, premium-card, image-zoom
+- Premium scrollbar, selection, focus states
+
+Dosyayı TAMAMEN kopyala, hiçbir şey değiştirme.
+
+==============================================================
+ADIM 3 — page.tsx: TASARIM DİLİNİ GEÇİR
+Dosya: /Users/arif/Desktop/btk/e-commerce-prototype-2/app/page.tsx
+==============================================================
+
+ÇOK ÖNEMLİ: page.tsx'teki mevcut FONKSİYONELLİĞİ KORU:
+- API'den ürün çekme (fetch /api/products)
+- Chat sistemi (messages, sendMessage, Gemini API)
+- matchScore, liveProduct, liveReviews state'leri
+- Yorum filtreleme (showOnlyWithImages)
+- ReviewImage gösterimi
+- Recommendations sistemi
+- Ürün görselleri galerisi (selectedImage, imageUrls)
+- SentimentBadge
+- Error/loading durumları
+
+Değiştirilecek olan SADECE görsel bileşenler ve className'ler.
+Kaynak dosyayı referans al:
+/Users/arif/Desktop/btk/premium-design-feedback/app/page.tsx
+
+─── 3A: Genel yapı değişiklikleri ───
+
+1. formatNumber ve formatPrice fonksiyonlarını KAYNAKTAN al (satır 10-16)
+2. categories dizisini ekle: const categories = ["Yeni", "Kadın", "Erkek", "Ev", "Teknoloji", "İndirim"]
+3. categoryLabels'ı Türkçeleştir:
+   giyim: "Moda", mobilya: "Yaşam", elektronik: "Teknoloji", outdoor: "Macera"
+
+─── 3B: Navbar — MAISON tarzı premium navbar ───
+
+KAYNAKTAN Navbar bileşenini al (satır 229-308).
+Aşağıdakileri Türkçeleştir ve SmartCart'a uyarla:
+- Logo: "MAISON" → "SMARTCART"
+- "Complimentary shipping..." → "500 TL üzeri ücretsiz kargo"
+- categories: Türkçe yap
+- isMenuOpen state'ini koru
+- max-w-[1800px] → olduğu gibi bırak (geniş layout)
+- Mevcut Navbar'daki search input'u basitleştir (kaynak gibi sadece search ikonu yap)
+- Sepet badge'deki sayıyı koru
+
+ÖNEMLİ: Kaynak navbar'daki rounded-full butonlar, bg-secondary/50
+ikonlar, backdrop-blur gibi class'ları AYNEN kullan.
+
+─── 3C: HeroBanner — MAISON hero ───
+
+KAYNAKTAN HeroBanner'ı al (satır 310-376).
+Türkçeleştir:
+- "Summer Collection 2024" → "Yapay Zeka Destekli"
+- "The Art of Understated Elegance" → "Alışverişte Gerçeği Keşfet"
+- "Curated pieces..." → "Her ürünün gerçek yüzünü AI ile analiz edin."
+- "Explore Collection" → "Keşfet"
+- "Watch Film" → "Nasıl Çalışır"
+- min-h-[85vh] → min-h-[70vh] (biraz kısalt)
+- Floating badge: "Vogue Türkiye" → "BTK Akademi Hackathon 2025" veya
+  "SmartCart AI ile gerçeği keşfedin"
+
+─── 3D: TrustBar — Güven çubuğu ───
+
+KAYNAKTAN TrustBar'ı al (satır 378-401).
+Türkçeleştir:
+- "Free Shipping" → "Ücretsiz Kargo", "Orders over 500 TL" → "500 TL üzeri"
+- "Secure Payment" → "Güvenli Ödeme", "256-bit SSL" → "256-bit SSL"
+- "Authenticity" → "AI Doğrulama", "100% Guaranteed" → "Gerçeklik Analizi"
+
+─── 3E: StarRating — Kaynaktaki gibi güncelle ───
+
+KAYNAKTAN StarRating'i al (satır 404-423).
+3 boyut seçeneği: "default", "large", "small"
+Yıldız rengi: fill-accent text-accent (altın tonu)
+strokeWidth={1} (ince, zarif)
+
+─── 3F: ProductCard — MAISON premium card ───
+
+KAYNAKTAN ProductCard'ı al (satır 425-513).
+Bu kartın özellikleri:
+- rounded-3xl aspect-[3/4] image container
+- Hover'da quick action butonları (heart, cart) slide-in
+- "Quick View" butonu altta slide-up
+- Marka text-[10px] tracking-[0.25em] uppercase
+- line-through-animated class hover efekti
+- featured prop'u destekle (col-span-2 row-span-2)
+
+BİZİM EKSTRAMİZ: Kartlarda gerçek CDN görseli göster.
+Kaynak placeholder kullanıyor, biz CDN URL kullanıyoruz:
+<img src={product.image} ... /> — bu KORU.
+
+─── 3G: HomePage — Kategori bazlı gösterim ───
+
+KAYNAKTAN HomePage'i al (satır 515-577).
+Kategorilerin asymmetric grid'i:
+- Üst başlık: "Curated Selection" → "Seçilmiş Koleksiyon"
+- "This Week's Edit" → "Haftanın Seçkisi"
+- Kategori numarası: "01", "02", "03", "04"
+- "View All Products" → "Tüm Ürünler"
+- grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12
+
+BİZİM EKSTRAMİZ: API'den ürün çekme (useEffect + fetch) KORU.
+Kaynak hardcoded, biz API kullanıyoruz.
+
+─── 3H: MagazineReviewCard — 3 varyantlı review kartı ───
+
+BU ÇOK ÖNEMLİ — KAYNAKTAN TAMAMEN AL (satır 579-684).
+3 varyant:
+- "featured": koyu arka plan (bg-foreground), büyük yazı, serif font
+- "default": bg-secondary/50, orta boy, yıldız + yorum + avatar
+- "compact": küçük, avatar + tek satır yorum
+
+MAISON'un yorum kartları çok güzel — rounded-[2.5rem],
+gradient avatarlar, verified badge, serif başlıklar.
+
+BİZİM EKSTRAMIZ: Yorum görselleri. Kaynakta yok, bizde var.
+Her review variant'ına yorum görseli desteği ekle:
+
+// featured variant'ın sonuna (satır ~612 civarı, comment'ten sonra):
+{review.images && review.images.length > 0 && (
+  <div className="flex gap-2 mt-4 overflow-x-auto">
+    {review.images.map((img: any, i: number) => (
+      <img key={i} src={img.imageUrl || img.originalUrl}
+           className="w-16 h-16 rounded-xl object-cover border border-background/20 flex-shrink-0" />
+    ))}
+  </div>
+)}
+
+// default variant'ına da ekle (satır ~664 civarı)
+// compact variant'ında gösterme (yer yok)
+
+─── 3I: RatingBreakdown — Puan dağılım çubuğu ───
+
+KAYNAKTAN TAMAMEN AL (satır 686-729).
+- Büyük serif puan (text-6xl)
+- Yatay bar'lar (bg-accent renkli)
+- "Based on X reviews" alt text
+
+─── 3J: CustomerReviews — Magazine tarzı yorum bölümü ───
+
+KAYNAKTAN TAMAMEN AL (satır 731-785).
+Bu bileşen:
+- "Customer Stories" başlığı → "Müşteri Deneyimleri"
+- "What People Are Saying" → "Yorumlar Ne Diyor"
+- RatingBreakdown + featured review + grid reviews
+- "Load More Reviews" → "Daha Fazla Yorum"
+- "Write a Review" → "Yorum Yaz"
+
+BİZİM EKSTRAMIZ: showOnlyWithImages filtresini KORU.
+"Fotoğraflı Yorumlar" butonunu başlık satırına ekle:
+
+<Button
+  variant={showOnlyWithImages ? "default" : "outline"}
+  size="sm"
+  onClick={() => setShowOnlyWithImages(!showOnlyWithImages)}
+  className="text-[11px] tracking-[0.1em] uppercase rounded-full px-5"
+>
+  📸 Fotoğraflı
+</Button>
+
+─── 3K: RealityScoreCircle — MAISON'un zarif skoru ───
+
+KAYNAKTAN AL (satır 787-825).
+Farklar:
+- w-32 h-32 (daha büyük)
+- strokeWidth={1} (ince daire, zarif)
+- font-serif text-4xl (büyük serif sayı)
+- "Reality" text altında text-[9px] tracking-[0.3em]
+
+─── 3L: ProductDetailPage — ANA SAYFA ───
+
+KAYNAKTAN layout ve className'leri al (satır 827-1138).
+Ancak BİZİM FONKSİYONLARIMIZI KORU.
+
+Layout:
+- max-w-[1800px] mx-auto px-6 lg:px-12 (geniş)
+- "Back to Collection" → "Koleksiyona Dön" (rounded-full pill buton)
+- grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20
+- Sol: lg:col-span-7 (görseller)
+- Sağ: lg:col-span-5 (ürün bilgi + AI panel + yorumlar)
+
+SOL KOLON (görseller):
+- Ana görsel: aspect-[4/5] rounded-[2rem]
+- Thumbnail'lar: 4'lü grid, rounded-2xl
+- Seçili thumbnail: ring-2 ring-foreground ring-offset-2
+- BİZİM EKSTRAMIZ: selectedImage state'i + gerçek CDN görselleri KORU
+
+SAĞ KOLON (ürün bilgi):
+- Breadcrumb: text-[11px] tracking-[0.15em] uppercase
+- Başlık: font-serif text-3xl lg:text-4xl font-light
+- Rating: StarRating size="large" + review sayısı
+- Fiyat: text-3xl font-light + line-through + Badge discount
+- Renk seçici: rounded-full pill butonlar
+- Beden seçici: rounded-full pill butonlar, min-w-[60px]
+- Add to Cart: rounded-full, bg-foreground text-background
+  → "Sepete Ekle" yap, sağ tarafta fiyat göster
+- Wishlist: rounded-full outline
+  → "Favorilere Ekle" yap
+- Accordion (details/summary): "Ürün Detayları" + "Kargo & İade"
+- Seller info: rounded-2xl icon + isim + puan + "Mağazayı Gör"
+
+AI PANELİ:
+KAYNAKTAN tasarımı al (satır 1065-1126) ama BİZİM CHAT SİSTEMİMİZİ KORU.
+- Container: border border-accent/30 bg-gradient-to-b from-accent/5 rounded-[2rem]
+- İkon: h-14 w-14 bg-accent/10 rounded-2xl
+- Başlık: "Reality Filter" → "Gerçeklik Filtresi"
+- Alt text: "AI-Powered Product Analysis" → "AI Destekli Ürün Analizi"
+- RealityScoreCircle: kaynaktaki gibi centered
+- Alt açıklama text'i
+- Chat input: h-14 rounded-full (Input + Send butonu)
+- Analiz Et butonu: bg-accent rounded-full
+- Suggested Questions: rounded-xl hover:bg-secondary/50
+
+BİZİM EKSTRALARIMIZ (KORU):
+- messages state + chat baloncukları
+- sendMessage fonksiyonu (Gemini API çağrısı)
+- matchScore state
+- warnings dizisi
+- dataSources dizisi
+- followUpQuestions dizisi
+- loading/error durumları
+- SentimentBadge
+
+Chat baloncuklarını premium yap:
+User: bg-foreground text-background rounded-2xl rounded-br-sm
+AI: bg-secondary/50 text-foreground rounded-2xl rounded-bl-sm
+
+Warnings → altın/amber tonlu:
+bg-accent/10 text-accent border border-accent/20 rounded-xl
+
+DataSources → muted pill'ler:
+bg-secondary text-muted-foreground text-[10px] px-3 py-1 rounded-full
+
+FollowUpQuestions → hover:bg-secondary/50 rounded-xl
+
+YORUMLAR:
+CustomerReviews bileşenini SAĞ kolonda değil, GRID DIŞINDA tam genişlikte göster.
+Kaynakta da böyle (satır 1129-1134).
+
+─── 3M: EcommercePage — Ana wrapper ───
+
+KAYNAKTAN yapıyı al (satır 1141-1169).
+BİZİM EKSTRALARIMIZ KORU:
+- products API fetch useEffect
+- recommendations sistemi
+- viewedIds tracking
+- loading state
+
+==============================================================
+ADIM 4 — Eksik UI bileşenlerini kontrol et
+==============================================================
+
+Kaynakta kullanılan ama bizde olmayabilecek bileşenler:
+- Button (var ✓)
+- Input (var ✓)
+- Badge (var ✓)
+- Card (mevcut page.tsx'te kullanılıyorsa import'u koru)
+
+Kaynakta KULLANILMAYAN ama bizim page.tsx'te kullanılan:
+- Card, CardContent → artık kullanılmayabilir (kaynak div kullanıyor)
+- Separator → kaynak border-b kullanıyor
+
+Eğer Card import'u gereksizse kaldır. Ama fonksiyonel bileşenlerde
+kullanılıyorsa (AI chat container gibi) bırak.
+
+==============================================================
+ADIM 5 — next.config.mjs: CDN domain izni
+==============================================================
+
+Dosya: /Users/arif/Desktop/btk/e-commerce-prototype-2/next.config.mjs
+
+images.remotePatterns'a ekle (yoksa oluştur):
+{
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'cdn.dsmcdn.com' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+    ]
+  }
+}
+
+==============================================================
+ADIM 6 — Test ve kontrol
+==============================================================
+
+"pnpm dev" veya "npm run dev" çalıştır.
+
+GÖRSEL KONTROL:
+→ Navbar: "SMARTCART" serif logo, pill navigasyon, rounded ikon butonlar?
+→ Hero: Büyük serif başlık, iki buton (Keşfet + Nasıl Çalışır)?
+→ TrustBar: 3 güven kartı, rounded-3xl?
+→ Ürün kartları: rounded-3xl, hover'da heart/cart slide-in?
+→ Ürün detay: 7/5 grid, büyük görsel, pill beden seçici?
+→ AI paneli: accent/altın tonlu border, serif skor, rounded-[2rem]?
+→ Yorumlar: Magazine grid (featured büyük kart + normal + compact)?
+→ Chat: rounded-full input, mesaj baloncukları?
+
+FONKSİYONEL KONTROL:
+→ Ürünler API'den yükleniyor mu?
+→ Chat çalışıyor mu? (mesaj gönder → Gemini yanıtı)
+→ Analiz Et butonu çalışıyor mu?
+→ Yorum filtreleme (fotoğraflı) çalışıyor mu?
+→ Skor çemberi gerçek skor gösteriyor mu?
+→ Ürün görselleri (CDN) yükleniyor mu?
+→ Thumbnail tıklama çalışıyor mu?
+
+Hata olursa düzelt. "next build" başarılı olmalı.
+==============================================================

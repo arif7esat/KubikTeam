@@ -1,0 +1,146 @@
+Sen BTK Hackathon 2026 için geliştirilen SmartCart AI e-ticaret demo uygulamasının
+"seed data + demo AI davranışı + öneri endpoint'i" kısmını hazırlayan
+otonom geliştiricisin.
+
+MEVCUT SİSTEM (DEĞİŞMEZ - başkası tarafından geliştirildi):
+- Backend: Spring Boot 3.5.0 + Java 21 (NOT: 3.2.5 değil, API reddetti)
+- DB: H2 In-Memory (seed: src/main/resources/data.sql, defer-datasource-init=true)
+- Frontend: Next.js 16, tek sayfa (app/page.tsx), http://localhost:3000
+- LLM: Gemini 2.5-flash + thinkingConfig(thinkingBudget=256)
+- GEMINI_API_KEY: backend/.env dosyasından ${GEMINI_API_KEY} ile okunuyor
+- MVP dışı: login/register/satıcı paneli/ödeme YOK
+
+Mevcut entity'ler (dizini: src/main/java/com/smartcart/model/entity/):
+- Product: id, name, category(GIYIM/MOBILYA/ELEKTRONIK/OUTDOOR), brand, description(1000), imageUrl, price, specs(@OneToMany EAGER), reviews(@OneToMany EAGER)
+- ProductSpec: id, product(@ManyToOne @JsonIgnore), specKey, specValue
+- Review: id, product(@ManyToOne @JsonIgnore), username(String), rating(Integer), comment(500), helpfulTags(String)
+
+ÖNEMLİ: User entity YOK. Review'da username String olarak tutuluyor, User referansı yok.
+User entity eklersen Review'daki username -> user(@ManyToOne) olarak refactor edilmeli.
+
+Mevcut servis ve endpoint'ler:
+- GET /api/products, GET /api/products?category=X, GET /api/products/{id}
+- POST /api/chat -> ChatResponse(reply, matchScore, visualInsights, warnings[], followUpQuestions[], dataSources[])
+- Pipeline: ContextBuilder -> DataAnalysis(7 skor) -> PromptBuilder -> Gemini -> merge -> ChatResponse
+- GeminiService: görsel base64 gönderiyor, JSON parse + fallback var
+- CorsConfig: localhost:3000, 5173, *.vercel.app
+- application.properties: /Users/arif/Desktop/btk/smartcart-backend/src/main/resources/application.properties
+  (gemini.api.url gemini-2.5-flash kullanıyor)
+
+Mevcut data.sql: 8 ürün, 40 spec, 23 review (frontend'deki verilerle birebir)
+Ürün imageUrl'leri: Unsplash URL'leri (çalışıyor, backend dönüyor)
+Frontend sorunu: Ürün kartı/detay sayfasında placeholder 📷 ikonu gösteriyor, gerçek URL'e geçilmemiş.
+
+Amaç: Demo sırasında AI özelliğini parlatmak.
+
+────────────────────────────────────────────
+1) SEED VERİ: Kullanıcı + Yorum (H2 uyumlu)
+────────────────────────────────────────────
+
+1.1 User entity OLUŞTUR
+- Yeni: src/main/java/com/smartcart/model/entity/User.java
+- Alanlar: id(Long auto), name, email(unique)
+- UserRepository oluştur
+
+1.2 Review entity'yi GÜNCELLE
+- username(String) yerine user(@ManyToOne @JsonIgnore User) yap
+- ReviewRepository'yi buna göre güncelle
+
+1.3 Seed verisi (data.sql)
+- 400 kullanıcı (TR isimleri, benzersiz email) - parametreli olsun
+- 1500 yorum, tüm ürünlere dağıt, her ürüne min 20 yorum
+- Duygu dağılımı: %70 pozitif, %20 nötr, %10 negatif
+- Doğal Türkçe yorum metinleri, küçük imla hataları olabilir
+- helpful_tags: random 0-3 tag (sistemdeki negatif tag havuzundan)
+
+1.4 Seed generator (opsiyonel ama önerilir)
+- 1500 INSERT'i tek data.sql'e yazmak yerine Java @Component ile
+- CommandLineRunner veya @PostConstruct ile restart'ta otomatik seed
+- Kullanıcı ve yorum sayısı application.properties'ten parametreli
+
+────────────────────────────────────────────
+2) ÜRÜN GÖRSELLERİ: Frontend tarafı
+────────────────────────────────────────────
+
+SORUN: Backend imageUrl dönüyor (Unsplash) AMA frontend'de app/page.tsx'teki
+ProductCard ve ProductDetailPage placeholder 📷 gösteriyor. Gerçek URL kullanılmıyor.
+
+YAPILACAK:
+- app/page.tsx'te ProductCard ve ProductDetailPage'teki görsel alanlarını
+  product.image (Unsplash URL) ile değiştir. <img> tag'i kullan.
+- 2-3 thumbnail için aynı URL'yi farklı query param ile kullan (w=150 vs w=600).
+- Scraping/indirme YAPMA. Direkt Unsplash URL'lerini kullan.
+
+────────────────────────────────────────────
+3) ÖNERİ + SIRALAMA (AI destekli, deterministik)
+────────────────────────────────────────────
+
+3.1 Yeni endpoint: GET /api/recommendations
+- Parametreler: ?viewed=1,2,3&category=GIYIM&limit=8 (hepsi optional)
+- Dönüş: { products: [...], reasons: [{productId, why}] }
+
+3.2 Deterministik sıralama (yeni servis: RecommendationService)
+- Aynı kategoridekileri öne çıkar
+- Yorum ortalaması yüksek olanları öne çıkar  
+- Negatif helpfulTags oranı yüksekse aşağı it
+- Görüntülenen ürünlerin fiyat aralığına yakın olanları öne çıkar
+- DataAnalysisService'teki skor mantığını kısmen reuse edebilirsin
+
+3.3 Gemini entegrasyonu (opsiyonel, sadece "why" cümlesi için)
+- Deterministik öneri sonucunu Gemini'ye gönder
+- "Bu ürün neden önerildi?" 1-2 cümle açıklasın
+- Gemini karar VERMEZ, sadece AÇIKLAMA üretir
+- Timeout + fallback ZORUNLU (mevcut GeminiService reuse edilebilir)
+
+3.4 Frontend'de gösterim
+- Ana sayfada "Senin İçin Öneriler" bölümü (HomePage altına)
+- Her öneri kartında "Neden?" tooltip/badge
+
+────────────────────────────────────────────
+4) YENİ ÜRÜN EKLENİNCE OTOMASYON
+────────────────────────────────────────────
+(Seed generator yapılırsa bunu da içine al)
+
+Yeni ürün data.sql'e eklenince seed sırasında otomatik:
+- 10-30 yorum üret (kullanıcı havuzundan random)
+- Unsplash'ten uygun kategori görseli ata
+- Öneri motoru otomatik dahil eder (aynı katalogda olduğu için)
+
+────────────────────────────────────────────
+5) GÜVENLİK (minimal)
+────────────────────────────────────────────
+
+5.1 Rate limiting (yeni)
+- Basit in-memory: her IP'ye dakikada max 30 istek
+- GET /api/products için ayrı, POST /api/chat için ayrı limit
+- 429 dön, Retry-After header ekle
+
+5.2 SSRF koruması (PromptBuilderService'i güncelle)
+- PromptBuilderService imageUrl'den görsel indiriyor (URL.openStream)
+- Sadece allowlist'teki domain'lere izin ver: images.unsplash.com
+- Diğer URL'lerde base64=null yap (görsel gönderme)
+
+5.3 Zaten var olanlar (dokunma):
+- DTO'da @Valid + @NotNull/@NotBlank (ChatRequest)
+- JPA repository (raw SQL yok)
+- Gemini JSON parse + fallback (GeminiService)
+- GlobalExceptionHandler (ProductNotFoundException->404, Exception->500)
+
+5.4 .env.example oluştur
+- backend/.env.example: GEMINI_API_KEY= (sadece bu)
+
+────────────────────────────────────────────
+6) TESLİM FORMATI
+────────────────────────────────────────────
+- Değişen/eklenen HER dosyanın listesi (path)
+- Yeni oluşturulan sınıfların tam kodu
+- Güncellenen data.sql (veya seed generator kodu)
+- Yeni endpoint'lerin curl örnekleri
+- mvn clean compile başarılı OLMALI
+
+ÖNCELİK SIRASI:
+1. User entity + Review güncelleme + seed data (data.sql veya generator)
+2. Frontend görsel fix'i (en hızlı kazanım)
+3. Recommendation endpoint (asıl yeni özellik)
+4. Rate limit + SSRF + .env.example (güvenlik)
+5. Gemini "why" açıklaması (cila)

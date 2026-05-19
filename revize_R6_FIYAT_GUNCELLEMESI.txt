@@ -1,0 +1,19 @@
+==============================================================
+SMARTCART AI — REVİZE PROMPT 6
+Konu: Fiyat Bilgilerinin Gerçek Verilerle Güncellenmesi
+==============================================================
+
+Önceki adımda "new_products_array.ts" içindeki fiyatlar eksikti çünkü Trendyol'dan veri çeken bot fiyatları "null" olarak kaydetmişti. Şu an bilgisayardaki bot özel bir komutla çalıştırıldı ve tüm fiyat eksikleri giderildi! Apple Pencil, Salomon ayakkabı gibi ürünlerin tüm gerçek fiyatları dosyaya başarıyla işlendi. Lütfen arayüzü yeni fiyatlarla güncelle.
+
+YAPILACAKLAR:
+
+ADIM 1: Güncel Fiyatları Al
+- Bilgisayardaki "/Users/arif/Desktop/ürü_veri_çekme/new_products_array.ts" dosyası az önce yeni fiyatlarla güncellendi.
+- Lütfen bu dosyayı tekrar oku.
+
+ADIM 2: Frontend FALLBACK_PRODUCTS Fiyatlarını Güncelle
+- Frontend'deki "FALLBACK_PRODUCTS" listesini (veya ürünlerin tutulduğu listeyi), 1. Adımda okuduğun dosyadaki gerçek fiyatlar ("price" ve "originalPrice") ile güncelle.
+
+ADIM 3: Sonuç
+- Sayfayı yenilediğinde ürün detaylarında 999.99 TL yerine, ürünlerin gerçek Trendyol fiyatlarını (Örn: Apple Pencil 3749 TL) göreceksin.
+==============================================================

@@ -1,0 +1,375 @@
+==============================================================
+SMARTCART AI — 4 KRİTİK BUG FIX
+Dosya: /Users/arif/Desktop/btk/e-commerce-prototype-2/app/page.tsx
+==============================================================
+
+SORUNLAR:
+1. Yorumlar sadece 5-6 tane görünüyor (slice(0,100) var ama CustomerReviews .slice(6) ile kesiyor)
+2. "Fotoğraflı Yorumlar" butonu çalışmıyor (filter sonucu boş olabilir)
+3. "Ürün Detayları" ve "Kargo & İade" bölümleri boş
+4. Fiyat 0,00 TL ve puan 4.698... gibi saçma rakamlar
+5. %NaN hesaplanıyor (price=0 olunca originalPrice de 0, iskonto NaN)
+
+==============================================================
+FIX 1 — CustomerReviews: Tüm yorumları göster, filtre düzelt
+Satır ~329-360
+==============================================================
+
+CustomerReviews fonksiyonunu şu şekilde TAMAMEN değiştir:
+
+function CustomerReviews({
+  reviews, rating, reviewCount, showOnlyWithImages, setShowOnlyWithImages
+}: {
+  reviews: Review[];
+  rating: number;
+  reviewCount: number;
+  showOnlyWithImages: boolean;
+  setShowOnlyWithImages: (v: boolean) => void;
+}) {
+  const [showAll, setShowAll] = useState(false)
+
+  // Filtre: fotoğraflı yorumlar için images.length > 0 kontrol et
+  const filtered = showOnlyWithImages
+    ? reviews.filter(r => r.images && r.images.length > 0)
+    : reviews
+
+  // Gösterilecek yorum sayısı
+  const visibleCount = showAll ? filtered.length : Math.min(filtered.length, 12)
+  const visibleReviews = filtered.slice(0, visibleCount)
+
+  // İlk yorum featured (uzun ve yüksek puanlı tercih et)
+  const featuredReview = visibleReviews.find(r => r.rating >= 5 && r.comment.length > 30) || visibleReviews[0]
+  const otherReviews = visibleReviews.filter(r => r.id !== featuredReview?.id)
+
+  // Filtre boşsa uyarı
+  const noResult = showOnlyWithImages && filtered.length === 0
+
+  return (
+    <div className="mt-24">
+      <div className="flex items-end justify-between mb-12">
+        <div>
+          <span className="text-[10px] tracking-[0.4em] text-accent uppercase mb-4 block font-medium">
+            Müşteri Deneyimleri
+          </span>
+          <h2 className="font-serif text-3xl text-foreground font-light">
+            Yorumlar Ne Diyor
+          </h2>
+        </div>
+        <div className="flex items-center gap-3">
+          <Button
+            variant={showOnlyWithImages ? "default" : "outline"}
+            size="sm"
+            onClick={() => setShowOnlyWithImages(!showOnlyWithImages)}
+            className="text-[11px] tracking-[0.1em] uppercase rounded-full px-5"
+          >
+            📸 Fotoğraflı ({reviews.filter(r => r.images && r.images.length > 0).length})
+          </Button>
+          <span className="text-sm text-muted-foreground">{formatNumber(reviewCount)} yorum</span>
+        </div>
+      </div>
+
+      <RatingBreakdown reviews={reviews} rating={rating} reviewCount={reviewCount} />
+
+      {noResult ? (
+        <div className="text-center py-16 text-muted-foreground">
+          <p className="text-sm">Bu ürün için fotoğraflı yorum bulunamadı.</p>
+          <button
+            className="text-accent text-sm mt-3 hover-underline"
+            onClick={() => setShowOnlyWithImages(false)}
+          >
+            Tüm yorumları göster
+          </button>
+        </div>
+      ) : (
+        <>
+          {/* Featured + grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
+            {featuredReview && <MagazineReviewCard review={featuredReview} variant="featured" />}
+            {otherReviews.slice(0, 3).map(review => (
+              <MagazineReviewCard key={review.id} review={review} variant="compact" />
+            ))}
+          </div>
+
+          {/* Kalan yorumlar 2 kolonlu */}
+          {otherReviews.length > 3 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10">
+              {otherReviews.slice(3).map(review => (
+                <MagazineReviewCard key={review.id} review={review} variant="default" />
+              ))}
+            </div>
+          )}
+
+          {/* Daha fazla / Az göster butonu */}
+          {filtered.length > 12 && (
+            <div className="text-center mt-8">
+              <Button
+                variant="outline"
+                onClick={() => setShowAll(!showAll)}
+                className="border-foreground text-foreground hover:bg-foreground hover:text-background h-14 px-12 text-[13px] tracking-[0.15em] font-normal rounded-full"
+              >
+                {showAll ? 'Daha Az Göster' : `Tüm ${filtered.length} Yorumu Göster`}
+                <ChevronRight className={`h-4 w-4 ml-2 transition-transform ${showAll ? 'rotate-90' : ''}`} strokeWidth={1.5} />
+              </Button>
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  )
+}
+
+IMPORT: useState zaten import edilmiş olmalı. Kontrol et.
+
+==============================================================
+FIX 2 — Fiyat ve puan sorunları: API mapping güncelle
+EcommercePage useEffect satır ~672
+==============================================================
+
+Ürün listesini API'den çekerken fiyat ve rating'i düzgün hesapla.
+BUL ve DEĞİŞTİR:
+
+MEVCUT (satır ~677-692):
+const mapped = (data as any[]).map((p: any) => ({
+  id: p.id, category: categoryFromBackend[p.category] || "giyim", brand: p.brand || "",
+  title: p.name || "", price: p.price || 0, originalPrice: Math.round((p.price || 0) * 1.3),
+  rating: p.reviews?.length > 0 ? Math.round((p.reviews.reduce((s: number, r: any) => s + r.rating, 0) / p.reviews.length) * 10) / 10 : 4.5,
+  reviewCount: p.reviews?.length || 0,
+  ...
+
+YENİ (bu satırları değiştir):
+const mapped = (data as any[]).map((p: any) => {
+  // Fiyat hesapla
+  const rawPrice = typeof p.price === 'number' ? p.price : parseFloat(p.price) || 0
+  // Rating hesapla — sıfır bölme koruması
+  const reviews = p.reviews || []
+  const rawRating = reviews.length > 0
+    ? reviews.reduce((s: number, r: any) => s + (r.rating || 5), 0) / reviews.length
+    : (p.averageRating || 4.5)
+  const rating = Math.round(rawRating * 10) / 10
+
+  // Fiyat gerçekçi değilse (0 veya NaN) varsayılan koy
+  const price = rawPrice > 0 ? rawPrice : 0
+  // originalPrice: price'ın %25-35 üstü
+  const originalPrice = price > 0 ? Math.round(price * 1.30) : 0
+  // İskonto hesapla
+  const discount = price > 0 && originalPrice > price
+    ? Math.round(((originalPrice - price) / originalPrice) * 100)
+    : 0
+
+  return {
+    id: p.id,
+    category: categoryFromBackend[p.category] || "giyim",
+    brand: p.brand || "",
+    title: p.name || p.title || "",
+    price,
+    originalPrice,
+    discount,
+    rating,
+    reviewCount: reviews.length || p.reviewCount || 0,
+    image: p.primaryImageUrl || (p.imageUrl ? p.imageUrl.split(',')[0].trim() : ""),
+    imageUrls: p.imageUrls || (p.imageUrl ? p.imageUrl.split(',').map((u: string) => u.trim()).filter(Boolean) : []),
+    sizes: (p.category === 'GIYIM' || p.category === 'OUTDOOR') ? ['S','M','L','XL'] : undefined,
+    colors: ['Varsayılan'],
+    material: p.specs?.find((s: any) => ['kumas','malzeme','material'].includes(s.specKey?.toLowerCase()))?.specValue || "",
+    dimensions: p.specs?.filter((s: any) => s.specKey?.includes('boyut') || s.specKey?.includes('cm') || s.specKey?.includes('olcu')).map((s: any) => `${s.specKey}: ${s.specValue}`).join(' | ') || "",
+    seller: { name: p.sellerName || p.brand || "Satıcı", rating: 9.5 },
+    reviews: reviews.slice(0, 50).map((r: any, i: number) => ({
+      id: r.id || i,
+      author: r.username || r.userName || "Kullanıcı",
+      rating: r.rating || 5,
+      date: r.date ? new Date(r.date).toLocaleDateString('tr-TR') : "",
+      comment: r.comment || "",
+      helpful: r.helpfulCount || Math.floor(Math.random() * 80),
+      verified: r.trusted !== false,
+      title: r.comment?.length > 40 ? r.comment.substring(0, 40) + '...' : r.comment,
+      location: "",
+      images: (r.images || []).map((img: any) => ({
+        id: img.id || Math.random(),
+        imageUrl: img.imageUrl || img.originalUrl || "",
+        caption: img.caption || "Kullanıcı fotoğrafı"
+      })).filter((img: any) => img.imageUrl),
+    })),
+  }
+})
+
+==============================================================
+FIX 3 — Ürün Detay: material ve dimensions doldur
+satır ~490-600 (ProductDetailPage sağ kolon)
+==============================================================
+
+BUL (details/summary accordion kısmı, satır ~530 civarı):
+<p><span className="text-foreground">Material:</span> {product.material}</p>
+<p><span className="text-foreground">Dimensions:</span> {product.dimensions}</p>
+
+DEĞİŞTİR:
+<div className="space-y-3 text-sm text-muted-foreground">
+  {displayProduct.material && displayProduct.material.trim() !== '' ? (
+    <p><span className="text-foreground">Malzeme:</span> {displayProduct.material}</p>
+  ) : (
+    <p className="text-muted-foreground/50 italic text-xs">Malzeme bilgisi mevcut değil</p>
+  )}
+  {displayProduct.dimensions && displayProduct.dimensions.trim() !== '' ? (
+    <p><span className="text-foreground">Ölçüler:</span> {displayProduct.dimensions}</p>
+  ) : (
+    <p className="text-muted-foreground/50 italic text-xs">Ölçü bilgisi mevcut değil</p>
+  )}
+  <p><span className="text-foreground">Kategori:</span> {categoryLabels[displayProduct.category]}</p>
+  <p><span className="text-foreground">Marka:</span> {displayProduct.brand}</p>
+</div>
+
+==============================================================
+FIX 4 — Fiyat/iskonto gösterimi: %NaN koruması
+satır ~480 civarı (ProductDetailPage fiyat bölümü)
+==============================================================
+
+discount hesaplama satırını güncelle (satır ~407):
+
+MEVCUT:
+const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
+
+DEĞİŞTİR:
+const rawDiscount = displayProduct.price > 0 && displayProduct.originalPrice > displayProduct.price
+  ? Math.round(((displayProduct.originalPrice - displayProduct.price) / displayProduct.originalPrice) * 100)
+  : 0
+
+-- Ve fiyat gösterimi:
+Fiyat bölümünü (satır ~510 civarı) bul:
+<span className="text-3xl text-foreground font-light">{formatPrice(product.price)} TL</span>
+<span className="text-lg text-muted-foreground line-through">{formatPrice(product.originalPrice)} TL</span>
+<Badge ...>{discount}% off</Badge>
+
+DEĞİŞTİR:
+<span className="text-3xl text-foreground font-light">
+  {displayProduct.price > 0 ? formatPrice(displayProduct.price) + ' TL' : 'Fiyat bilgisi yok'}
+</span>
+{displayProduct.price > 0 && displayProduct.originalPrice > displayProduct.price && (
+  <>
+    <span className="text-lg text-muted-foreground line-through">
+      {formatPrice(displayProduct.originalPrice)} TL
+    </span>
+    <Badge className="bg-accent/10 text-accent border-0 text-[10px] tracking-[0.1em] uppercase px-4 py-1.5 rounded-full">
+      %{rawDiscount} indirim
+    </Badge>
+  </>
+)}
+
+-- ProductCard'daki fiyat da düzelt (satır ~197):
+MEVCUT:
+const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
+
+DEĞİŞTİR:
+const discount = product.price > 0 && product.originalPrice > product.price
+  ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
+  : 0
+
+-- Kart fiyat gösterimi (~satır 220):
+DEĞİŞTİR:
+<div className="flex items-baseline gap-3 pt-1">
+  <span className={`${featured ? 'text-xl' : 'text-base'} font-medium text-foreground`}>
+    {product.price > 0 ? formatPrice(product.price) + ' TL' : '—'}
+  </span>
+  {product.price > 0 && product.originalPrice > product.price && (
+    <span className="text-sm text-muted-foreground line-through line-through-animated">
+      {formatPrice(product.originalPrice)} TL
+    </span>
+  )}
+</div>
+
+==============================================================
+FIX 5 — Rating gösterimi: ondalık düzelt
+==============================================================
+
+RatingBreakdown'da (satır ~318):
+MEVCUT: {rating.toFixed(1)}
+ZATEN DOĞRU — ama rating NaN ise çöker.
+DEĞİŞTİR: {isNaN(rating) ? '—' : rating.toFixed(1)}
+
+ProductDetailPage'deki rating satırı (satır ~914 civarı):
+MEVCUT: {product.rating} ({formatNumber(product.reviewCount)} reviews)
+DEĞİŞTİR:
+{isNaN(displayProduct.rating) ? '—' : displayProduct.rating.toFixed(1)}
+{' '}({formatNumber(displayProduct.reviewCount)} değerlendirme)
+
+==============================================================
+FIX 6 — liveProduct mapping: fiyat ve rating düzelt
+satır ~416-435 (ProductDetailPage useEffect)
+==============================================================
+
+MEVCUT:
+price: data.price || product.price,
+rating: data.reviews?.length > 0 ? data.reviews.reduce(...) / data.reviews.length : product.rating,
+
+DEĞİŞTİR:
+price: (typeof data.price === 'number' && data.price > 0) ? data.price : product.price,
+originalPrice: (typeof data.price === 'number' && data.price > 0)
+  ? Math.round(data.price * 1.30)
+  : product.originalPrice,
+rating: data.reviews?.length > 0
+  ? Math.round((data.reviews.reduce((s: number, r: any) => s + (r.rating || 5), 0) / data.reviews.length) * 10) / 10
+  : product.rating,
+
+Ve material/dimensions için spec verisi:
+material: data.specs?.find((s: any) =>
+  ['kumas','malzeme','material','kumaş'].includes((s.specKey || '').toLowerCase())
+)?.specValue || product.material || "",
+
+dimensions: data.specs?.filter((s: any) =>
+  (s.specKey || '').match(/(boyut|cm|olcu|ölçü|ebat|genislik|yukseklik|derinlik)/)
+).map((s: any) => `${s.specKey}: ${s.specValue}`).join(' — ') || product.dimensions || "",
+
+==============================================================
+FIX 7 — liveReviews: tüm yorumları al, .slice(0,100) koru
+satır ~428
+==============================================================
+
+MEVCUT:
+setLiveReviews((data.reviews || []).slice(0, 100).map(...)
+
+Bu doğru ama API'den gelen reviews boşsa product.reviews'a fallback:
+
+useEffect callback içinde, .catch'ten önce:
+const apiReviews = data.reviews || []
+setLiveReviews(
+  apiReviews.length > 0
+    ? apiReviews.slice(0, 200).map((r: any, i: number) => ({
+        id: r.id || i,
+        author: r.username || r.userName || 'Kullanıcı',
+        rating: r.rating || 5,
+        date: r.date ? new Date(r.date).toLocaleDateString('tr-TR') : "",
+        comment: r.comment || '',
+        helpful: r.helpfulCount || Math.floor(Math.random() * 50),
+        verified: r.trusted !== false,
+        title: r.comment?.length > 40 ? r.comment.substring(0, 40) + '...' : r.comment,
+        location: '',
+        images: (r.images || []).map((img: any) => ({
+          id: img.id || Math.random(),
+          imageUrl: img.imageUrl || img.originalUrl || '',
+          caption: img.caption || 'Kullanıcı fotoğrafı'
+        })).filter((img: any) => img.imageUrl),
+      }))
+    : product.reviews
+)
+
+NOT: slice(0, 200) yaptık — 200 yoruma çıkardık. CustomerReviews da
+artık hepsini gösteriyor (showAll true olunca).
+
+==============================================================
+ADIM 8 — Test kontrol listesi
+==============================================================
+
+pnpm dev / npm run dev çalıştır.
+
+Backend AÇIKKEN:
+→ Ürün listesinde fiyatlar doğru mu? (0 TL yok)
+→ Puanlar 1 ondalık mı? (4.7, 4.5 gibi)
+→ %NaN yok mu?
+→ Ürüne tıklayınca yorum sayısı ≥ API'den gelen sayı mı?
+→ "Fotoğraflı" butonuna basınca fotoğraflı yorum sayısı (X) gösteriyor mu?
+→ Fotoğraflı yorum yoksa "Fotoğraflı yorum bulunamadı" çıkıyor mu?
+→ "Tüm X Yorumu Göster" butonu çalışıyor mu?
+→ Ürün Detayları accordion → Malzeme/Ölçüler doluyor mu?
+
+Backend KAPALI:
+→ Site çalışıyor mu? (fallback yoksa sadece boş liste)
+→ Hata sayfasına gitmiyor mu?
+==============================================================

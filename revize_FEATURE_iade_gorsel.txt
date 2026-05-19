@@ -1,0 +1,514 @@
+==============================================================
+SMARTCART AI — FEATURE PROMPT
+Konu: İade Verisi + Görselli Yorumlar + AI Görsel Karşılaştırma
+Dizin: /Users/arif/Desktop/btk/smartcart-backend/
+        /Users/arif/Desktop/btk/e-commerce-prototype-2/
+==============================================================
+
+MEVCUT SİSTEM (DOKUNMA):
+- Product, ProductSpec, Review, User entity'leri
+- Pipeline: ContextBuilder → DataAnalysis → PromptBuilder → Gemini → ChatResponse
+- DataAnalysisService: 7 skor hesaplıyor (deterministik)
+- PromptBuilderService: Gemini'ye prompt oluşturuyor
+- GeminiService: multimodal (metin+görsel) çağrı yapabiliyor
+- Frontend: page.tsx tek dosya, chat çalışıyor
+
+YAPILACAKLAR (sırayla):
+
+==============================================================
+ADIM 1 — Backend: ReturnRecord Entity + Seed
+==============================================================
+
+─── 1A: ReturnRecord.java entity oluştur ───
+
+Dosya: src/main/java/com/smartcart/model/entity/ReturnRecord.java
+
+@Entity
+@Table(name = "return_records")
+@Data @NoArgsConstructor @AllArgsConstructor
+public class ReturnRecord {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "product_id")
+    @JsonIgnore
+    private Product product;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    @JsonIgnore
+    private User user;
+
+    private String returnReason;
+    // Değerler: BEDEN_UYUMSUZ, RENK_FARKLI, KALITE_DUSUK,
+    //           URUN_HASARLI, YANLIS_URUN, BEKLENTI_KARSILAMADI, DIGER
+
+    @Column(length = 500)
+    private String returnComment;
+    // Alıcının iade sırasında yazdığı açıklama
+
+    private Integer originalRating;
+    // Alıcının ilk verdiği puan (iade öncesi, 1-5)
+
+    private String returnDate;
+    // "2024-01-15" formatında
+
+    @Transient
+    public String getUserName() {
+        return user != null ? user.getName() : "Anonim";
+    }
+}
+
+─── 1B: ReturnRecordRepository oluştur ───
+
+Dosya: src/main/java/com/smartcart/repository/ReturnRecordRepository.java
+
+public interface ReturnRecordRepository extends JpaRepository<ReturnRecord, Long> {
+    List<ReturnRecord> findByProductId(Long productId);
+    long countByProductId(Long productId);
+}
+
+─── 1C: Product entity'ye ilişki ekle ───
+
+Product.java'ya ekle:
+
+@OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+@JsonIgnore
+private List<ReturnRecord> returnRecords;
+
+@Transient
+public int getReturnCount() {
+    return returnRecords != null ? returnRecords.size() : 0;
+}
+
+@Transient
+public Map<String, Integer> getReturnReasonSummary() {
+    if (returnRecords == null || returnRecords.isEmpty()) return Map.of();
+    Map<String, Integer> summary = new HashMap<>();
+    for (ReturnRecord r : returnRecords) {
+        summary.merge(r.getReturnReason(), 1, Integer::sum);
+    }
+    return summary;
+}
+
+Import: java.util.HashMap, java.util.Map
+
+─── 1D: SeedDataGenerator'a iade verisi ekle ───
+
+SeedDataGenerator.java'nın seed() metodunun SONUNA ekle (review seed'den SONRA):
+
+// İade verisi seed
+String[] returnReasons = {"BEDEN_UYUMSUZ","RENK_FARKLI","KALITE_DUSUK",
+                           "URUN_HASARLI","BEKLENTI_KARSILAMADI","DIGER"};
+
+Map<Long, String[]> returnComments = new HashMap<>() {{
+    put(1L, new String[]{
+        "Rengi beyaz yerine sarımsı geldi, fotoğrafla uyuşmuyor.",
+        "M beden aldım ama çok dar geldi, beden tablosu tutarsız.",
+        "Keten kumaş bekliyordum ama karışım gibi hissettirdi."
+    });
+    put(2L, new String[]{
+        "Slim fit dediler ama skinny gibi dar geldi.",
+        "Koyu mavi renk fotoğraftakinden çok açık çıktı.",
+        "İlk yıkamada boyunda kısaldı, kalite sorunu."
+    });
+    put(3L, new String[]{
+        "Fotoğrafta parlak beyaz, gerçekte kırık beyaz geldi.",
+        "Çekmece rayları 2 haftada bozuldu.",
+        "80cm yazdı ama 77cm ölçtüm, ölçü tutarsız."
+    });
+    put(4L, new String[]{
+        "65 inç TV'nin ayakları üniteye sığmadı, genişlik yetersiz.",
+        "Melamin kaplama ilk hafta çizildi."
+    });
+    put(5L, new String[]{
+        "Batarya ömrü söylenenin yarısı kadar.",
+        "Kamera lens çevresi ilk haftada çizildi."
+    });
+    put(6L, new String[]{
+        "Fotoğraftaki kadar ince çerçeve değil, yanlardan kalın.",
+        "Panel ışık sızıntısı var, karanlık sahnelerde belli oluyor."
+    });
+    put(7L, new String[]{
+        "Minus 5'te sıcak tutmuyor, abartılı reklam.",
+        "Kol boyu kısa, L beden aldım ama S gibi geldi."
+    });
+    put(8L, new String[]{
+        "Gore-Tex deniyor ama yağmurda ayağım ıslandı.",
+        "Taban 1 ayda aşındı, dayanıklılık düşük."
+    });
+}};
+
+List<ReturnRecord> returnRecords = new ArrayList<>();
+for (Product product : products) {
+    String[] comments = returnComments.getOrDefault(product.getId(), new String[]{"Beklentimi karşılamadı."});
+    // Her ürüne 3-8 iade kaydı
+    int returnCount = 3 + rnd.nextInt(6);
+    for (int i = 0; i < returnCount; i++) {
+        ReturnRecord record = new ReturnRecord();
+        record.setProduct(product);
+        record.setUser(users.get(rnd.nextInt(users.size())));
+        record.setReturnReason(returnReasons[rnd.nextInt(returnReasons.length)]);
+        record.setReturnComment(comments[rnd.nextInt(comments.length)]);
+        record.setOriginalRating(rnd.nextInt(3) + 1); // 1-3 arası
+        record.setReturnDate("2024-0" + (rnd.nextInt(9)+1) + "-" + String.format("%02d", rnd.nextInt(28)+1));
+        returnRecords.add(record);
+    }
+}
+returnRecordRepository.saveAll(returnRecords);
+
+ReturnRecordRepository'yi SeedDataGenerator'a @Autowired ile ekle.
+
+─── 1E: mvn clean compile ───
+
+Başarılı olmalı.
+
+==============================================================
+ADIM 2 — Backend: ReviewImage Entity (Görselli Yorumlar)
+==============================================================
+
+─── 2A: ReviewImage.java entity oluştur ───
+
+Dosya: src/main/java/com/smartcart/model/entity/ReviewImage.java
+
+@Entity
+@Table(name = "review_images")
+@Data @NoArgsConstructor @AllArgsConstructor
+public class ReviewImage {
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "review_id")
+    @JsonIgnore
+    private Review review;
+
+    private String imageUrl;
+    // Kullanıcının yüklediği fotoğrafın URL'i
+
+    @Column(length = 200)
+    private String caption;
+    // "Gerçek renk böyle", "Kutudan çıkan ürün" gibi
+}
+
+─── 2B: Review entity'ye ilişki ekle ───
+
+Review.java'ya ekle:
+
+@OneToMany(mappedBy = "review", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+private List<ReviewImage> images;
+
+@Transient
+public boolean hasImages() {
+    return images != null && !images.isEmpty();
+}
+
+─── 2C: ReviewImageRepository oluştur ───
+
+Dosya: src/main/java/com/smartcart/repository/ReviewImageRepository.java
+
+public interface ReviewImageRepository extends JpaRepository<ReviewImage, Long> {
+    List<ReviewImage> findByReviewId(Long reviewId);
+    List<ReviewImage> findByReviewProductId(Long productId);
+}
+
+─── 2D: SeedDataGenerator'a görselli yorum ekle ───
+
+SeedDataGenerator.java'da review seed'inden SONRA ekle:
+
+// Görselli yorumlar: Her üründen 3-5 yoruma gerçekçi fotoğraf URL'si ekle
+Map<Long, String[]> reviewImageUrls = new HashMap<>() {{
+    put(1L, new String[]{
+        "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400",
+        "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400",
+        "https://images.unsplash.com/photo-1564584217132-2271feaeb3c5?w=400"
+    });
+    put(2L, new String[]{
+        "https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=400",
+        "https://images.unsplash.com/photo-1604176354204-9268737828e4?w=400"
+    });
+    put(3L, new String[]{
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400",
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=400"
+    });
+    put(5L, new String[]{
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=400"
+    });
+    put(7L, new String[]{
+        "https://images.unsplash.com/photo-1578681994506-b8f463449011?w=400",
+        "https://images.unsplash.com/photo-1544923246-77307dd270cb?w=400"
+    });
+    put(8L, new String[]{
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400",
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400"
+    });
+}};
+
+String[] captions = {
+    "Gerçek renk böyle görünüyor",
+    "Kutudan çıkan ürün",
+    "1 hafta kullanım sonrası",
+    "Fotoğrafla karşılaştırma",
+    "Gerçek boyutu görmek için"
+};
+
+ReviewImageRepository reviewImageRepo = // @Autowired ile inject et
+List<ReviewImage> allReviewImages = new ArrayList<>();
+
+for (Product product : products) {
+    String[] urls = reviewImageUrls.get(product.getId());
+    if (urls == null) continue;
+
+    List<Review> productReviews = reviewRepository.findByProductIdOrderByIdDesc(product.getId());
+    int imageCount = Math.min(urls.length, productReviews.size());
+
+    for (int i = 0; i < imageCount; i++) {
+        ReviewImage ri = new ReviewImage();
+        ri.setReview(productReviews.get(i));
+        ri.setImageUrl(urls[i]);
+        ri.setCaption(captions[rnd.nextInt(captions.length)]);
+        allReviewImages.add(ri);
+    }
+}
+reviewImageRepository.saveAll(allReviewImages);
+
+ReviewImageRepository'yi SeedDataGenerator'a @Autowired ile ekle.
+
+─── 2E: mvn clean compile ───
+
+==============================================================
+ADIM 3 — Backend: DataAnalysisService + PromptBuilder güncelle
+==============================================================
+
+─── 3A: ProductContext'e iade ve görsel yorum verisi ekle ───
+
+ProductContext.java'ya yeni alanlar ekle:
+
+private List<ReturnRecord> returnRecords;
+private int returnCount;
+private Map<String, Integer> returnReasonSummary;
+private List<ReviewImage> reviewImages;
+private int reviewImageCount;
+
+─── 3B: ContextBuilderService'i güncelle ───
+
+ContextBuilderService.java'daki build() metoduna ekle:
+
+ReturnRecordRepository returnRepo; // @Autowired inject et
+
+// Mevcut kodun sonuna, return'den önce:
+List<ReturnRecord> returns = returnRecordRepository.findByProductId(productId);
+List<ReviewImage> reviewImages = reviewImageRepository.findByReviewProductId(productId);
+
+context.setReturnRecords(returns);
+context.setReturnCount(returns.size());
+context.setReturnReasonSummary(product.getReturnReasonSummary());
+context.setReviewImages(reviewImages);
+context.setReviewImageCount(reviewImages.size());
+
+ReviewImageRepository'yi ContextBuilderService'a inject et.
+
+─── 3C: DataAnalysisService'i güncelle ───
+
+DataAnalysisService.java'daki analyze() metoduna ekle:
+
+// Mevcut 7 skor hesaplamasından SONRA, warnings/insights oluşturmadan ÖNCE:
+
+// İade verisi analizi
+List<ReturnRecord> returns = context.getReturnRecords();
+if (returns != null && !returns.isEmpty()) {
+    int returnCount = returns.size();
+    int reviewCount = context.getReviews() != null ? context.getReviews().size() : 1;
+    double returnRate = (double) returnCount / Math.max(reviewCount, 1);
+
+    // İade oranı yüksekse skorları düşür
+    if (returnRate > 0.15) {
+        result.setSpecScore(Math.max(0, result.getSpecScore() - 10));
+        result.setTrustScore(Math.max(0, result.getTrustScore() - 15));
+    }
+
+    // İade sebeplerinden warning üret
+    Map<String, Integer> reasons = context.getReturnReasonSummary();
+    if (reasons != null) {
+        if (reasons.getOrDefault("BEDEN_UYUMSUZ", 0) >= 2) {
+            warnings.add("⚠️ Birden fazla kullanıcı beden uyumsuzluğu sebebiyle iade etmiş.");
+        }
+        if (reasons.getOrDefault("RENK_FARKLI", 0) >= 2) {
+            warnings.add("⚠️ Birden fazla kullanıcı renk farkı sebebiyle iade etmiş.");
+        }
+        if (reasons.getOrDefault("KALITE_DUSUK", 0) >= 1) {
+            warnings.add("⚠️ Kalite düşüklüğü sebebiyle iade kaydı mevcut.");
+        }
+    }
+
+    insights.add("📊 Bu ürünün iade oranı: %" + Math.round(returnRate * 100));
+}
+
+// Görselli yorum analizi
+if (context.getReviewImageCount() > 0) {
+    insights.add("📸 " + context.getReviewImageCount() + " kullanıcı fotoğraflı yorum paylaşmış.");
+    usedSources.add("Kullanıcı fotoğrafları (" + context.getReviewImageCount() + " görsel)");
+}
+
+// İade verisi usedSources'a ekle
+if (returns != null && !returns.isEmpty()) {
+    usedSources.add("İade verileri (" + returns.size() + " kayıt)");
+}
+
+─── 3D: PromptBuilderService'i güncelle ───
+
+PromptBuilderService.java'daki build() metodunda, Gemini prompt'una şu bölümleri ekle
+(mevcut "KULLANICI YORUMLARI" bölümünden SONRA):
+
+// İade verisi bölümü
+if (context.getReturnRecords() != null && !context.getReturnRecords().isEmpty()) {
+    prompt.append("\n=== İADE VERİLERİ ===\n");
+    prompt.append("Toplam iade: ").append(context.getReturnCount()).append("\n");
+    Map<String, Integer> reasons = context.getReturnReasonSummary();
+    if (reasons != null && !reasons.isEmpty()) {
+        prompt.append("İade sebepleri: ");
+        reasons.forEach((k, v) -> prompt.append(k).append("(").append(v).append(") "));
+        prompt.append("\n");
+    }
+    // En fazla 5 iade yorumu ekle
+    int count = 0;
+    for (ReturnRecord r : context.getReturnRecords()) {
+        if (count >= 5) break;
+        prompt.append("- İade sebebi: ").append(r.getReturnReason())
+              .append(" | Yorum: ").append(r.getReturnComment()).append("\n");
+        count++;
+    }
+}
+
+// Görselli yorum bilgisi
+if (context.getReviewImageCount() > 0) {
+    prompt.append("\n=== KULLANICI FOTOĞRAFLARI ===\n");
+    prompt.append(context.getReviewImageCount()).append(" kullanıcı fotoğraflı yorum paylaşmış.\n");
+    prompt.append("Bu fotoğraflar ürünün gerçek görünümüne dair ek kanıt sağlar.\n");
+    prompt.append("Stüdyo çekimi ile kullanıcı fotoğrafları arasındaki farkları belirt.\n");
+}
+
+─── 3E: mvn clean compile ───
+
+==============================================================
+ADIM 4 — Frontend: İade bilgisi + görselli yorumlar gösterimi
+Dizin: /Users/arif/Desktop/btk/e-commerce-prototype-2/app/page.tsx
+==============================================================
+
+─── 4A: ChatResponse gösteriminde iade uyarılarını vurgula ───
+
+Mevcut warnings gösteriminde zaten uyarılar gösteriliyor.
+İade kaynaklı uyarılar "⚠️" ile başlıyor — ekstra UI gerekmez.
+
+─── 4B: dataSources gösteriminde "İade verileri" göster ───
+
+Mevcut dataSources gösteriminde zaten kaynaklar listeleniyor.
+"İade verileri (X kayıt)" ve "Kullanıcı fotoğrafları (Y görsel)" otomatik görünecek.
+
+─── 4C: CustomerReviews bileşeninde görselli yorumları göster ───
+
+CustomerReviews component'ini güncelle. Review tipine images ekle:
+
+type Review tipine ekle:
+  images?: { id: number; imageUrl: string; caption: string }[]
+
+CustomerReviews içinde her review'da images varsa göster:
+
+review.images && review.images.length > 0 kısmını ekle:
+
+{review.images && review.images.length > 0 && (
+  <div className="mt-3 flex gap-2 overflow-x-auto">
+    {review.images.map((img: any) => (
+      <div key={img.id} className="flex-shrink-0">
+        <img
+          src={img.imageUrl}
+          alt={img.caption || 'Kullanıcı fotoğrafı'}
+          className="w-20 h-20 rounded-lg object-cover border border-border cursor-pointer hover:opacity-80 transition-opacity"
+          title={img.caption}
+          onClick={() => window.open(img.imageUrl, '_blank')}
+        />
+        {img.caption && (
+          <p className="text-[10px] text-muted-foreground mt-1 max-w-[80px] truncate">{img.caption}</p>
+        )}
+      </div>
+    ))}
+  </div>
+)}
+
+Bu kodu her review kartının comment paragrafından SONRA ekle.
+
+─── 4D: Ürün detay sayfasına "İade İstatistikleri" bölümü ekle ───
+
+ProductDetailPage içinde, "Ürün Bilgileri" bölümünden SONRA,
+"Sepete Ekle" butonundan ÖNCE:
+
+(Hardcoded product verisinde returnCount ve returnReasonSummary yok,
+ bu yüzden backend'den çekilmesi gerekir. Eğer ürün verisi API'den geliyorsa
+ zaten gelecek. Hardcoded ise bu adımı ATLA.)
+
+Eğer API'den geliyorsa:
+{product.returnCount > 0 && (
+  <div className="border-t border-border pt-4">
+    <div className="flex items-center gap-2 mb-2">
+      <span className="text-sm font-medium text-orange-600">⚠️ İade Bilgisi</span>
+    </div>
+    <p className="text-xs text-muted-foreground">
+      Bu üründe {product.returnCount} iade kaydı bulunmaktadır.
+    </p>
+  </div>
+)}
+
+─── 4E: Görselli yorum filtresi ───
+
+CustomerReviews component'ine filtre butonu ekle:
+
+State ekle:
+const [showOnlyWithImages, setShowOnlyWithImages] = useState(false)
+
+Filtre butonu (başlığın yanına):
+<div className="flex items-center justify-between mb-6">
+  <h3 className="text-lg font-bold text-foreground">Müşteri Yorumları</h3>
+  <Button
+    variant={showOnlyWithImages ? "default" : "outline"}
+    size="sm"
+    className="text-xs"
+    onClick={() => setShowOnlyWithImages(!showOnlyWithImages)}
+  >
+    📸 Fotoğraflı Yorumlar
+  </Button>
+</div>
+
+Filtreleme:
+const filteredReviews = showOnlyWithImages
+  ? reviews.filter(r => r.images && r.images.length > 0)
+  : reviews
+
+filteredReviews.map(...) ile listele.
+
+==============================================================
+ADIM 5 — Son kontrol
+==============================================================
+
+Backend:
+mvn clean compile → başarılı
+mvn spring-boot:run
+
+curl http://localhost:8080/api/products/1
+→ returnCount alanı görünmeli (3-8 arası)
+→ returnReasonSummary görünmeli
+→ reviews içinde bazılarında images dizisi olmalı
+
+curl -X POST http://localhost:8080/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"productId":1,"message":"Bu ürünün iade oranı yüksek mi?"}'
+→ reply'da iade verilerine referans olmalı
+→ warnings'de iade uyarıları olmalı
+→ dataSources'da "İade verileri" görünmeli
+
+Frontend (localhost:3000):
+→ Ürün detayda yorumlar içinde fotoğraflı olanlar mini galeri göstermeli
+→ "📸 Fotoğraflı Yorumlar" butonu çalışmalı
+→ Chat'te iade sorusu sorulunca iade verileri referans edilmeli
+==============================================================

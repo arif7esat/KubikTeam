@@ -1,0 +1,24 @@
+==============================================================
+SMARTCART AI — REVİZE PROMPT 5
+Konu: Backend'in (TrendyolDataLoader) Gerçek JSON Verileriyle Güncellenmesi
+==============================================================
+
+Şu an yaptığın analiz çok doğru: Frontend'deki FALLBACK_PRODUCTS dizisini "new_products_array.ts" içindeki %100 doğru verilerle güncellemen harika bir adım. Ancak bu sadece backend kapalıyken işe yarar. Backend çalıştığında ise veriler API'den geliyor ve API şu an "TrendyolDataLoader" içindeki "extractSpecsFromName" gibi uydurma fonksiyonlarla sahte özellikler üretiyor! Lütfen backend'i de gerçek verilerle buluştur.
+
+YAPILACAKLAR:
+
+ADIM 1: Frontend Fallback'ini Tamamla (Senin Planladığın Gibi)
+- "new_products_array.ts" içindeki gerçek 9 ürünü al.
+- Bunları Frontend'in (app/page.tsx veya store) beklediği formata göre (key/value -> specKey/specValue) eşleştir (map) ve FALLBACK_PRODUCTS olarak kaydet. (Mevcut çalışan iyi resim linklerini ve fiyatları koruyabilirsin).
+
+ADIM 2: Backend "TrendyolDataLoader" Sınıfını Düzelt
+- Backend projendeki "TrendyolDataLoader" (veya benzeri Seed) dosyasını aç.
+- "extractSpecsFromName" gibi ürün isimlerinden sahte özellik uyduran kodları SİL.
+- Bunun yerine, Java ile (Jackson kullanarak) doğrudan bilgisayardaki "/Users/arif/Desktop/ürü_veri_çekme/trendyol_verileri" dizinine git.
+- Her klasörün içindeki gerçek "product_info.json" dosyalarını okuyarak, içindeki "specs" dizisini ve "description" metnini veritabanına kaydet. 
+- Böylece API çağrıldığında sahte veriler değil, JSON dosyasındaki gerçek veriler dönsün!
+
+ADIM 3: Test ve Onay
+- Backend'i ("mvn spring-boot:run" vb.) ve Frontend'i yeniden başlat.
+- Sitede ürün detay sayfasına gir. Hem backend çalışırken hem de backend kapalıyken ürün özelliklerinin eksiksiz ve ürünle uyumlu (Apple Pencil'de Dpi, Mont'ta Kumaş vb.) olduğunu teyit et.
+==============================================================
