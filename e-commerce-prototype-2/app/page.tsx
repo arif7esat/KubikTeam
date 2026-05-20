@@ -815,9 +815,12 @@ export default function EcommercePage() {
 
   useEffect(() => {
     const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"
-    fetch(`${apiUrl}/api/products`)
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 4000)
+    fetch(`${apiUrl}/api/products`, { signal: controller.signal })
       .then(r => { if (!r.ok) throw new Error("API error"); return r.json() })
       .then(data => {
+        clearTimeout(timeout)
         const mapped = (data as any[]).map((p: any) => {
           const rawPrice = typeof p.price === 'number' ? p.price : parseFloat(p.price) || 0
           const reviews = p.reviews || []
@@ -853,7 +856,7 @@ export default function EcommercePage() {
         setProducts(mapped.length > 0 ? mapped : FALLBACK_PRODUCTS)
         setLoading(false)
       })
-      .catch(() => { console.log("API erişilemedi, fallback veriler kullanılıyor"); setProducts(FALLBACK_PRODUCTS); setLoading(false) })
+      .catch(() => { clearTimeout(timeout); console.log("API erişilemedi, fallback veriler kullanılıyor"); setProducts(FALLBACK_PRODUCTS); setLoading(false) })
   }, [])
 
   const handleProductClick = (product: Product) => {
