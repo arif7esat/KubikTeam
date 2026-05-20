@@ -14,6 +14,14 @@
 *Online alışverişte tüketicinin en büyük sorunu: "Bu ürün gerçekten göründüğü kadar iyi mi?"
 SmartCart AI, bu soruyu yapay zeka ile yanıtlıyor.*
 
+### 🌐 Canlı Demo
+
+| Servis | URL |
+|--------|-----|
+| **Frontend** | [kubik-smartcart.vercel.app](https://kubik-smartcart.vercel.app) |
+| **Backend API** | [smartcart-backend.onrender.com](https://smartcart-backend.onrender.com) |
+| **GitHub** | [github.com/arif7esat/KubikTeam](https://github.com/arif7esat/KubikTeam) |
+
 ---
 
 </div>
@@ -219,6 +227,28 @@ cd backend
   "dataSources": ["user_reviews", "product_specs"]
 }
 ```
+
+---
+
+## 🚀 Hızlı Başlangıç
+
+```bash
+# Repoyu klonla
+git clone https://github.com/arif7esat/KubikTeam.git
+cd KubikTeam
+
+# Backend (Java 21 + Maven)
+cd smartcart-backend
+export GEMINI_API_KEY=your_api_key  # https://aistudio.google.com/apikey
+./mvnw spring-boot:run              # http://localhost:8080
+
+# Frontend (Node.js 18+)
+cd e-commerce-prototype-2
+npm install
+npm run dev                          # http://localhost:3000
+```
+
+> Backend olmadan da frontend 67 Trendyol ürünüyle çalışır. AI sohbet için backend gerekli.
 
 ---
 
