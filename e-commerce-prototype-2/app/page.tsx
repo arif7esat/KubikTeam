@@ -810,11 +810,12 @@ export default function EcommercePage() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
   const [recommendations, setRecommendations] = useState<{ product: Product; why: string }[]>([])
   const [viewedIds, setViewedIds] = useState<number[]>([])
-  const [products, setProducts] = useState<Product[]>([])
-  const [loading, setLoading] = useState(true)
+  const [products, setProducts] = useState<Product[]>(FALLBACK_PRODUCTS)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL
+    if (!apiUrl || apiUrl === "http://localhost:8080") return
     const controller = new AbortController()
     const timeout = setTimeout(() => controller.abort(), 4000)
     fetch(`${apiUrl}/api/products`, { signal: controller.signal })
@@ -853,10 +854,9 @@ export default function EcommercePage() {
             })),
           }
         })
-        setProducts(mapped.length > 0 ? mapped : FALLBACK_PRODUCTS)
-        setLoading(false)
+        if (mapped.length > 0) setProducts(mapped)
       })
-      .catch(() => { clearTimeout(timeout); console.log("API erişilemedi, fallback veriler kullanılıyor"); setProducts(FALLBACK_PRODUCTS); setLoading(false) })
+      .catch(() => { clearTimeout(timeout) })
   }, [])
 
   const handleProductClick = (product: Product) => {
