@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { Search, User, Heart, ShoppingCart, Star, ArrowLeft, Sparkles, Send, Store, ChevronRight, Loader2, AlertTriangle, Lightbulb, Database, MessageCircle, Check, ThumbsUp, ArrowRight, Menu, X, Play, Award, Shield, Truck, Clock, History, MapPin, Package, LogOut, Settings, ExternalLink, MessageSquare } from "lucide-react"
 import { MaisonChat } from "@/components/maison-chat"
+import { ALL_PRODUCTS } from "./products-data"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
@@ -810,7 +811,7 @@ export default function EcommercePage() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
   const [recommendations, setRecommendations] = useState<{ product: Product; why: string }[]>([])
   const [viewedIds, setViewedIds] = useState<number[]>([])
-  const [products, setProducts] = useState<Product[]>(FALLBACK_PRODUCTS)
+  const [products, setProducts] = useState<Product[]>(ALL_PRODUCTS as Product[])
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
